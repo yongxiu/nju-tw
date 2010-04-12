@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+	<definition name="standard-layout" template="main.jsp">
+		<put name="title" value="Tiles tutorial homepage" />
+		<put name="banner" value="/layouts/banner.jsp"  />
+		<put name="navigation" value="/layouts/navigation.jsp"  />
+		<put name="ipHolder" value="/layouts/ipHolder.jsp"  />
+		
+		<put name="search" value="/layouts/search.jsp" />
+		
+		<put name="linker" value="/layouts/linker.jsp" />
+		<put name="copyRight" value="/layouts/copyRight.jsp" />
+	</definition>
+</tiles-definitions>
