@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- Pages -->
+	<definition name="index" extends="standard-layout">
+		<put-attribute name="title" value="南京大学共青团委" />
+		<put-attribute name="body" value="index.jsp" />
+	</definition>
+	
+	<definition name="search" extends="standard-layout">
+		<put-attribute name="title" value="团委搜索结果" />
+		<put-attribute name="body" value="search.jsp" />
+	</definition>
+	
+	<definition name="detail" extends="standard-layout">
+		<put-attribute name="title" value="南京大学共青团委" />
+		<put-attribute name="body" value="detail.jsp" />
+	</definition>
+	
+</tiles-definitions>
