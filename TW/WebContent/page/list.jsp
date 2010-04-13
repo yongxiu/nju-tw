@@ -1,3 +1,3 @@
 
-detail
+list
 <br />

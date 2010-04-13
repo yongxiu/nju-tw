@@ -8,7 +8,7 @@
 	<package name="default"   extends="tiles-default">
 
 		<action name="LoginAction" class="action.LoginAction">
-			<result name="success">standard</result>
+			<result name="success" type="tiles">index</result>
 		   
 		</action>	
 	</package>
