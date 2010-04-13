@@ -12,11 +12,11 @@
 <div id="nav"><tiles:insertAttribute name="navigation" /></div>
 <!-- end header -->
 <div id="left">
-<div id="log"></div>
+<div id="log"><tiles:insertAttribute name="login" /></div>
 <div id="searchs"><tiles:insertAttribute name="search" /></div>
 <div id="ip"><tiles:insertAttribute name="ipHolder" /></div>
 </div>
-<div id="content" ></div>
+<div id="content" ><tiles:insertAttribute name="body" /></div>
 <!-- end content -->
 <div id="footer" >
 <div id="link"><tiles:insertAttribute name="linker" /></div>
