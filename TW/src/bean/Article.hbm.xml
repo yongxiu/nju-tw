@@ -6,16 +6,16 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="bean.Article"  table="article" lazy="false">
+	<class name="bean.Article" table="article" lazy="false">
 		<id name="id" column="id" type="long">
-			<generator class="increment"/>
-				
+			<generator class="increment" />
+
 		</id>
-		
+
 		<property name="title" column="title" type="string"></property>
 		<property name="content" column="content" type="string"></property>
-	
-		
-	
-	 </class>
+
+
+
+	</class>
 </hibernate-mapping>

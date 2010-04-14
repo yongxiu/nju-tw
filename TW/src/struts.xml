@@ -5,12 +5,12 @@
 <struts>
 
 
-	<package name="default"   extends="tiles-default">
+	<package name="default" extends="tiles-default">
 
 		<action name="LoginAction" class="action.LoginAction">
 			<result name="success" type="tiles">index</result>
-		   
-		</action>	
+
+		</action>
 	</package>
 </struts>
 
