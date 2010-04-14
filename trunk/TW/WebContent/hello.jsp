@@ -14,6 +14,8 @@ img,div {
 <title>Student Login</title>
 </head>
 <body id="login">
-<a href='LoginAction.do'> 中国</a>test
+
+<a href='showAction.do'> 中国</a>
+
 </body>
 </html>
