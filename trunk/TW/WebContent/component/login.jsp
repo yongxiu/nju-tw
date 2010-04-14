@@ -11,9 +11,7 @@
 		<tr>
 			<td>
 
-			<button type="submit" class="positive" name="Submit"><img
-				src="<%=request.getContextPath()%>/images/key.png"
-				alt="Announcement" />Login</button>
+			<button type="submit" class="positive" name="Submit">Login</button>
 
 			</td>
 		</tr>
