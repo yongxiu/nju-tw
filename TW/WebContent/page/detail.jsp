@@ -1,3 +1,2 @@
-
-detail
+ detail
 <br />
