@@ -15,7 +15,7 @@ img,div {
 </head>
 <body id="login">
 
-<a href='showAction.do'> 中国</a>
+<a href='LoginAction.do'> 中国</a>
 
 </body>
 </html>
