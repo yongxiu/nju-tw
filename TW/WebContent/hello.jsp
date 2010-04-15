@@ -15,7 +15,8 @@ img,div {
 </head>
 <body id="login">
 
-<a href='LoginAction.do'> 中国</a>
+
+<a href='redirectToHomePage.do'> 进入南大团委首页</a>
 
 </body>
 </html>

@@ -6,10 +6,20 @@
 
 
 	<package name="default" extends="tiles-default">
-
-		<action name="LoginAction" class="action.LoginAction">
+		<!-- Redirect to home page -->
+		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
 			<result name="success" type="tiles">index</result>
+		</action>
 
+		<!-- login -->
+		<action name="LoginAction" class="action.LoginAction">
+			<result name="success" type="tiles">userIndex</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
+		<!-- Search Article -->
+		<action name="SearchAction" class="action.SearchAction">
+			<result name="success" type="tiles">list</result>
 		</action>
 	</package>
 </struts>
