@@ -99,7 +99,9 @@ A:hover {
 	WIDTH: 940px;
 	HEIGHT: 148px
 }
-
+#search {
+	BACKGROUND: url(/images/search.gif) no-repeat;
+}
 #logo {
 	MARGIN: 0px;
 	BACKGROUND: url(images/img02.jpg) no-repeat left 20px;
