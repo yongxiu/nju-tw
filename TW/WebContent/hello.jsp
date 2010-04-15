@@ -18,5 +18,6 @@ img,div {
 
 <a href='redirectToHomePage.do'> 进入南大团委首页</a>
 
+<p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>
 </body>
 </html>
