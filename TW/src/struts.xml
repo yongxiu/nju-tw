@@ -21,6 +21,11 @@
 		<action name="SearchAction" class="action.SearchAction">
 			<result name="success" type="tiles">list</result>
 		</action>
+		
+		<!-- List Article -->
+		<action name="DetailArticleAction" class="action.DetailArticleAction">
+			<result name="success" type="tiles">detail</result>
+		</action>
 	</package>
 </struts>
 
