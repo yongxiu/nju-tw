@@ -3,15 +3,15 @@
 
 <table>
   <tr>
-	<td><a href="http://www.nju.edu.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/link1.gif"></a>
+	<td><a href="http://www.nju.edu.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/nju.gif"></a>
 	</td>   	
-	<td><a href="http://www.ccyl.org.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/link2.gif"></a>
+	<td><a href="http://www.ccyl.org.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/twcn.gif"></a>
 	</td> 
-	<td><a href="http://www.jsgqt.org/index.aspx"><img alt="" src="<%=request.getContextPath()%>/linkImage/link3.gif"></a>
+	<td><a href="http://www.jsgqt.org/index.aspx"><img alt="" src="<%=request.getContextPath()%>/linkImage/twjs.gif"></a>
 	</td> 
-	<td><a href="http://www.redmay.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/link4.gif"></a>
+	<td><a href="http://www.redmay.cn/"><img alt="" src="<%=request.getContextPath()%>/linkImage/sujs.gif"></a>
 	</td> 
-	<td><a href="http://bbs.nju.edu.cn"><img alt="" src="<%=request.getContextPath()%>/linkImage/link5.gif"></a>
+	<td><a href="http://bbs.nju.edu.cn"><img alt="" src="<%=request.getContextPath()%>/linkImage/bbs.gif"></a>
 	</td> 
   </tr>
 </table>

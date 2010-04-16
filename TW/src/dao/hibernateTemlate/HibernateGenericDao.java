@@ -20,8 +20,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 		HibernateUtil.closeSession();
 	}
 
-	@Override
-	// create an entity
 	public boolean create(E entity) {
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
@@ -41,8 +39,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
-	// delete an entity
 	public boolean delete(K id) {
 		// TODO Auto-generated method stub
 		Session session = getSession();
@@ -69,8 +65,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
-	// get all entity
 	public List<E> getAllEntity() {
 		// TODO Auto-generated method stub
 		Session session=getSession();
@@ -92,8 +86,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
-	// get entity by id
 	public E getById(K id) {
 		// TODO Auto-generated method stub
 		Session session = getSession();
@@ -108,8 +100,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
-	// update an entity
 	public void update(E entity) {
 		// TODO Auto-generated method stub
 		Session session=getSession();
