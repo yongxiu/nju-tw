@@ -11,6 +11,11 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 public class CKEditorUploadServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private static String baseDir;// CKEditor的根目录
 	private static boolean debug = false;// 是否debug模式
 	private static boolean enabled = false;// 是否开启CKEditor上传
