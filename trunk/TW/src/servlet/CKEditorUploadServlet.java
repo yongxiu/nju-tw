@@ -19,8 +19,8 @@ public class CKEditorUploadServlet extends HttpServlet {
 	private static String baseDir;// CKEditor的根目录
 	private static boolean debug = false;// 是否debug模式
 	private static boolean enabled = false;// 是否开启CKEditor上传
-	private static Hashtable allowedExtensions;// 允许的上传文件扩展名
-	private static Hashtable deniedExtensions;// 阻止的上传文件扩展名
+	private static Hashtable<String, ArrayList<String>> allowedExtensions;// 允许的上传文件扩展名
+	private static Hashtable<String, ArrayList<String>> deniedExtensions;// 阻止的上传文件扩展名
 	private static SimpleDateFormat dirFormatter;// 目录命名格式:yyyyMM
 	private static SimpleDateFormat fileFormatter;// 文件命名格式:yyyyMMddHHmmssSSS
 	/**
@@ -48,8 +48,8 @@ public class CKEditorUploadServlet extends HttpServlet {
 		}
 		System.out.println(realBaseDir);
 		// 实例化允许的扩展名和阻止的扩展名
-		allowedExtensions = new Hashtable(3);
-		deniedExtensions = new Hashtable(3);
+		allowedExtensions = new Hashtable<String, ArrayList<String>>(3);
+		deniedExtensions = new Hashtable<String, ArrayList<String>>(3);
 		// 从web.xml中读取配置信息
 		allowedExtensions.put("File",
 		stringToArrayList(getInitParameter("AllowedExtensionsFile")));
@@ -178,11 +178,11 @@ public class CKEditorUploadServlet extends HttpServlet {
 	/**
 	 * 字符串像ArrayList转化的方法
 	 */
-	private ArrayList stringToArrayList(String str) {
+	private ArrayList<String> stringToArrayList(String str) {
 		if (debug)
 			System.out.println(str);
 		String[] strArr = str.split("\\|");
-		ArrayList tmp = new ArrayList();
+		ArrayList<String> tmp = new ArrayList<String>();
 		if (str.length() > 0) {
 			for (int i = 0; i < strArr.length; ++i) {
 				if (debug)
@@ -195,10 +195,11 @@ public class CKEditorUploadServlet extends HttpServlet {
 	/**
 	 * 判断扩展名是否允许的方法
 	 */
+
 	private boolean extIsAllowed(String fileType, String ext) {
 		ext = ext.toLowerCase();
-		ArrayList allowList = (ArrayList) allowedExtensions.get(fileType);
-		ArrayList denyList = (ArrayList) deniedExtensions.get(fileType);
+		ArrayList<String> allowList = (ArrayList<String>) allowedExtensions.get(fileType);
+		ArrayList<String> denyList = (ArrayList<String>) deniedExtensions.get(fileType);
 		if (allowList.size() == 0) {
 			if (denyList.contains(ext)) {
 				return false;
