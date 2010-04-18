@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!-- map File class: wjc -->
+<hibernate-mapping>
+	<class name="bean.File" table="file" lazy="false">
+		<id name="id" column="id" type="long">
+			<generator class="increment"/>
+		</id>
+		
+		<property name="filename" column="filename" type="string"/>
+		
+		<property name="path" column="path" type="string"/>
+		
+		<property name="state" column="state" type="boolean"/>
+		
+		<property name="date" column="date" type="date"/>
+		
+		<many-to-one name="user" column="uid" class="bean.User" not-null="true" cascade="all"/>
+	</class>
+</hibernate-mapping>

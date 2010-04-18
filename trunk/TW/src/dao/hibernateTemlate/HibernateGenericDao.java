@@ -7,7 +7,6 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.hql.ast.tree.FromClause;
 
 public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	// get hibernate session
@@ -99,7 +98,6 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	public void update(E entity) {
 		// TODO Auto-generated method stub
 		Session session=getSession();
@@ -127,7 +125,7 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 	}
 
 	// get K class
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings({ "unchecked", "unused" })
 	private Class<E> getKeyClass() {
 		return (Class<E>) ((ParameterizedType) getClass()
 				.getGenericSuperclass()).getActualTypeArguments()[1];
