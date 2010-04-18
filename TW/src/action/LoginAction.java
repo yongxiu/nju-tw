@@ -1,15 +1,21 @@
 package action;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import bean.Article;
+import bean.GenericArticle;
+import bean.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.ArticleDao;
+import dao.GenericArticleDao;
+import dao.UserDao;
 
 
 public class LoginAction extends ActionSupport{
@@ -31,6 +37,31 @@ public class LoginAction extends ActionSupport{
 //		for(Article article:articles){
 //			System.out.println(article.getId()+" : "+article.getTitle()+" : "+article.getContent());
 //		}
+		
+		
+		
+		/**
+		 * test create an article, success
+		 */
+		
+//		UserDao userDAO=new UserDao();
+//		GenericArticleDao articleDao=new GenericArticleDao();
+//		User user1=userDAO.getById(new Long(1));
+//		GenericArticle article1=new GenericArticle("title1", new Date(), "content1", user1,1, false);
+//		
+//	
+//		
+//		articleDao.create(article1);
+//		
+		
+		
+		UserDao userDao=new UserDao();
+	
+		Set<GenericArticle> articles=userDao.getArticles(new Long(1));
+		
+		
+		
+		
 	
 		
 		return INPUT;

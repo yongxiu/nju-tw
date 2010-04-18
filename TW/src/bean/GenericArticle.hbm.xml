@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- map GenericArticle: wjc -->
+<hibernate-mapping>
+	<class name="bean.GenericArticle" table="genericarticle" lazy="false">
+		<id  name="id" column="id" type="long">
+			<generator class="increment"/>
+		</id>
+		
+		<property name="title" column="title" type="string"/>
+		
+		<property name="date" column="date" type="date"/>
+		
+		<property name="content" column="content" type="string"/>
+		<property name="category" column="category" type="int"/>
+		<property name="state" column="state" type="boolean"></property>
+		
+		<many-to-one name="user" column="uid" class="bean.User" not-null="true" cascade="all"/>
+	</class>
+</hibernate-mapping>
