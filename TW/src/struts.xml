@@ -17,6 +17,12 @@
 			<result name="input" type="tiles">index</result>
 		</action>
 		
+		<!-- ipCount -->
+		<action name="IpcountAction" class="action.IpcountAction">
+			<result name="success" type="tiles">userIndex</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
 		<!-- Search Article -->
 		<action name="SearchAction" class="action.SearchAction">
 			<result name="success" type="tiles">list</result>
