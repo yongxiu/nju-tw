@@ -3,6 +3,7 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.FileDao;
 import dao.GenericArticleDao;
 
 import bean.GenericArticle;
@@ -42,7 +43,9 @@ public class GetFiveNews {
 		ArrayList<GenericArticle> five=new GetFiveNews().getFiveNews();
 		for(GenericArticle article:five){
 			System.out.println(article.getId()+":"+article.getDate());
-		}
+	}
+		
+		
 	}
 	
 	

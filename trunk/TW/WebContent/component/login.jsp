@@ -3,11 +3,11 @@
 <s:form action="LoginAction.do">
 	<table align="center" cellpadding="1" cellspacing="1" class="form">
 		<tr>
-			<td><s:textfield name="username" label="UserName"
+			<td><s:textfield name="username" label="用户名" size="10"
 				labelposition="left"></s:textfield></td>
 		</tr>
 		<tr>
-			<td ><s:password name="password" label="Password"
+			<td ><s:password name="password" label="密    码" size="11"
 				labelposition="left"></s:password></td>
 		</tr>
 		<tr>

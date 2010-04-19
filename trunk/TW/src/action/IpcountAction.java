@@ -1,5 +1,6 @@
 package action;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +35,7 @@ public class IpcountAction extends ActionSupport{
 		
 			countString="<img src='/TW/ipImage/"+count%10+".gif' />"+countString;
 			count=count/10;
-			System.out.println(countString);
+			System.out.println(new Date());
 		}
 		return SUCCESS;
 		
