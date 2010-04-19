@@ -1,7 +1,12 @@
 package action;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -53,11 +58,16 @@ public class LoginAction extends ActionSupport{
 //		
 //		articleDao.create(article1);
 //		
+		GenericArticleDao dao=new GenericArticleDao();
+		List<GenericArticle> articles=dao.getAllEntity();
+		List<GenericArticle> news=new ArrayList<GenericArticle>();
+		for(GenericArticle a:articles){
+			if(a.getCategory()==0)
+				news.add(a);
+		}
 		
-		
-		UserDao userDao=new UserDao();
-	
-		Set<GenericArticle> articles=userDao.getArticles(new Long(1));
+		for(GenericArticle n:news)
+		System.out.println(n.getCategory()+":"+n.getContent());
 		
 		
 		
