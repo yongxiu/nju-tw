@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import java.util.Date;
 
+import dao.GenericArticleDao;
+
 import bean.GenericArticle;
 
 public class SortUtil {
@@ -37,6 +39,11 @@ public class SortUtil {
 			return false;
 	}
 
-	
+	//test
+	public static void main(String[] args){
+		GenericArticleDao dao=new GenericArticleDao();
+		GenericArticle a=dao.getById(new Long(1));
+		System.out.println(a.getCategory());
+	}
 
 }
