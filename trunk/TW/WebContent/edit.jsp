@@ -10,9 +10,8 @@
 <body>
 <textarea  name="content" id="content" class="ckeditor" rows="16" cols="100"></textarea>
 <script type="text/javascript">   
-        CKEDITOR.replace('content',{filebrowserUploadUrl : '/ckeditor/ckeditor/uploader?Type=File',   
-filebrowserImageUploadUrl : '<%=request.getContextPath()%>/uploader?Type=Image',   
-filebrowserFlashUploadUrl : '/uploader?Type=Flash'  
+        CKEDITOR.replace('content',{ 
+filebrowserImageUploadUrl : '<%=request.getContextPath()%>/uploader?Type=Image'
         });   
 </script> 
 </body>

@@ -16,28 +16,28 @@ public class CKEditorUploadServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private static String baseDir;// CKEditorµÄ¸ùÄ¿Â¼
-	private static boolean debug = false;// ÊÇ·ñdebugÄ£Ê½
-	private static boolean enabled = false;// ÊÇ·ñ¿ªÆôCKEditorÉÏ´«
-	private static Hashtable<String, ArrayList<String>> allowedExtensions;// ÔÊĞíµÄÉÏ´«ÎÄ¼şÀ©Õ¹Ãû
-	private static Hashtable<String, ArrayList<String>> deniedExtensions;// ×èÖ¹µÄÉÏ´«ÎÄ¼şÀ©Õ¹Ãû
-	private static SimpleDateFormat dirFormatter;// Ä¿Â¼ÃüÃû¸ñÊ½:yyyyMM
-	private static SimpleDateFormat fileFormatter;// ÎÄ¼şÃüÃû¸ñÊ½:yyyyMMddHHmmssSSS
+	private static String baseDir;// CKEditorçš„æ ¹ç›®å½•
+	private static boolean debug = false;// æ˜¯å¦debugæ¨¡å¼
+	private static boolean enabled = false;// æ˜¯å¦å¼€å¯CKEditorä¸Šä¼ 
+	private static Hashtable<String, ArrayList<String>> allowedExtensions;// å…è®¸çš„ä¸Šä¼ æ–‡ä»¶æ‰©å±•å
+	private static Hashtable<String, ArrayList<String>> deniedExtensions;// é˜»æ­¢çš„ä¸Šä¼ æ–‡ä»¶æ‰©å±•å
+	private static SimpleDateFormat dirFormatter;// ç›®å½•å‘½åæ ¼å¼:yyyyMM
+	private static SimpleDateFormat fileFormatter;// æ–‡ä»¶å‘½åæ ¼å¼:yyyyMMddHHmmssSSS
 	/**
-	 * Servlet³õÊ¼»¯·½·¨
+	 * Servletåˆå§‹åŒ–æ–¹æ³•
 	 */
 	public void init() throws ServletException {
-		// ´Óweb.xmlÖĞ¶ÁÈ¡debugÄ£Ê½
+		// ä»web.xmlä¸­è¯»å–debugæ¨¡å¼
 		debug = (new Boolean(getInitParameter("debug"))).booleanValue();
 		if (debug)
 			System.out
 					.println("\r\n---- SimpleUploaderServlet initialization started ----");
-		// ¸ñÊ½»¯Ä¿Â¼ºÍÎÄ¼şÃüÃû·½Ê½
+		// æ ¼å¼åŒ–ç›®å½•å’Œæ–‡ä»¶å‘½åæ–¹å¼
 		dirFormatter = new SimpleDateFormat("yyyyMM");
 		fileFormatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
-		// ´Óweb.xmlÖĞ»ñÈ¡¸ùÄ¿Â¼Ãû³Æ
+		// ä»web.xmlä¸­è·å–æ ¹ç›®å½•åç§°
 		baseDir = getInitParameter("baseDir");
-		// ´Óweb.xmlÖĞ»ñÈ¡ÊÇ·ñ¿ÉÒÔ½øĞĞÎÄ¼şÉÏ´«
+		// ä»web.xmlä¸­è·å–æ˜¯å¦å¯ä»¥è¿›è¡Œæ–‡ä»¶ä¸Šä¼ 
 		enabled = (new Boolean(getInitParameter("enabled"))).booleanValue();
 		if (baseDir == null)
 			baseDir = "/UserFiles/";
@@ -47,10 +47,10 @@ public class CKEditorUploadServlet extends HttpServlet {
 			baseFile.mkdirs();
 		}
 		System.out.println(realBaseDir);
-		// ÊµÀı»¯ÔÊĞíµÄÀ©Õ¹ÃûºÍ×èÖ¹µÄÀ©Õ¹Ãû
+		// å®ä¾‹åŒ–å…è®¸çš„æ‰©å±•åå’Œé˜»æ­¢çš„æ‰©å±•å
 		allowedExtensions = new Hashtable<String, ArrayList<String>>(3);
 		deniedExtensions = new Hashtable<String, ArrayList<String>>(3);
-		// ´Óweb.xmlÖĞ¶ÁÈ¡ÅäÖÃĞÅÏ¢
+		// ä»web.xmlä¸­è¯»å–é…ç½®ä¿¡æ¯
 		allowedExtensions.put("File",
 		stringToArrayList(getInitParameter("AllowedExtensionsFile")));
 		deniedExtensions.put("File",
@@ -75,34 +75,34 @@ public class CKEditorUploadServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		response.setHeader("Cache-Control", "no-cache");
 		PrintWriter out = response.getWriter();
-		// ´ÓÇëÇó²ÎÊıÖĞ»ñÈ¡ÉÏ´«ÎÄ¼şµÄÀàĞÍ£ºFile/Image/Flash
+		// ä»è¯·æ±‚å‚æ•°ä¸­è·å–ä¸Šä¼ æ–‡ä»¶çš„ç±»å‹ï¼šFile/Image/Flash
 		String typeStr = request.getParameter("Type");
 		if (typeStr == null) {
 			typeStr = "File";
 		}
 		if (debug)
 			System.out.println(typeStr);
-		// ÊµÀı»¯dNow¶ÔÏó£¬»ñÈ¡µ±Ç°Ê±¼ä
+		// å®ä¾‹åŒ–dNowå¯¹è±¡ï¼Œè·å–å½“å‰æ—¶é—´
 		Date dNow = new Date();
-		// Éè¶¨ÉÏ´«ÎÄ¼şÂ·¾¶
+		// è®¾å®šä¸Šä¼ æ–‡ä»¶è·¯å¾„
 		String currentPath = baseDir + typeStr + "/"
 				+ dirFormatter.format(dNow);
-		// »ñµÃwebÓ¦ÓÃµÄÉÏ´«Â·¾¶
+		// è·å¾—webåº”ç”¨çš„ä¸Šä¼ è·¯å¾„
 		String currentDirPath = getServletContext().getRealPath(currentPath);
-		// ÅĞ¶ÏÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ£¬²»´æÔÚÔò´´½¨
+		// åˆ¤æ–­æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨ï¼Œä¸å­˜åœ¨åˆ™åˆ›å»º
 		File dirTest = new File(currentDirPath);
 		if (!dirTest.exists()) {
 			dirTest.mkdirs();
 		}
-		// ½«Â·¾¶Ç°¼ÓÉÏwebÓ¦ÓÃÃû
+		// å°†è·¯å¾„å‰åŠ ä¸Šwebåº”ç”¨å
 		currentPath = request.getContextPath() + currentPath;
 		if (debug)
 			System.out.println(currentDirPath);
-		// ÎÄ¼şÃûºÍÎÄ¼şÕæÊµÂ·¾¶
+		// æ–‡ä»¶åå’Œæ–‡ä»¶çœŸå®è·¯å¾„
 		String newName = "";
 		String fileUrl = "";
 		if (enabled) {
-			// Ê¹ÓÃApache Common×é¼şÖĞµÄfileupload½øĞĞÎÄ¼şÉÏ´«
+			// ä½¿ç”¨Apache Commonç»„ä»¶ä¸­çš„fileuploadè¿›è¡Œæ–‡ä»¶ä¸Šä¼ 
 			FileItemFactory factory = new DiskFileItemFactory();
 			ServletFileUpload upload = new ServletFileUpload(factory);
 			try {
@@ -116,18 +116,18 @@ public class CKEditorUploadServlet extends HttpServlet {
 					else
 						fields.put(item.getFieldName(), item);
 				}
-				// CEKditorÖĞfileÓòµÄnameÖµÊÇupload
+				// CEKditorä¸­fileåŸŸçš„nameå€¼æ˜¯upload
 				FileItem uplFile = (FileItem) fields.get("upload");
-				// »ñÈ¡ÎÄ¼şÃû²¢×ö´¦Àí
+				// è·å–æ–‡ä»¶åå¹¶åšå¤„ç†
 				String fileNameLong = uplFile.getName();
 				fileNameLong = fileNameLong.replace('\\', '/');
 				String[] pathParts = fileNameLong.split("/");
 				String fileName = pathParts[pathParts.length - 1];
-				// »ñÈ¡ÎÄ¼şÀ©Õ¹Ãû
+				// è·å–æ–‡ä»¶æ‰©å±•å
 				String ext = getExtension(fileName);
-				// ÉèÖÃÉÏ´«ÎÄ¼şÃû
+				// è®¾ç½®ä¸Šä¼ æ–‡ä»¶å
 				fileName = fileFormatter.format(dNow) + "." + ext;
-				// »ñÈ¡ÎÄ¼şÃû(ÎŞÀ©Õ¹Ãû)
+				// è·å–æ–‡ä»¶å(æ— æ‰©å±•å)
 				String nameWithoutExt = getNameWithoutExtension(fileName);
 				File pathToSave = new File(currentDirPath, fileName);
 				fileUrl = currentPath + "/" + fileName;
@@ -142,7 +142,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 					uplFile.write(pathToSave);
 				} else {
 					if (debug)
-						System.out.println("ÎŞĞ§µÄÎÄ¼şÀàĞÍ£º " + ext);
+						System.out.println("æ— æ•ˆçš„æ–‡ä»¶ç±»å‹ï¼š " + ext);
 				}
 			} catch (Exception ex) {
 				if (debug)
@@ -150,9 +150,9 @@ public class CKEditorUploadServlet extends HttpServlet {
 			}
 		} else {
 			if (debug)
-				System.out.println("Î´¿ªÆôCKEditorÉÏ´«¹¦ÄÜ");
+				System.out.println("æœªå¼€å¯CKEditorä¸Šä¼ åŠŸèƒ½");
 		}
-		// CKEditorFuncNumÊÇ»Øµ÷Ê±ÏÔÊ¾µÄÎ»ÖÃ£¬Õâ¸ö²ÎÊı±ØĞëÓĞ
+		// CKEditorFuncNumæ˜¯å›è°ƒæ—¶æ˜¾ç¤ºçš„ä½ç½®ï¼Œè¿™ä¸ªå‚æ•°å¿…é¡»æœ‰
 		String callback = request.getParameter("CKEditorFuncNum");
 		out.println("<script type=\"text/javascript\">");
 		out.println("window.parent.CKEDITOR.tools.callFunction(" + callback
@@ -164,19 +164,19 @@ public class CKEditorUploadServlet extends HttpServlet {
 			System.out.println("--- END DOPOST ---");
 	}
 	/**
-	 * »ñÈ¡ÎÄ¼şÃûµÄ·½·¨
+	 * è·å–æ–‡ä»¶åçš„æ–¹æ³•
 	 */
 	private static String getNameWithoutExtension(String fileName) {
 		return fileName.substring(0, fileName.lastIndexOf("."));
 	}
 	/**
-	 * »ñÈ¡À©Õ¹ÃûµÄ·½·¨
+	 * è·å–æ‰©å±•åçš„æ–¹æ³•
 	 */
 	private String getExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
 	}
 	/**
-	 * ×Ö·û´®ÏñArrayList×ª»¯µÄ·½·¨
+	 * å­—ç¬¦ä¸²åƒArrayListè½¬åŒ–çš„æ–¹æ³•
 	 */
 	private ArrayList<String> stringToArrayList(String str) {
 		if (debug)
@@ -193,7 +193,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 		return tmp;
 	}
 	/**
-	 * ÅĞ¶ÏÀ©Õ¹ÃûÊÇ·ñÔÊĞíµÄ·½·¨
+	 * åˆ¤æ–­æ‰©å±•åæ˜¯å¦å…è®¸çš„æ–¹æ³•
 	 */
 
 	private boolean extIsAllowed(String fileType, String ext) {
