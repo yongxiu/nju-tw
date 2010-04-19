@@ -52,9 +52,9 @@
 		<servlet-name>SimpleUploader</servlet-name>
 		<url-pattern>/uploader</url-pattern>
 	</servlet-mapping>
-	
-	
-	
+
+
+
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
@@ -64,6 +64,17 @@
 		</init-param>
 	</filter>
 
+     <filter-mapping>
+
+		<filter-name>struts2</filter-name>
+
+		<url-pattern>*.do</url-pattern>
+		 <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+
+	</filter-mapping>
 	<context-param>
 
 		<param-name>
@@ -82,23 +93,10 @@
 	</listener>
 
 
-
-
-
-
-
-	<filter-mapping>
-
-		<filter-name>struts2</filter-name>
-
-		<url-pattern>*.do</url-pattern>
-
-	</filter-mapping>
+	
 
 	<welcome-file-list>
-
-		<welcome-file>index.jsp</welcome-file>
-
+		<welcome-file>hello.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
 

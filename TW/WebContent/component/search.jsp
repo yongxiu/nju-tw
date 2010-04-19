@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<s:form action="SearchAction">
+<s:form id="search" action="SearchAction">
 <table>
   <tr>
     <td><s:textfield value="输入标题关键字..." name="search" onblur="if (this.value == '') {this.value = '输入标题关键字...';}" onfocus="if (this.value == '输入标题关键字...') {this.value = '';}"></s:textfield></td>
