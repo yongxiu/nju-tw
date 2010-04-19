@@ -19,7 +19,7 @@
 		
 		<!-- ipCount -->
 		<action name="IpcountAction" class="action.IpcountAction">
-			<result name="success" type="tiles">userIndex</result>
+			<result name="success" >/component/ipHolder.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
 		

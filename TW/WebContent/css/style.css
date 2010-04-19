@@ -5,185 +5,139 @@ body {
 	background:  url(/TW/img/bg-body.png) repeat-x;
 }
 
+#menu {
+	width:1000px;
+	height:50px;
+	background-color:#FFF;
+}
 #banner {
 	width:1000px;
 	height:180px;
 }
 
 
-#navigation {
-	width:792px;
+
+#nav {
+	width:794px;
 	height:36px;
 	border:1px solid #dcebf7;
 	margin:6px 0 6px 6px;
+	padding:0;
 	float:left;
 }
 
-#nav
-{
-	width: 973px;
-	height: 35px;
-	margin: 0;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}
-
-
-
-#nav li
-{
+#nav li {
 	list-style: none;
-	margin: 0;
-	float: left;
-	position: relative;
+	width:99px;
+	height:36px;
+	float:left;
 }
-
-
 
 #nav a
 {
 	display: block;
-	width: 120px;
-	height: 35px;
+	width: 99px;
+	height: 36px;
 	float: left;
 	text-indent: -9000px;
 	outline: 0;
-	background: transparent url(/TW/img/nav.png) no-repeat 0 bottom;
 }
 
-#nav .home a
-{
-	width: 122px;
+.sy a {
+	background-image:url(/TW/img/nav-sy.png);
 }
 
-#nav .about_us a
-{
-	background-position: -122px bottom;
+.zz a {
+	background-image:url(/TW/img/nav-zz.png);
 }
 
-#nav .products a
-{
-	background-position: -242px bottom;
+.jd a {
+	background-image:url(/TW/img/nav-jd.png);
 }
 
-#nav .customers a
-{
-	background-position: -362px bottom;
+.gg a {
+	background-image:url(/TW/img/nav-gg.png);
 }
 
-#nav .news a
-{
-	background-position: -482px bottom;
+.ll a {
+	background-image:url(/TW/img/nav-ll.png);
 }
 
-#nav .community a
-{
-	background-position: -602px bottom;
+.mt a {
+	background-image:url(/TW/img/nav-mt.png);
 }
 
-#nav .career a
-{
-	background-position: -722px bottom;
+.xz a {
+	background-image:url(/TW/img/nav-xz.png);
 }
 
-#nav .contact a
-{
-	background-position: -842px bottom;
-	width: 131px;
+.lx a {
+	background-image:url(/TW/img/nav-lx.png);
 }
 
-
-
-#nav .home a:hover
-{
-	background-position: 0 -40px;
+.sy a:hover {
+	background-image:url(/TW/img/nav-sy-hover.png);
 }
 
-#nav .about_us a:hover
-{
-	background-position: -122px -40px;
+.zz a:hover {
+	background-image:url(/TW/img/nav-zz-hover.png);
 }
 
-#nav .products a:hover, #nav .products:hover a
-{
-	background-position: -242px -40px;
+.jd a:hover {
+	background-image:url(/TW/img/nav-jd-hover.png);
 }
 
-#nav .customers a:hover
-{
-	background-position: -362px -40px;
+.gg a:hover {
+	background-image:url(/TW/img/nav-gg-hover.png);
 }
 
-#nav .news a:hover
-{
-	background-position: -482px -40px;
+.ll a:hover {
+	background-image:url(/TW/img/nav-ll-hover.png);
 }
 
-#nav .community a:hover
-{
-	background-position: -602px -40px;
+.mt a:hover {
+	background-image:url(/TW/img/nav-mt-hover.png);
 }
 
-#nav .career a:hover
-{
-	background-position: -722px -40px;
+.xz a:hover {
+	background-image:url(/TW/img/nav-xz-hover.png);
 }
 
-#nav .contact a:hover
-{
-	background-position: -842px -40px;
+.lx a:hover {
+	background-image:url(/TW/img/nav-lx-hover.png);
 }
 
-
-
-#nav .home a.active, #nav .home a.active:hover
-{
-	background-position: 0 0;
+.sy a:active {
+	background-image:url(/TW/img/nav-sy-active.png);
 }
 
-#nav .about_us a.active, #nav .about_us a.active:hover
-{
-	background-position: -122px 0;
+.zz a:active {
+	background-image:url(/TW/img/nav-zz-active.png);
 }
 
-#nav .products a.active, #nav .products a.active:hover
-{
-	background-position: -242px 0;
+.jd a:active {
+	background-image:url(/TW/img/nav-jd-active.png);
 }
 
-#nav .customers a.active, #nav .customers a.active:hover
-{
-	background-position: -362px 0;
+.gg a:active {
+	background-image:url(/TW/img/nav-gg-active.png);
 }
 
-#nav .news a.active, #nav .news a.active:hover
-{
-	background-position: -482px 0;
+.ll a:active {
+	background-image:url(/TW/img/nav-ll-active.png);
 }
 
-#nav .community a.active, #nav .community a.active:hover
-{
-	background-position: -602px 0;
+.mt a:active {
+	background-image:url(/TW/img/nav-mt-active.png);
 }
 
-#nav .career a.active, #nav .career a.active:hover
-{
-	background-position: -722px -0;
+.xz a:active {
+	background-image:url(/TW/img/nav-xz-active.png);
 }
 
-#nav .contact a.active, #nav .contact a.active:hover
-{
-	background-position: -842px 0;
+.lx a:active {
+	background-image:url(/TW/img/nav-lx-active.png);
 }
-
-
-
-#nav .contact a.active2
-{
-	background-position: -842px 0;
-}
-
 
 
 
