@@ -16,6 +16,11 @@ public class GenericArticle {
 	private int category;
 	
 	private boolean state;
+	
+	//new property
+
+	private boolean ishaveimage;
+	private String path;
 
 	public long getId() {
 		return id;
@@ -73,8 +78,17 @@ public class GenericArticle {
 		this.state = state;
 	}
 
+	
+	public boolean isIshaveimage() {
+		return ishaveimage;
+	}
+
+	public void setIshaveimage(boolean ishaveimage) {
+		this.ishaveimage = ishaveimage;
+	}
+
 	public GenericArticle(String title, Date date, String content, User user,
-			int category, boolean state) {
+			int category, boolean state, boolean ishaveimage,String path) {
 		super();
 		this.title = title;
 		this.date = date;
@@ -82,11 +96,25 @@ public class GenericArticle {
 		this.user = user;
 		this.category = category;
 		this.state = state;
+		this.ishaveimage=ishaveimage;
+		this.path=path;
 	}
 
 	public GenericArticle() {
 		
 	}
+
+	
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
+	
 	
 	
 }
