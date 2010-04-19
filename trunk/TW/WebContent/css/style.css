@@ -7,14 +7,9 @@ body {
 
 #banner {
 	width:1000px;
-	height:270px;
+	height:180px;
 }
 
-#menu {
-	width:1000px;
-	height:50px;
-	background-color:#FFF;
-}
 
 #navigation {
 	width:792px;
@@ -23,6 +18,176 @@ body {
 	margin:6px 0 6px 6px;
 	float:left;
 }
+
+#nav
+{
+	width: 973px;
+	height: 35px;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+#nav li
+{
+	list-style: none;
+	margin: 0;
+	float: left;
+	position: relative;
+}
+
+
+
+#nav a
+{
+	display: block;
+	width: 120px;
+	height: 35px;
+	float: left;
+	text-indent: -9000px;
+	outline: 0;
+	background: transparent url(/TW/img/nav.png) no-repeat 0 bottom;
+}
+
+#nav .home a
+{
+	width: 122px;
+}
+
+#nav .about_us a
+{
+	background-position: -122px bottom;
+}
+
+#nav .products a
+{
+	background-position: -242px bottom;
+}
+
+#nav .customers a
+{
+	background-position: -362px bottom;
+}
+
+#nav .news a
+{
+	background-position: -482px bottom;
+}
+
+#nav .community a
+{
+	background-position: -602px bottom;
+}
+
+#nav .career a
+{
+	background-position: -722px bottom;
+}
+
+#nav .contact a
+{
+	background-position: -842px bottom;
+	width: 131px;
+}
+
+
+
+#nav .home a:hover
+{
+	background-position: 0 -40px;
+}
+
+#nav .about_us a:hover
+{
+	background-position: -122px -40px;
+}
+
+#nav .products a:hover, #nav .products:hover a
+{
+	background-position: -242px -40px;
+}
+
+#nav .customers a:hover
+{
+	background-position: -362px -40px;
+}
+
+#nav .news a:hover
+{
+	background-position: -482px -40px;
+}
+
+#nav .community a:hover
+{
+	background-position: -602px -40px;
+}
+
+#nav .career a:hover
+{
+	background-position: -722px -40px;
+}
+
+#nav .contact a:hover
+{
+	background-position: -842px -40px;
+}
+
+
+
+#nav .home a.active, #nav .home a.active:hover
+{
+	background-position: 0 0;
+}
+
+#nav .about_us a.active, #nav .about_us a.active:hover
+{
+	background-position: -122px 0;
+}
+
+#nav .products a.active, #nav .products a.active:hover
+{
+	background-position: -242px 0;
+}
+
+#nav .customers a.active, #nav .customers a.active:hover
+{
+	background-position: -362px 0;
+}
+
+#nav .news a.active, #nav .news a.active:hover
+{
+	background-position: -482px 0;
+}
+
+#nav .community a.active, #nav .community a.active:hover
+{
+	background-position: -602px 0;
+}
+
+#nav .career a.active, #nav .career a.active:hover
+{
+	background-position: -722px -0;
+}
+
+#nav .contact a.active, #nav .contact a.active:hover
+{
+	background-position: -842px 0;
+}
+
+
+
+#nav .contact a.active2
+{
+	background-position: -842px 0;
+}
+
+
+
+
+
 
 #search {
 	width:186px;

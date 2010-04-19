@@ -4,15 +4,16 @@
 <html>
 <head>
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" />
-<title>2</title>
+<script src="/TW/js/swfobject_modified.js" type="text/javascript"></script>
+<title>南京大学共青团委</title>
 
 </head>
 <body>
 
 <div id="banner"><tiles:insertAttribute name="banner" /></div>
-<div id="menu"><div id="navigation">
-<tiles:insertAttribute name="navigation" /></div>
-<div id="search"><tiles:insertAttribute name="search" /></div>
+<div id="menu">
+<tiles:insertAttribute name="navigation" />
+<tiles:insertAttribute name="search" />
 </div>
 <div id="page">
 	<div id="sidebar">
