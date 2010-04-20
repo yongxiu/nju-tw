@@ -2,17 +2,17 @@
 
 
 <object id="FlashID"
-	classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000"
-	height="180">
-	<param name="movie" value="/TW/flash/banner.swf" />
+	classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="986"
+	height="128">
+	<param name="movie" value="/TW/flash/flash_player.swf" />
 	<param name="quality" value="high" />
 	<param name="wmode" value="opaque" />
 	<param name="swfversion" value="6.0.65.0" />
 	<!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
 	<param name="expressinstall" value="Scripts/expressInstall.swf" />
 	<!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 --> <!--[if !IE]>--> <object
-		type="application/x-shockwave-flash" data="/TW/flash/banner.swf"
-		width="1000" height="180"> <!--<![endif]-->
+		type="application/x-shockwave-flash" data="/TW/flash/flash_player.swf"
+		width="986" height="128"> <!--<![endif]-->
 		<param name="quality" value="high" />
 		<param name="wmode" value="opaque" />
 		<param name="swfversion" value="6.0.65.0" />
