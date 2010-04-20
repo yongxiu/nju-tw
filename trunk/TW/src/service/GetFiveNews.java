@@ -42,7 +42,7 @@ public class GetFiveNews {
 	public static void main(String[] args){
 		ArrayList<GenericArticle> five=new GetFiveNews().getFiveNews();
 		for(GenericArticle article:five){
-			System.out.println(article.getId()+":"+article.getDate());
+			System.out.println(article.getId()+":"+article.getDate()+":"+article.getTitle());
 	}
 		
 		

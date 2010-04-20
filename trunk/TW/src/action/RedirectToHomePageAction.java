@@ -8,6 +8,8 @@ public class RedirectToHomePageAction extends ActionSupport{
 	 */
 	//redirect to home page
 	public String execute(){
+		
+		
 		return SUCCESS;
 	}
 }
