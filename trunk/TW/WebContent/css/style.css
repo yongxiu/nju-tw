@@ -1,8 +1,8 @@
-body {
-	width:1000px;
-	height:995px;
-	margin:0 auto 100px auto;
-	background:  url(/TW/img/bg-body.png) repeat-x;
+body {	
+	text-align: center; 
+	margin: 0 auto;
+	position: relative;
+	background:  #E2E2E2 url(/TW/img/bg-body.png) repeat-x;
 }
 
 #menu {
@@ -149,6 +149,7 @@ body {
 	border:1px solid #dcebf7;
 	margin:6px 6px 6px 6px;
 	float:left;
+	padding:0;
 }
 
 #page {
@@ -180,12 +181,13 @@ body {
 	background-image:url(/TW/img/sidebar-head-3.jpg);
 }
 
-#sidebar .sidebar-p {
+#sidebar .sidebar-p {	
 	height:150px;
 	width:186px;
 	border:1px solid #dcebf7;
 	border-top-width:3px;
 	margin:0 6px 6px 6px;
+	padding:auto;
 }
 
 #content {
@@ -236,5 +238,13 @@ body {
 #copyright {
 	width:1000px;
 	height:75px;
-	background-image:url(/TW/img/copyright.jpg);
+	padding: 15px 30px 15px;
+	position: relative;
+	color: #848484;
+	font-size: 14px;
+}
+#copyright a
+{
+	color: #848484;
+	padding: 6px 15px 0 0;
 }

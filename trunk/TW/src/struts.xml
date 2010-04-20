@@ -23,6 +23,12 @@
 			<result name="input" type="tiles">index</result>
 		</action>
 		
+		<!-- updateNews -->
+		<action name="UpdateNewsAction" class="action.UpdateNewsAction">
+			<result name="success" >/component/news.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
 		<!-- Search Article -->
 		<action name="SearchAction" class="action.SearchAction">
 			<result name="success" type="tiles">list</result>
