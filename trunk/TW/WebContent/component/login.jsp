@@ -12,7 +12,7 @@
 		</tr>
 		<tr>
 			<td>
-			<button type="submit" class="positive" name="Submit">Login</button>
+			<s:submit type="image" name="search" src="/TW/img/logoin.gif"  ></s:submit>
 			</td>
 		</tr>
 	</table>
