@@ -19,7 +19,7 @@
 	<div id="sidebar">
 		<div id="unsure1">
 			<div class="sidebar-h"></div>
-			<div class="sidebar-p">unsure1</div>
+			<div class="sidebar-p"><tiles:insertAttribute name="topic" /></div>
 		</div>
 		<div id="login">
 			<div class="sidebar-h"></div>
@@ -35,7 +35,7 @@
 		<div id="news">
 			<div id="news1" class="subnews">
 				<div class="news-h"></div>
-				<div class="news-p">news1</div>
+				<div class="news-p"><tiles:insertAttribute name="news" /></div>
 			</div>
 			<div id="news2" class="subnews">
 				<div class="news-h"></div>
