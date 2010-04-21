@@ -38,6 +38,12 @@
 		<action name="DetailArticleAction" class="action.DetailArticleAction">
 			<result name="success" type="tiles">detail</result>
 		</action>
+		
+		<!-- Files Upload -->
+		<action name ="FileUploadAction" class  ="action.FileUploadAction">
+            <!--  interceptor-ref name ="fileUploadStack"/>-->
+            <result name="success" type="tiles">index</result>
+        </action> 
 	</package>
 </struts>
 
