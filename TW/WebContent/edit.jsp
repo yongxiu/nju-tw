@@ -11,7 +11,9 @@
 <textarea  name="content" id="content" class="ckeditor" rows="16" cols="100"></textarea>
 <script type="text/javascript">   
         CKEDITOR.replace('content',{ 
-filebrowserImageUploadUrl : '<%=request.getContextPath()%>/uploader?Type=Image'
+        	filebrowserUploadUrl : '<%=request.getContextPath()%>/uploader?Type=File',
+			filebrowserImageUploadUrl : '<%=request.getContextPath()%>/uploader?Type=Image',
+			filebrowserFlashUploadUrl : '<%=request.getContextPath()%>/uploader?Type=Flash'
         });   
 </script> 
 </body>
