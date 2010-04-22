@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
+<body>
 <s:form action="LoginAction.do">
 	<table align="center" cellpadding="1" cellspacing="1" class="form">
 		<tr>
@@ -18,4 +20,6 @@
 	</table>
 
 </s:form>
+</body>
+</html>
 

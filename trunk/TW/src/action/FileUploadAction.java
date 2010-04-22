@@ -18,7 +18,9 @@ public class FileUploadAction extends ActionSupport  {
     private static final int BUFFER_SIZE = 16 * 1024 ;
    
     private File myFile;
-    private String contentType;
+   
+
+	private String contentType;
     private String fileName;
     private String imageFileName;
     private String caption;
@@ -34,6 +36,9 @@ public class FileUploadAction extends ActionSupport  {
     public void setMyFile(File myFile)  {
         this .myFile = myFile;
    } 
+    public File getMyFile() {
+		return myFile;
+	}
    
     public String getImageFileName()  {
         return imageFileName;
