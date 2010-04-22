@@ -11,6 +11,9 @@ public class Organization {
 	
 	private String department;
 	
+	//1 means shujing  ;  2 means neibujinggou  ; 3 means xiashujigou
+	private int category;
+	
 	public int getId() {
 		return id;
 	}
@@ -33,6 +36,16 @@ public class Organization {
 
 	public void setDepartment(String department) {
 		this.department = department;
+	}
+
+	
+	
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		this.category = category;
 	}
 
 	public Organization(String content, String department) {

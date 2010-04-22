@@ -42,9 +42,17 @@
 		<!-- Files Upload -->
 		<action name ="FileUploadAction" class  ="action.FileUploadAction">
             <!--  interceptor-ref name ="fileUploadStack"/>-->
-            <result name="success" type="tiles">index</result>
+            <result name="success" >/page/loginSuccess.jsp</result>
+            <result name="input" >/FileUpload.jsp</result>
+            
         </action> 
+        
+        <!--  List organization -->
+        <action name="OrgnizationAction" class="action.OrgnizationAction">
+        	<result name="success">/page/organization.jsp</result>
+        </action>
 	</package>
+	
 </struts>
 
     

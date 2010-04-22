@@ -15,5 +15,7 @@
 		<property name="content" column="content"  type="string"/>
 		
 		<property name="department" column="department" type="string"/>
+		
+		<property name="category" column="category" type="int"></property>
 	</class>
 </hibernate-mapping>
