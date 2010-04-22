@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<ul id="nav"> 
+<ul id="m_nav"> 
 	  <li class="sy" ><a href="###" title="首页" class="active"><span>sy</span></a></li> 
 	  <li class="zz"><a href="OrgnizationAction.do" title="组织结构" /><span>zz</span></a></li> 
 	  <li class="jd"><a href="###" title="焦点新闻"><span>jd</span></a></li> 
