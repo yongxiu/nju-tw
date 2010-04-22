@@ -222,7 +222,7 @@ body {
 	width:786px;
 	border:1px solid #e0e0e0;
 	border-top:none;
-	height:334px;
+	height:340px;
 	padding-left:2px;	
 	float:left;
 }
@@ -285,7 +285,7 @@ body {
 
 <!--For picNews -->
 #nav {
-	BACKGROUND: url(/TW/picNewsImg/loadsmall.gif)  no-repeat 320px 100px; OVERFLOW: hidden; WIDTH: 780px; POSITION: relative; HEIGHT: 330px
+	BACKGROUND: url(/TW/picNewsImg/loadsmall.gif)  no-repeat 330px 100px; OVERFLOW: hidden; WIDTH: 780px; POSITION: relative; HEIGHT: 330px
 }
 #nav UL {
 	Z-INDEX: 999; LEFT: 3px; BOTTOM: 0px; POSITION: absolute; TEXT-ALIGN: left
