@@ -47,10 +47,15 @@
             
         </action> 
         
-        <!--  List organization -->
+        <!-- List organization -->
         <action name="OrgnizationAction" class="action.OrgnizationAction">
         	<result name="success">/page/organization.jsp</result>
         </action>
+        <!-- List organization Details -->
+        <action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
+        	<result name="success">/page/orgList.jsp</result>
+        </action>
+        
 	</package>
 	
 </struts>
