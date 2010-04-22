@@ -11,9 +11,10 @@
 <body>
 <div id="container">
 <div id="banner"><tiles:insertAttribute name="banner" /></div>
-<div id="menu"><tiles:insertAttribute name="navigation" /> <tiles:insertAttribute
-	name="search" />
-<div id="blank-h1"></div>
+<div id="menu">
+<tiles:insertAttribute name="navigation" /> 
+<tiles:insertAttribute name="search" />
+<div id="blank-h1"> </div>
 </div>
 <div id="page">
 <div id="sidebar">
@@ -53,11 +54,8 @@
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
 </div>
 </div>
-
 </div>
 <div id="linker"><tiles:insertAttribute name="linker" /></div>
-
-
 <div id="copyright"><tiles:insertAttribute name="copyRight" /></div>
 <div id="blank-h2"></div>
 </div>
