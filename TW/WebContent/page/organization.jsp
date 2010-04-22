@@ -14,10 +14,18 @@
 			<td>书记室</td>
 		</tr>
 		
-		<s:iterator value="org1">
+		<s:iterator value="org1" id="org">
 			<tr>
 				<td>
-					<s:property value="department"/>
+					
+					<s:set name="id"> <s:property value="id"/> </s:set>
+					<a href="<s:url action="OrganizationDetailAction.do">
+						<s:param name="id" value="#id"/>
+					</s:url>">
+						<s:property value="department"/>
+					</a>
+					
+					
 				</td>
 			</tr>
 		</s:iterator>
@@ -33,7 +41,13 @@
 		<s:iterator value="org2">
 			<tr>
 				<td>
-					<s:property value="department"/>
+					<s:set name="id"> <s:property value="id"/> </s:set>
+					<a href="<s:url action="OrganizationDetailAction.do">
+						<s:param name="id" value="#id"/>
+					</s:url>">
+						<s:property value="department"/>
+					</a>
+					
 				</td>
 			</tr>
 		</s:iterator>
@@ -49,7 +63,13 @@
 		<s:iterator value="org3">
 			<tr>
 				<td>
-					<s:property value="department"/>
+					<s:set name="id"> <s:property value="id"/> </s:set>
+					<a href="<s:url action="OrganizationDetailAction.do">
+						<s:param name="id" value="#id"/>
+					</s:url>">
+						<s:property value="department"/>
+					</a>
+					
 				</td>
 			</tr>
 		</s:iterator>
