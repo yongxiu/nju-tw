@@ -3,9 +3,15 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-
+	
 
 	<package name="default" extends="tiles-default">
+		<!-- User interceptor -->
+		<interceptors>
+			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor"/>
+		</interceptors>
+		
+	
 		<!-- Redirect to home page -->
 		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
 			<result name="success" type="tiles">index</result>
@@ -14,7 +20,7 @@
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
 			<result name="success" type="tiles">userIndex</result>
-			<result name="input" type="tiles">index</result>
+			<result name="input" >/component/login.jsp</result>
 		</action>
 		
 		<!-- ipCount -->
@@ -53,6 +59,8 @@
         </action>
         <!-- List organization Details -->
         <action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
+        	<!-- interceptor -->
+        	<interceptor-ref name="UserInterceptor"/>
         	<result name="success">/page/orgList.jsp</result>
         </action>
         

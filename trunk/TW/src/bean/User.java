@@ -13,6 +13,8 @@ public class User {
 	
 	private String password;
 	
+	private String name;
+	
 	private int role;
 	
 	private Set<GenericArticle> articles;
@@ -53,11 +55,12 @@ public class User {
 		this.role = role;
 	}
 
-	public User(String username, String password, int role) {
+	public User(String username, String password, String name,int role) {
 		
 		this.username = username;
 		this.password = password;
 		this.role = role;
+		this.name=name;
 	}
 
 	public User() {
@@ -78,6 +81,14 @@ public class User {
 
 	public void setFiles(Set<File> files) {
 		this.files = files;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

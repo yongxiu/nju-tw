@@ -5,12 +5,25 @@
 <s:form action="LoginAction.do">
 	<table align="center" cellpadding="1" cellspacing="1" class="form">
 		<tr>
+    	 	<s:actionerror/>
+     		<s:actionmessage name="message" value="message"/>
+		</tr>
+		<tr>
+			<td>
+				<s:fielderror></s:fielderror>
+			</td>
+		</tr>
+		<tr>
 			<td><s:textfield name="username" label="用户名" size="10"
-				labelposition="left"></s:textfield></td>
+				labelposition="left"></s:textfield>
+			</td>
+			
 		</tr>
 		<tr>
 			<td ><s:password name="password" label="密    码" size="11"
-				labelposition="left"></s:password></td>
+				labelposition="left"></s:password>
+			</td>
+		
 		</tr>
 		<tr>
 			<td>
