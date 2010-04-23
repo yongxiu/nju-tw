@@ -1,5 +1,7 @@
 package action;
 
+import interceptor.UserInterceptor;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -12,6 +14,9 @@ import java.util.Set;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import service.ValidateUser;
+
+import FinalValue.UserRole;
 import bean.Article;
 import bean.GenericArticle;
 import bean.User;
@@ -23,16 +28,57 @@ import dao.GenericArticleDao;
 import dao.UserDao;
 
 
-public class LoginAction extends ActionSupport{
+public class LoginAction extends ActionSupport implements SessionAware{
 	
 	private String username;
 	private String password;
+	private int role;
+	private String name;
+	private User user;
+	
+	
+	
+	@SuppressWarnings("unchecked")
+	private Map session;
 	
 	private static final long serialVersionUID = 1L;
 
+	@SuppressWarnings("unchecked")
 	public String execute()throws Exception {
-		if(username.equals("1")&&password.equals("1"))
-			return SUCCESS;	
+			 ValidateUser validateUser=new ValidateUser();
+			 //judge if username or password is null
+			 if(getUsername()==null || getUsername().equals("")){
+				 System.out.println("username is null");
+				 addFieldError("usernameError", "用户名不能为空");
+				 return INPUT;
+			 }
+			 
+			 if(getPassword()==null || getPassword().equals("")){
+				 System.out.println("password is null");
+				 addFieldError("passwordError", "密码不能为空");
+				 return INPUT;
+			 }
+			 
+			 //validate user
+		
+			 User user=validateUser.validate(getUsername(),getPassword());
+			
+			 if(user!=null){
+				role=user.getRole();
+				name=user.getName();
+				System.out.println(role+ " : "+user.getUsername());
+				
+				//session.put(UserInterceptor.USER_KEY,getUsername());
+				System.out.println(name+" is login");
+				return SUCCESS;
+			 }
+			 else {
+				addActionError("您输入的帐户或密码错误，请重新输入!");
+				return INPUT;
+			}
+		
+		
+	
 		
 		/**
 		 * test the hibernate CRUD
@@ -58,32 +104,29 @@ public class LoginAction extends ActionSupport{
 //		
 //		articleDao.create(article1);
 //		
-		GenericArticleDao dao=new GenericArticleDao();
-		List<GenericArticle> articles=dao.getAllEntity();
-		List<GenericArticle> news=new ArrayList<GenericArticle>();
-		for(GenericArticle a:articles){
-			if(a.getCategory()==0)
-				news.add(a);
-		}
-		
-		for(GenericArticle n:news)
-		System.out.println(n.getCategory()+":"+n.getContent());
-		
-		
-		
-		
-	
-		
-		return INPUT;
+//		GenericArticleDao dao=new GenericArticleDao();
+//		List<GenericArticle> articles=dao.getAllEntity();
+//		List<GenericArticle> news=new ArrayList<GenericArticle>();
+//		for(GenericArticle a:articles){
+//			if(a.getCategory()==0)
+//				news.add(a);
+//		}
+//		
+//		for(GenericArticle n:news)
+//		System.out.println(n.getCategory()+":"+n.getContent());
+//		
+//		
+//		
+//		
+//	
+//		
+//		return INPUT;
 		
 		
 		
 	}
 
-	public void setSession(Map arg0) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	public String getUsername() {
 		return username;
@@ -101,5 +144,50 @@ public class LoginAction extends ActionSupport{
 		this.password = password;
 	}
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+
+	public Map getSession() {
+		return session;
+	}
+
+
+
+	public void setSession(Map session) {
+		this.session = session;
+	}
+
+
+
+	public int getRole() {
+		return role;
+	}
+
+
+
+	public void setRole(int role) {
+		this.role = role;
+	}
+
+
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 	
 }

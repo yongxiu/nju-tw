@@ -39,5 +39,7 @@ public class UserDao extends HibernateGenericDao<User,Long>{
 		session.close();
 		return articles;
 	}
+	
+	
 
 }
