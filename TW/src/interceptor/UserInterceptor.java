@@ -8,7 +8,7 @@ public class UserInterceptor implements Interceptor{
 	private String message;
 
 	public static final String USER_KEY="UserKey";
-	@Override
+	
 	public String intercept(ActionInvocation actionInvocation) throws Exception {
 		// TODO Auto-generated method stub
 		String username=(String) actionInvocation.getInvocationContext().getSession().get(USER_KEY);
@@ -16,20 +16,20 @@ public class UserInterceptor implements Interceptor{
 				return actionInvocation.invoke();
 			}
 			else {
-				this.setMessage("ÄúÃ»ÓÐµÇÂ½È¨ÏÞ");
+				this.setMessage("ï¿½ï¿½Ã»ï¿½Ðµï¿½Â½È¨ï¿½ï¿½");
 				return Action.INPUT;
 			}
 	}
 	
 	
 	
-	@Override
+
 	public void destroy() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+
 	public void init() {
 		// TODO Auto-generated method stub
 		
