@@ -54,7 +54,6 @@
 	</servlet-mapping>
 
 
-
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
@@ -72,6 +71,7 @@
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
+	
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>*.jsp</url-pattern>
@@ -80,6 +80,16 @@
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
+	
+	<display-name>Struts 2 Fileupload</display-name> 
+
+    <filter> 
+        <filter-name>struts-cleanup</filter-name> 
+        <filter-class> 
+            org.apache.struts2.dispatcher.ActionContextCleanUp
+        </filter-class> 
+    </filter> 
+
 	<context-param>
 		<param-name>
 			org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>

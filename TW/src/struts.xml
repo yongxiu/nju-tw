@@ -47,11 +47,15 @@
 		
 		<!-- Files Upload -->
 		<action name ="FileUploadAction" class  ="action.FileUploadAction">
-            <!--  interceptor-ref name ="fileUploadStack"/>-->
-            <result name="success" >/page/loginSuccess.jsp</result>
+            <interceptor-ref name ="fileUploadStack"/>
+            <result name="success" type="tiles">userIndex</result>
             <result name="input" >/FileUpload.jsp</result>
-            
         </action> 
+        
+        <action name="upload" class="action.UploadAction">
+			<!--上传成功时返回的视图页面-->
+			<result name="success">/show.jsp</result>
+		</action>
         
         <!-- List organization -->
         <action name="OrgnizationAction" class="action.OrgnizationAction">
