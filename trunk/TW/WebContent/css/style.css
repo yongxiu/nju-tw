@@ -1,10 +1,15 @@
 body {
+	
 	width:988px;
 	margin:50px auto 0 auto;
     text-align:center;
 	background-image:url(/TW/img/bg.jpg);
 	background-repeat:no-repeat;
 	background-position:center top;
+}
+a {
+text-decoration:none;
+font-size:15px;
 }
 #container {
 	width:986px;	
@@ -195,6 +200,7 @@ body {
 #sidebar .sidebar-p {
 	height:154px;
 	width:186px;
+	padding:auto auto;
 	border:1px solid #e0e0e0;
 	border-top:none;
 	margin:0 6px 6px 0;
@@ -233,7 +239,7 @@ body {
 	float:left;
 }
 
-#news .subnews {
+#news .subnews {	
 	width:394px;
 	height:206px;
 	float:left;
@@ -249,11 +255,13 @@ body {
 #news .news-p {
 	height:160px;
 	width:392px;
+	
 	border:1px solid #e0e0e0;
 	border-top:none;
 	margin:0 0 6px 0;
 	float:left;
 }
+
 
 #blank-v {
 	width:6px;
