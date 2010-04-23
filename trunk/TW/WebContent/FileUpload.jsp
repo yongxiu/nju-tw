@@ -12,9 +12,8 @@
     <s:fielderror />
 </div>
 
-    <s:form action ="FileUploadAction.do"> 
-        <s:file name ="myFile" label ="Image File"/> 
-        <s:textfield name ="caption" label ="Caption"/>        
+    <s:form action ="FileUploadAction.do"  method="post" enctype ="multipart/form-data"> 
+        <s:file name ="myFile" label ="Image File"/>       
         <s:submit /> 
     </s:form> 
 </body> 
