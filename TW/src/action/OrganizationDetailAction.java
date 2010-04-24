@@ -14,6 +14,7 @@ public class OrganizationDetailAction extends ActionSupport{
 	private Organization org;
 	
 	public String execute(){
+		System.out.println("into organizationDetail action");
 		OrganizationDao dao=new OrganizationDao();
 		org=dao.getById(getId());
 		System.out.println(org.getId());

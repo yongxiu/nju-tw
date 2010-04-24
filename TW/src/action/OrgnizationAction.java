@@ -10,6 +10,11 @@ import dao.OrganizationDao;
 
 public class OrgnizationAction extends ActionSupport{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	//所有的组织
 	private ArrayList<Organization> allOrg;
 	
