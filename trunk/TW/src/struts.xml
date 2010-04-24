@@ -9,6 +9,7 @@
 		<!-- User interceptor -->
 		<interceptors>
 			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor"/>
+		
 		</interceptors>
 		
 	
@@ -64,7 +65,7 @@
         <!-- List organization Details -->
         <action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
         	<!-- interceptor -->
-        	<interceptor-ref name="UserInterceptor"/>
+        	
         	<result name="success">/page/orgList.jsp</result>
         </action>
         
