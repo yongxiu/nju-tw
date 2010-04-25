@@ -82,6 +82,10 @@ public class UploadAction extends ActionSupport {
 		while ((len = fis.read(buffer)) > 0) {
 			fos.write(buffer, 0, len);
 		}
+		
+		fos.flush();
+		fos.close();
+		fis.close();
 
 		return SUCCESS;
 	}

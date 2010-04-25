@@ -53,7 +53,15 @@
 		<url-pattern>/uploader</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>CommonUpload</servlet-name>
+		<servlet-class>servlet.CommonUpload</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommonUpload</servlet-name>
+		<url-pattern>/CommonUpload</url-pattern>
+	</servlet-mapping>
+	
 	<filter>
 		<filter-name>struts2</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
@@ -66,19 +74,23 @@
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>*.do</url-pattern>
+		
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ERROR</dispatcher>
+		
 	</filter-mapping>
 	
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>*.jsp</url-pattern>
+		<!--  
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ERROR</dispatcher>
+		-->
 	</filter-mapping>
 	
 	<display-name>Struts 2 Fileupload</display-name> 
