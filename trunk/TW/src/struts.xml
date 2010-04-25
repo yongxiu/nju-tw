@@ -49,7 +49,7 @@
 		<!-- Files Upload -->
 		<action name ="FileUploadAction" class  ="action.FileUploadAction">
             <interceptor-ref name ="fileUploadStack"/>
-            <result name="success" type="tiles">userIndex</result>
+            <result name="success" type="tiles">index</result>
             <result name="input" >/FileUpload.jsp</result>
         </action> 
         
