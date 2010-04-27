@@ -3,16 +3,16 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	
+	<constant name="struts.multipart.maxSize" value="20971520" />
 
 	<package name="default" extends="tiles-default">
 		<!-- User interceptor -->
 		<interceptors>
-			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor"/>
-		
+			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
+
 		</interceptors>
-		
-	
+
+
 		<!-- Redirect to home page -->
 		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
 			<result name="success" type="tiles">index</result>
@@ -21,56 +21,60 @@
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
 			<result name="success" type="tiles">userIndex</result>
-			<result name="input" >/component/login.jsp</result>
+			<result name="input">/component/login.jsp</result>
 		</action>
-		
+
 		<!-- ipCount -->
 		<action name="IpcountAction" class="action.IpcountAction">
-			<result name="success" >/component/ipHolder.jsp</result>
+			<result name="success">/component/ipHolder.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
-		
+
 		<!-- updateNews -->
 		<action name="UpdateNewsAction" class="action.UpdateNewsAction">
-			<result name="success" >/component/news.jsp</result>
+			<result name="success">/component/news.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
-		
+
 		<!-- Search Article -->
 		<action name="SearchAction" class="action.SearchAction">
 			<result name="success" type="tiles">list</result>
 		</action>
-		
+
 		<!-- List Article -->
 		<action name="DetailArticleAction" class="action.DetailArticleAction">
 			<result name="success" type="tiles">detail</result>
 		</action>
-		
+
 		<!-- Files Upload -->
-		<action name ="FileUploadAction" class  ="action.FileUploadAction">
-            <interceptor-ref name ="fileUploadStack"/>
-            <result name="success" type="tiles">index</result>
-            <result name="input" >/FileUpload.jsp</result>
-        </action> 
-        
-        <action name="upload" class="action.UploadAction">
-			<!--上传成功时返回的视图页面-->
-			<result name="success">/show.jsp</result>
+		<action name="FileUploadAction" class="action.FileUploadAction">
+			<result name="success" type="redirect">redirectToHomePage.do</result>
+			<result name="input">/FileUpload.jsp</result>
 		</action>
-        
-        <!-- List organization -->
-        <action name="OrgnizationAction" class="action.OrgnizationAction">
-        	<result name="success">/page/organization.jsp</result>
-        </action>
-        <!-- List organization Details -->
-        <action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
-        	<!-- interceptor -->
-        	
-        	<result name="success">/page/orgList.jsp</result>
-        </action>
-        
+
+		<action name="upload" class="action.UploadAction">
+			<!--上传成功时返回的视图页面-->
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/gif,image/jpeg</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success">/show.jsp</result>
+			<result name="input">/upload.jsp</result>
+		</action>
+
+		<!-- List organization -->
+		<action name="OrgnizationAction" class="action.OrgnizationAction">
+			<result name="success">/page/organization.jsp</result>
+		</action>
+		<!-- List organization Details -->
+		<action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
+			<!-- interceptor -->
+
+			<result name="success">/page/orgList.jsp</result>
+		</action>
+
 	</package>
-	
+
 </struts>
 
     

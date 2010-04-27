@@ -2,6 +2,7 @@ package action;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
@@ -11,13 +12,15 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class FileUploadAction extends ActionSupport {
 	private static final long serialVersionUID = 572146812454l;
-	private static final int BUFFER_SIZE = 16 * 1024;
 
 	private File myFile;
 	private String contentType;
 	private String fileName;
 	private String imageFileName;
 	private String caption;
+	
+	private static ArrayList<String> allowedExtensions;// 允许的上传文件扩展名
+	private static ArrayList<String> deniedExtensions;// 阻止的上传文件扩展名
 
 	public void setMyFileContentType(String contentType) {
 		this.contentType = contentType;
@@ -48,23 +51,60 @@ public class FileUploadAction extends ActionSupport {
 		int pos = fileName.lastIndexOf(".");
 		return fileName.substring(pos);
 	}
+	
+	private boolean extIsAllowed(String ext) {
+		ext = ext.toLowerCase();
+		if (allowedExtensions.size() == 0) {
+			if (deniedExtensions.contains(ext)) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		if (deniedExtensions.size() == 0) {
+			if (allowedExtensions.contains(ext)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	private ArrayList<String> stringToArrayList(String str) {
+		String[] strArr = str.split("\\|");
+		ArrayList<String> tmp = new ArrayList<String>();
+		if (str.length() > 0) {
+			for (int i = 0; i < strArr.length; ++i) {
+				tmp.add(strArr[i].toLowerCase());
+			}
+		}
+		return tmp;
+	}
 
 	@Override
 	public String execute() throws Exception {
 
-		imageFileName = new Date().getTime() + getExtention(fileName);
-		File imageFile = new File(ServletActionContext.getServletContext()
-				.getRealPath("/UserFiles")
-				+ "/" + imageFileName);
-		try {
-			FileUtils.copyFile(myFile, imageFile);
-		} catch (IOException e) {
-			addActionError(e.getMessage());
+		allowedExtensions = new ArrayList<String>();
+
+		deniedExtensions = stringToArrayList("html|htm|php|php2|php3|php4|php5|phtml|pwml|inc|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi|htaccess|asis|ftl");
+		if(extIsAllowed(getExtention(fileName).substring(1)))
+		{
+			imageFileName = new Date().getTime() + getExtention(fileName);
+			File imageFile = new File(ServletActionContext.getServletContext()
+					.getRealPath("/UserFiles")
+					+ "/" + imageFileName);
+			try {
+				FileUtils.copyFile(myFile, imageFile);
+			} catch (IOException e) {
+				addActionError(e.getMessage());
+				return INPUT;
+			}
+
+			return SUCCESS;
+		}
+		else {
 			return INPUT;
 		}
-
-		// copy(myFile, imageFile);
-		// myFile.delete();
-		return SUCCESS;
 	}
 }
