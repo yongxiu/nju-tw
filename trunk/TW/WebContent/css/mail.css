@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+.invalid{
+	border:2px #F00 ridge;	
+}
+
+body{
+	margin:auto;
+}
+
+.header{
+	background:url(../img/mail.png) bottom left no-repeat #D8FEF3;
+	height:50px;
+	width:550px;
+	padding-left:80px;
+	font-size:35px;
+	line-height:45px;
+	text-align:left;
+	margin-left:-10px;
+	position:relative;
+}
+.return{
+	position:absolute;
+	right:0px;
+	top:0px;	
+}
+
+#wrapper{
+	background:#EDFDFE;
+	width:610px;
+	height:600px;
+	overflow:hidden;
+	padding:0 10px 0 10px;
+}
+.in{
+	background:#FEFFFB;
+	width:600px;
+	height:20px;
+	font-size:14px;
+}
+
+.in:active{
+	border:#FF6 dotted 2px ;
+}
+
+.tr{
+	margin-top:10px;	
+	text-align:left;
+}
+#content{
+	height:300px;
+}
+
+.subbutton{
+	width:50px;
+	height:30px;
+	background:#BFE666;
+	border:none;
+}

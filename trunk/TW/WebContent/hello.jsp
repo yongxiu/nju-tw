@@ -20,5 +20,6 @@ img,div {
 <a href='IpcountAction.do'> 计数器</a>
 
 <p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>
+<p><a href='<%=request.getContextPath()%>/mail.jsp'>发送邮件测试，管理员邮箱为njutuanweiadmin@126.com</a></p>
 </body>
 </html>
