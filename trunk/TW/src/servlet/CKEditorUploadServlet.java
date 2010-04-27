@@ -15,7 +15,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private static String baseDir;// CKEditor的根目录
 	private static boolean debug = false;// 是否debug模式
 	private static boolean enabled = false;// 是否开启CKEditor上传
@@ -23,6 +23,7 @@ public class CKEditorUploadServlet extends HttpServlet {
 	private static Hashtable<String, ArrayList<String>> deniedExtensions;// 阻止的上传文件扩展名
 	private static SimpleDateFormat dirFormatter;// 目录命名格式:yyyyMM
 	private static SimpleDateFormat fileFormatter;// 文件命名格式:yyyyMMddHHmmssSSS
+
 	/**
 	 * Servlet初始化方法
 	 */
@@ -52,22 +53,27 @@ public class CKEditorUploadServlet extends HttpServlet {
 		deniedExtensions = new Hashtable<String, ArrayList<String>>(3);
 		// 从web.xml中读取配置信息
 		allowedExtensions.put("File",
-		stringToArrayList(getInitParameter("AllowedExtensionsFile")));
+				stringToArrayList(getInitParameter("AllowedExtensionsFile")));
 		deniedExtensions.put("File",
-		stringToArrayList(getInitParameter("DeniedExtensionsFile")));
+				stringToArrayList(getInitParameter("DeniedExtensionsFile")));
 		allowedExtensions.put("Image",
-	stringToArrayList(getInitParameter("AllowedExtensionsImage")));
-		deniedExtensions.put("Image",			stringToArrayList(getInitParameter("DeniedExtensionsImage")));
-		allowedExtensions.put("Flash",			stringToArrayList(getInitParameter("AllowedExtensionsFlash")));
-		deniedExtensions.put("Flash",			stringToArrayList(getInitParameter("DeniedExtensionsFlash")));
+				stringToArrayList(getInitParameter("AllowedExtensionsImage")));
+		deniedExtensions.put("Image",
+				stringToArrayList(getInitParameter("DeniedExtensionsImage")));
+		allowedExtensions.put("Flash",
+				stringToArrayList(getInitParameter("AllowedExtensionsFlash")));
+		deniedExtensions.put("Flash",
+				stringToArrayList(getInitParameter("DeniedExtensionsFlash")));
 		if (debug)
 			System.out
 					.println("---- SimpleUploaderServlet initialization completed ----\r\n");
 	}
+
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doPost(request, response);
 	}
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		if (debug)
@@ -163,18 +169,21 @@ public class CKEditorUploadServlet extends HttpServlet {
 		if (debug)
 			System.out.println("--- END DOPOST ---");
 	}
+
 	/**
 	 * 获取文件名的方法
 	 */
 	private static String getNameWithoutExtension(String fileName) {
 		return fileName.substring(0, fileName.lastIndexOf("."));
 	}
+
 	/**
 	 * 获取扩展名的方法
 	 */
 	private String getExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
 	}
+
 	/**
 	 * 字符串像ArrayList转化的方法
 	 */
@@ -192,14 +201,17 @@ public class CKEditorUploadServlet extends HttpServlet {
 		}
 		return tmp;
 	}
+
 	/**
 	 * 判断扩展名是否允许的方法
 	 */
 
 	private boolean extIsAllowed(String fileType, String ext) {
 		ext = ext.toLowerCase();
-		ArrayList<String> allowList = (ArrayList<String>) allowedExtensions.get(fileType);
-		ArrayList<String> denyList = (ArrayList<String>) deniedExtensions.get(fileType);
+		ArrayList<String> allowList = (ArrayList<String>) allowedExtensions
+				.get(fileType);
+		ArrayList<String> denyList = (ArrayList<String>) deniedExtensions
+				.get(fileType);
 		if (allowList.size() == 0) {
 			if (denyList.contains(ext)) {
 				return false;
