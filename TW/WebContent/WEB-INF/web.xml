@@ -57,9 +57,19 @@
 		<servlet-name>CommonUpload</servlet-name>
 		<servlet-class>servlet.CommonUpload</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
 		<servlet-name>CommonUpload</servlet-name>
 		<url-pattern>/CommonUpload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SendMail</servlet-name>
+		<servlet-class>test.SendMail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendMail</servlet-name>
+		<url-pattern>/SendMail</url-pattern>
 	</servlet-mapping>
 	
 	<filter>
