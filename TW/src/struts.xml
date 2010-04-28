@@ -17,6 +17,10 @@
 		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
 			<result name="success" type="tiles">index</result>
 		</action>
+		
+		<action name="ckupload" class="action.CkeditorUploadAction">
+			<result name="success" type="tiles">index</result>
+		</action>
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
