@@ -58,26 +58,28 @@ public class SendMail extends HttpServlet {
 		String subject = request.getParameter("subject");
 		String content = request.getParameter("content");
 
-		String mailServer = "smtp.qq.com";
+		String mailServer = "smtp.gmail.com";
 
 		try {
 			Properties prop = System.getProperties();
 			prop.put("mail.stmp.host", mailServer);
-			prop.put("mail.stmp.auth", "false");
+			prop.put("mail.stmp.auth", "true");
+			prop.put("mail.smtp.starttls.enable","true");
 
 			Session session = Session.getInstance(prop);
 			session.setDebug(true);
 
 			MimeMessage message = new MimeMessage(session);
 
-			message.setFrom(new InternetAddress("723943634@qq.com"));
+			java.security.Security
+					.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+			message.setFrom(new InternetAddress("njutwproxy@gmail.com"));
 			message.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					"njutuanweiadmin@126.com"));
+					"njutwmail@gmail.com"));
 
 			message.setSubject(subject);
 			message.setText(content + mailfrom);
 
-			// ����Mimemultipart���BodyPart����
 			Multipart mul = new MimeMultipart();
 
 			BodyPart bpart = new MimeBodyPart();
@@ -91,13 +93,13 @@ public class SendMail extends HttpServlet {
 
 			Transport transport = session.getTransport("smtp");
 
-			transport.connect(mailServer, "723943634@qq.com", "huating8232828");
+			transport.connect(mailServer, "njutwproxy@gmail.com", "njutw2010@");
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
 			response.sendRedirect("mail.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();
-			String s = "<script language='Javascript'>alert('0')</script>";
+			String s = "<script language='Javascript'>alert('发送邮件失败，请重试！')</script>";
 			out.println(s);
 		}
 	}
