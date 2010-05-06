@@ -16,7 +16,7 @@ public class FileUploadAction extends ActionSupport {
 	private File myFile;
 	private String contentType;
 	private String fileName;
-	private String imageFileName;
+	private String uploadFileName;
 	private String caption;
 	
 	private static ArrayList<String> allowedExtensions;// 允许的上传文件扩展名
@@ -35,7 +35,7 @@ public class FileUploadAction extends ActionSupport {
 	}
 
 	public String getImageFileName() {
-		return imageFileName;
+		return uploadFileName;
 	}
 
 	public String getCaption() {
@@ -81,19 +81,19 @@ public class FileUploadAction extends ActionSupport {
 		}
 		return tmp;
 	}
+	
+	public FileUploadAction() {
+		allowedExtensions = new ArrayList<String>();
+		deniedExtensions = stringToArrayList("html|htm|php|php2|php3|php4|php5|phtml|pwml|inc|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi|htaccess|asis|ftl");
+	}
 
 	@Override
 	public String execute() throws Exception {
-
-		allowedExtensions = new ArrayList<String>();
-
-		deniedExtensions = stringToArrayList("html|htm|php|php2|php3|php4|php5|phtml|pwml|inc|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi|htaccess|asis|ftl");
-		if(extIsAllowed(getExtention(fileName).substring(1)))
-		{
-			imageFileName = new Date().getTime() + getExtention(fileName);
+		if(extIsAllowed(getExtention(fileName).substring(1))) {
+			uploadFileName = new Date().getTime() + getExtention(fileName);
 			File imageFile = new File(ServletActionContext.getServletContext()
 					.getRealPath("/UserFiles")
-					+ "/" + imageFileName);
+					+ "/" + uploadFileName);
 			try {
 				FileUtils.copyFile(myFile, imageFile);
 			} catch (IOException e) {
@@ -102,8 +102,8 @@ public class FileUploadAction extends ActionSupport {
 			}
 
 			return SUCCESS;
-		}
-		else {
+		} else {
+			addFieldError("myFileError", "文件格式错误！");
 			return INPUT;
 		}
 	}

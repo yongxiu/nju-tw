@@ -8,7 +8,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Hashtable;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -36,9 +38,40 @@ public class CkeditorUploadAction extends ActionSupport {
 	
 	private String type;
 	
+	private static Hashtable<String, ArrayList<String>> allowedExtensions;
+	private static Hashtable<String, ArrayList<String>> deniedExtensions;
+	
 	/**
 	 * @return the upload
 	 */
+	private ArrayList<String> stringToArrayList(String str) {
+		String[] strArr = str.split("\\|");
+		ArrayList<String> tmp = new ArrayList<String>();
+		if (str.length() > 0) {
+			for (int i = 0; i < strArr.length; ++i) {
+				tmp.add(strArr[i].toLowerCase());
+			}
+		}
+		return tmp;
+	}
+	
+	public CkeditorUploadAction() {
+		allowedExtensions = new Hashtable<String, ArrayList<String>>(3);
+		deniedExtensions = new Hashtable<String, ArrayList<String>>(3);
+		allowedExtensions.put("File",
+				stringToArrayList(""));
+		deniedExtensions.put("File",
+				stringToArrayList("html|htm|php|php2|php3|php4|php5|phtml|pwml|inc|asp|aspx|ascx|jsp|cfm|cfc|pl|bat|exe|com|dll|vbs|js|reg|cgi|htaccess|asis|ftl"));
+		allowedExtensions.put("Image",
+				stringToArrayList("jpg|gif|jpeg|png|bmp"));
+		deniedExtensions.put("Image",
+				stringToArrayList(""));
+		allowedExtensions.put("Flash",
+				stringToArrayList("swf|fla"));
+		deniedExtensions.put("Flash",
+				stringToArrayList(""));
+	}
+	
 	public File getUpload() {
 		return upload;
 	}
@@ -122,9 +155,11 @@ public class CkeditorUploadAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
+
 		if (type == null) {
 			type = "File";
 		}
+		
 		// 实例化dNow对象，获取当前时间
 		Date dNow = new Date();
 		
@@ -136,29 +171,34 @@ public class CkeditorUploadAction extends ActionSupport {
 		}
 		//FileImageInputStream is = new FileImageInputStream(this.upload);
 		//FileImageOutputStream os = new FileImageOutputStream(new File(strPath + File.separator + this.uploadFileName));
+		
 		InputStream is = new FileInputStream(this.upload);
 		
 		String ext = getExtension(uploadFileName);
+
 		// 设置上传文件名
 		SimpleDateFormat fileFormatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 		uploadFileName = fileFormatter.format(dNow) + "." + ext;
-		OutputStream os = new FileOutputStream(new File(currentDirPath + File.separator + uploadFileName));
 		
-		try {
-
-			int len;
-			byte[] buffer = new byte[1024];
-			while ((len=is.read(buffer)) > 0) {
-				os.write(buffer,0,len);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			if(is!=null){
-				is.close();
-			}
-			if(os!=null){
-				os.close();
+		if(extIsAllowed(type, getExtension(uploadFileName))) {
+			OutputStream os = new FileOutputStream(new File(currentDirPath + File.separator + uploadFileName));
+			
+			try {
+	
+				int len;
+				byte[] buffer = new byte[1024];
+				while ((len=is.read(buffer)) > 0) {
+					os.write(buffer,0,len);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if(is!=null){
+					is.close();
+				}
+				if(os!=null){
+					os.close();
+				}
 			}
 		}
 		PrintWriter out = ServletActionContext.getResponse().getWriter();
@@ -177,6 +217,29 @@ public class CkeditorUploadAction extends ActionSupport {
 	
 	private String getExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
+	}
+	
+	private boolean extIsAllowed(String fileType, String ext) {
+		ext = ext.toLowerCase();
+		ArrayList<String> allowList = (ArrayList<String>) allowedExtensions
+				.get(fileType);
+		ArrayList<String> denyList = (ArrayList<String>) deniedExtensions
+				.get(fileType);
+		if (allowList.size() == 0) {
+			if (denyList.contains(ext)) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		if (denyList.size() == 0) {
+			if (allowList.contains(ext)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return false;
 	}
 }
 
