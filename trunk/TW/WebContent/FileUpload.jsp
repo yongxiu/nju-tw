@@ -12,7 +12,7 @@
     <s:fielderror />
 </div>
     <s:form action ="FileUploadAction.do"  method="post" enctype ="multipart/form-data"> 
-        <s:file name ="myFile" label ="Image File"/>
+        <s:file name ="myFile" label ="File"/>
         <s:submit /> 
     </s:form> 
 </body> 

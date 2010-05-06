@@ -56,16 +56,6 @@
 			<result name="input">/FileUpload.jsp</result>
 		</action>
 
-		<action name="upload" class="action.UploadAction">
-			<!--上传成功时返回的视图页面-->
-			<interceptor-ref name="fileUpload">
-				<param name="allowedTypes">image/gif,image/jpeg</param>
-			</interceptor-ref>
-			<interceptor-ref name="defaultStack" />
-			<result name="success">/show.jsp</result>
-			<result name="input">/upload.jsp</result>
-		</action>
-
 		<!-- List organization -->
 		<action name="OrgnizationAction" class="action.OrgnizationAction">
 			<result name="success">/page/organization.jsp</result>
