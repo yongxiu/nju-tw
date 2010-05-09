@@ -1,7 +1,5 @@
-package test;
+package action;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.util.Properties;
 
@@ -14,49 +12,44 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-public class SendMail extends HttpServlet {
+import com.opensymphony.xwork2.ActionSupport;
+
+public class SendMailAction extends ActionSupport {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private String mailfrom;
+	private String subject;
+	private String content;
 
-	/**
-	 * Constructor of the object.
-	 */
-	public SendMail() {
-		super();
+	public String getMailfrom() {
+		return mailfrom;
 	}
 
-	/**
-	 * Destruction of the servlet. <br>
-	 */
-	public void destroy() {
-		super.destroy(); // Just puts "destroy" string in log
-		// Put your code here
+	public void setMailfrom(String mailfrom) {
+		this.mailfrom = mailfrom;
 	}
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public String getSubject() {
+		return subject;
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
-		String mailfrom = request.getParameter("mailfrom");
-		String subject = request.getParameter("subject");
-		String content = request.getParameter("content");
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String execute() {
 
 		String mailServer = "smtp.gmail.com";
 
@@ -64,7 +57,7 @@ public class SendMail extends HttpServlet {
 			Properties prop = System.getProperties();
 			prop.put("mail.stmp.host", mailServer);
 			prop.put("mail.stmp.auth", "true");
-			prop.put("mail.smtp.starttls.enable","true");
+			prop.put("mail.smtp.starttls.enable", "true");
 
 			Session session = Session.getInstance(prop);
 			session.setDebug(true);
@@ -96,11 +89,9 @@ public class SendMail extends HttpServlet {
 			transport.connect(mailServer, "njutwproxy@gmail.com", "njutw2010@");
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
-			response.sendRedirect("mail.jsp");
+			return SUCCESS;
 		} catch (Exception e) {
-			e.printStackTrace();
-			String s = "<script language='Javascript'>alert('发送邮件失败，请重试！')</script>";
-			out.println(s);
+			return INPUT;
 		}
 	}
 }

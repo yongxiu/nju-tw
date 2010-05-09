@@ -60,11 +60,18 @@
 		<action name="OrgnizationAction" class="action.OrgnizationAction">
 			<result name="success">/page/organization.jsp</result>
 		</action>
+		
 		<!-- List organization Details -->
 		<action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
 			<!-- interceptor -->
 
 			<result name="success">/page/orgList.jsp</result>
+		</action>
+		
+		<!-- Send email -->
+		<action name="SendMailAction" class="action.SendMailAction">
+			<result name="success">/page/sendMailSuccess.jsp</result>
+			<result name="input">/page/mail.jsp</result>
 		</action>
 
 	</package>
