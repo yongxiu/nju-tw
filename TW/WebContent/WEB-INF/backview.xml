@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Site background of Cusntomer Layout -->
+	<definition name="edit" extends="customer">		
+		<put-attribute name="body" value="/userComponent/edit.jsp" />
+	</definition>
+
+	<definition name="fileList" extends="customer">			
+		<put-attribute name="body" value="/userComponent/fileList.jsp" />
+	</definition>
+
+	<definition name="upload" extends="customer">		
+		<put-attribute name="body" value="/userComponent/upload.jsp" />
+	</definition>
+	
+	<definition name="changePSW" extends="customer">		
+		<put-attribute name="body" value="/userComponent/changePSW.jsp" />
+	</definition>
+	
+	
+	<!-- Site background of Admin Layout -->
+		<definition name="edit" extends="admin">		
+		<put-attribute name="body" value="/userComponent/edit.jsp" />
+	</definition>
+
+	<definition name="fileList" extends="admin">			
+		<put-attribute name="body" value="/userComponent/fileList.jsp" />
+	</definition>
+
+	<definition name="upload" extends="admin">		
+		<put-attribute name="body" value="/userComponent/upload.jsp" />
+	</definition>
+	
+	<definition name="changePSW" extends="admin">		
+		<put-attribute name="body" value="/userComponent/changePSW.jsp" />
+	</definition>
+	
+	<definition name="userManage" extends="admin">		
+		<put-attribute name="body" value="/admin/userManage.jsp" />
+	</definition>
+
+	
+</tiles-definitions>
+
+
