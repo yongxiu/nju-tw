@@ -9,7 +9,7 @@
 		<!-- User interceptor -->
 		<interceptors>
 			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
-
+			
 		</interceptors>
 
 
@@ -71,6 +71,7 @@
 		
 		<!-- summit article -->
 		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
+			
 			<result name="success">/page/submitSuccess.jsp</result>
 			<result name="imageSelect">/page/imageSelect.jsp</result>
 		</action>
