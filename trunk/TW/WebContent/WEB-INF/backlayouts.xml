@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Layout -->
+	<definition name="customer" template="/layouts/background.jsp">
+		<put-attribute name="banner" value="/component/banner.jsp" />
+		<put-attribute name="navigation" value="/component/navigation.jsp" />
+		<put-attribute name="menu" value="/userComponent/menu.jsp" />	
+		<put-attribute name="search" value="/component/search.jsp" />
+		<put-attribute name="linker" value="/component/linker.jsp" />
+		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
+	</definition>
+	
+	
+	<definition name="admin" template="/layouts/background.jsp">
+		<put-attribute name="banner" value="/component/banner.jsp" />
+		<put-attribute name="navigation" value="/component/navigation.jsp" />
+		<put-attribute name="menu" value="/admin/menu.jsp" />	
+		<put-attribute name="search" value="/component/search.jsp" />
+		<put-attribute name="linker" value="/component/linker.jsp" />
+		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
+	</definition>
+
+
+</tiles-definitions>
