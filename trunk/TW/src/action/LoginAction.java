@@ -49,13 +49,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 			 //judge if username or password is null
 			 if(getUsername()==null || getUsername().equals("")){
 				 System.out.println("username is null");
-				 addFieldError("usernameError", "ÓÃ»§Ãû²»ÄÜÎª¿Õ");
+				 addFieldError("usernameError", "ç”¨æˆ·åä¸èƒ½ä¸ºç©º");
 				 return INPUT;
 			 }
 			 
 			 if(getPassword()==null || getPassword().equals("")){
 				 System.out.println("password is null");
-				 addFieldError("passwordError", "ÃÜÂë²»ÄÜÎª¿Õ");
+				 addFieldError("passwordError", "å¯†ç ä¸èƒ½ä¸ºç©º");
 				 return INPUT;
 			 }
 			 
@@ -70,10 +70,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				
 				//session.put(UserInterceptor.USER_KEY,getUsername());
 				System.out.println(name+" is login");
+				getSession().put(UserInterceptor.USER_KEY, getUsername());
+				getSession().put("id", user.getId());
+				
 				return SUCCESS;
 			 }
 			 else {
-				addActionError("ÄúÊäÈëµÄÕÊ»§»òÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë!");
+				addActionError("ç”¨æˆ·åæˆ–å¯†ç é”™è¯¯!");
 				return INPUT;
 			}
 		

@@ -19,6 +19,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class CkeditorUploadAction extends ActionSupport {
 
+	
 	/**
 	 * 
 	 */
@@ -156,11 +157,21 @@ public class CkeditorUploadAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 
+
+		
+		
+
+
+
 		if (type == null) {
 			type = "File";
 		}
+
+		// 瀹炰緥鍖杁Now瀵硅薄锛岃幏鍙栧綋鍓嶆椂闂�
+
 		
 		// 实例化dNow对象，获取当前时间
+
 		Date dNow = new Date();
 		
 		String strPath = "UserFiles/" + type + "/" + (new SimpleDateFormat("yyyyMM")).format(dNow);
@@ -176,7 +187,11 @@ public class CkeditorUploadAction extends ActionSupport {
 		
 		String ext = getExtension(uploadFileName);
 
+		// 璁剧疆涓婁紶鏂囦欢鍚�
+
+
 		// 设置上传文件名
+
 		SimpleDateFormat fileFormatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 		uploadFileName = fileFormatter.format(dNow) + "." + ext;
 		
@@ -202,9 +217,13 @@ public class CkeditorUploadAction extends ActionSupport {
 			}
 		}
 		PrintWriter out = ServletActionContext.getResponse().getWriter();
-		//返回给ckeditor
+		//杩斿洖缁檆keditor
 		out.write("<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction("+this.CKEditorFuncNum+", '" + strPath + "/" + this.uploadFileName+"', '');</script>");
 		return Action.NONE;
+		
+		
+		
+		
 	}
 
 	public String getType() {
@@ -218,6 +237,14 @@ public class CkeditorUploadAction extends ActionSupport {
 	private String getExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
 	}
+
+
+
+
+
+	
+	
+
 	
 	private boolean extIsAllowed(String fileType, String ext) {
 		ext = ext.toLowerCase();
@@ -241,5 +268,6 @@ public class CkeditorUploadAction extends ActionSupport {
 		}
 		return false;
 	}
+
 }
 
