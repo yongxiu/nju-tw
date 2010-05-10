@@ -20,7 +20,7 @@
     	</a>
     </td>
     <td>
-    	<a href="#">
+    	<a href="edit.jsp">
     		发表文章
     	</a>
     </td>
@@ -68,7 +68,7 @@
   <tr>
    
     <td>
-    	<a href="#">
+    	<a href="edit.jsp">
     		发表文章
     	</a>
     </td>
