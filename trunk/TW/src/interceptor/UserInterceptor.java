@@ -16,7 +16,7 @@ public class UserInterceptor implements Interceptor{
 				return actionInvocation.invoke();
 			}
 			else {
-				this.setMessage("��û�е�½Ȩ��");
+				this.setMessage("未授权？");
 				return Action.INPUT;
 			}
 	}
