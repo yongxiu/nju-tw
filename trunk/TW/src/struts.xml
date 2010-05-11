@@ -9,7 +9,7 @@
 		<!-- User interceptor -->
 		<interceptors>
 			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
-			
+
 		</interceptors>
 
 
@@ -67,27 +67,12 @@
 
 			<result name="success">/page/orgList.jsp</result>
 		</action>
-
-		
-		<!-- summit article -->
-		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
-			
-			<result name="success">/page/submitSuccess.jsp</result>
-			<result name="imageSelect">/page/imageSelect.jsp</result>
-		</action>
-		
-		<!-- Select image as main image -->
-		<action name="SelectImage" class="action.SelectImageAction">
-			<result name="success">/page/imageSelectSuccess.jsp</result>
-		</action>
-
 		
 		<!-- Send email -->
 		<action name="SendMailAction" class="action.SendMailAction">
 			<result name="success">/page/sendMailSuccess.jsp</result>
-			<result name="input">mail.jsp</result>
+			<result name="input">/mail.jsp</result>
 		</action>
-
 
 	</package>
 
