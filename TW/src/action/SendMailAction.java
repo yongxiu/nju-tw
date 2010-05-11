@@ -21,9 +21,18 @@ public class SendMailAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String mailfrom;
-	private String subject;
-	private String content;
+	private String author, mailfrom, subject, content, mailInfo, mailBox,
+			mailFooter;
+
+	private int charInARow = 50;
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 
 	public String getMailfrom() {
 		return mailfrom;
@@ -53,6 +62,20 @@ public class SendMailAction extends ActionSupport {
 
 		String mailServer = "smtp.gmail.com";
 
+		mailInfo = "<p><font color=\"#ff0000\">注意：本邮件来自团委网站！</font></p>";
+		mailBox = "<p><font color=\"FF00FF\">发件人：<a title=\"点此可回复邮件。\" href=\"mailto:"
+				+ mailfrom + "\">" + author + "</a></span></font><br/><br/>";
+		mailFooter = "</br><br/><p><font color=\"#ff00ff\">若要回复此邮件，请点此处：<a href=\"mailto:"
+				+ mailfrom + "\">回复</a></font></p>";
+
+		String tmp = "";
+		for (int i = 0; i < content.length(); i++) {
+			tmp += content.charAt(i);
+			if ((i + 1) % charInARow == 0) {
+				tmp += "</br/>";
+			}
+		}
+		content = "<font color=\"#88ff88\">邮件内容：</font><br/>" + tmp;
 		try {
 			Properties prop = System.getProperties();
 			prop.put("mail.stmp.host", mailServer);
@@ -71,12 +94,11 @@ public class SendMailAction extends ActionSupport {
 					"njutwmail@gmail.com"));
 
 			message.setSubject(subject);
-			message.setText(content + mailfrom);
 
 			Multipart mul = new MimeMultipart();
-
 			BodyPart bpart = new MimeBodyPart();
-			bpart.setContent(content, "text/html;charset=utf-8");
+			bpart.setContent(mailInfo + mailBox + content + mailFooter,
+					"text/html;charset=utf-8");
 			mul.addBodyPart(bpart);
 			message.setContent(mul);
 
