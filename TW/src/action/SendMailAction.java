@@ -75,7 +75,8 @@ public class SendMailAction extends ActionSupport {
 				tmp += "</br/>";
 			}
 		}
-		content = "<font color=\"#88ff88\">邮件内容：</font><br/>" + tmp;
+		subject = "<font color=\"#FF00FF\">邮件主题：</font>" + subject + "</br>";
+		content = "<font color=\"#FF00FF\">邮件内容：</font><br/>" + tmp;
 		try {
 			Properties prop = System.getProperties();
 			prop.put("mail.stmp.host", mailServer);
@@ -91,14 +92,14 @@ public class SendMailAction extends ActionSupport {
 					.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 			message.setFrom(new InternetAddress("njutwproxy@gmail.com"));
 			message.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					"njutwmail@gmail.com"));
+					"njutwmail.gmail.com"));
 
 			message.setSubject(subject);
 
 			Multipart mul = new MimeMultipart();
 			BodyPart bpart = new MimeBodyPart();
-			bpart.setContent(mailInfo + mailBox + content + mailFooter,
-					"text/html;charset=utf-8");
+			bpart.setContent(mailInfo + mailBox + subject + content
+					+ mailFooter, "text/html;charset=utf-8");
 			mul.addBodyPart(bpart);
 			message.setContent(mul);
 
