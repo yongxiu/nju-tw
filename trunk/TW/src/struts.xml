@@ -85,7 +85,7 @@
 		<!-- Send email -->
 		<action name="SendMailAction" class="action.SendMailAction">
 			<result name="success">/page/sendMailSuccess.jsp</result>
-			<result name="input">/page/mail.jsp</result>
+			<result name="input">mail.jsp</result>
 		</action>
 
 
