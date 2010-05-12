@@ -29,32 +29,10 @@
 
 </s:if>
 
-<!-- sydic -->
-<s:if test="role==2">
-	<table>
-  <tr>
-   	<td> 欢迎您： <s:property value="name"/> </td>
-  </tr>
-  
-  <tr>
-  <td>
-  	您可以执行：
-  	 </td>
-  </tr>
-  <tr>
-    <td>
-    	<a href="#">
-    		审核文章
-    	</a>
-    </td>
-   
-  </tr>
-</table>
 
-</s:if>
 
 <!-- user -->
-<s:if test="role==3">
+<s:if test="role==2">
 	<table>
   <tr>
    	<td> 欢迎您： <s:property value="name"/> </td>
@@ -71,6 +49,10 @@
     	<a href="edit.jsp">
     		发表文章
     	</a>
+    	<a href="/TW/userComponent/changePSW.jsp">
+    		修改密码
+    	</a>
+    	
     </td>
   </tr>
 </table>

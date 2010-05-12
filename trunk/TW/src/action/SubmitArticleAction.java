@@ -6,10 +6,16 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Document;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexWriter;
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
 
 import service.Category;
 import service.GetImageFromArticle;
+import service.LuceneIndexWriter;
 
 import bean.GenericArticle;
 import bean.User;
@@ -57,6 +63,11 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 				true, false, null);
 		getSession().put("article", article);
 		dao.create(article);
+		
+		//更新索引
+		String INDEX_PATH = ServletActionContext.getServletContext().getRealPath("/")+"index";
+		LuceneIndexWriter.updateIndex(INDEX_PATH, article);
+		System.out.println("更新索引");
 		
 		if (imageStrings.isEmpty()) {
 

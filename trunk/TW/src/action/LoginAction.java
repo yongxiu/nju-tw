@@ -35,11 +35,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private int role;
 	private String name;
 	private User user;
-	
-	
-	
-	@SuppressWarnings("unchecked")
 	private Map session;
+	
+	
+
 	
 	private static final long serialVersionUID = 1L;
 
@@ -68,10 +67,12 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				name=user.getName();
 				System.out.println(role+ " : "+user.getUsername());
 				
-				//session.put(UserInterceptor.USER_KEY,getUsername());
+				
 				System.out.println(name+" is login");
-				getSession().put(UserInterceptor.USER_KEY, getUsername());
+				getSession().put(UserInterceptor.USER_KEY, user.getUsername());
+				System.out.println("mark : "+getSession().get(UserInterceptor.USER_KEY));
 				getSession().put("id", user.getId());
+				getSession().put("user", user);
 				
 				return SUCCESS;
 			 }
@@ -154,6 +155,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+
+
+
 
 
 
