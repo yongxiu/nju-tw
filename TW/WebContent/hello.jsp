@@ -21,5 +21,6 @@ img,div {
 
 <p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>
 <p><a href='<%=request.getContextPath()%>/mail.jsp'>发送邮件测试</a></p>
+<p><a href='writeIndex.do'>建立全文索引</a></p>
 </body>
 </html>

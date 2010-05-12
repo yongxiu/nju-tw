@@ -1,6 +1,24 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
+	<s:form action="ChangePassword.do">
+		<s:actionmessage name="message"/>
+		<s:password name="oldPassword" label="原始密码"></s:password>
+		<s:password name="newPassword" label="新密码"></s:password>
+		<s:password name="newPasswordConfirmed" label="新密码确认"></s:password>
+		<s:submit></s:submit>
+	</s:form>
 <s:form action="ChangePSWAction.do">
 	<table align="center" cellpadding="1" cellspacing="1" class="form">
 

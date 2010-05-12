@@ -1,45 +1,34 @@
 package interceptor;
 
+import java.util.Map;
+
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionInvocation;
+import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 import com.opensymphony.xwork2.interceptor.Interceptor;
 
-public class UserInterceptor implements Interceptor{
+public class UserInterceptor extends AbstractInterceptor{
 	private String message;
 
 	public static final String USER_KEY="UserKey";
 	
+	@SuppressWarnings("unchecked")
 	public String intercept(ActionInvocation actionInvocation) throws Exception {
 		// TODO Auto-generated method stub
-		String username=(String) actionInvocation.getInvocationContext().getSession().get(USER_KEY);
+		 Map session = actionInvocation.getInvocationContext().getSession();
+		 String username = (String) session.get(USER_KEY);
+		 
 			if(username!=null){
 				return actionInvocation.invoke();
 			}
 			else {
-				this.setMessage("未授权？");
-				return Action.INPUT;
+				this.setMessage("请登录");
+				return Action.LOGIN;
 			}
 	}
 	
 	
 	
-
-	public void destroy() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void init() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-	public String getMessage() {
-		return message;
-	}
 
 
 

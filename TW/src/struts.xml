@@ -6,13 +6,29 @@
 	<constant name="struts.multipart.maxSize" value="20971520" />
 
 	<package name="default" extends="tiles-default">
+		
+		
+		
 		<!-- User interceptor -->
 		<interceptors>
 			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
 
+			<interceptor-stack name="loginDefaultStack">
+				<interceptor-ref name="UserInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+
 		</interceptors>
-
-
+		
+		<!-- 
+		<default-interceptor-ref name="loginDefaultStack"/>
+		 -->
+		
+		<global-results>
+			<result name="login">/component/login.jsp</result>
+		</global-results>
+		
+		
 		<!-- Redirect to home page -->
 		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
 			<result name="success" type="tiles">index</result>
@@ -67,13 +83,67 @@
 
 			<result name="success">/page/orgList.jsp</result>
 		</action>
+
+		<!-- summit article -->
+		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
+			
+			<result name="success">/page/submitSuccess.jsp</result>
+			<result name="imageSelect">/page/imageSelect.jsp</result>
+			<interceptor-ref name="UserInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+			
+		</action>
 		
+		<!-- Select image as main image -->
+		<action name="SelectImage" class="action.SelectImageAction">
+			<result name="success">/page/imageSelectSuccess.jsp</result>
+		</action>
+
+		
+
 		<!-- Send email -->
 		<action name="SendMailAction" class="action.SendMailAction">
 			<result name="success">/page/sendMailSuccess.jsp</result>
 			<result name="input">/mail.jsp</result>
 		</action>
 
+		<!-- List User -->
+		<action name="ListUser" class="action.ListUserAction">
+			<result name="success">/admin/userManage.jsp</result>
+		</action>
+		
+		<!-- Delete User -->
+		<action name="DeleteUser" class="action.DeleteUserAction">
+			<result name="success" type="redirect">ListUser.do</result>
+		</action>
+		
+		<!-- Add User -->
+		<action name="AddUser" class="action.AddUserAction">
+			<result name="success">/admin/addUserSuccess.jsp</result>
+			<result name="input">/admin/adduser.jsp</result>
+		</action>
+		
+		<!-- Get Modify List -->
+		<action name="GetModifyList" class="action.GetModifyListAction">
+			<result name="success">/admin/modifyuser.jsp</result>
+		</action>
+		
+		<!-- Modify User -->
+		<action name="ModifyUser" class="action.ModifyUserAction">
+			<result name="success" type="redirect">ListUser.do</result>
+			<result name="input">/admin/modifyuser.jsp</result>
+		</action>
+		
+		<!-- Change Password -->
+		<action name="ChangePassword" class="action.ChangePasswordAction">
+			<result name="success">/userComponent/changePswSuccess.jsp</result>
+			<result name="input">/userComponent/changePSW.jsp</result>
+		</action>
+		
+		<!-- Write Index -->
+		<action name="writeIndex" class="action.lucene.WriteIndexAction">
+			<result name="success">/component/login.jsp</result>
+		</action>
 	</package>
 
 </struts>
