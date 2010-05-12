@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sx" uri="/struts-dojo-tags"%>
 
 <html>
 <head>
@@ -7,6 +9,7 @@
 <script src="/TW/js/swfobject_modified.js" type="text/javascript"></script>
 <script src="/TW/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 <title>南京大学共青团委</title>
+<sx:head  />
 </head>
 <body>
 <div id="container">
@@ -24,7 +27,9 @@
 </div>
 <div id="login">
 <div class="sidebar-h"></div>
-<div class="sidebar-p"><tiles:insertAttribute name="login" /></div>
+<s:div id="logindiv" cssClass="sidebar-p">
+<tiles:insertAttribute name="login" />
+</s:div>
 </div>
 <div id="ipholder">
 <div class="sidebar-h"></div>
