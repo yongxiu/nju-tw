@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<html>
-<body>
-<s:form action="LoginAction.do">
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
+<s:url id="url" value="/LoginAction.do" />
+<s:form  action="LoginAction.do" theme="xhtml">
 	<table align="center" cellpadding="1" cellspacing="1" class="form">
 		<tr>
     	 	<s:actionerror/>
@@ -27,12 +27,12 @@
 		</tr>
 		<tr>
 			<td>
-			<s:submit type="image" name="search" src="/TW/img/logoin.gif"  ></s:submit>
+			<sx:submit type="image" name="loginbt" src="/TW/img/logoin.gif"  targets="logindiv" ></sx:submit>
+						
 			</td>
 		</tr>
 	</table>
 
 </s:form>
-</body>
-</html>
+
 
