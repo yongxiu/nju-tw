@@ -10,7 +10,7 @@ font-size:150%;
 color:#444444;
 font-weight:bold;
 line-height:100%;
-margin:0 0 5px;
+margin:0 10px 5px;
 text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -57,7 +57,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 	padding: 2px;
 	line-height: 15px;
 	display: inline;
-	width: 178px;
+	width: 184px;
 }
 
 .input:focus, textarea:focus, input.gsc-input:focus {
@@ -113,11 +113,22 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 	cursor:pointer;
 	font-size:14px;
 	height:29px;
-	margin:5px 5px 5px 0;
+	margin:5px 5px 5px 100px;
 	width:75px;
 }
 
 .errorMessage  {
 color:#FF0000;
 font-size:15px;
+}
+
+.label {
+	font-size:14px;
+	padding-left:10px;
+}
+
+.onError {
+color:#FF0000;
+font-size:15px;
+padding-left:20px;
 }
