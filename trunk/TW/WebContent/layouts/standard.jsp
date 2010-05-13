@@ -1,11 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags"%>
 
+
 <html>
 <head>
-<link href="/TW/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="/TW/js/swfobject_modified.js" type="text/javascript"></script>
 <script src="/TW/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 <title>南京大学共青团委</title>
@@ -15,10 +17,10 @@
 <div id="container">
 <div id="banner"><tiles:insertAttribute name="banner" /></div>
 <div id="menu">
-<tiles:insertAttribute name="navigation" /> 
-<tiles:insertAttribute name="search" />
-<div id="blank-h1"> </div>
+<div><tiles:insertAttribute name="navigation" /></div>
+<div><tiles:insertAttribute name="search" /></div>
 </div>
+<div id="blank-h1"> </div>
 <div id="page">
 <div id="sidebar">
 <div id="topic">
@@ -46,6 +48,7 @@
 <div class="news-h"></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
 </div>
+<div id="blank-v"> </div>
 <div id="news2" class="subnews">
 <div class="news-h"></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
@@ -54,6 +57,7 @@
 <div class="news-h"></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
 </div>
+<div id="blank-v"> </div>
 <div id="news4" class="subnews">
 <div class="news-h"></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
