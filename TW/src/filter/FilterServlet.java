@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 public class FilterServlet extends HttpServlet implements Filter{
 	private String redirectUrl = null;
 		
-	@Override
+
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
@@ -31,7 +31,7 @@ public class FilterServlet extends HttpServlet implements Filter{
 		}
 	}
 
-	@Override
+	
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
 		redirectUrl = "TW/component/login.jsp" ;
