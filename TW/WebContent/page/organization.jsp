@@ -1,13 +1,8 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Organization</title>
-</head>
-<body>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>    
+
 	<table>
 		<tr>
 			<td>书记室</td>
@@ -18,11 +13,12 @@
 				<td>
 					
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<a href="<s:url action="OrganizationDetailAction.do">
+					<s:url id="org1det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
-					</s:url>">
+					</s:url>
+					<sx:a targets="content" href="%{org1det}" >
 						<s:property value="department"/>
-					</a>
+					</sx:a>
 					
 					
 				</td>
@@ -41,11 +37,12 @@
 			<tr>
 				<td>
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<a href="<s:url action="OrganizationDetailAction.do">
+					<s:url id="org2det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
-					</s:url>">
+					</s:url>
+					<sx:a targets="content" href="%{org2det}" >
 						<s:property value="department"/>
-					</a>
+					</sx:a>
 					
 				</td>
 			</tr>
@@ -63,16 +60,15 @@
 			<tr>
 				<td>
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<a href="<s:url action="OrganizationDetailAction.do">
+					<s:url id="org3det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
-					</s:url>">
+					</s:url>
+					<sx:a targets="content" href="%{org3det}" >
 						<s:property value="department"/>
-					</a>
+					</sx:a >
 					
 				</td>
 			</tr>
 		</s:iterator>
 		
 	</table>
-</body>
-</html>
