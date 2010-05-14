@@ -1,16 +1,12 @@
 @charset "utf-8";
 /* CSS Document */
 
-#form_comments h3 {
-margin-bottom:10px;
-}
-
 h3 {
 font-size:150%;
 color:#444444;
 font-weight:bold;
 line-height:100%;
-margin:0 10px 5px;
+margin:20px 60px;
 text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -57,7 +53,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 	padding: 2px;
 	line-height: 15px;
 	display: inline;
-	width: 184px;
+	width: 250px;
 }
 
 .input:focus, textarea:focus, input.gsc-input:focus {
@@ -67,15 +63,15 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 }
 
 .inputname {
-	background-position: -18px center;
+	background-position: -40px center;
 }
 
 .inputemail {
-	background-position: -218px center;
+	background-position: -352px center;
 }
 
 .inputurl {
-	background-position: -418px center;
+	background-position: -647px center;
 }
 
 #form_comments h3 {
@@ -95,14 +91,14 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 }
 
 #author_info {
-	padding: 5px 0;
+	padding: 20px 0 10px;
 }
 
 #comment {
-	width: 650px;
+	width: 450px;
 	padding: 5px;
 	line-height: 20px;
-	height: 450px;
+	height: 300px;
 	font-size: 14px;
 }
 
@@ -113,7 +109,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 	cursor:pointer;
 	font-size:14px;
 	height:29px;
-	margin:5px 5px 5px 100px;
+	margin:5px 10px 50px 150px;
 	width:75px;
 }
 
@@ -123,12 +119,23 @@ font-size:15px;
 }
 
 .label {
+	vertical-align:top;
 	font-size:14px;
-	padding-left:10px;
+	padding-left:100px;
+}
+
+.info {
+	font-size:14px;
+	padding-left:150px;
 }
 
 .onError {
 color:#FF0000;
 font-size:15px;
-padding-left:20px;
+padding-left:60px;
+}
+
+.star {
+font-size:14px;
+padding-left: 10px;
 }

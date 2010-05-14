@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$('#form_comments').ready(function() {
 	$('.inputname').blur(function() {
 		var $parent = $(this).parent();
 		$parent.find(".formtips").remove();
