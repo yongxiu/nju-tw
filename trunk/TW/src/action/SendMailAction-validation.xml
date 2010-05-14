@@ -21,9 +21,5 @@
 		<message>必须输入主题！</message>
 	</field-validator>
 </field>
-<field name = "comment">
-	<field-validator type="requiredstring">
-		<message>请输入回复内容！</message>
-	</field-validator>
-</field>
+
 </validators>

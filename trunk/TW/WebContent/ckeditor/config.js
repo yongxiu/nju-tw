@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config )
 	config.uiColor = '#c2ceea'; // 背景颜色   
 	config.width = '800px'; // 宽度   
 	config.height = '300px'; // 高度   
-	//config.skin = 'v2';//界面v2,kama,office2003   
+	config.skin = 'kama';//界面v2,kama,office2003   
 	config.toolbar = 'Full';// 工具栏风格Full,Basic  
 	
 	config.toolbar_Full =
