@@ -42,20 +42,16 @@ public class SearchAction extends ActionSupport implements SessionAware {
 				+ "index";
 		Document doc = null;
 		articles = new ArrayList<ArticleTemp>();
-
+		Hits hits = null;
 		try {
-			Hits hits = LuceneSearch.search(search, INDEX_PATH);
-//			for (int i = 0; i < hits.length(); i++) {
-//				doc = hits.doc(i);
-//				ArticleTemp article = new ArticleTemp();
-//				article.setId(Integer.parseInt(doc.get("id")));
-//				article.setTitle(doc.get("title"));
-//				article.setCategory(doc.get("category"));
-//				article.setDate(doc.get("date"));
-//				articles.add(article);
-//
-//			}
+			if(getSession().get("hits"+search)!=null)
+				hits = (Hits) getSession().get("hits"+search);
+			else {
+				hits = LuceneSearch.search(search, INDEX_PATH);
+			}
 			
+			
+
 			
 
 			// add hits to session

@@ -164,6 +164,11 @@
 		<action name="writeIndex" class="action.lucene.WriteIndexAction">
 			<result name="success">/component/login.jsp</result>
 		</action>
+		
+		<!-- Modify Article -->
+		<action name="ModifyArticle" class="action.ModifyArticleAction">
+			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
 	</package>
 
 </struts>

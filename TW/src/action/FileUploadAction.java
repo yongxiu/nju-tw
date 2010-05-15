@@ -5,13 +5,19 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.SessionAware;
+
+import bean.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class FileUploadAction extends ActionSupport {
+import dao.FileDao;
+
+public class FileUploadAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = 572146812454l;
 
 	private File myFile;
@@ -19,6 +25,7 @@ public class FileUploadAction extends ActionSupport {
 	private String fileName;
 	private String uploadFileName;
 	private String caption;
+	private Map session;
 	
 	private static ArrayList<String> allowedExtensions;// 允许的上传文件扩展名
 	private static ArrayList<String> deniedExtensions;// 阻止的上传文件扩展名
@@ -113,10 +120,30 @@ public class FileUploadAction extends ActionSupport {
 			}
 			
 			uploadFileName = strPath + "/" + newName;
+			
+			bean.File file = new bean.File();
+			file.setDate(dNow);
+			file.setPath(uploadFileName);
+			User user = (User) getSession().get("user");
+			file.setUser(user);
+			file.setFilename(uploadFileName);
+			
+			FileDao fileDao = new FileDao();
+			fileDao.create(file);
 			return SUCCESS;
 		} else {
 			addFieldError("myFileError", "文件格式错误！");
 			return INPUT;
 		}
 	}
+
+	public Map getSession() {
+		return session;
+	}
+
+	public void setSession(Map session) {
+		this.session = session;
+	}
+	
+	
 }

@@ -22,6 +22,7 @@ import bean.GenericArticle;
 import bean.User;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import dao.ArticleDao;
 import dao.GenericArticleDao;
@@ -71,7 +72,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				System.out.println(name+" is login");
 				getSession().put(UserInterceptor.USER_KEY, user.getUsername());
 				System.out.println("mark : "+getSession().get(UserInterceptor.USER_KEY));
-				getSession().put("id", user.getId());
+				getSession().put("id", new Long(user.getId()));
 				getSession().put("user", user);
 				
 				return SUCCESS;
