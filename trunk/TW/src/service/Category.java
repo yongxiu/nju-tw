@@ -39,4 +39,36 @@ public class Category {
 		}
 		return categoryInt;
 	}
+	
+	public static String getCategory(int categoryId) {
+		String category;
+		if(categoryId == 1)
+			category = "组织机构";
+		else if(categoryId == 2)
+				category = "焦点新闻";
+		else if(categoryId == 3)
+			category = "公告信息";
+		else if(categoryId == 4)
+			category = "理论园地";
+		else if(categoryId == 5)
+			category = "媒体报道";
+		else if(categoryId == 6)
+			category = "下属组织";
+		else if(categoryId == 7)
+			category = "下载专区";
+		else if(categoryId == 8)
+			category = "内部机构";
+		else if(categoryId == 9)
+			category = "书记室";
+		else if(categoryId == 10)
+			category = "宣传思想";
+		else if(categoryId == 11)
+			category = "基层动态";
+		
+		else {
+			// incorrect input
+			category = "incorret";
+		}
+		return category;
+	}
 }
