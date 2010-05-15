@@ -21,7 +21,7 @@ public class SendMailAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String author, mailfrom, subject, content, mailInfo, mailBox,
+	private String author, mailfrom, subject, comment, mailInfo, mailBox,
 			mailFooter;
 
 	private int charInARow = 50;
@@ -50,12 +50,12 @@ public class SendMailAction extends ActionSupport {
 		this.subject = subject;
 	}
 
-	public String getContent() {
-		return content;
+	public String getComment() {
+		return comment;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public String execute() {
@@ -69,14 +69,15 @@ public class SendMailAction extends ActionSupport {
 				+ mailfrom + "\">回复</a></font></p>";
 
 		String tmp = "";
-		for (int i = 0; i < content.length(); i++) {
-			tmp += content.charAt(i);
+		for (int i = 0; i < comment.length(); i++) {
+			tmp += comment.charAt(i);
 			if ((i + 1) % charInARow == 0) {
 				tmp += "</br/>";
 			}
 		}
-		subject = "<font color=\"#FF00FF\">邮件主题：</font>" + subject + "</br>";
-		content = "<font color=\"#FF00FF\">邮件内容：</font><br/>" + tmp;
+		String newSubject, newComment;
+		newSubject = "<font color=\"#FF00FF\">邮件主题：</font>" + subject + "</br>";
+		newComment = "<font color=\"#FF00FF\">邮件内容：</font><br/>" + tmp;
 		try {
 			Properties prop = System.getProperties();
 			prop.put("mail.stmp.host", mailServer);
@@ -92,13 +93,13 @@ public class SendMailAction extends ActionSupport {
 					.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 			message.setFrom(new InternetAddress("njutwproxy@gmail.com"));
 			message.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					"njutwmail.gmail.com"));
+					"njutwmail@gmail.com"));
 
 			message.setSubject(subject);
 
 			Multipart mul = new MimeMultipart();
 			BodyPart bpart = new MimeBodyPart();
-			bpart.setContent(mailInfo + mailBox + subject + content
+			bpart.setContent(mailInfo + mailBox + newSubject + newComment
 					+ mailFooter, "text/html;charset=utf-8");
 			mul.addBodyPart(bpart);
 			message.setContent(mul);
