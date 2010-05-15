@@ -17,7 +17,7 @@
 		<property name="name" column="name" type="string"/>
 		<property name="role" column="role" type="int"></property>
 		
-		<set name="articles" inverse="true" cascade="all">
+		<set name="articles" inverse="true" cascade="all" lazy="false">
 			<key column="uid"></key>
 			<one-to-many class="bean.GenericArticle"/>
 		</set>

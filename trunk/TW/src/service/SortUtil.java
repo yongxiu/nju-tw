@@ -15,6 +15,7 @@ public class SortUtil {
 	 * @param articles
 	 * @return
 	 */
+	//asc
 	public static ArrayList<GenericArticle> sort(
 			ArrayList<GenericArticle> articles) {
 		GenericArticle tempArticle;
@@ -29,6 +30,18 @@ public class SortUtil {
 			}
 		}
 		return articles;
+	}
+	
+	
+	public static ArrayList<GenericArticle> revertSort(
+			ArrayList<GenericArticle> articles) {
+		ArrayList<GenericArticle> tempArticles = new ArrayList<GenericArticle>();
+	
+		articles = sort(articles);
+		for(GenericArticle temp:articles) {
+			tempArticles.add(temp);
+		}
+		return tempArticles;
 	}
 
 	public static boolean gt(Date date1, Date date2) {
