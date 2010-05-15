@@ -16,7 +16,7 @@ img,div {
 <body id="login">
 
 
-<a href='redirectToHomePage.do'> 进入南大团委首页</a>
+<a href='Home.do'> 进入南大团委首页</a>
 <a href='IpcountAction.do'> 计数器</a>
 
 <p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>

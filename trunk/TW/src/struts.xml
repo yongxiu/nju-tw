@@ -31,8 +31,20 @@
 		
 		
 		<!-- Redirect to home page -->
-		<action name="redirectToHomePage" class="action.RedirectToHomePageAction">
+		<action name="Home">
 			<result name="success" type="tiles">index</result>
+		</action>
+		
+		<action name="Org" >
+			<result name="success" type="tiles">organization</result>
+		</action>
+		
+		<action name="ConnectUs" >
+			<result name="success" type="tiles">connect</result>
+		</action>
+		
+		<action name="Mail" >
+			<result name="success" >/page/mail.jsp</result>
 		</action>
 		
 		<action name="ckupload" class="action.CkeditorUploadAction">
@@ -75,7 +87,7 @@
 
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
-			<result name="success" type="redirect">redirectToHomePage.do</result>
+			<result name="success" type="redirect">Home.do</result>
 			<result name="input">/FileUpload.jsp</result>
 		</action>
 

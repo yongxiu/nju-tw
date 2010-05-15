@@ -2,17 +2,13 @@
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 
 <link href="<%=request.getContextPath()%>/css/mail.css"
 	type="text/css" media="screen" rel="stylesheet" />
-<script type="text/javascript" src="js/sendmail.js"></script>
-<title>发送邮件给管理员</title>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery-1.4.2.min.js"></script>
+
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/sendmail.js"></script>
-</head>
+
 <body>
 <s:form theme = "simple" cssClass="tl" id = "form_comments" action="SendMailAction.do" method="post">
 	
@@ -44,5 +40,3 @@
 		</div>
 	</div>
 </s:form>
-</body>
-</html>
