@@ -29,7 +29,7 @@
 	
 		<p><label class="label" for="comment">内容：</label><s:textarea cssClass="input textarea" id="comment" name="comment" tabindex="4"></s:textarea></p>
 		<s:fielderror><s:param>comment</s:param></s:fielderror>
-		<p><s:submit cssClass="btn" value="发表评论" name="submit" id="input_comments_submit" tabindex="5"></s:submit>
+		<p><s:submit cssClass="btn" value="发送" name="submit" id="input_comments_submit" tabindex="5"></s:submit>
        	<input type="button" value="取消" class="btn"></p>
        	
        	<div class="info">

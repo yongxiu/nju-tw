@@ -87,7 +87,8 @@
 
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
-			<result name="success" type="redirect">Home.do</result>
+			<!-- result name="success" type="redirect">Home.do</result> -->
+			<result name="success">/UploadSuccess.jsp</result>
 			<result name="input">/FileUpload.jsp</result>
 		</action>
 
