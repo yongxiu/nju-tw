@@ -24,19 +24,12 @@ public class CkeditorUploadAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
 	private String uploadContentType;
-	
 	private String uploadFileName;
-	
 	private String CKEditorFuncNum;
-	
 	private String CKEditor;
-	
 	private String langCode;
-	
 	private File upload;
-	
 	private String type;
 	
 	private static Hashtable<String, ArrayList<String>> allowedExtensions;
@@ -157,18 +150,9 @@ public class CkeditorUploadAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 
-
-		
-		
-
-
-
 		if (type == null) {
 			type = "File";
 		}
-
-		// 瀹炰緥鍖杁Now瀵硅薄锛岃幏鍙栧綋鍓嶆椂闂�
-
 		
 		// 实例化dNow对象，获取当前时间
 
@@ -187,9 +171,6 @@ public class CkeditorUploadAction extends ActionSupport {
 		
 		String ext = getExtension(uploadFileName);
 
-		// 璁剧疆涓婁紶鏂囦欢鍚�
-
-
 		// 设置上传文件名
 
 		SimpleDateFormat fileFormatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
@@ -197,9 +178,8 @@ public class CkeditorUploadAction extends ActionSupport {
 		
 		if(extIsAllowed(type, getExtension(uploadFileName))) {
 			OutputStream os = new FileOutputStream(new File(currentDirPath + File.separator + uploadFileName));
-			
+
 			try {
-	
 				int len;
 				byte[] buffer = new byte[1024];
 				while ((len=is.read(buffer)) > 0) {
@@ -220,10 +200,6 @@ public class CkeditorUploadAction extends ActionSupport {
 		//杩斿洖缁檆keditor
 		out.write("<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction("+this.CKEditorFuncNum+", '" + strPath + "/" + this.uploadFileName+"', '');</script>");
 		return Action.NONE;
-		
-		
-		
-		
 	}
 
 	public String getType() {
@@ -237,14 +213,6 @@ public class CkeditorUploadAction extends ActionSupport {
 	private String getExtension(String fileName) {
 		return fileName.substring(fileName.lastIndexOf(".") + 1);
 	}
-
-
-
-
-
-	
-	
-
 	
 	private boolean extIsAllowed(String fileType, String ext) {
 		ext = ext.toLowerCase();

@@ -2,6 +2,7 @@ package action;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -26,6 +27,9 @@ public class FileUploadAction extends ActionSupport {
 		this.contentType = contentType;
 	}
 
+	public String getContentType() {
+		return contentType;
+	}
 	public void setMyFileFileName(String fileName) {
 		this.fileName = fileName;
 	}
@@ -34,7 +38,7 @@ public class FileUploadAction extends ActionSupport {
 		this.myFile = myFile;
 	}
 
-	public String getImageFileName() {
+	public String getUploadFileName() {
 		return uploadFileName;
 	}
 
@@ -90,17 +94,25 @@ public class FileUploadAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		if(extIsAllowed(getExtention(fileName).substring(1))) {
-			uploadFileName = new Date().getTime() + getExtention(fileName);
-			File imageFile = new File(ServletActionContext.getServletContext()
-					.getRealPath("/UserFiles")
-					+ "/" + uploadFileName);
+			Date dNow = new Date();
+			String strPath = "UserFiles/Upload/" + (new SimpleDateFormat("yyyyMM")).format(dNow);
+			String currentDirPath = ServletActionContext.getServletContext().getRealPath("/" + strPath);
+			File path = new File(currentDirPath);
+			if(!path.exists()){
+				path.mkdirs();
+			}
+			String newName = dNow.getTime() + getExtention(fileName);
+			uploadFileName = currentDirPath + File.separator + newName;
+			
+			File imageFile = new File(uploadFileName);
 			try {
 				FileUtils.copyFile(myFile, imageFile);
 			} catch (IOException e) {
 				addActionError(e.getMessage());
 				return INPUT;
 			}
-
+			
+			uploadFileName = strPath + "/" + newName;
 			return SUCCESS;
 		} else {
 			addFieldError("myFileError", "文件格式错误！");
