@@ -5,6 +5,10 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
 <tiles-definitions>
+	<definition name="index.content" template="/page/icontent.jsp">
+		<put-attribute name="picNews" value="/component/picNews.jsp" />
+		<put-attribute name="news" value="/UpdateNewsAction.do" />
+	</definition>
 
 	<!-- Layout -->
 	<definition name="standard" template="/layouts/standard.jsp">
@@ -13,12 +17,10 @@
 		<put-attribute name="topic" value="/component/topic.jsp" />
 		<put-attribute name="login" value="/component/login.jsp" />
 		<put-attribute name="ipHolder" value="/IpcountAction.do" />
-		<put-attribute name="picNews" value="/component/picNews.jsp" />
-		<put-attribute name="news" value="/UpdateNewsAction.do" />
+		
 		<put-attribute name="search" value="/component/search.jsp" />
 		<put-attribute name="linker" value="/component/linker.jsp" />
 		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
 	</definition>
-
 
 </tiles-definitions>

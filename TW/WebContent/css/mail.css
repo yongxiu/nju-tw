@@ -22,7 +22,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 }
 
 .tl {
-	background: #f4f4ec url(../img/avatar.png) no-repeat -76px -204px;
+	background: #f4f4ec url(/TW/img/avatar.png) no-repeat -76px -204px;
 }
 
 .tl, .related-bg {
@@ -44,7 +44,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 
 
 .input, input.gsc-input {
-	background: white url(../img/input.png) repeat-x 0 -60px;
+	background: white url(/TW/img/input.png) repeat-x 0 -60px;
 	border: 1px solid #a79d8f;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -103,7 +103,7 @@ font:12px/180% Optima,"Trebuchet MS",Tahoma,"Hiragino Sans GB","Microsoft Yahei"
 }
 
 .btn {
-	background:url("../img/btn_form.png") no-repeat scroll 0 0 transparent;
+	background:url("/TW/img/btn_form.png") no-repeat scroll 0 0 transparent;
 	border:medium none;
 	color:#FFFFFF;
 	cursor:pointer;

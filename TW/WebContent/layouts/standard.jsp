@@ -39,30 +39,7 @@
 </div>
 </div>
 <div id="content">
-<div id="picNews">
-<div class="picNews-h"></div>
-<div class="picNews-p"><tiles:insertAttribute name="picNews" /></div>
-</div>
-<div id="news">
-<div id="news1" class="subnews">
-<div class="news-h"></div>
-<div class="news-p"><tiles:insertAttribute name="news" /></div>
-</div>
-<div id="blank-v"> </div>
-<div id="news2" class="subnews">
-<div class="news-h"></div>
-<div class="news-p"><tiles:insertAttribute name="news" /></div>
-</div>
-<div id="news3" class="subnews">
-<div class="news-h"></div>
-<div class="news-p"><tiles:insertAttribute name="news" /></div>
-</div>
-<div id="blank-v"> </div>
-<div id="news4" class="subnews">
-<div class="news-h"></div>
-<div class="news-p"><tiles:insertAttribute name="news" /></div>
-</div>
-</div>
+<tiles:insertAttribute name="content" />
 </div>
 <div id="linker"><tiles:insertAttribute name="linker" /></div>
 <div id="copyright"><tiles:insertAttribute name="copyRight" /></div>

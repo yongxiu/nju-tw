@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>    
+  
 
 	<table>
 		<tr>
@@ -16,9 +16,9 @@
 					<s:url id="org1det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
-					<sx:a targets="content" href="%{org1det}" >
+					<s:a  href="%{org1det}" >
 						<s:property value="department"/>
-					</sx:a>
+					</s:a>
 					
 					
 				</td>
@@ -40,9 +40,9 @@
 					<s:url id="org2det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
-					<sx:a targets="content" href="%{org2det}" >
+					<s:a  href="%{org2det}" >
 						<s:property value="department"/>
-					</sx:a>
+					</s:a>
 					
 				</td>
 			</tr>
@@ -63,9 +63,9 @@
 					<s:url id="org3det" action="OrganizationDetailAction.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
-					<sx:a targets="content" href="%{org3det}" >
+					<s:a  href="%{org3det}" >
 						<s:property value="department"/>
-					</sx:a >
+					</s:a >
 					
 				</td>
 			</tr>
