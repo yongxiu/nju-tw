@@ -34,7 +34,7 @@ public class FilterServlet extends HttpServlet implements Filter{
 	
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		redirectUrl = "TW/component/login.jsp" ;
+		redirectUrl = "/TW/component/login.jsp" ;
 	}
 	
 }

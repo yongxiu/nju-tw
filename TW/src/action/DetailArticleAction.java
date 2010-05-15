@@ -3,32 +3,25 @@ package action;
 import org.apache.struts2.ServletActionContext;
 
 import bean.Article;
+import bean.GenericArticle;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import dao.GenericArticleDao;
+
 public class DetailArticleAction extends ActionSupport {
+	/**
+	 * wjc
+	 * list article detail
+	 */
 	private int id; //article's id
-	private Article article;
+	private GenericArticle article;
 	
 	public String execute(){
-		if(getId()==1){
 		
-			article=new Article();
-			article.setTitle("news title 1");
-			article.setContent("news content 1");
-		}
+		GenericArticleDao articleDao = new GenericArticleDao();
+		article = articleDao.getById(new Long(id));
 		
-		if(getId()==2){
-			article=new Article();
-			article.setTitle("news title 2");
-			article.setContent("news content 2");
-		}
-		
-		if(getId()==3){
-			article=new Article();
-			article.setTitle("news title 3");
-			article.setContent("news content 3");
-		}
 		return SUCCESS;
 		
 	}
@@ -59,7 +52,7 @@ public class DetailArticleAction extends ActionSupport {
 
 
 
-	public Article getArticle() {
+	public GenericArticle getArticle() {
 		return article;
 	}
 
@@ -72,7 +65,7 @@ public class DetailArticleAction extends ActionSupport {
 
 
 
-	public void setArticle(Article article) {
+	public void setArticle(GenericArticle article) {
 		this.article = article;
 	}
 }

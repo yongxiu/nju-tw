@@ -2,6 +2,7 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
 <struts>
 	<constant name="struts.multipart.maxSize" value="20971520" />
 
@@ -58,13 +59,19 @@
 
 		<!-- Search Article -->
 		<action name="SearchAction" class="action.SearchAction">
-			<result name="success" type="tiles">list</result>
+			<result name="success">/page/list.jsp</result>
+		</action>
+		
+		<!-- Search then Page -->
+		<action name="PageAction" class="action.PageAction">
+			<result name="success">/page/list.jsp</result>
 		</action>
 
 		<!-- List Article -->
 		<action name="DetailArticleAction" class="action.DetailArticleAction">
-			<result name="success" type="tiles">detail</result>
+			<result name="success">page/detail.jsp</result>
 		</action>
+		
 
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
