@@ -34,6 +34,8 @@ public class SearchAction extends ActionSupport implements SessionAware {
 	private Map session;
 
 	private ArrayList<String> pageCount;
+	
+	private String currentPage;
 
 	public String execute() {
 		
@@ -73,7 +75,7 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			getSession().put("pageCount"+search, pageCount);
 
 			// add current page to session
-			String currentPage = "1";
+			currentPage = "1";
 			getSession().put("currentPage"+search, currentPage);
 
 		}
@@ -118,6 +120,14 @@ public class SearchAction extends ActionSupport implements SessionAware {
 		this.pageCount = pageCount;
 	}
 
+	public String getCurrentPage() {
+		return currentPage;
+	}
 
+	public void setCurrentPage(String currentPage) {
+		this.currentPage = currentPage;
+	}
+
+	
 	
 }

@@ -1,13 +1,17 @@
 package action;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
+import interceptor.UserInterceptor;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Map;
+
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
 
-import service.SortUtil;
-
+import service.Category;
+import service.GetImageFromArticle;
+import service.LuceneIndexWriter;
 import bean.GenericArticle;
 import bean.User;
 
@@ -17,52 +21,84 @@ import dao.GenericArticleDao;
 import dao.UserDao;
 
 public class ModifyArticleAction extends ActionSupport implements SessionAware{
-	/**
-	 * list article to be modified
-	 * wjc
-	 */
+	//update database with the modify article
+	private String content;
+
+	private String title;
+
+	private String category2;
 	
-	private ArrayList<GenericArticle> articles;
+	
 	private Map session;
 	
-	public String execute() {
-		GenericArticleDao articleDao =  new GenericArticleDao();
-		UserDao userDao = new UserDao();
-		Long id = (Long) getSession().get("id");
-		User user = userDao.getById(id);
+	//image paths
+	ArrayList<String> imageStrings;
+
+	public String execute() throws Exception {
 	
-		Set<GenericArticle> tempArticles = user.getArticles();
-		articles = new ArrayList<GenericArticle>();
-		for(GenericArticle articleTemp : tempArticles) {
-			articles.add(articleTemp);
+		
+		GetImageFromArticle get = new GetImageFromArticle();
+		imageStrings = get.getImage(getContent());
+
+		GenericArticleDao dao = new GenericArticleDao();
+		UserDao userDao = new UserDao();
+		User user = (User) getSession().get("user");
+		GenericArticle article = (GenericArticle) getSession().get("articlem");
+		article.setTitle(getTitle());
+		article.setContent(getContent());
+		article.setCategory(Category.getCategory(getCategory2()));
+		
+		getSession().put("article", article);
+		dao.update(article);
+		
+		//更新索引
+		String INDEX_PATH = ServletActionContext.getServletContext().getRealPath("/")+"index";
+		LuceneIndexWriter.updateIndex(INDEX_PATH, article);
+		System.out.println("更新索引");
+		
+		if (imageStrings.isEmpty()) {
+
+			
+			
+			//get user from session
+			
+			
+			
+			System.out.println(article.getContent());
+			
+
+			return SUCCESS;
 		}
 		
-		//sort articles by date
-		articles = SortUtil.revertSort(articles);
-		
-		
-		
-		
-		return SUCCESS;
+		else {
+			return "imageSelect";
+		}
 	}
 
-	
-
-	public void setArticles(ArrayList<GenericArticle> articles) {
-		this.articles = articles;
+	public String getContent() {
+		return content;
 	}
 
+	public void setContent(String content) {
+		this.content = content;
 
-
-
-
-
-
-	public ArrayList<GenericArticle> getArticles() {
-		return articles;
 	}
 
+	public String getTitle() {
+		return title;
+	}
 
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getCategory2() {
+		return category2;
+	}
+
+	public void setCategory2(String category2) {
+		this.category2 = category2;
+	}
 
 	public Map getSession() {
 		return session;
@@ -71,6 +107,14 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 	public void setSession(Map session) {
 		this.session = session;
 	}
-	
-	
+
+	public ArrayList<String> getImageStrings() {
+		return imageStrings;
+	}
+
+	public void setImageStrings(ArrayList<String> imageStrings) {
+		this.imageStrings = imageStrings;
+	}
+
+
 }
