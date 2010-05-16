@@ -47,8 +47,8 @@
 <s:iterator value="pageCount" id="p">
 		<s:set name="pValue"><s:property value="p"/></s:set>
 		<s:set name="search"><s:property value="search" escape="false"/></s:set>
-		
-		<s:if test="#session.currentPage==#pValue">
+		<s:set name="current"><s:property value="currentPage" escape="false"/></s:set>
+		<s:if test="#current==#pValue">
 			[<s:property value="#pValue"/>]
 		</s:if>
 		<s:else>

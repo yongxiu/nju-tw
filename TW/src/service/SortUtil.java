@@ -38,8 +38,8 @@ public class SortUtil {
 		ArrayList<GenericArticle> tempArticles = new ArrayList<GenericArticle>();
 	
 		articles = sort(articles);
-		for(GenericArticle temp:articles) {
-			tempArticles.add(temp);
+		for(int i=0;i<articles.size();i++) {
+			tempArticles.add(articles.get(articles.size()-1-i));
 		}
 		return tempArticles;
 	}

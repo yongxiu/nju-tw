@@ -49,7 +49,7 @@
     	<a href="edit.jsp">
     		发表文章
     	</a>
-    	<a href="ModifyArticle.do">
+    	<a href="GetModifyArticle.do">
     		已发表文章
     	</a>
     	<a href="/TW/userComponent/changePSW.jsp">

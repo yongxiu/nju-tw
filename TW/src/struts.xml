@@ -165,9 +165,20 @@
 			<result name="success">/component/login.jsp</result>
 		</action>
 		
+		<!-- Get Modify Articles -->
+		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
+			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
+		
+		<!-- Show Modify Article -->
+		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<result name="success">/userComponent/modifyArticle.jsp</result>
+		</action>
+		
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
-			<result name="success">/userComponent/articleList.jsp</result>
+			<result name="success">/userComponent/modifySuccess.jsp</result>
+			<result name="imageSelect">/page/imageSelect.jsp</result>
 		</action>
 	</package>
 
