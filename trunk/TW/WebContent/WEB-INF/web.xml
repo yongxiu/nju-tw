@@ -41,7 +41,7 @@
 	<context-param>
 		<param-name>
 			org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
-		<param-value>/WEB-INF/layouts.xml,/WEB-INF/view.xml</param-value>
+		<param-value>/WEB-INF/layouts.xml,/WEB-INF/view.xml,/WEB-INF/backlayouts.xml,/WEB-INF/backview.xml</param-value>
 	</context-param>
 
 	<listener>
