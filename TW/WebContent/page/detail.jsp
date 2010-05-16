@@ -7,13 +7,14 @@
 <br>
 <table>
   <tr>
-    <td>标题：</td>
+    <td></td>
     <td><s:property value="article.title" /> </td>
   </tr>
   <tr>
-    <td>内容：</td>
-    <td> <c:set var="content" ><s:property value="article.content" /></c:set><s:property value="article.content" />
-    <c:out value="${content}" escapeXml="false"></c:out>
+    <td></td>
+    <td> <s:set name="contentd" value="article.content"/>
+	<s:property value="#contentd" escape="false"/>
+   
      </td>
     
   </tr>
