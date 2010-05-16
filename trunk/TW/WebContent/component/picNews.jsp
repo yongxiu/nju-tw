@@ -6,65 +6,54 @@
   <div id="ifocus_pic">
     <div style="TOP: 0px; LEFT: 0px" id="ifocus_piclist">
       <ul>
-        <li><a href="http://www.pcbeta.com/viewnews-9416.html" target="_blank"><img 
-  style="BORDER-TOP: #e8e8e8 1px solid" title="Windows 7 SP1 16556 v.172泄露 多图赏" 
-  alt="Windows 7 SP1 16556 v.172泄露 多图赏" 
-  src="picNewsImg/p1.jpg" /></a></li>
-        <li><a href="http://www.pcbeta.com/viewnews-9255.html" target="_blank"><img 
-  style="BORDER-TOP: #e8e8e8 1px solid" title="耀和你一起微软官方VisualStudio广告美女壁纸下载" 
-  alt="耀和你一起微软官方VisualStudio广告美女壁纸下载" 
-  src="picNewsImg/p2.jpg" /></a></li>
-        <li><a href="http://www.pcbeta.com/viewnews-9099.html" target="_blank"><img 
-  style="BORDER-TOP: #e8e8e8 1px solid" title="来自Windows 7 LOGO设计师的超现实主题包" 
-  alt="来自Windows 7 LOGO设计师的超现实主题包" 
-  src="picNewsImg/p3.jpg" /></a></li>
-        <li><a href="http://www.pcbeta.com/viewnews-9025.html" target="_blank"><img 
-  style="BORDER-TOP: #e8e8e8 1px solid" 
-  title="Internet Explorer 9 Preview 第二版发布" 
-  alt="Internet Explorer 9 Preview 第二版发布" 
-  src="picNewsImg/p4.jpg" /></a></li>
-        <li><a href="http://www.pcbeta.com/viewnews-8646.html" target="_blank"><img 
-  style="BORDER-TOP: #e8e8e8 1px solid" title="远景发布IE8中国版 Beta1" 
-  alt="远景发布IE8中国版 Beta1" 
-  src="picNewsImg/p5.jpg" /></a> </li>
+        <li><a href="###" target="_blank"><img 
+  style="BORDER-TOP: #e8e8e8 1px solid" src="picNewsImg/p1.jpg" /></a></li>
+        <li><a href="###" target="_blank"><img 
+  style="BORDER-TOP: #e8e8e8 1px solid" src="picNewsImg/p2.jpg" /></a></li>
+        <li><a href="###" target="_blank"><img 
+  style="BORDER-TOP: #e8e8e8 1px solid" src="picNewsImg/p3.jpg" /></a></li>
+        <li><a href="###" target="_blank"><img 
+  style="BORDER-TOP: #e8e8e8 1px solid" src="picNewsImg/p4.jpg" /></a></li>
+        <li><a href="###" target="_blank"><img 
+  style="BORDER-TOP: #e8e8e8 1px solid" src="picNewsImg/p5.jpg" /></a> </li>
       </ul>
     </div>
   </div>
   <div id="ifocus_btn">
     <ul>
       <li id="pic_0" class="piccurrent">
-        <div><a class="pic_title" href="http://www.pcbeta.com/viewnews-9416.html" 
-  target="_blank">Windows 7 SP1 16556 v.172&nbsp;</a></div>
+        <div><a class="pic_title" href="###" 
+  target="_blank">南京大学第十九次团代会召开</a></div>
         <div class="pic_info">
-          <p>近日网上又出现了一个Windo近日网上又出现了一个Windo&nbsp;</p>
+          <p>11月28日，我校共青团第十九次代表大会在大礼堂...</p>
         </div>
       </li>
       <li id="pic_1" >
-        <div><a class="pic_title" href="http://www.pcbeta.com/viewnews-9255.html" 
-  target="_blank">耀和你一起微软官方VisualS&nbsp;</a></div>
+        <div><a class="pic_title" href="###" 
+  target="_blank">中共十七届四中全会在京举行</a></div>
         <div class="pic_info">
-          <p>相信大家还记得微软为Visual相信大家还记得微软为Visual &nbsp;</p>
+          <p>中共十七届四中全会在京举行 中央政治局主持会议...</p>
         </div>
       </li>
       <li id="pic_2">
-        <div><a class="pic_title" href="http://www.pcbeta.com/viewnews-9099.html" 
-  target="_blank">来自Windows 7 LOGO设计师的主题&nbsp;</a></div>
+        <div><a class="pic_title" href="###" 
+  target="_blank">纪念五四运动90周年大会隆重举行</a></div>
         <div class="pic_info">
-          <p>微软今天又提供了一款新的Win微软今天又提供了一款新的Win&nbsp;</p>
+          <p> 5月4日晚上，南京大学纪念五四运动90周年大会暨...</p>
         </div>
       </li>
       <li id="pic_3">
-        <div><a class="pic_title" href="http://www.pcbeta.com/viewnews-9025.html" 
-  target="_blank">Internet Explorer 9 Preview&nbsp;</a></div>
+        <div><a class="pic_title" href="###" 
+  target="_blank">纪念“四一”爱国学生运动六十周年座谈会</a></div>
         <div class="pic_info">
-          <p>从Internet Explorer 9官网看从Internet Explorer 9官网看&nbsp;</p>
+          <p>4月1日，南京大学纪念“四一”爱国学生运动六十周...</p>
         </div>
       </li>
       <li id="pic_4">
-        <div><a class="pic_title" href="http://www.pcbeta.com/viewnews-8646.html" 
-  target="_blank">远景发布IE8中国版 Beta1</a></div>
+        <div><a class="pic_title" href="###" 
+  target="_blank">南京大学学生党员深入学习实践科学发展观</a></div>
         <div class="pic_info">
-          <p>经过远景数周的努力和内部的经过远景数周的努力和内部的&nbsp;</p>
+          <p>根据中央和部属高校深入学习实践科学发展观活动领...</p>
         </div>
       </li>
     </ul>

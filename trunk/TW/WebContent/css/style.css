@@ -186,6 +186,25 @@ a {
 	background: url(../imgs/search.png);
 }
 
+#search table {
+	width:195px;
+	}
+
+#searchTextField {
+	width:125px;
+	height:18px;
+	position:relative;
+	top:4px;
+	font-family: 微软雅黑, Georgia, Times New Roman, Times, serif;
+	}
+
+#searchSubmit {
+	width:66px;
+	height:26px;
+	position:relative;
+	top:5px;
+	}
+
 #blank-h1 {
 	width: 988px;
 	height: 6px;
@@ -206,6 +225,41 @@ a {
 	background-color: #FFF;
 }
 
+#topic .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:5%;
+}
+
+#logindiv {
+	position:relative;
+	top:10%;
+	left:10%;
+}
+
+#logindiv label {
+	font-style:normal;
+}
+
+#ipholder .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:30%;
+}
+
+.headText {
+	position:relative;
+	top:13px;
+	left:55px;
+	width:80px;
+	}
+	
+.headLink {
+	width:34px;
+	position:relative;
+	left:350px;
+}
+	
 #sidebar .sidebar-h {
 	height: 39px;
 	width: 188px;
