@@ -50,6 +50,11 @@
 		<action name="ckupload" class="action.CkeditorUploadAction">
 			<result name="success" type="tiles">index</result>
 		</action>
+		
+		<!-- Redirect to background page -->
+		<action name="BackHome">
+			<result name="success" type="tiles">edit</result>
+		</action>
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">

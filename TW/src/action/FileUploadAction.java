@@ -58,7 +58,7 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 	}
 
 	private String getExtention(String fileName) {
-		System.out.println(fileName);
+
 		int pos = fileName.lastIndexOf(".");
 		return fileName.substring(pos);
 	}
@@ -126,7 +126,7 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			file.setPath(uploadFileName);
 			User user = (User) getSession().get("user");
 			file.setUser(user);
-			file.setFilename(uploadFileName);
+			file.setFilename(fileName);
 			
 			FileDao fileDao = new FileDao();
 			fileDao.create(file);

@@ -19,6 +19,7 @@ img,div {
 <a href='Home.do'> 进入南大团委首页</a>
 <a href='IpcountAction.do'> 计数器</a>
 
+<p><a href='BackHome.do'> 进入后台管理</a></p>
 <p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>
 <p><a href='<%=request.getContextPath()%>/mail.jsp'>发送邮件测试</a></p>
 <p><a href='writeIndex.do'>建立全文索引</a></p>

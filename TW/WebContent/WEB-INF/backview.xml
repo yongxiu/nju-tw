@@ -25,7 +25,7 @@
 	
 	
 	<!-- Site background of Admin Layout -->
-		<definition name="edit" extends="admin">		
+	<definition name="edit" extends="admin">		
 		<put-attribute name="body" value="/userComponent/edit.jsp" />
 	</definition>
 

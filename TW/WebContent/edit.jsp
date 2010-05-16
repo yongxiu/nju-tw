@@ -13,13 +13,6 @@
 <s:form action="SubmitArticleAction.do">
 <s:textfield name="title" label="文章标题"></s:textfield>
 <s:textarea  name="content" id="content" cssClass="ckeditor" rows="16" cols="100"></s:textarea>
-<script>  
-            CKEDITOR.replace("content",{  
-                filebrowserUploadUrl : 'ckupload.do?type=File',
-                filebrowserImageUploadUrl : 'ckupload.do?type=Image', 
-                filebrowserFlashUploadUrl : 'ckupload.do?type=Flash'  
-            });  
-        </script>
         <br>
 
 	
