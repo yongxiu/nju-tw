@@ -2,10 +2,10 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <s:form id="search" action="SearchAction" theme="simple">
-<table>
+<table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td><s:textfield size="12" value="输入标题关键字..." name="search" onblur="if (this.value == '') {this.value = '输入标题关键字...';}" onfocus="if (this.value == '输入标题关键字...') {this.value = '';}"></s:textfield></td>
-    <td><s:submit type="image" name="search" src="/TW/img/search.gif"  ></s:submit></td>  
+    <td ><s:textfield id="searchTextField" size="12" value="输入标题关键字..." name="search" onblur="if (this.value == '') {this.value = '输入标题关键字...';}" onfocus="if (this.value == '输入标题关键字...') {this.value = '';}"></s:textfield></td>
+    <td ><s:submit id="searchSubmit" type="image" name="search" src="/TW/img/search2.png"  ></s:submit></td>  
 </tr>
 </table>
 </s:form>

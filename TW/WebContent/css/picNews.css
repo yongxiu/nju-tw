@@ -672,7 +672,7 @@ U {
 	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: 312px; PADDING-RIGHT: 10px; BACKGROUND: url(picplayer_bg_normal.png) repeat-x left bottom; HEIGHT: 60px; VERTICAL-ALIGN: bottom; OVERFLOW: hidden; CURSOR: pointer; PADDING-TOP: 0px
 }
 #ifocus_btn A:hover {
-	COLOR: #1569a6
+	COLOR: #ff6400
 }
 .pic_title {
 	LINE-HEIGHT: 36px; DISPLAY: block; HEIGHT: 36px; COLOR: #523a00; FONT-SIZE: 12px
@@ -684,10 +684,10 @@ U {
 	BACKGROUND: url(picNewsImg/p.jpg) repeat-x left bottom
 }
 .piccurrent A {
-	COLOR: #1569a6
+	COLOR: #ff6400
 }
 .piccurrent A:hover {
-	COLOR: #1569a6
+	COLOR: #ff6400
 }
 #hs-photos {
 	MARGIN: 0px; WIDTH: 678px; HEIGHT: 258px; OVERFLOW: hidden

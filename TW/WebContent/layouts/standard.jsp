@@ -20,22 +20,24 @@
 <div><tiles:insertAttribute name="navigation" /></div>
 <div><tiles:insertAttribute name="search" /></div>
 </div>
-<div id="blank-h1"> </div>
+<div id="blank-h1"></div>
 <div id="page">
 <div id="sidebar">
 <div id="topic">
-<div class="sidebar-h"></div>
-<div class="sidebar-p"><tiles:insertAttribute name="topic" /></div>
+<div class="sidebar-h"><div class="headText">专题活动</div></div>
+<div class="sidebar-p"><div class="sidebarElement"><tiles:insertAttribute name="topic" /></div></div>
 </div>
 <div id="login">
-<div class="sidebar-h"></div>
-<s:div id="logindiv" cssClass="sidebar-p">
+<div class="sidebar-h"><div class=headText>用户登录</div></div>
+<div class="sidebar-p">
+<s:div id="logindiv">
 <tiles:insertAttribute name="login" />
 </s:div>
 </div>
+</div>
 <div id="ipholder">
-<div class="sidebar-h"></div>
-<div class="sidebar-p"><tiles:insertAttribute name="ipHolder" /></div>
+<div class="sidebar-h"><div class="headText">访问统计</div></div>
+<div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="ipHolder" /></div></div>
 </div>
 </div>
 <div id="content">
