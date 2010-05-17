@@ -14,13 +14,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td><s:textfield name="username" label="用户名" size="20"
+			<td><s:textfield id="loginTextfield" name="username" label="用户名" size="20"
 				labelposition="top"></s:textfield>
 			</td>
 		</tr>
 		<tr><td><br></td></tr>
 		<tr>
-			<td ><s:password name="password" label="密码" size="20"
+			<td ><s:password id="loginTextfield" name="password" label="密码" size="20"
 				labelposition="top"></s:password>
 			</td>
 		</tr>
