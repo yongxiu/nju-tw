@@ -14,6 +14,10 @@
 	<definition name="fileList" extends="customer">			
 		<put-attribute name="body" value="/userComponent/fileList.jsp" />
 	</definition>
+	
+	<definition name="articleList" extends="customer">			
+		<put-attribute name="body" value="/userComponent/articleList.jsp" />
+	</definition>
 
 	<definition name="upload" extends="customer">		
 		<put-attribute name="body" value="/userComponent/upload.jsp" />
@@ -31,6 +35,10 @@
 
 	<definition name="fileList" extends="admin">			
 		<put-attribute name="body" value="/userComponent/fileList.jsp" />
+	</definition>
+	
+	<definition name="articleList" extends="admin">			
+		<put-attribute name="body" value="/userComponent/articleList.jsp" />
 	</definition>
 
 	<definition name="upload" extends="admin">		

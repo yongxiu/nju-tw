@@ -9,8 +9,7 @@
 	<!-- Layout -->
 	<definition name="customer" template="/layouts/background.jsp">
 		<put-attribute name="banner" value="/userComponent/banner.jsp" />
-		<put-attribute name="navigation" value="/userComponent/navigation.jsp" />
-		<put-attribute name="menu" value="/userComponent/menu.jsp" />	
+		<put-attribute name="navigation" value="/userComponent/navigation.jsp" />	
 		<put-attribute name="search" value="/component/search.jsp" />
 		<put-attribute name="linker" value="/component/linker.jsp" />
 		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
@@ -19,8 +18,7 @@
 	
 	<definition name="admin" template="/layouts/background.jsp">
 		<put-attribute name="banner" value="/userComponent/banner.jsp" />
-		<put-attribute name="navigation" value="/component/navigation.jsp" />
-		<put-attribute name="menu" value="/admin/menu.jsp" />	
+		<put-attribute name="navigation" value="/userComponent/navigation.jsp" />
 		<put-attribute name="search" value="/component/search.jsp" />
 		<put-attribute name="linker" value="/component/linker.jsp" />
 		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
