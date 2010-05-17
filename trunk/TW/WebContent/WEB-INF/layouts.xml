@@ -8,6 +8,9 @@
 	<definition name="index.content" template="/page/icontent.jsp">
 		<put-attribute name="picNews" value="/component/picNews.jsp" />
 		<put-attribute name="news" value="/UpdateNewsAction.do" />
+		<put-attribute name="info" value="/UpdateInfoAction.do" />
+		<put-attribute name="theory" value="/UpdateTheoryAction.do" />
+		<put-attribute name="media" value="/UpdateMediaAction.do" />
 	</definition>
 
 	<!-- Layout -->
