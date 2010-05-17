@@ -68,6 +68,10 @@
 			<result name="success" type="tiles">upload</result>
 		</action>
 		
+		<action name="FileList">
+			<result name="success" type="tiles">fileList</result>
+		</action>
+		
 		<action name="changePSW">
 			<result name="success" type="tiles">changePSW</result>
 		</action>
