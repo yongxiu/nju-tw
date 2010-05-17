@@ -20,6 +20,7 @@ public class LuceneSearch {
 	public static Hits search(String query,String path) throws IOException, ParseException {
 		IndexSearcher searcher = new IndexSearcher(path);
 		QueryParser parser = new QueryParser("title", new MMAnalyzer());
+		
 		Query q = parser.parse(query);
 		Hits hits = searcher.search(q);
 		return hits;

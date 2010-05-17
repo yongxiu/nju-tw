@@ -12,6 +12,7 @@ import dao.GenericArticleDao;
 
 public class SelectImageAction extends ActionSupport implements SessionAware{
 	private String imageValue;
+	@SuppressWarnings("unchecked")
 	private Map session;
 	
 	public String execute() {
@@ -41,10 +42,12 @@ public class SelectImageAction extends ActionSupport implements SessionAware{
 
 
 
+	@SuppressWarnings("unchecked")
 	public Map getSession() {
 		return session;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setSession(Map session) {
 		this.session = session;
 	}
