@@ -13,7 +13,7 @@
 				<td>
 					
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<s:url id="org1det" action="OrganizationDetailAction.do">
+					<s:url id="org1det" action="OrgDetail.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
 					<s:a  href="%{org1det}" >
@@ -37,7 +37,7 @@
 			<tr>
 				<td>
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<s:url id="org2det" action="OrganizationDetailAction.do">
+					<s:url id="org2det" action="OrgDetail.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
 					<s:a  href="%{org2det}" >
@@ -60,7 +60,7 @@
 			<tr>
 				<td>
 					<s:set name="id"> <s:property value="id"/> </s:set>
-					<s:url id="org3det" action="OrganizationDetailAction.do">
+					<s:url id="org3det" action="OrgDetail.do">
 						<s:param name="id" value="#id"/>
 					</s:url>
 					<s:a  href="%{org3det}" >
