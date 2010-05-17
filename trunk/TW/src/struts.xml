@@ -59,6 +59,19 @@
 		<action name="BackHome">
 			<result name="success" type="tiles">edit</result>
 		</action>
+		
+		<action name="ArticleList">
+			<result name="success" type="tiles">articleList</result>
+		</action>
+		
+		<action name="uploadFile">
+			<result name="success" type="tiles">upload</result>
+		</action>
+		
+		<action name="changePSW">
+			<result name="success" type="tiles">changePSW</result>
+		</action>
+		
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
