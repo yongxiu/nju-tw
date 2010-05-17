@@ -22,9 +22,14 @@
 <div id="blank-h1"></div>
 <div id="page">
 
-<div id="body">
-<tiles:insertAttribute name="body" />
+<div id="sidebar">
+<tiles:insertAttribute name="menu" />
 </div>
+
+<div id="body">
+<tiles:insertAttribute name="content" />
+</div>
+
 <div id="linker"><tiles:insertAttribute name="linker" /></div>
 <div id="copyright"><tiles:insertAttribute name="copyRight" /></div>
 <div id="blank-h2"></div>

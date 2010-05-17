@@ -8,49 +8,29 @@
 
 	<!-- Site background of Cusntomer Layout -->
 	<definition name="edit" extends="customer">		
-		<put-attribute name="body" value="/userComponent/edit.jsp" />
+		<put-attribute name="content" value="/userComponent/edit.jsp" />
 	</definition>
 
 	<definition name="fileList" extends="customer">			
-		<put-attribute name="body" value="/userComponent/fileList.jsp" />
+		<put-attribute name="content" value="/GetModifyArticle.do" />
 	</definition>
 	
 	<definition name="articleList" extends="customer">			
-		<put-attribute name="body" value="/userComponent/articleList.jsp" />
+		<put-attribute name="content" value="/GetModifyArticle.do" />
 	</definition>
 
 	<definition name="upload" extends="customer">		
-		<put-attribute name="body" value="/userComponent/upload.jsp" />
+		<put-attribute name="content" value="/userComponent/upload.jsp" />
 	</definition>
 	
 	<definition name="changePSW" extends="customer">		
-		<put-attribute name="body" value="/userComponent/changePSW.jsp" />
+		<put-attribute name="content" value="/userComponent/changePSW.jsp" />
 	</definition>
 	
 	
 	<!-- Site background of Admin Layout -->
-	<definition name="edit" extends="admin">		
-		<put-attribute name="body" value="/userComponent/edit.jsp" />
-	</definition>
-
-	<definition name="fileList" extends="admin">			
-		<put-attribute name="body" value="/userComponent/fileList.jsp" />
-	</definition>
-	
-	<definition name="articleList" extends="admin">			
-		<put-attribute name="body" value="/userComponent/articleList.jsp" />
-	</definition>
-
-	<definition name="upload" extends="admin">		
-		<put-attribute name="body" value="/userComponent/upload.jsp" />
-	</definition>
-	
-	<definition name="changePSW" extends="admin">		
-		<put-attribute name="body" value="/userComponent/changePSW.jsp" />
-	</definition>
-	
 	<definition name="userManage" extends="admin">		
-		<put-attribute name="body" value="/admin/userManage.jsp" />
+		<put-attribute name="content" value="/admin/userManage.jsp" />
 	</definition>
 
 	
