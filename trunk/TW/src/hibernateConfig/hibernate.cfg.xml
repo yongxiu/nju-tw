@@ -30,7 +30,7 @@
 
 
 
-		<mapping resource="bean/Article.hbm.xml" />
+		
 		<mapping resource="bean/File.hbm.xml"/>
 		<mapping resource="bean/GenericArticle.hbm.xml"/>
 		<mapping resource="bean/IpCount.hbm.xml"/>
