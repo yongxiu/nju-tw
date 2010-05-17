@@ -1,31 +1,26 @@
 package action;
 
 import interceptor.UserInterceptor;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
-
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.index.IndexWriter;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
-
 import service.Category;
 import service.GetImageFromArticle;
 import service.LuceneIndexWriter;
-
 import bean.GenericArticle;
 import bean.User;
-
 import com.opensymphony.xwork2.ActionSupport;
-
 import dao.GenericArticleDao;
 import dao.UserDao;
 
 public class SubmitArticleAction extends ActionSupport implements SessionAware{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8372001051631250847L;
+
 	private String content;
 
 	private String title;
@@ -33,28 +28,24 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 	private String category2;
 	
 	
+	@SuppressWarnings("unchecked")
 	private Map session;
 	
 	//image paths
 	ArrayList<String> imageStrings;
 
+	@SuppressWarnings("unchecked")
 	public String execute() throws Exception {
 		//test session
-		System.out.println(getSession().get(UserInterceptor.USER_KEY));
-		System.out.println(getSession().get("id"));
-		////////
+//		System.out.println(getSession().get(UserInterceptor.USER_KEY));
+//		System.out.println(getSession().get("id"));
 		
-		
-		// System.out.println(getContent());
-
 		/**
 		 * check the image path wjc
 		 */
 		GetImageFromArticle get = new GetImageFromArticle();
 		imageStrings = get.getImage(getContent());
-//		 for(String image : imageStrings) {
-//		 System.out.println(image);
-//		 }
+
 		GenericArticleDao dao = new GenericArticleDao();
 		UserDao userDao = new UserDao();
 		User user = userDao.getById((Long) getSession().get("id"));
@@ -70,16 +61,7 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		System.out.println("更新索引");
 		
 		if (imageStrings.isEmpty()) {
-
-			
-			
-			//get user from session
-			
-			
-			
 			System.out.println(article.getContent());
-			
-
 			return SUCCESS;
 		}
 		
@@ -113,10 +95,12 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		this.category2 = category2;
 	}
 
+	@SuppressWarnings("unchecked")
 	public Map getSession() {
 		return session;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setSession(Map session) {
 		this.session = session;
 	}

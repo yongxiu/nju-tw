@@ -35,7 +35,9 @@ public class SearchAction extends ActionSupport implements SessionAware {
 
 	private ArrayList<String> pageCount;
 	
-	private String currentPage;
+	private int currentPage;
+	
+	private String pages;
 
 	public String execute() {
 		
@@ -63,6 +65,9 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			pageCount = new ArrayList<String>();
 			
 			int pages = PageService.countPage(hits.length());
+			//add pages to the session
+			getSession().put("pages"+search, pages+"");
+			this.pages = pages+"";
 			
 			//get articles
 			articles = PageService.getArticleByPage(1, pages, hits);
@@ -75,7 +80,7 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			getSession().put("pageCount"+search, pageCount);
 
 			// add current page to session
-			currentPage = "1";
+			currentPage = 1;
 			getSession().put("currentPage"+search, currentPage);
 
 		}
@@ -120,12 +125,22 @@ public class SearchAction extends ActionSupport implements SessionAware {
 		this.pageCount = pageCount;
 	}
 
-	public String getCurrentPage() {
+
+
+	public int getCurrentPage() {
 		return currentPage;
 	}
 
-	public void setCurrentPage(String currentPage) {
+	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
+	}
+
+	public String getPages() {
+		return pages;
+	}
+
+	public void setPages(String pages) {
+		this.pages = pages;
 	}
 
 	
