@@ -35,6 +35,10 @@
 		<put-attribute name="content" value="/GetMediaListAction.do"></put-attribute>
 	</definition>
 	
+	<definition name="AticalDetail" extends="standard">
+		<put-attribute name="content" value="/GenericArticleDetail.do"></put-attribute>
+	</definition>
+	
 	<definition name="download" extends="standard">
 		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
 	</definition>

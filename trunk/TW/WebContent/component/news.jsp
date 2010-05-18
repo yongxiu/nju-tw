@@ -8,7 +8,7 @@
 <s:iterator value="news">
  <tr>
  	<td>
- 		 <a href='<s:url action="GenericArticleDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
+ 		 <a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
  		 	<s:property value="title"/> &nbsp; [ <s:property value="date"/> ]
  		 </a>
  	
