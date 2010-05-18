@@ -75,24 +75,50 @@
 		</action>
 		
 		<!-- Redirect to background page -->
+		<!-- User1 -->
 		<action name="BackHome">
-			<result name="success" type="tiles">edit</result>
+			<result name="success" type="tiles">customer.edit</result>
 		</action>
 		
 		<action name="ArticleList">
-			<result name="success" type="tiles">articleList</result>
+			<result name="success" type="tiles">customer.articleList</result>
 		</action>
 		
 		<action name="uploadFile">
-			<result name="success" type="tiles">upload</result>
+			<result name="success" type="tiles">customer.upload</result>
 		</action>
 		
 		<action name="FileList">
-			<result name="success" type="tiles">fileList</result>
+			<result name="success" type="tiles">customer.fileList</result>
 		</action>
 		
 		<action name="changePSW">
-			<result name="success" type="tiles">changePSW</result>
+			<result name="success" type="tiles">customer.changePSW</result>
+		</action>
+		
+		<!-- User2 -->
+		<action name="admin.BackHome">
+			<result name="success" type="tiles">admin.edit</result>
+		</action>
+		
+		<action name="admin.ArticleList">
+			<result name="success" type="tiles">admin.articleList</result>
+		</action>
+		
+		<action name="admin.uploadFile">
+			<result name="success" type="tiles">admin.upload</result>
+		</action>
+		
+		<action name="admin.FileList">
+			<result name="success" type="tiles">admin.fileList</result>
+		</action>
+		
+		<action name="admin.changePSW">
+			<result name="success" type="tiles">admin.changePSW</result>
+		</action>
+		
+		<action name="admin.ListUser" class="action.ListUserAction">
+			<result name="success" type="tiles">admin.userManage</result>
 		</action>
 		
 
