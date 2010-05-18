@@ -218,6 +218,7 @@ a {
 }
 
 #page {
+	z-index:1;
 	float: left;
 	width: 988px;
 	background-color: #FFF;
