@@ -16,13 +16,6 @@
 
 <s:set name="contentm"><s:property value="article.content" escape="false"/></s:set>
 <s:textarea  name="content" id="content" cssClass="ckeditor" rows="16" cols="100" value="%{#contentm}"></s:textarea>
-<script>  
-            CKEDITOR.replace("content",{  
-                filebrowserUploadUrl : 'ckupload.do?type=File',
-                filebrowserImageUploadUrl : 'ckupload.do?type=Image', 
-                filebrowserFlashUploadUrl : 'ckupload.do?type=Flash'  
-            });  
-        </script>
         <br>
 
 	

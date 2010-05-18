@@ -18,6 +18,10 @@
 	<definition name="articleList" extends="customer">			
 		<put-attribute name="content" value="/GetModifyArticle.do" />
 	</definition>
+	
+	<definition name="ShowModifyArticle" extends="customer">
+		<put-attribute name="content" value="/userComponent/modifyArticle.jsp" />
+	</definition>
 
 	<definition name="upload" extends="customer">		
 		<put-attribute name="content" value="/userComponent/upload.jsp" />
