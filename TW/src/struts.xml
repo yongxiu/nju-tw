@@ -54,6 +54,9 @@
 		<action name="Media" >
 			<result name="success" type="tiles">mediapage</result>
 		</action>
+		<action name="AticalDetail" >
+			<result name="success" type="tiles">AticalDetail</result>
+		</action>
 		
 		<action name="Download" >
 			<result name="success" type="tiles">download</result>
