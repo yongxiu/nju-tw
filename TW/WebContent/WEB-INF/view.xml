@@ -23,6 +23,14 @@
 		<put-attribute name="content" value="/GetNewsListAction.do"></put-attribute>
 	</definition>
 	
+	<definition name="newpublic" extends="standard">
+		<put-attribute name="content" value="/GetNewsOfPublic.do"></put-attribute>
+	</definition>
+	
+	<definition name="newdynamic" extends="standard">
+		 <put-attribute name="content" value="/GetNewsOfDynamic.do"></put-attribute>
+	</definition>
+	
 	<definition name="infopage" extends="standard">
 		<put-attribute name="content" value="/GetInfoListAction.do"></put-attribute>
 	</definition>
@@ -53,6 +61,10 @@
 	
 	<definition name="connect" extends="standard">		
 		<put-attribute name="content" value="/Mail.do" />
+	</definition>
+	
+	<definition name="search" extends="standard">
+		 <put-attribute name="content" value="/SearchAction.do"></put-attribute>
 	</definition>
 	
 		

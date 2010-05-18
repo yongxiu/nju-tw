@@ -45,6 +45,12 @@
 		<action name="New" >
 			<result name="success" type="tiles">newspage</result>
 		</action>
+			<action name="NewPublic">
+				<result name="success" type="tiles">newpublic</result>
+			</action>
+			<action name="NewDaymaic">
+				<result name="success" type="tiles">newdynamic</result>
+			</action>
 		<action name="Info" >
 			<result name="success" type="tiles">infopage</result>
 		</action>
@@ -66,9 +72,15 @@
 			<result name="success" type="tiles">connect</result>
 		</action>
 		
+		<action name="Search">
+			<result name="success" type="tiles">search</result>
+		</action>
+		
+		
 		<action name="Mail" >
 			<result name="success" >/page/mail.jsp</result>
 		</action>
+		
 		
 		<action name="ckupload" class="action.CkeditorUploadAction">
 			<result name="success" type="tiles">index</result>
