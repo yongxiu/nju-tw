@@ -1,5 +1,5 @@
 $('#form_comments').ready(function() {
-	$('.inputname').blur(function() {
+	$('#author').blur(function() {
 		var $parent = $(this).parent();
 		$parent.find(".formtips").remove();
 		if(this.value=="") {
@@ -8,7 +8,7 @@ $('#form_comments').ready(function() {
 		}
 	});
 
-	$('.inputemail').blur(function() {
+	$('#mailfrom').blur(function() {
 		var $parent = $(this).parent();
 		$parent.find(".formtips").remove();
 		if(this.value=="") {
@@ -20,7 +20,7 @@ $('#form_comments').ready(function() {
 		}
 	});
 
-	$('.inputurl').blur(function() {
+	$('#subject').blur(function() {
 		var $parent = $(this).parent();
 		$parent.find(".formtips").remove();
 		if(this.value=="") {
@@ -29,7 +29,7 @@ $('#form_comments').ready(function() {
 		}
 	});
 
-	$('.textarea').blur(function() {
+	$('#comment').blur(function() {
 		var $parent = $(this).parent();
 		$parent.find(".formtips").remove();
 		if(this.value=="") {

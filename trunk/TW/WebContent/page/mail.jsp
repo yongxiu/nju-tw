@@ -9,8 +9,8 @@
 
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/sendmail.js"></script>
 
-<body>
-<s:form theme = "simple" cssClass="tl" id = "form_comments" action="SendMailAction.do" method="post">
+
+<s:form theme = "simple" cssClass="tl" id = "form_comments" action="SendMailAction.do" >
 	
 	<div class="inner br">
 		<h3>联系我们 </h3>
