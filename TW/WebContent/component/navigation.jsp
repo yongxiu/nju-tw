@@ -7,7 +7,7 @@
 <SCRIPT language=javascript type=text/javascript src="js/jquery.js"></SCRIPT>
   
 	<SCRIPT type="text/javascript">
-	  $(document).ready(function(){
+	  $('#m-nav').ready(function(){
 			$("#m-nav li").hover(
 				function(){ $("ul", this).fadeIn("normal"); }, 
 				function() { } 
