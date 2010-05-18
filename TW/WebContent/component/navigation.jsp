@@ -41,8 +41,8 @@
 	<li class="jd"><a href="New.do" title="焦点新闻"></a>
 	    
     	<UL style="display: block; opacity: 0.9999; ">
-			<LI id="xcsx"><A href="#" title="宣传思想"></A></LI>
-			<LI id="jcdt"><A href="#" title="基层动态"></A></LI>
+			<LI id="xcsx"><A href="GetNewsOfPublic.do" title="宣传思想"></A></LI>
+			<LI id="jcdt"><A href="GetNewsOfDynamic.do" title="基层动态"></A></LI>
 		</UL>
 		
     </li>
