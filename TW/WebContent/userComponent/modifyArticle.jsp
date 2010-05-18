@@ -21,7 +21,9 @@
 	
 <s:set name="category" value="#{'焦点新闻':{'基层动态','宣传思想'},
 								'组织机构':{'书记室','内部机构','下属组织'},
-								'test1':{'test1.1','test1.2'}}"/>
+								'公告信息':{'—— ——'},
+								'理论园地':{'—— ——'},
+								'媒体报导':{'—— ——'}}"/>
 		
 		<s:doubleselect name="category1" list="#category.keySet()" doubleName="category2" doubleList="#category[top]" label="文章类型"/>
 		<s:submit label="发布文章"></s:submit>
