@@ -7,33 +7,57 @@
 <tiles-definitions>
 
 	<!-- Site background of Cusntomer Layout -->
-	<definition name="edit" extends="customer">		
+	<definition name="customer.edit" extends="customer">		
 		<put-attribute name="content" value="/userComponent/edit.jsp" />
 	</definition>
 
-	<definition name="fileList" extends="customer">			
+	<definition name="customer.fileList" extends="customer">			
 		<put-attribute name="content" value="/GetModifyArticle.do" />
 	</definition>
 	
-	<definition name="articleList" extends="customer">			
+	<definition name="customer.articleList" extends="customer">			
 		<put-attribute name="content" value="/GetModifyArticle.do" />
 	</definition>
 	
-	<definition name="ShowModifyArticle" extends="customer">
+	<definition name="customer.ShowModifyArticle" extends="customer">
 		<put-attribute name="content" value="/userComponent/modifyArticle.jsp" />
 	</definition>
 
-	<definition name="upload" extends="customer">		
+	<definition name="customer.upload" extends="customer">		
 		<put-attribute name="content" value="/userComponent/upload.jsp" />
 	</definition>
 	
-	<definition name="changePSW" extends="customer">		
+	<definition name="customer.changePSW" extends="customer">		
 		<put-attribute name="content" value="/userComponent/changePSW.jsp" />
 	</definition>
 	
 	
 	<!-- Site background of Admin Layout -->
-	<definition name="userManage" extends="admin">		
+	<definition name="admin.edit" extends="admin">		
+		<put-attribute name="content" value="/userComponent/edit.jsp" />
+	</definition>
+
+	<definition name="admin.fileList" extends="admin">			
+		<put-attribute name="content" value="/GetModifyArticle.do" />
+	</definition>
+	
+	<definition name="admin.articleList" extends="admin">			
+		<put-attribute name="content" value="/GetModifyArticle.do" />
+	</definition>
+	
+	<definition name="admin.ShowModifyArticle" extends="admin">
+		<put-attribute name="content" value="/userComponent/modifyArticle.jsp" />
+	</definition>
+
+	<definition name="admin.upload" extends="admin">		
+		<put-attribute name="content" value="/userComponent/upload.jsp" />
+	</definition>
+	
+	<definition name="admin.changePSW" extends="admin">		
+		<put-attribute name="content" value="/userComponent/changePSW.jsp" />
+	</definition>
+	
+	<definition name="admin.userManage" extends="admin">		
 		<put-attribute name="content" value="/admin/userManage.jsp" />
 	</definition>
 
