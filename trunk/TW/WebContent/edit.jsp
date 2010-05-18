@@ -20,7 +20,7 @@
 								'组织机构':{'书记室','内部机构','下属组织'},
 								'公告信息':{'—— ——'},
 								'理论园地':{'—— ——'},
-								'媒体报导':{'—— ——'}}"/>
+								'媒体报道':{'—— ——'}}"/>
 		
 		<s:doubleselect name="category1" list="#category.keySet()" doubleName="category2" doubleList="#category[top]" label="文章类型"/>
 		<s:submit label="发布文章"></s:submit>
