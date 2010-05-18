@@ -108,25 +108,25 @@
 			<result name="input" type="tiles">index</result>
 		</action>
 
-		<!-- updateNews -->
+		<!-- update News -->
 		<action name="UpdateNewsAction" class="action.UpdateNewsAction">
 			<result name="success">/component/news.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
 		
-		<!-- updateNews -->
+		<!-- update Infos-->
 		<action name="UpdateInfoAction" class="action.UpdateInfoAction">
 			<result name="success">/component/info.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
 		
-		<!-- updateNews -->
+		<!-- update Theory -->
 		<action name="UpdateTheoryAction" class="action.UpdateTheoryAction">
 			<result name="success">/component/theory.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
 		
-		<!-- updateNews -->
+		<!-- update Media -->
 		<action name="UpdateMediaAction" class="action.UpdateMediaAction">
 			<result name="success">/component/media.jsp</result>
 			<result name="input" type="tiles">index</result>

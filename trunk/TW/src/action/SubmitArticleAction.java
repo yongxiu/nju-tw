@@ -27,6 +27,8 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 
 	private String category2;
 	
+	private String category1;
+	
 	
 	@SuppressWarnings("unchecked")
 	private Map session;
@@ -49,8 +51,17 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		GenericArticleDao dao = new GenericArticleDao();
 		UserDao userDao = new UserDao();
 		User user = userDao.getById((Long) getSession().get("id"));
+	    
+		//two category
+		int category;
+		if(getCategory2().equals("—— ——")) {
+			category = Category.getCategory(getCategory1());
+		}
+		else {
+			category = Category.getCategory(getCategory2());
+		}
 		GenericArticle article = new GenericArticle(getTitle(), new Date(),
-				getContent(), user, Category.getCategory(getCategory2()),
+				getContent(), user, category,
 				true, false, null);
 		getSession().put("article", article);
 		dao.create(article);
@@ -113,7 +124,15 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		this.imageStrings = imageStrings;
 	}
 
+	public String getCategory1() {
+		return category1;
+	}
 
+	public void setCategory1(String category1) {
+		this.category1 = category1;
+	}
+
+	
 
 
 	

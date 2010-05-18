@@ -28,6 +28,8 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 
 	private String category2;
 	
+	private String category1;
+	
 	
 	private Map session;
 	
@@ -46,7 +48,17 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 		GenericArticle article = (GenericArticle) getSession().get("articlem");
 		article.setTitle(getTitle());
 		article.setContent(getContent());
-		article.setCategory(Category.getCategory(getCategory2()));
+		
+		//two category
+		int category;
+		if(getCategory2().equals("—— ——")) {
+			category = Category.getCategory(getCategory1());
+		}
+		else {
+			category = Category.getCategory(getCategory2());
+		}
+		
+		article.setCategory(category);
 		
 		getSession().put("article", article);
 		dao.update(article);
@@ -116,5 +128,14 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 		this.imageStrings = imageStrings;
 	}
 
+	public String getCategory1() {
+		return category1;
+	}
+
+	public void setCategory1(String category1) {
+		this.category1 = category1;
+	}
+
+	
 
 }
