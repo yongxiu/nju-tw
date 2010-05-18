@@ -123,10 +123,11 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			
 			bean.File file = new bean.File();
 			file.setDate(dNow);
-			file.setPath(uploadFileName);
+			file.setPath("/TW/"+uploadFileName);
 			User user = (User) getSession().get("user");
 			file.setUser(user);
 			file.setFilename(fileName);
+			
 			
 			FileDao fileDao = new FileDao();
 			fileDao.create(file);
