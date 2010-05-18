@@ -4,12 +4,12 @@
 
 <link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
-<SCRIPT language=javascript type=text/javascript src="js/jquery-1.4.2.min.js"></SCRIPT>
+<SCRIPT language=javascript type=text/javascript src="js/jquery.js"></SCRIPT>
   
 	<SCRIPT type="text/javascript">
 	  $(document).ready(function(){
 			$("#m-nav li").hover(
-				function(){ $("ul", this).fadeIn("fast"); }, 
+				function(){ $("ul", this).fadeIn("normal"); }, 
 				function() { } 
 			);
 	  	if (document.all) {
@@ -55,10 +55,7 @@
 </ul>
 
 <BR clear="all">
-<SCRIPT type="text/javascript">
-_uacct = "UA-325840-2";
-urchinTracker();
-</SCRIPT>
+
 <!--
 <script language="javascript">
 	$('#m_nav').ready(
