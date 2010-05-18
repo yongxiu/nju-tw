@@ -254,6 +254,15 @@
 		<action name="GetNewsListAction" class="action.navigation.GetNewsListAction">
 			<result name="success">/naviPage/news.jsp</result>
 		</action>
+			<!-- Get 宣传思想 -->
+			<action name="GetNewsOfPublic" class="action.navigation.news.GetNewsOfPublicAction">
+				<result name="success">/naviPage/news/publicNews.jsp</result>
+			</action>
+			
+			<!-- Get 基层动态 -->
+			<action name="GetNewsOfDynamic" class="action.navigation.news.GetNewsOfDynamicAction">
+				<result name="success">/naviPage/news/dynamicNews.jsp</result>
+			</action>
 		
 		<!-- Get Info List-->
 		<action name="GetInfoListAction" class="action.navigation.GetInfoListAction">

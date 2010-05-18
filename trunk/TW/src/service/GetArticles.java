@@ -251,6 +251,55 @@ GenericArticleDao genericArticleDao=new GenericArticleDao();
 	
 	}
 	
+	public ArrayList<GenericArticle> getAllPublicNews(){
+		GenericArticleDao genericArticleDao=new GenericArticleDao();
+		
+		//get all articles
+		List<GenericArticle> articles=genericArticleDao.getAllEntity();
+		
+		//hold all news
+		ArrayList<GenericArticle> news=new ArrayList<GenericArticle>();
+		
+		//hold newest news
+		ArrayList<GenericArticle> fiveNews=new ArrayList<GenericArticle>();
+		
+		//get all news
+		for(GenericArticle a:articles){
+			if(a.getCategory()==10)
+				news.add(a);
+		}
+
+		
+		//sort news
+		news=SortUtil.revertSort(news);
+		return news;
+	}
+	
+	public ArrayList<GenericArticle> getAllDynamicNews(){
+		GenericArticleDao genericArticleDao=new GenericArticleDao();
+		
+		//get all articles
+		List<GenericArticle> articles=genericArticleDao.getAllEntity();
+		
+		//hold all news
+		ArrayList<GenericArticle> news=new ArrayList<GenericArticle>();
+		
+		//hold newest news
+		ArrayList<GenericArticle> fiveNews=new ArrayList<GenericArticle>();
+		
+		//get all news
+		for(GenericArticle a:articles){
+			if(a.getCategory()==11)
+				news.add(a);
+		}
+
+		
+		//sort news
+		news=SortUtil.revertSort(news);
+		
+		return news;
+	}
+	
 	
 	public static void main(String[] args){
 		ArrayList<GenericArticle> five=new GetArticles().getFiveNews();
