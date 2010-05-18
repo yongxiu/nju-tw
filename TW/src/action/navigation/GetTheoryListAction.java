@@ -1,4 +1,4 @@
-package action;
+package action.navigation;
 
 import java.util.ArrayList;
 
@@ -8,20 +8,12 @@ import bean.GenericArticle;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UpdateTheoryAction extends ActionSupport{
-	/**
-	 * wjc 
-	 * usage: update news
-	 */
-	private static final long serialVersionUID = 5843553509139320770L;
-	//five news to be displayed
-	ArrayList<GenericArticle> theories;
+public class GetTheoryListAction extends ActionSupport{
+	private ArrayList<GenericArticle> theories;
 	
-	//Get service
-	
-	public String execute(){
+	public String execute() throws Exception {
 		GetArticles service = new GetArticles();
-		theories=service.getFiveTheories();
+		theories = service.getAllThories();
 		return SUCCESS;
 	}
 
@@ -32,7 +24,6 @@ public class UpdateTheoryAction extends ActionSupport{
 	public void setTheories(ArrayList<GenericArticle> theories) {
 		this.theories = theories;
 	}
-
-
+	
 	
 }

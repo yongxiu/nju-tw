@@ -18,7 +18,7 @@
 		<property name="content" column="content" type="string"/>
 		<property name="category" column="category" type="int"/>
 		<property name="state" column="state" type="boolean"/>
-		<property name="ishaveimage" column="ishasimage" type="boolean"/>
+		<property name="ishaveimage" column="ishasimage" type="boolean" />
 		<property name="path" column="path" type="string"/>
 		
 		<many-to-one name="user" column="uid" class="bean.User" not-null="true" cascade="all"/>

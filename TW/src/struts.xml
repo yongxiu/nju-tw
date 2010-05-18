@@ -147,6 +147,11 @@
 
 			<result name="success">/page/orgList.jsp</result>
 		</action>
+		
+		<!-- Generic Article Detail -->
+		<action name="GenericArticleDetail" class="action.GenericArticleDetail">
+			<result name="success">/page/genericArticleDetail.jsp</result>
+		</action>
 
 		<!-- summit article -->
 		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
@@ -223,6 +228,27 @@
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
 			<result name="success">/userComponent/modifySuccess.jsp</result>
 			<result name="imageSelect">/page/imageSelect.jsp</result>
+		</action>
+		
+		<!-- Navigation List -->
+		<!-- Get news List -->
+		<action name="GetNewsListAction" class="action.navigation.GetNewsListAction">
+			<result name="success">/naviPage/news.jsp</result>
+		</action>
+		
+		<!-- Get Info List-->
+		<action name="GetInfoListAction" class="action.navigation.GetInfoListAction">
+			<result name="success">/naviPage/info.jsp</result>
+		</action>
+		
+		<!-- Get Meida List-->
+		<action name="GetMediaListAction" class="action.navigation.GetMediaListAction">
+			<result name="success">/naviPage/media.jsp</result>
+		</action>
+		
+		<!-- Get Theory List -->
+		<action name="GetTheoryListAction" class="action.navigation.GetTheoryListAction">
+			<result name="success">/naviPage/theory.jsp</result>
 		</action>
 	</package>
 
