@@ -240,7 +240,7 @@
 		
 		<!-- Show Modify Article -->
 		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
-			<result name="success">/userComponent/modifyArticle.jsp</result>
+			<result name="success" type="tiles">ShowModifyArticle</result>
 		</action>
 		
 		<!-- Modify Article -->
