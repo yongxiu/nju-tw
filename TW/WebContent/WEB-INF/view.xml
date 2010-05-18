@@ -18,6 +18,26 @@
 	<definition name="OrgDetail" extends="standard">
 		<put-attribute name="content" value="/OrganizationDetailAction.do"></put-attribute>
 	</definition>
+	
+	<definition name="newspage" extends="standard">
+		<put-attribute name="content" value="/GetNewsListAction.do"></put-attribute>
+	</definition>
+	
+	<definition name="infopage" extends="standard">
+		<put-attribute name="content" value="/GetInfoListAction.do"></put-attribute>
+	</definition>
+	
+	<definition name="theorypage" extends="standard">
+		<put-attribute name="content" value="/GetTheoryListAction.do"></put-attribute>
+	</definition>
+	
+	<definition name="mediapage" extends="standard">
+		<put-attribute name="content" value="/GetMediaListAction.do"></put-attribute>
+	</definition>
+	
+	<definition name="download" extends="standard">
+		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
+	</definition>
 
 	<definition name="list" extends="standard">
 		<put-attribute name="content" value="/page/list.jsp"></put-attribute>
