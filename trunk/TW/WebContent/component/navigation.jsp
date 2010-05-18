@@ -1,18 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags"%>
-<ul id="m_nav">
-	<li class="sy"><a href="Home.do" title="首页" ><span>sy</span>
-	</a></li>
-	<li class="zz"><a href="Org.do" title="组织结构"> </a></li>
-	<li class="jd"><a href="GetNewsListAction.do" title="焦点新闻"><span>jd</span></a></li>
-	<li class="gg"><a href="GetInfoListAction.do" title="公告信息"><span>gg</span></a></li>
-	<li class="ll"><a href="GetTheoryListAction.do" title="理论园地"><span>ll</span></a></li>
-	<li class="mt"><a href="GetMediaListAction.do" title="媒体报道"><span>nt</span></a></li>
-	<li class="xz"><a href="###" title="下载专区"><span>xz</span></a></li>
+
+<link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
+<link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
+<SCRIPT language=javascript type=text/javascript src="js/jquery.js"></SCRIPT>
+  
+	<SCRIPT type="text/javascript">
+	  $(document).ready(function(){
+			$("#m-nav li").hover(
+				function(){ $("ul", this).fadeIn("fast"); }, 
+				function() { } 
+			);
+	  	if (document.all) {
+				$("#m-nav li").hoverClass ("sfHover");
+			}
+	  });
+	  
+		$.fn.hoverClass = function(c) {
+			return this.each(function(){
+				$(this).hover( 
+					function() { $(this).addClass(c);  },
+					function() { $(this).removeClass(c); }
+				);
+			});
+		};	  
+	</SCRIPT>
+
+<ul id="m-nav" class="nav">
+	<li class="sy"><a href="Home.do" title="首页" ></a></li>
+	<li class="zz"><a href="Org.do" title="组织结构"> </a>
+    
+    	<UL style="display: block; opacity: 0.9999;">
+			<LI id="sjs"><A href="#" title="书记室"></A></LI>
+			<LI id="nbjg"><A href="#" title="内部结构"></A></LI>
+			<LI id="xszz"><A href="#" title="下属组织"></A></LI>
+		</UL>
+		
+    </li>
+	<li class="jd"><a href="GetNewsListAction.do" title="焦点新闻"></a>
+	    
+    	<UL style="display: block; opacity: 0.9999; ">
+			<LI id="xcsx"><A href="#" title="宣传思想"></A></LI>
+			<LI id="jcdt"><A href="#" title="基层动态"></A></LI>
+		</UL>
+		
+    </li>
+	<li class="gg"><a href="GetInfoListAction.do" title="公告信息"></a></li>
+	<li class="ll"><a href="GetTheoryListAction.do" title="理论园地"></a></li>
+	<li class="mt"><a href="GetMediaListAction.do" title="媒体报道"></a></li>
+	<li class="xz"><a href="###" title="下载专区"></a></li>
 	<li class="lx"><a href="ConnectUs.do" title="联系我们"></a></li>
 </ul>
 
-
+<BR clear="all">
+<SCRIPT type="text/javascript">
+_uacct = "UA-325840-2";
+urchinTracker();
+</SCRIPT>
+<!--
 <script language="javascript">
 	$('#m_nav').ready(
 			function() {
@@ -27,9 +72,4 @@
 					navArray[0].className = "active";}
 			});
 </script>
-
-
-
-
-
-
+-->
