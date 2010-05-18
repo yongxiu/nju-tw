@@ -250,6 +250,11 @@
 		<action name="GetTheoryListAction" class="action.navigation.GetTheoryListAction">
 			<result name="success">/naviPage/theory.jsp</result>
 		</action>
+		
+		<!-- Download Files -->
+		<action name="DownloadAction" class="action.navigation.DownloadAction">
+			<result name="success">/naviPage/download.jsp</result>
+		</action>
 	</package>
 
 </struts>
