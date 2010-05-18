@@ -42,6 +42,22 @@
 		<action name="OrgDetail" >
 			<result name="success" type="tiles">OrgDetail</result>
 		</action>
+		<action name="New" >
+			<result name="success" type="tiles">newspage</result>
+		</action>
+		<action name="Info" >
+			<result name="success" type="tiles">infopage</result>
+		</action>
+		<action name="Theory" >
+			<result name="success" type="tiles">theorypage</result>
+		</action>
+		<action name="Media" >
+			<result name="success" type="tiles">mediapage</result>
+		</action>
+		
+		<action name="Download" >
+			<result name="success" type="tiles">download</result>
+		</action>
 		
 		<action name="ConnectUs" >
 			<result name="success" type="tiles">connect</result>
