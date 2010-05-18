@@ -38,16 +38,9 @@
   top: 36px;
   margin:0;
   padding:0;
-  right:-99px;
-}
-
-#xcsx {
-left:50px;
-	}
-	
-#jcdt {
-	left:50px;
-	}	
+  left:0;
+ opacity:0.5;
+}	
 
 .nav ul li {
   float: none;
