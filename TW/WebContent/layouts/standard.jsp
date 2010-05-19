@@ -30,9 +30,9 @@
 <div id="login">
 <div class="sidebar-h"><div class=headText>用户登录</div></div>
 <div class="sidebar-p">
-<s:div id="logindiv">
+<div id="logindiv">
 <tiles:insertAttribute name="login" />
-</s:div>
+</div>
 </div>
 </div>
 <div id="ipholder">
