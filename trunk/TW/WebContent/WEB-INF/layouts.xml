@@ -18,7 +18,7 @@
 		<put-attribute name="banner" value="/component/banner.jsp" />
 		<put-attribute name="navigation" value="/component/navigation.jsp" />
 		<put-attribute name="topic" value="/component/topic.jsp" />
-		<put-attribute name="login" value="/component/login.jsp" />
+		<put-attribute name="login" value="/CheckLogin.do" />
 		<put-attribute name="ipHolder" value="/IpcountAction.do" />
 		
 		<put-attribute name="search" value="/component/search.jsp" />

@@ -136,7 +136,13 @@
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
-			<result name="success" >/page/loginSuccess.jsp</result>
+			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="input">/component/login.jsp</result>
+		</action>
+		
+		<!-- Login check -->
+		<action name="CheckLogin" class="action.CheckLoginAction">
+			<result name="success">/page/loginSuccess.jsp</result>
 			<result name="input">/component/login.jsp</result>
 		</action>
 
