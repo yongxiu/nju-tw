@@ -38,8 +38,14 @@ public class SearchAction extends ActionSupport implements SessionAware {
 	private int currentPage;
 	
 	private String pages;
+	
+	private int number;
+	
+	private long time;
 
 	public String execute() {
+		//time
+		long start,end;
 		
 		String INDEX_PATH = ServletActionContext.getServletContext()
 				.getRealPath("/")
@@ -48,15 +54,24 @@ public class SearchAction extends ActionSupport implements SessionAware {
 		articles = new ArrayList<ArticleTemp>();
 		Hits hits = null;
 		try {
+			//start time
+			Date datestart = new Date();
+			start = datestart.getTime();
+			
 			if(getSession().get("hits"+search)!=null)
 				hits = (Hits) getSession().get("hits"+search);
 			else {
 				hits = LuceneSearch.search(search, INDEX_PATH);
 			}
 			
+			//end time
+			Date endtart = new Date();
+			end = endtart.getTime();
+			time = end - start;
 			
-
-			
+			//add time to session
+			getSession().put("time", time);
+			System.out.println(time);
 
 			// add hits to session
 			getSession().put("hits"+search, hits);
@@ -82,6 +97,10 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			// add current page to session
 			currentPage = 1;
 			getSession().put("currentPage"+search, currentPage);
+			
+			//add number to session
+			number = hits.length();
+			getSession().put("number", number);
 
 		}
 
@@ -141,6 +160,22 @@ public class SearchAction extends ActionSupport implements SessionAware {
 
 	public void setPages(String pages) {
 		this.pages = pages;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public long getTime() {
+		return time;
+	}
+
+	public void setTime(long time) {
+		this.time = time;
 	}
 
 	

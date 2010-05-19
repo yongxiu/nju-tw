@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<s:set name="number"><s:property value="number"/></s:set>
+<!-- no result -->
+<s:if test="#number==0">
+<br><br>
+	抱歉,没有您要的搜索结果，请重新输入搜索条件！
+</s:if>
 
 
-<table>
-  <tr>
-    <td>
-    	<s:set name="ss"><s:property value="search" escape="false"/></s:set>
-    	
-    	<s:textfield size="10" value="%{#ss}" name="ss" ></s:textfield>
-    </td>
-     
-</tr>
-</table>
-
-<br>
-<br>
+<s:set name="search"><s:property value="search" escape="false"/></s:set>
+<s:else>
+关键词&nbsp;"<s:property value="#search" />"&nbsp;&nbsp;搜索的结果共有："<s:property value="number"/>"  条</>&nbsp;&nbsp;
+<s:if test="time==0">搜索耗时忽略不计</s:if>
+<s:else>
+搜索耗时 ：" <s:property value="time"/>"ms   
+</s:else>
 <br>
 <s:form action="DetailArticleAction">
 
@@ -50,7 +50,14 @@
 <s:set name="pages"><s:property value="pages"/> </s:set>
 <s:set name="previous"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))-1) %></s:set>
 <s:set name="next"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))+1) %></s:set>
-<s:if test="#current==1"/>
+
+<!-- one page -->
+<s:if test="#pages==1">
+	<!-- nothing to do -->
+</s:if>
+<!-- more than one page -->
+<s:else>
+  <s:if test="#current==1"/>
 		<s:else>
 			<a href='<s:url action="PageAction.do" ><s:param name="pp"> <s:property value="#previous"/></s:param> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
 				上一页
@@ -58,7 +65,7 @@
 		</s:else>
 		
 
-<s:iterator value="pageCount" id="p">
+  <s:iterator value="pageCount" id="p">
 		<s:set name="pValue"><s:property value="p"/></s:set>
 		
 		<s:if test="#current==#pValue">
@@ -69,10 +76,7 @@
 		 <s:property value="p"/> 
 		</a>]
 		</s:else>
-
-		
-	
-</s:iterator>
+  </s:iterator>
 
 	<s:if test="#current==#pages"/>
 			<s:else>
@@ -80,5 +84,5 @@
 				下一页
 			</a>
 		</s:else>
-		
-
+</s:else>		
+</s:else>
