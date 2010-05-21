@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config )
 {
 	config.language = 'zh-cn'; // 配置语言   
 	config.uiColor = '#c2ceea'; // 背景颜色   
-	config.width = '700px'; // 宽度   
+	config.width = '760px'; // 宽度   
 	config.height = '300px'; // 高度   
 	config.skin = 'kama';//界面v2,kama,office2003   
 	config.toolbar = 'Full';// 工具栏风格Full,Basic  
@@ -32,7 +32,7 @@ CKEDITOR.editorConfig = function( config )
 	config.filebrowserImageUploadUrl = "ckupload.do?type=Image";
 	config.filebrowserFlashUploadUrl = "ckupload.do?type=Flash";
 	config.font_names='宋体/宋体;黑体/黑体;仿宋/仿宋 _GB2312;楷体/楷体_GB2312;隶书/隶书;幼圆/幼圆;微软雅黑/微软雅黑;'+ config.font_names;
-	config.resize_maxWidth = 700;
-	config.resize_minWidth = 700;
+	config.resize_maxWidth = 760;
+	config.resize_minWidth = 760;
 };
 

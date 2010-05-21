@@ -1,35 +1,56 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags"%>
-<ul id="m_nav">
-	<li class="sy"><a href="Home.do" title="首页" ><span>sy</span>
-	</a></li>
-	<li class="zz"><a href="BackHome.do" title="发表文章"><span>发文章</span></a></li>
-	<li class="jd"><a href="ArticleList.do" title="已发表的文章"><span>已发文章</span></a></li>
-	<li class="gg"><a href="uploadFile.do" title="上传文件"><span>上传文件</span></a></li>
-	<li class="ll"><a href="changePSW.do" title="账户管理"><span>账户管理</span></a></li>
-	<li class="mt"><a href="###" title="媒体报道"><span>nt</span></a></li>
-	<li class="xz"><a href="###" title="下载专区"><span>xz</span></a></li>
+
+
+<link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
+<SCRIPT language=javascript type=text/javascript src="js/jquery.js"></SCRIPT>
+  
+	<SCRIPT type="text/javascript">
+	  $('#m-nav').ready(function(){
+			$("#m-nav li").hover(
+				function(){ $("ul", this).fadeIn("normal"); }, 
+				function() { } 
+			);
+	  	if (document.all) {
+				$("#m-nav li").hoverClass ("sfHover");
+			}
+	  });
+	  
+		$.fn.hoverClass = function(c) {
+			return this.each(function(){
+				$(this).hover( 
+					function() { $(this).addClass(c);  },
+					function() { $(this).removeClass(c); }
+				);
+			});
+		};	  
+	</SCRIPT>
+
+<ul id="m-nav" class="nav">
+	<li class="sy"><a href="Home.do" title="首页" ></a></li>
+	<li class="zz"><a href="Org.do" title="组织结构"> </a>
+    
+    	<UL style="display: block; opacity: 0.9999;">
+			<LI id="sjs"><A href="#" title="书记室"></A></LI>
+			<LI id="nbjg"><A href="#" title="内部结构"></A></LI>
+			<LI id="xszz"><A href="#" title="下属组织"></A></LI>
+		</UL>
+		
+    </li>
+	<li class="jd"><a href="New.do" title="焦点新闻"></a>
+	    
+    	<UL style="display: block; opacity: 0.9999; ">
+			<LI id="xcsx"><A href="NewPublic.do" title="宣传思想"></A></LI>
+			<LI id="jcdt"><A href="NewDaymaic.do" title="基层动态"></A></LI>
+		</UL>
+		
+    </li>
+	<li class="gg"><a href="Info.do" title="公告信息"></a></li>
+	<li class="ll"><a href="Theory.do" title="理论园地"></a></li>
+	<li class="mt"><a href="Media.do" title="媒体报道"></a></li>
+	<li class="xz"><a href="Download.do" title="下载专区"></a></li>
+
 	<li class="lx"><a href="ConnectUs.do" title="联系我们"></a></li>
 </ul>
 
-
-<script language="javascript">
-	$('#m_nav').ready(
-			function() {
-				var pageUrl = "";
-				pageUrl = window.location;
-				pageUrl = pageUrl.toString();
-				var navArray = document.getElementById('m_nav')
-						.getElementsByTagName("a");
-				if (pageUrl.indexOf("Org.do")>0) {
-					navArray[1].className = "active";
-				}else{
-					navArray[0].className = "active";}
-			});
-</script>
-
-
-
-
-
-
+<BR clear="all">

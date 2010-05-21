@@ -112,6 +112,11 @@
 			<result name="success" type="tiles">customer.changePSW</result>
 		</action>
 		
+		<!-- Show Modify Article -->
+		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<result name="success" type="tiles">customer.ShowModifyArticle</result>
+		</action>
+		
 		<!-- User2 -->
 		<action name="admin.BackHome">
 			<result name="success" type="tiles">admin.edit</result>
@@ -135,6 +140,10 @@
 		
 		<action name="admin.ListUser" class="action.ListUserAction">
 			<result name="success" type="tiles">admin.userManage</result>
+		</action>
+		
+		<action name="admin.ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<result name="success" type="tiles">admin.ShowModifyArticle</result>
 		</action>
 		
 
@@ -286,10 +295,6 @@
 			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		
-		<!-- Show Modify Article -->
-		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
-			<result name="success" type="tiles">ShowModifyArticle</result>
-		</action>
 		
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">

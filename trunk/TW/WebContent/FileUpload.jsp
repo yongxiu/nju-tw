@@ -13,6 +13,7 @@
 </div>
     <s:form action ="FileUploadAction.do"  method="post" enctype ="multipart/form-data"> 
         <s:file name ="myFile" label ="File"/>
+        <s:textfield cssClass="filename" name="myName"></s:textfield>
         <s:submit /> 
     </s:form> 
 </body> 
