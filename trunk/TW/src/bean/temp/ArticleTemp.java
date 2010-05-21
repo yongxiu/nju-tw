@@ -7,6 +7,8 @@ public class ArticleTemp {
 	private String date;
 	private String category;
 	private String title;
+	private String introduce;
+	private String path;
 	public int getId() {
 		return id;
 	}
@@ -30,6 +32,18 @@ public class ArticleTemp {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getIntroduce() {
+		return introduce;
+	}
+	public void setIntroduce(String introduce) {
+		this.introduce = introduce;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
 	}
 	
 	

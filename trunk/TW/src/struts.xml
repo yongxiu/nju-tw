@@ -76,6 +76,10 @@
 			<result name="success" type="tiles">search</result>
 		</action>
 		
+		<action name="SearchDetail">
+			<result name="success"  type="tiles">searchdetail</result>
+		</action>
+		
 		
 		<action name="Mail" >
 			<result name="success" >/page/mail.jsp</result>
@@ -326,6 +330,11 @@
 		<!-- Download Files -->
 		<action name="DownloadAction" class="action.navigation.DownloadAction">
 			<result name="success">/naviPage/download.jsp</result>
+		</action>
+		
+		<!-- Pic news  -->
+		<action name="Picnews" class="action.PicnewsAction">
+			<result name="success">/component/picNews.jsp</result>
 		</action>
 	</package>
 
