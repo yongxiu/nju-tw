@@ -8,7 +8,7 @@
 <title>Org Detail</title>
 </head>
 <body >
-	<table border="1">
+	<table border="1" class="organizationDetail">
 		<tr>
 			<td>
 				<h1>组织结构介绍</h1>

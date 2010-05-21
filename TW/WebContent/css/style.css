@@ -317,46 +317,62 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	background-color: #FFF;
 }
 
-.contentTableTitle {
-	font-weight:bold;
-	font-size:20px;
-	text-align:center;
-}
-
-.articleTableContent {
+#content table {
+	font-size:15px;
+	padding-top:15px;
+	padding-left:75px;
+	padding-right:81px;
 	text-align:left;
 	}
 
-.articleTableTitle {
-	font-weight:bold;
-	font-size:20px;
+.organizationTable * {
 	text-align:center;
-	padding-bottom:10px;
-	padding-left:50px;
-	padding-right:50px;
-	}
+	padding-left:75px;
+	padding-right:81px;
+}
 
-#content table {
-	text-decoration:none;
-	font-size:15px;
-	text-align:center;
-	padding-top:15px;
-	padding-right:15px;
-	padding-left:15px;
+.organizationTable {
 	margin-left:auto;
 	margin-right:auto;
 	}
 
+.organizationTitle {
+	font-weight:bold;
+	font-size:18px;
+}
+
+.organizationDetail{
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.articleTable {
+	text-align:left;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+.articleTitle {
+	font-weight:bold;
+	font-size:20px;
+	text-align:center;
+	padding-bottom:10px;
+	padding-left:75px;
+	padding-right:81px;
+	}
+
 #news .news-p table {
 	padding:0;
-	margin:6px 6px 6px 6px;
+	margin:7px 7px 7px 7px;
+	text-align:left;
 	}
 
 #content table a {
 	text-decoration:none;
 	font-size:13px;
 	color:black;
-	}
+}
 
 #content table a:hover {
 	text-decoration:none;
