@@ -60,6 +60,10 @@
 		 <put-attribute name="content" value="/SearchAction.do"></put-attribute>
 	</definition>
 	
+	<definition name="searchdetail" extends="standard">
+		<put-attribute name="content" value="/DetailArticleAction.do"></put-attribute>
+	</definition>
+	
 		
 	<definition name="userLogin" extends="standard">
 		<put-attribute name="title" value="home" />

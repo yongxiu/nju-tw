@@ -20,7 +20,7 @@
     	</a>
     </td>
     <td>
-    	<a href="edit.jsp">
+    	<a href="/TW/edit.jsp">
     		发表文章
     	</a>
     </td>
@@ -46,7 +46,7 @@
   <tr>
    
     <td>
-    	<a href="edit.jsp">
+    	<a href="/TW/edit.jsp">
     		发表文章
     	</a>
     	<a href="GetModifyArticle.do">

@@ -16,14 +16,14 @@
 搜索耗时 ：" <s:property value="time"/>"ms   
 </s:else>
 <br>
-<s:form action="DetailArticleAction">
+<s:form action="SearchDetail.do">
 
 <table>
 	<s:iterator value="articles" id="article">
 		<tr>
 			<td>
 				 <s:set name="id"> <s:property value="id"/> </s:set>
-				 标题：&nbsp; <a href='<s:url action="DetailArticleAction.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a>
+				 标题：&nbsp; <a href='<s:url action="SearchDetail.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a>
 			</td>
 		</tr>
 		<tr>
@@ -38,6 +38,7 @@
 				发布日期:&nbsp;<s:property value="date"/>
 			</td>
 		</tr>
+	
 	</s:iterator>
 </table>
 

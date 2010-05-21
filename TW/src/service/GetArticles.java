@@ -300,6 +300,40 @@ GenericArticleDao genericArticleDao=new GenericArticleDao();
 		return news;
 	}
 	
+	public ArrayList<GenericArticle> GetFivePicnews() {
+		GenericArticleDao genericArticleDao=new GenericArticleDao();
+		
+		//get all articles
+		List<GenericArticle> articles=genericArticleDao.getAllEntity();
+		
+		//hold all news
+		ArrayList<GenericArticle> picnews=new ArrayList<GenericArticle>();
+		
+		//hold newest news
+		ArrayList<GenericArticle> fivePicNews=new ArrayList<GenericArticle>();
+		
+		//get all news
+		for(GenericArticle a:articles){
+			if(a.isIshaveimage()==true)
+				picnews.add(a);
+		}
+		
+		picnews = SortUtil.sort(picnews);
+		if (picnews.size()<5) {
+			for(int i=0;i<picnews.size();i++) {
+				fivePicNews.add(picnews.get(picnews.size()-i-1));
+			}
+		}
+		else {
+			for(int i=0;i<5;i++) {
+				fivePicNews.add(picnews.get(picnews.size()-i-1));
+			}
+		}
+		
+		return fivePicNews;
+		
+	}
+	
 	
 	public static void main(String[] args){
 		ArrayList<GenericArticle> five=new GetArticles().getFiveNews();
