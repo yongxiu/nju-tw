@@ -5,7 +5,7 @@
 
 	<table class="organizationTable">
 		<tr>
-			<td class="contentTableTitle">书记室</td>
+			<td class="organizationTitle">书记室</td>
 		</tr>
 		
 		<s:iterator value="org1" id="org">
@@ -30,7 +30,7 @@
 	
 	<table class="organizationTable">
 		<tr>
-			<td class="contentTableTitle">内部结构</td>
+			<td class="organizationTitle">内部结构</td>
 		</tr>
 		
 		<s:iterator value="org2">
@@ -52,7 +52,7 @@
 
 	<table class="organizationTable">
 		<tr>
-			<td class="contentTableTitle">下属组织</td>
+			<td class="organizationTitle">下属组织</td>
 		</tr>
 		
 		<s:iterator value="org3">
