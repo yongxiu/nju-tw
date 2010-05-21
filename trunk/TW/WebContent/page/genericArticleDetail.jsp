@@ -4,7 +4,7 @@
 <table>
   <tr>
     <td></td>
-    <td><s:property value="article.title" /> </td>
+    <td class="articleTableTitle"><s:property value="article.title" /> </td>
   </tr>
   <tr>
     <td></td>
