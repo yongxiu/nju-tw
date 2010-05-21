@@ -8,7 +8,7 @@
   </tr>
   <tr>
     <td></td>
-    <td> <s:set name="contentd" value="article.content"/>
+    <td class="articleTableContent"> <s:set name="contentd" value="article.content"/>
 	<s:property value="#contentd" escape="false"/>
    
      </td>

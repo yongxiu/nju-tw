@@ -3,7 +3,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
   
 
-	<table>
+	<table class="organizationTable">
 		<tr>
 			<td class="contentTableTitle">书记室</td>
 		</tr>
@@ -28,7 +28,7 @@
 	</table>
 
 	
-	<table>
+	<table class="organizationTable">
 		<tr>
 			<td class="contentTableTitle">内部结构</td>
 		</tr>
@@ -50,7 +50,7 @@
 		
 	</table>
 
-	<table>
+	<table class="organizationTable">
 		<tr>
 			<td class="contentTableTitle">下属组织</td>
 		</tr>
