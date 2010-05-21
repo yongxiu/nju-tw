@@ -25,6 +25,15 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 	private String fileName;
 	private String uploadFileName;
 	private String caption;
+	private String myName;
+	public String getMyName() {
+		return myName;
+	}
+
+	public void setMyName(String myName) {
+		this.myName = myName;
+	}
+
 	private Map session;
 	
 	private static ArrayList<String> allowedExtensions;// 允许的上传文件扩展名
@@ -126,7 +135,7 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			file.setPath("/TW/"+uploadFileName);
 			User user = (User) getSession().get("user");
 			file.setUser(user);
-			file.setFilename(fileName);
+			file.setFilename(myName);
 			
 			
 			FileDao fileDao = new FileDao();

@@ -1,0 +1,74 @@
+#content {
+	font-family:Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+}
+
+#content .doubleselect {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#content .doubleselect br{      
+	display:none;
+}
+
+#content .page-title.post  {
+	height:22px;
+	padding:15px 0px 10px;
+	margin-bottom: 20px;
+}
+
+#content .page-title.post h2 {
+	background:url(/TW/img/blog.gif) no-repeat scroll 0 50% transparent;
+	padding:0 0 0 24px;
+	font-size:14px;
+}
+
+#content .input-text {
+	-moz-border-radius:3px 3px 3px 3px;
+	border:1px solid #CCCCCC;
+	font-size:14px;
+	height:26px;
+	line-height:26px;
+	margin-bottom:14px;
+	width:610px;
+	border:1px solid #BDC7D8;
+	padding:3px 3px 3px 15px;
+	font-weight:bold;
+}
+
+#content label, textarea, input {
+	font-family:'lucida grande',tahoma,verdana,arial,STHeiTi,simsun,sans-serif;
+}
+
+#content .label {
+	font-size:12px;
+	font-style:normal;
+	color:#666666;
+	font-weight:bold;
+	padding-right:5px;
+}
+
+#content #SubmitArticleAction_category1, #SubmitArticleAction_category2 {
+	width:150px;
+	font-family:'lucida grande',tahoma,verdana,arial,STHeiTi,simsun,sans-serif;
+	font-size:12px;
+	vertical-align:middle;
+	border:1px solid #BDC7D8;
+	height:22px;
+	padding:2px;
+}
+
+#content .btn  {
+	float: right;
+	background:url("/TW/img/btn_form.png") no-repeat scroll 0 0 transparent;
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:14px;
+	height:29px;
+	width:75px;
+	font-size:12px;
+	font-weight:bold;
+	margin-right: 30px;
+	margin-top: -3px;
+}

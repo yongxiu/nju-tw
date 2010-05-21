@@ -269,10 +269,11 @@ a {
 }
 
 #sidebar {
-	width: 200px;
+	width: 194px;
 	line-height: 30px; 
 	list-style-type: none;
 	text-align:left;
+	float: left;
 }
 
 #sidebar a {
