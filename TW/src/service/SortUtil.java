@@ -8,6 +8,8 @@ import dao.GenericArticleDao;
 
 import bean.GenericArticle;
 
+import bean.File;
+
 public class SortUtil {
 	/**
 	 * sort article by date wjc
@@ -42,6 +44,34 @@ public class SortUtil {
 			tempArticles.add(articles.get(articles.size()-1-i));
 		}
 		return tempArticles;
+	}
+	
+	public static ArrayList<File> sortFile(
+			ArrayList<File> files) {
+		File tempFile;
+		for (int i = 0; i < files.size(); i++) {
+			for (int j = 0; j < files.size() - i - 1; j++) {
+				if (gt(files.get(j).getDate(), files.get(j + 1).getDate())) {
+					tempFile = files.get(j);
+					files.set(j, files.get(j + 1));
+					files.set(j + 1, tempFile);
+				}
+
+			}
+		}
+		return files;
+	}
+	
+	
+	public static ArrayList<File> revertSortFile(
+			ArrayList<File> files) {
+		ArrayList<File> tempFiles = new ArrayList<File>();
+	
+		files = sortFile(files);
+		for(int i=0;i<files.size();i++) {
+			tempFiles.add(files.get(files.size()-1-i));
+		}
+		return tempFiles;
 	}
 
 	public static boolean gt(Date date1, Date date2) {

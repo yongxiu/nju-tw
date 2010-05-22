@@ -146,6 +146,10 @@
 			<result name="success" type="tiles">admin.ShowModifyArticle</result>
 		</action>
 		
+		<!-- Get Modify Files -->
+		<action name="GetModifyFile" class="action.GetModifyFileAction">
+			<result name="success">/userComponent/fileList.jsp</result>
+		</action>
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">

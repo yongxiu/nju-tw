@@ -12,7 +12,7 @@
 	</definition>
 
 	<definition name="customer.fileList" extends="customer">			
-		<put-attribute name="content" value="/GetModifyArticle.do" />
+		<put-attribute name="content" value="/GetModifyFile.do" />
 	</definition>
 	
 	<definition name="customer.articleList" extends="customer">			
