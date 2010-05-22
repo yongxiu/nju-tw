@@ -3,39 +3,57 @@
 	font-size:14px;
 }
 
-#content dt {
-	width: 560px;
-	height: auto;
-	float:left;
-	margin-left: 3px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+#content table {
+	margin: 0px;
+	padding: 0px;
 }
 
-#content dd {
-	height: auto;
-	float: left;
+#content td {
 	margin-left: 0px;
 	text-align: center;
 	padding-top: 4px;
 	padding-bottom: 4px;
+	valign: center;
 }
-.date {
+
+#content td a {
+	font-size: 12px;
+	text-decoration: none;
+	color: #6E6E6E;
+	noline:expression(this.onfocus=this.blur);
+}
+
+#content td a:hover {
+	font-size: 12px;
+	color: #000000;
+	text-decoration:underline
+}
+
+#content .title {
+	width: 530px;
+	margin-left: 3px;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+}
+
+#content .date {
 	width: 80px;
 }
 
-.category {
+#content .category {
 	width: 80px;
 }
 
-.act {
-	width: 60px;
+#content .act {
+	width: 40px;
 }
 
-.even {
+#content .even {
 	background: #EEEEEE;
 }
 
-.odd {
+#content .odd {
 	background: #FFFFFF;
 }
