@@ -48,7 +48,7 @@
 	padding-right:5px;
 }
 
-#content #SubmitArticleAction_category1, #SubmitArticleAction_category2 {
+#content #SubmitArticleAction_category1, #SubmitArticleAction_category2, #ModifyArticle_category1, #ModifyArticle_category2 {
 	width:150px;
 	font-family:'lucida grande',tahoma,verdana,arial,STHeiTi,simsun,sans-serif;
 	font-size:12px;
