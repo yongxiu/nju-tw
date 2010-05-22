@@ -49,11 +49,11 @@ public class PicnewsAction extends ActionSupport{
 		picnews5.setPath(article5.getPath());
 		
 		//set title
-		picnews1.setTitle(article1.getTitle());
-		picnews2.setTitle(article2.getTitle());
-		picnews3.setTitle(article3.getTitle());
-		picnews4.setTitle(article4.getTitle());
-		picnews5.setTitle(article5.getTitle());
+		picnews1.setTitle(articleTempService.getTitle(article1.getTitle()));
+		picnews2.setTitle(articleTempService.getTitle(article2.getTitle()));
+		picnews3.setTitle(articleTempService.getTitle(article3.getTitle()));
+		picnews4.setTitle(articleTempService.getTitle(article4.getTitle()));
+		picnews5.setTitle(articleTempService.getTitle(article5.getTitle()));
 		
 		//set introduce
 		String introduce1 = articleTempService.getIntroduce(articleService.getPureStringFromHtml(article1.getContent()));

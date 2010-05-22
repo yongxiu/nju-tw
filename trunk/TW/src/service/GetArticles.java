@@ -243,7 +243,7 @@ GenericArticleDao genericArticleDao=new GenericArticleDao();
 		ArrayList<GenericArticle> fiveTheories = new ArrayList<GenericArticle>();
 		
 		for(GenericArticle a:articles) {
-			if(a.getCategory()==3)
+			if(a.getCategory()==4)
 				theories.add(a);
 		}	
 			theories = SortUtil.sort(theories);
