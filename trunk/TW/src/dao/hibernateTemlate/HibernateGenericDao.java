@@ -26,6 +26,7 @@ public class HibernateGenericDao<E, K> implements GenericDao<E, K> {
 			session.save(entity);
 			
 			
+			
 		} catch (HibernateException createException) {
 			// TODO: handle exception
 			createException.printStackTrace();
