@@ -1,5 +1,7 @@
 package service;
 
+import javax.swing.text.AbstractDocument.Content;
+
 public class ArticleTempService {
 
 	public String getIntroduce(String content) {
@@ -12,6 +14,17 @@ public class ArticleTempService {
 			introduce = content;
 		}
 		return introduce;
+	}
+	
+	public String getTitle(String input) {
+		String title = null;
+		if(input.length()>=24) {
+			title = input.substring(0,24);
+		}
+		else {
+			title = input;
+		}
+		return title;
 	}
 	
 	public static void main(String[] args) {
