@@ -1,0 +1,41 @@
+#content {
+	font-family:Tahoma,Verdana,STHeiTi,simsun,sans-serif;
+	font-size:14px;
+}
+
+#content dt {
+	width: 560px;
+	height: auto;
+	float:left;
+	margin-left: 3px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#content dd {
+	height: auto;
+	float: left;
+	margin-left: 0px;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.date {
+	width: 80px;
+}
+
+.category {
+	width: 80px;
+}
+
+.act {
+	width: 60px;
+}
+
+.even {
+	background: #EEEEEE;
+}
+
+.odd {
+	background: #FFFFFF;
+}
