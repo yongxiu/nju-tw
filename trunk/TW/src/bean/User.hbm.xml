@@ -22,7 +22,7 @@
 			<one-to-many class="bean.GenericArticle"/>
 		</set>
 		
-			<set name="files" inverse="true" cascade="all">
+		<set name="files" inverse="true" cascade="all" lazy="false">
 			<key column="uid"></key>
 			<one-to-many class="bean.File"/>
 		</set>
