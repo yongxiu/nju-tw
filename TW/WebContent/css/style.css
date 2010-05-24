@@ -534,3 +534,38 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	margin-right:81px;
 	text-align:left;
 }
+
+#downloadPage a {
+	text-decoration:none;
+	font-size:13px;
+	color:black;
+}
+
+#downloadPage a:hover {
+	text-decoration:none;
+	color:blue;
+	font-size:13px;
+}
+
+#copyrightPage {
+	font-size:13px;
+	color:grey;
+}
+
+#copyrightPage a {
+	font-size:13px;
+	text-decoration:none;
+	color:blue;
+}
+
+#copyrightPage a:link{
+	color:blue;
+}
+
+#copyrightPage a:visited {
+	color:blue;
+}
+
+#copyrightPage a:hover {
+	color:red;
+}
