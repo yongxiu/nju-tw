@@ -34,7 +34,7 @@ $('#form_comments').ready(function() {
 		$parent.find(".formtips").remove();
 		if(this.value=="") {
 			var errorMsg = '请输入回复内容。';
-			$parent.append('<p><span class="formtips onError">' + errorMsg + '</span></p>');
+			$parent.append('<p><span class="formtips onError onLast">' + errorMsg + '</span></p>');
 		}
 	});
 

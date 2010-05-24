@@ -271,8 +271,16 @@ line-height:30px;
 text-align:left;
 }
 
-.txt-link, a {
+.g-table-comm .wd4 {
+color:#A5A5A5;
+}
+.g-table-comm tbody td a {
 color:#000000;
+outline:medium none;
+}
+
+.txt-link, a {
+color:#158144;
 }
 
 .gIbx .ibx-sel {

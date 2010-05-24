@@ -4,9 +4,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
-<link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
 
-  
 	<SCRIPT type="text/javascript">
 	  $('#m-nav').ready(function(){
 			$("#m-nav li").hover(

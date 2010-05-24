@@ -130,7 +130,11 @@ font-size:15px;
 .onError {
 color:#FF0000;
 font-size:15px;
-padding-left:60px;
+padding-left:20px;
+}
+
+.onLast {
+	padding-left: 140px;
 }
 
 .star {
