@@ -12,9 +12,6 @@ a {
 	font-size: 15px;	
 }
 
-
-
-
 #container {
 	width: 988px;
 	float: left;
@@ -487,4 +484,35 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	width: 988px;
 	height: 50px;
 	float: left;
+}
+
+#loginSuccessfulTable span {
+	font-weight:bold;
+}
+
+#loginSuccessfulTable {
+	font-size:15px;
+}
+
+#loginSuccessfulTable a:link {
+	font-size:15px;
+	color:black;
+}
+
+#loginSuccessfulTable a:visited {
+	font-size:15px;
+	color:black;	
+}
+
+#loginSuccessfulTable a:hover {
+	font-size:15px;
+	color:red;
+}
+
+#loginSuccessfulTable a:active{
+	font-size:15px;
+}
+
+#loginSuccessfulTable td {
+	width:85px;
 }
