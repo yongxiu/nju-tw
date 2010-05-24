@@ -20,10 +20,10 @@
 
 <br>
 <!-- init -->
-<s:set name="currentPage"><s:property value="currentPage"/></s:set>
+<div id="articleNavi"><s:set name="currentPage"><s:property value="currentPage"/></s:set>
 <s:set name="category"><s:property value="category"/></s:set>
 <s:iterator value="pageCount" id="page">
 		<a href='<s:url action="Article.do" ><s:param name="currentPage" value="#page"/> <s:param name="category" value="#category"/></s:url>'>
 			<s:property value="page"/>
 		</a>
-</s:iterator>
+</s:iterator></div>
