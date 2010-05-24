@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags"%>
 
+<%@ taglib prefix="s" uri="/struts-tags" %>
 
 <link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
@@ -38,17 +39,17 @@
 		</UL>
 		
     </li>
-	<li class="jd"><a href="New.do" title="焦点新闻"></a>
-	    
+	<li class="jd"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="焦点新闻"></a>
+	   
     	<UL style="display: block; opacity: 0.9999; ">
-			<LI id="xcsx"><A href="NewPublic.do" title="宣传思想"></A></LI>
-			<LI id="jcdt"><A href="NewDaymaic.do" title="基层动态"></A></LI>
+			<LI id="xcsx"><a href='<s:url action="Article.do"><s:param name="category" value="10"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></LI>
+			<LI id="jcdt"> <a href='<s:url action="Article.do"><s:param name="category" value="11"/><s:param name="currentPage" value="1"/></s:url>' title="基层动态"></a></LI>
 		</UL>
 		
     </li>
-	<li class="gg"><a href="Info.do" title="公告信息"></a></li>
-	<li class="ll"><a href="Theory.do" title="理论园地"></a></li>
-	<li class="mt"><a href="Media.do" title="媒体报道"></a></li>
+	<li class="gg"><a href='<s:url action="Article.do"><s:param name="category" value="3"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></li>
+	<li class="ll"><a href='<s:url action="Article.do"><s:param name="category" value="4"/><s:param name="currentPage" value="1"/></s:url>' title="理论园地"></a></li>
+	<li class="mt"><a href='<s:url action="Article.do"><s:param name="category" value="5"/><s:param name="currentPage" value="1"/></s:url>' title="媒体报道"></a></li>
 	<li class="xz"><a href="Download.do" title="下载专区"></a></li>
 
 	<li class="lx"><a href="ConnectUs.do" title="联系我们"></a></li>
