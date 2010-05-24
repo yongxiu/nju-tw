@@ -455,27 +455,25 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #linker {
-	width: 989px;
-	height: 72px;
-	float: left;
-	padding:9px 10px 9px 0px;
+	width: 986px;
+	height: 64px;
 	margin: 10px 0 10px 0;
-	
-	background:url(/TW/linkImage/linkbg.png) no-repeat;
+	border: 1px solid #e0e0e0;
+	float:left;
 }
 
-#linker table td {
+#linkerTable td {
+	border: 1px solid #e0e0e0;
 	float:left;
 	margin-left:6px;
-	border: 1px solid #e0e0e0;
+	margin-top:6px;
 	}
 
 #copyright {
-	background:#f8f8f8;
 	float: left;
 	width: 988px;
 	height: 50px;
-	padding-top:20px;
+	padding-top:10px;
 	text-align: center;
 }
 

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
-<table cellpadding="0" cellspacing="0">
+<table id="linkerTable" cellpadding="0" cellspacing="6px">
 	<tr>
 		<td><a href="http://www.gqt.org.cn/"><img border="0" alt=""
 			src="/TW/linkImage/gqt.gif"></a></td>
