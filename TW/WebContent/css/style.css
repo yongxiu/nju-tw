@@ -319,9 +319,9 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 
 #content table {
 	font-size:15px;
-	padding-top:15px;
-	padding-left:75px;
-	padding-right:81px;
+	margin-top:15px;
+	margin-left:75px;
+	margin-right:81px;
 	text-align:left;
 	}
 
@@ -346,6 +346,21 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	margin-left:auto;
 	margin-right:auto;
 }
+
+#organizationTable1 {
+	position:relative;
+	left:100px;
+	}
+	
+#organizationTable2 {
+	position:relative;
+	left:70px;
+	}
+	
+#organizationTable3 {
+	position:relative;
+	left:0;
+	}
 
 .articleTable {
 	text-align:left;
