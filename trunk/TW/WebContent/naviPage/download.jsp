@@ -7,12 +7,13 @@
 <title>download</title>
 </head>
 <body>
-
-	<s:iterator value="files" id="file">
+<div id="downloadPage">
+<s:iterator value="files" id="file">
 	<a href="<s:property value="#file.path"/>">
 	 	<s:property value="#file.filename"/>
 	</a>
 	<br>
 	</s:iterator>
+	</div>
 </body>
 </html>
