@@ -60,15 +60,15 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .inputname {
-	background-position: -40px center;
+	background-position: 10px center;
 }
 
 .inputemail {
-	background-position: -352px center;
+	background-position: -446px center;
 }
 
 .inputurl {
-	background-position: -647px center;
+	background-position: -895px center;
 }
 
 #form_comments h3 {
@@ -124,7 +124,7 @@ font-size:15px;
 
 .info {
 	font-size:14px;
-	padding-left:50px;
+	padding-left:150px;
 }
 
 .onError {

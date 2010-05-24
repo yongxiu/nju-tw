@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content {
+	color:#000;
+	background:#fff;
+	overflow:auto;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:verdana, sans-serif;
+}
+
+#content h1, h2, h3, h4, h5, h6, select, input, textarea, button, table {
+	font-size:100%
+}
+#content h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, table, th, td, img, blockquote {
+	margin:0;
+	padding:0;
+	border:0
+}
+#content input, button, textarea, img {
+	line-height:normal;
+	outline:0
+}
+
+#content table {
+border-collapse:collapse;
+border-spacing:0;
+}
+
+.gIbx .g-title-1 .fn-fle {
+margin-bottom:2px;
+}
+
+.fn-fle {
+float:left;
+}
+
+Inherited fromdiv.g-title-1
+.gIbx .g-title-1 {
+line-height:24px;
+}
+
+.g-title-1 {
+text-indent:3px;
+}
+
+.g-title-1 h2 {
+display:inline;
+font-size:14px;
+margin-right:5px;
+}
+
+.gRead-dialog .gRead-info .lb, .g-file .info, .gWel-ftlink, .g-cntalist .srch em, .gSys-inner-batt .pause, .gSys-inner-batt .upload, .btn-dft-disabd span, .btn-dft-gl-disabd span, .btn-dft-gc-disabd span, .btn-dft-gr-disabd span, .txt-disabd, .txt-del, .txt-info {
+color:#7D7D7D;
+}
+
+.gIbx .g-toolbar {
+clear:both;
+position:relative;
+}
+
+.g-probar span, .gRead-gg, .gWel-tab .tabs, .gCmp-side .tabs li, .g-toolbar, .gFToptd, .g-table-comm thead tr, .fn-bgx {
+background-image:url("/TW/img/bgx.png");
+background-repeat:repeat-x;
+}
+
+.g-toolbar-top, .g-toolbar-bottom {
+height:35px;
+}
+
+.g-toolbar {
+background-position:0 -144px;
+clear:both;
+height:34px;
+padding:0 10px;
+white-space:nowrap;
+}
+
+.g-toolbar a, .g-toolbar .btn, .g-toolbar .btngrp, .g-toolbar select {
+display:inline;
+float:left;
+vertical-align:baseline;
+}
+
+.btngrp {
+margin-right:8px;
+padding-right:1px;
+}
+
+.ico-free, .gRead-dialog .reply .ctrl a, .gRead-dialog .tip-top, .gWel-space .nolimit, .gRead-info .flag, .g-menu-auto .ico, .g-probar, span.ipt-t, .g-addr, .g-addr .arr, .ico, .btngrp, .btn, .btn span, .btn .arr, .fn-ib {
+-moz-box-align:center;
+display:inline-block;
+vertical-align:middle;
+}
+
+.g-toolbar .btngrp-ext {
+float:right;
+margin-right:0;
+}
