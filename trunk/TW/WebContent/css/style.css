@@ -497,20 +497,19 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 #loginSuccessfulTable a:link {
 	font-size:15px;
 	color:black;
+	text-decoration:none;
 }
 
 #loginSuccessfulTable a:visited {
 	font-size:15px;
-	color:black;	
+	color:black;
+	text-decoration:none;	
 }
 
 #loginSuccessfulTable a:hover {
 	font-size:15px;
-	color:red;
-}
-
-#loginSuccessfulTable a:active{
-	font-size:15px;
+	color:blue;
+	text-decoration:none;
 }
 
 #loginSuccessfulTable td {
