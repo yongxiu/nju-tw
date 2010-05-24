@@ -455,12 +455,19 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #linker {
-	width: 869px;
-	height: 50px;
+	width: 989px;
+	height: 70px;
 	float: left;
-	padding-left: 119px;
-	margin: 30px 0 10px 0;
+	padding:9px 10px 9px 0px;
+	margin: 10px 0 10px 0;
+	
+	background:url(/TW/linkImage/linkbg.png) no-repeat;
 }
+#linker table td {
+	float:left;
+	margin-left:6px;
+	border: 1px solid #e0e0e0;
+	}
 
 #copyright {
 	background:#f8f8f8;
