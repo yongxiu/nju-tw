@@ -25,7 +25,7 @@
 		</tr>
 		<tr>
 			<td><a href='#'>主题活动管理</a></td>
-			<td><a href='#'>退出</a></td>
+			<td><a href='Logout.do'>退出</a></td>
 		</tr>
 	</table>
 
@@ -54,7 +54,7 @@
 		</tr>
 		<tr>
 			<td><a href='changePSW.do'> 修改密码</a></td>
-			<td><a href='#'>退出</a></td>
+			<td><a href='Logout.do'>退出</a></td>
 		</tr>
 	</table>
 
