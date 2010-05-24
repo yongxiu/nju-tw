@@ -551,12 +551,13 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 #copyrightPage {
 	font-size:13px;
 	color:grey;
+	margin-top:0;
+	padding-top:0;
 }
 
 #copyrightPage a {
 	font-size:13px;
 	text-decoration:none;
-	color:blue;
 }
 
 #copyrightPage a:link{
