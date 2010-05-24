@@ -36,6 +36,10 @@ public class PageAction extends ActionSupport implements SessionAware{
 	//query string
 	private String search;
 	
+	private int number;
+	
+	private long time;
+	
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
@@ -55,9 +59,14 @@ public class PageAction extends ActionSupport implements SessionAware{
 		
 		System.out.println("pValue : "+pp);
 
+		//number
+		number = (Integer) getSession().get("number"+search);
+		
+		//get time
+		time = (Long) getSession().get("time"+search);
 
-		int pages = PageService.countPage(hits.length());
-		articles = PageService.getArticleByPage(pp, pages, hits);
+		int count = PageService.countPage(hits.length());
+		articles = PageService.getArticleByPage(pp, count, hits);
 		
 		//add current page to sessin
 		getSession().put("currentPage"+search, pp+"");
@@ -123,6 +132,22 @@ public class PageAction extends ActionSupport implements SessionAware{
 
 	public void setPages(String pages) {
 		this.pages = pages;
+	}
+
+	public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public long getTime() {
+		return time;
+	}
+
+	public void setTime(long time) {
+		this.time = time;
 	}
 
 	

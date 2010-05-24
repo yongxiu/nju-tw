@@ -60,7 +60,7 @@
 <s:else>
   <s:if test="#current==1"/>
 		<s:else>
-			<a href='<s:url action="PageAction.do" ><s:param name="pp"> <s:property value="#previous"/></s:param> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
+			<a href='<s:url action="SearchPage.do" ><s:param name="pp"> <s:property value="#previous"/></s:param> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
 				上一页
 			</a>
 		</s:else>
@@ -73,7 +73,7 @@
 			<s:property value="#pValue"/>
 		</s:if>
 		<s:else>
-		[<a href='<s:url action="PageAction.do" ><s:param name="pp"> <s:property value="#pValue"/></s:param> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
+		[<a href='<s:url action="SearchPage.do" ><s:param name="pp"> <s:property value="#pValue"/></s:param> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
 		 <s:property value="p"/> 
 		</a>]
 		</s:else>
@@ -81,7 +81,7 @@
 
 	<s:if test="#current==#pages"/>
 			<s:else>
-			<a href='<s:url action="PageAction.do" ><s:param name="pp" value="#next"/> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
+			<a href='<s:url action="SearchPage.do" ><s:param name="pp" value="#next"/> <s:param name="search" value="%{#search}"> </s:param></s:url>'>
 				下一页
 			</a>
 		</s:else>

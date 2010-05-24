@@ -63,6 +63,10 @@
 			<result name="success" type="tiles">search</result>
 		</action>
 		
+		<action name="SearchPage">
+			<result name="success" type="tiles">searchPage</result>
+		</action>
+		
 		<action name="SearchDetail">
 			<result name="success"  type="tiles">searchdetail</result>
 		</action>
