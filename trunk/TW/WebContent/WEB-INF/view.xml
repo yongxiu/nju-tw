@@ -19,29 +19,13 @@
 		<put-attribute name="content" value="/OrganizationDetailAction.do"></put-attribute>
 	</definition>
 	
-	<definition name="newspage" extends="standard">
-		<put-attribute name="content" value="/GetNewsListAction.do"></put-attribute>
+
+	
+	<definition name="article" extends="standard">
+		<put-attribute name="content" value="/GetArticleAction.do"></put-attribute>
 	</definition>
 	
-	<definition name="newpublic" extends="standard">
-		<put-attribute name="content" value="/GetNewsOfPublic.do"></put-attribute>
-	</definition>
 	
-	<definition name="newdynamic" extends="standard">
-		 <put-attribute name="content" value="/GetNewsOfDynamic.do"></put-attribute>
-	</definition>
-	
-	<definition name="infopage" extends="standard">
-		<put-attribute name="content" value="/GetInfoListAction.do"></put-attribute>
-	</definition>
-	
-	<definition name="theorypage" extends="standard">
-		<put-attribute name="content" value="/GetTheoryListAction.do"></put-attribute>
-	</definition>
-	
-	<definition name="mediapage" extends="standard">
-		<put-attribute name="content" value="/GetMediaListAction.do"></put-attribute>
-	</definition>
 	
 	<definition name="AticalDetail" extends="standard">
 		<put-attribute name="content" value="/GenericArticleDetail.do"></put-attribute>

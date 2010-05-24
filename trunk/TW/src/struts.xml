@@ -42,24 +42,11 @@
 		<action name="OrgDetail" >
 			<result name="success" type="tiles">OrgDetail</result>
 		</action>
-		<action name="New" >
-			<result name="success" type="tiles">newspage</result>
+		
+		<action name="Article" >
+			<result name="success" type="tiles">article</result>
 		</action>
-			<action name="NewPublic">
-				<result name="success" type="tiles">newpublic</result>
-			</action>
-			<action name="NewDaymaic">
-				<result name="success" type="tiles">newdynamic</result>
-			</action>
-		<action name="Info" >
-			<result name="success" type="tiles">infopage</result>
-		</action>
-		<action name="Theory" >
-			<result name="success" type="tiles">theorypage</result>
-		</action>
-		<action name="Media" >
-			<result name="success" type="tiles">mediapage</result>
-		</action>
+		
 		<action name="AticalDetail" >
 			<result name="success" type="tiles">AticalDetail</result>
 		</action>
@@ -307,33 +294,15 @@
 		</action>
 		
 		<!-- Navigation List -->
-		<!-- Get news List -->
-		<action name="GetNewsListAction" class="action.navigation.GetNewsListAction">
-			<result name="success">/naviPage/news.jsp</result>
-		</action>
-			<!-- Get 宣传思想 -->
-			<action name="GetNewsOfPublic" class="action.navigation.news.GetNewsOfPublicAction">
-				<result name="success">/naviPage/news/publicNews.jsp</result>
-			</action>
-			
-			<!-- Get 基层动态 -->
-			<action name="GetNewsOfDynamic" class="action.navigation.news.GetNewsOfDynamicAction">
-				<result name="success">/naviPage/news/dynamicNews.jsp</result>
+		
+			<!-- Get Article -->
+			<action name="GetArticleAction" class="action.navigation.GetArticleAction">
+				<result name="success">/naviPage/aricle.jsp</result>
 			</action>
 		
-		<!-- Get Info List-->
-		<action name="GetInfoListAction" class="action.navigation.GetInfoListAction">
-			<result name="success">/naviPage/info.jsp</result>
-		</action>
-		
-		<!-- Get Meida List-->
-		<action name="GetMediaListAction" class="action.navigation.GetMediaListAction">
-			<result name="success">/naviPage/media.jsp</result>
-		</action>
-		
-		<!-- Get Theory List -->
-		<action name="GetTheoryListAction" class="action.navigation.GetTheoryListAction">
-			<result name="success">/naviPage/theory.jsp</result>
+		<!-- Navi Page Action -->
+		<action name="NaviPage" class="action.navigation.page.NaviPageAction">
+			<result name="success">/naviPage/aricle.jsp</result>
 		</action>
 		
 		<!-- Download Files -->
