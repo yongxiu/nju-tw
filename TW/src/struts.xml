@@ -288,7 +288,7 @@
 		
 		<!-- Get Modify Articles -->
 		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
-			<result name="success">/userComponent/articleList.jsp</result>
+			<result name="success">/userComponent/articleList2.jsp</result>
 		</action>
 		
 		

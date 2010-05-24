@@ -58,7 +58,3 @@ Email：<a href="mailto:guyue@nju.edu.cn">guyue@nju.edu.cn</a><br>
 关于本站任何问题与建议请联络：<br>
 <a href="mailto:webmaster@nju.edu.cn">webmaster@nju.edu.cn</a></p>
 </div>
-<div class="map"><img alt="" src="/TW/img/map.jpg">
-<a
-	href="http://ditu.google.cn/maps?f=q&source=s_q&hl=zh-CN&geocode=&q=%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6+%E5%8C%97%E5%A4%A7%E6%A5%BC&sll=32.056973,118.772764&sspn=0.041755,0.090551&brcurrent=3,0x35b58cbd6f026b19:0x99078ba991015b05,0,0x35b58b4255794bc9:0x54f67b57d0a85240%3B5,0,0&ie=UTF8&hq=%E5%8C%97%E5%A4%A7%E6%A5%BC&hnear=%E6%B1%9F%E8%8B%8F%E7%9C%81%E5%8D%97%E4%BA%AC%E5%B8%82%E9%BC%93%E6%A5%BC%E5%8C%BA%E6%B1%89%E5%8F%A3%E8%B7%AF%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&ll=32.057263,118.778214&spn=0.019968,0.045276&z=15">在谷歌地图中打开</a>
-</div>
