@@ -44,6 +44,10 @@
 		 <put-attribute name="content" value="/SearchAction.do"></put-attribute>
 	</definition>
 	
+	<definition name="searchPage" extends="standard">
+		<put-attribute name="content" value="/PageAction.do"></put-attribute>
+	</definition>
+	
 	<definition name="searchdetail" extends="standard">
 		<put-attribute name="content" value="/DetailArticleAction.do"></put-attribute>
 	</definition>

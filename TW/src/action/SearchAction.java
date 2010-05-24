@@ -100,7 +100,10 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			
 			//add number to session
 			number = hits.length();
-			getSession().put("number", number);
+			getSession().put("number"+search, number);
+			
+			//add time to session
+			getSession().put("time"+search, time);
 
 		}
 
