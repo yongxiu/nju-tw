@@ -9,8 +9,11 @@ body {
 
 a {
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 15px;	
 }
+
+
+
 
 #container {
 	width: 988px;
@@ -475,8 +478,11 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	text-decoration:none;
 	text-shadow:0 2px 3px rgba(0, 0, 0, 0.3)
 	font-size:13px;
+	font-color:#444751; 
 	}
 
+#copyright a:link { 
+	text-decoration: none; color: #1160b7; }
 #blank-h2 {
 	width: 988px;
 	height: 50px;
