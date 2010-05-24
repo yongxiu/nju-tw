@@ -149,6 +149,11 @@
 			<result name="success">/page/loginSuccess.jsp</result>
 			<result name="input">/component/login.jsp</result>
 		</action>
+		
+		<!-- Log out -->
+		<action name="Logout" class="action.LogoutAction">
+			<result name="success" type="tiles">index</result>
+		</action>
 
 		<!-- ipCount -->
 		<action name="IpcountAction" class="action.IpcountAction">
