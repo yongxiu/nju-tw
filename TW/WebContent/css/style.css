@@ -524,6 +524,13 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 #articleNavi {
-	margin-left:auto;
-	margin-right:auto;
+	text-align:center;
+}
+
+#downloadPage {
+	font-size:15px;
+	margin-top:15px;
+	margin-left:75px;
+	margin-right:81px;
+	text-align:left;
 }
