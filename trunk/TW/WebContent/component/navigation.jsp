@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
-<SCRIPT language=javascript type=text/javascript src="js/jquery.js"></SCRIPT>
+
   
 	<SCRIPT type="text/javascript">
 	  $('#m-nav').ready(function(){
