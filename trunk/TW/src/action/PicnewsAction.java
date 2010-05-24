@@ -68,7 +68,12 @@ public class PicnewsAction extends ActionSupport{
 		picnews4.setIntroduce(introduce4);
 		picnews5.setIntroduce(introduce5);
 		
-		
+		//set id
+		picnews1.setId(article1.getId());
+		picnews2.setId(article2.getId());
+		picnews3.setId(article3.getId());
+		picnews4.setId(article4.getId());
+		picnews5.setId(article5.getId());
 		
 		return SUCCESS;
 	}

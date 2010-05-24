@@ -3,16 +3,17 @@ package bean.temp;
 
 
 public class ArticleTemp {
-	private int id;
+	private long id;
 	private String date;
 	private String category;
 	private String title;
 	private String introduce;
 	private String path;
-	public int getId() {
+	
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getDate() {
