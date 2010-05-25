@@ -291,3 +291,14 @@ line-height:30px;
 padding:0 10px;
 text-align:left;
 }
+
+.msg-info {
+	color:#000000;
+	float:left;
+	font-size:14px;
+	margin-top:7px;
+}
+
+.lightBck {
+	background-color: #FFFFCA;
+}

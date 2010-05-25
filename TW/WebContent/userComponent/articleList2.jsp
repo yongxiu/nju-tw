@@ -18,11 +18,8 @@
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删 除</span></div>
   </div>
-
-  <div class="btngrp">
-    <div class="btn btn-dft btn-dft-gr btn-dft-pd" onmouseover="this.className='btn btn-dft btn-dft-gf btn-dft-gr-hover btn-dft-pd'" onmouseout="this.className='btn btn-dft btn-dft-gf btn-dft-pd'" onmousedown="this.className='btn btn-dft btn-dft-gr btn-dft-gr-active btn-dft-pd'" onmouseup="this.className='btn btn-dft btn-dft-gr btn-dft-gr-hover btn-dft-pd'" onclick="GE.showToolbarMenu('inbox__sort');EV.stopEvent();" title="" id="inbox__sort"><span>查看</span><b class="arr"></b></div>
-    <div class="btn btn-dft btn-dft-gr btn-dft-pd" onmouseover="this.className='btn btn-dft btn-dft-gr btn-dft-gr-hover btn-dft-pd'" onmouseout="this.className='btn btn-dft btn-dft-gf btn-dft-pd'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-gr btn-dft-gr-hover btn-dft-pd'" onclick="GE.showToolbarMenu('inbox__more');EV.stopEvent();" title="" id="inbox__more"><span>更多操作</span><b class="arr"></b></div>
-  </div>
+  
+  <span class="msg-info">(若要修改，请直接点击文章)</span>
   
   <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
     <select onchange="MM.inbox.goPage(this.value);">
@@ -74,10 +71,8 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__bottom__delete"><span>删 除</span></div>
   </div>
 
-  <div class="btngrp">
-    <div class="btn btn-dft btn-dft-gc btn-dft-pd" onmouseover="this.className='btn btn-dft btn-dft-gc btn-dft-gc-hover btn-dft-pd'" onmouseout="this.className='btn btn-dft btn-dft-gc btn-dft-pd'" onmousedown="this.className='btn btn-dft btn-dft-gc btn-dft-gc-active btn-dft-pd'" onmouseup="this.className='btn btn-dft btn-dft-gc btn-dft-gc-hover btn-dft-pd'" onclick="GE.showToolbarMenu('inbox__bottom__sort');EV.stopEvent();" title="" id="inbox__bottom__sort"><span>查看</span><b class="arr"></b></div>
-    <div class="btn btn-dft btn-dft-gr btn-dft-pd" onmouseover="this.className='btn btn-dft btn-dft-gr btn-dft-gr-hover btn-dft-pd'" onmouseout="this.className='btn btn-dft btn-dft-gr btn-dft-pd'" onmousedown="this.className='btn btn-dft btn-dft-gr btn-dft-gr-active btn-dft-pd'" onmouseup="this.className='btn btn-dft btn-dft-gr btn-dft-gr-hover btn-dft-pd'" onclick="GE.showToolbarMenu('inbox__bottom__more');EV.stopEvent();" title="" id="inbox__bottom__more"><span>更多操作</span><b class="arr"></b></div>
-  </div>
+	<span class="msg-info">(若要修改，请直接点击文章)</span>
+
   <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
     <select onchange="MM.inbox.goPage(this.value);">
       <option value="1" selected="selected">1 / 7</option>

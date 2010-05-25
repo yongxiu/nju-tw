@@ -15,7 +15,7 @@ $('#form_comments').ready(function() {
 			var errorMsg = '请输入您的Email。';
 			$parent.append('<span class="formtips onError">' + errorMsg + '</span>');
 		} else if(this.value !="" && !/.+@.+.+\.[a-zA-Z]{2,4}$/.test(this.value)) {
-			var errorMsg = '请输入正确的Email地址。';
+			var errorMsg = '请输入正确的Email。';
 			$parent.append('<span class="formtips onError">' + errorMsg + '</span>');
 		}
 	});
