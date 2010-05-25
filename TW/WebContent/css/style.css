@@ -242,7 +242,7 @@ a {
 #topic .sidebarElement {
 	text-align:center;
 	position:relative;
-	top:5%;
+	top:0;
 }
 
 #logindiv {
