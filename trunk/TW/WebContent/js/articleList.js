@@ -5,7 +5,7 @@ $('#content').ready(function() {
 				$(this).attr("checked", true);
 			});
 			$(".mark0").each(function() {
-				$(this).css("background-color", "#FFFFCA");
+				$(this).addClass("lightBck");
 			});
 		}
 		else {
@@ -13,11 +13,18 @@ $('#content').ready(function() {
 				$(this).attr("checked", false);
 			});
 			$(".mark0").each(function() {
-				$(this).css("background-color", "#FFFFFF");
+				$(this).removeClass("lightBck");
 			});
 		}
 	});
 	
-	
+	$("input[name='checkbox_inbox']").click(function() {
+		if ($(this).attr("checked") == true) {
+			$(this).parent().parent().addClass("lightBck");
+		}
+		else {
+			$(this).parent().parent().removeClass("lightBck");
+		}
+	});
 	
 });
