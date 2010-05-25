@@ -64,7 +64,7 @@
     </div>
   </div>
 </div>
-<div class="ibx-sel" id="divBom_inbox" style=""> 选择： <a href="javascript:fGoto()">全部</a> - <a href="javascript:fGoto()" onclick="MM.inbox.click('fan',true);">反选</a> - <a href="javascript:fGoto()" onclick="MM.inbox.click('all',false);">不选</a> </div>
+<div class="ibx-sel" id="divBom_inbox" style=""> 选择： <a href="javascript:selAll()">全部</a> - <a href="javascript:selConvert()">反选</a> - <a href="javascript:selNone()">不选</a> </div>
 
 <div class="g-toolbar g-toolbar-bottom" id="dvToolbar_inbox__bottom">
   <div class="btngrp">
