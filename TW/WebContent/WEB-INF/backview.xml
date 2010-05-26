@@ -65,6 +65,10 @@
 		<put-attribute name="content" value="/admin/modifyuser.jsp" />
 	</definition>
 
+	<definition name="admin.adduser" extends="admin">		
+		<put-attribute name="content" value="/admin/adduser.jsp" />
+	</definition>
+
 	<definition name="admin.themeManage" extends="admin">		
 		<put-attribute name="content" value="/admin/Theme.jsp" />
 	</definition>

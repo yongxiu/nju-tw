@@ -27,15 +27,6 @@ $('#content').ready(function() {
 		}
 	});
 	
-	$("<a>全选</a>").click(function() {
-		$("input[name='checkbox_inbox']").each(function(){
-				$(this).attr("checked", true);
-			});
-			$(".mark0").each(function() {
-				$(this).addClass("lightBck");
-			});
-	});
-	
 });
 
 function selAll() {
@@ -66,4 +57,11 @@ function selNone() {
 	$(".mark0").each(function() {
 		$(this).removeClass("lightBck");
 	});
+}
+
+function delUser(url) {
+	var val = window.confirm("确定要删除吗？");
+    if(val) {
+    	window.location.href= (url);
+    }
 }
