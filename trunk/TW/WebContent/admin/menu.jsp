@@ -5,3 +5,4 @@
 <li><a href='admin.uploadFile.do'> 上传文件</a></li>
 <li><a href='admin.FileList.do'> 已上传文件</a></li>
 <li><a href='admin.changePSW.do'> 修改密码</a></li>
+<li><a href='admin.ChangeTheme.do'> 变换主题</a></li>

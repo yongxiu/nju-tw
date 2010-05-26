@@ -10,6 +10,7 @@
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="/TW/js/swfobject_modified.js" type="text/javascript"></script>
 <script src="/TW/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/TW/js/grayscale.js" type="text/javascript"></script>
 <title>南京大学共青团委</title>
 <sx:head  />
 </head>
