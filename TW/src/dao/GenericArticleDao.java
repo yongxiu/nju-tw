@@ -66,10 +66,29 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		query.setParameter("category", category);
 		ArrayList<Integer> result = (ArrayList<Integer>) query.list();
 		int count = result.get(0);
+		closeSession();
 		return count;
 		
 	}
 	
+
+	
+	
+
+	@Override
+	public boolean delete(Long id) {
+		// TODO Auto-generated method stub
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		
+		GenericArticle article = (GenericArticle) session.load(GenericArticle.class, id);
+		article.setUser(null);
+		
+		session.delete(article);
+		tx.commit();
+		return true;
+	}
+
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
 		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);

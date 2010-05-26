@@ -17,12 +17,15 @@
 		<property name="name" column="name" type="string"/>
 		<property name="role" column="role" type="int"></property>
 		
-		<set name="articles" inverse="true" cascade="all" lazy="false">
+		
+		<!-- delete  without lazy -->
+		<set name="articles" inverse="true" cascade="none" lazy="false">
 			<key column="uid"></key>
 			<one-to-many class="bean.GenericArticle"/>
 		</set>
 		
-		<set name="files" inverse="true" cascade="all" lazy="false">
+		
+		<set name="files" inverse="true" cascade="none" lazy="false">
 			<key column="uid"></key>
 			<one-to-many class="bean.File"/>
 		</set>
