@@ -96,26 +96,6 @@
 	background: url(../imgs/xszz-hover.gif) no-repeat;
 	width: 99px;
 }
-
-#xcsx a {
-	background: url(../imgs/xcsx.png) no-repeat;
-	width: 99px;
-}
-
-#xcsx a:hover {
-	background: url(../imgs/xcsx-hover.png) no-repeat;
-	width: 99px;
-}
-
-#jcdt a {
-	background: url(../imgs/jcdt.png) no-repeat;
-	width: 99px;
-}
-
-#jcdt a:hover {
-	background: url(../imgs/jcdt-hover.png) no-repeat;
-	width: 99px;
-}
 			
 #xwbd a {
 	background: url(../imgs/xwbd.gif) no-repeat;
