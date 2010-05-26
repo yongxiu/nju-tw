@@ -109,6 +109,10 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 
 	@Override
 	public String execute() throws Exception {
+		if(myFile == null) {
+			addFieldError("myFile", "请选择要上传的文件！");
+			return INPUT;
+		}
 		if(extIsAllowed(getExtention(fileName).substring(1))) {
 			Date dNow = new Date();
 			String strPath = "UserFiles/Upload/" + (new SimpleDateFormat("yyyyMM")).format(dNow);
@@ -142,7 +146,7 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			fileDao.create(file);
 			return SUCCESS;
 		} else {
-			addFieldError("myFileError", "文件格式错误！");
+			addFieldError("myFile", "文件格式错误！");
 			return INPUT;
 		}
 	}

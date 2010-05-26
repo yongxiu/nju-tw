@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html;charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -29,7 +29,7 @@
 	
 		<p><label class="label" for="comment">内容：</label><s:textarea cssClass="input textarea" id="comment" name="comment" tabindex="4"></s:textarea></p>
 		<s:fielderror><s:param>comment</s:param></s:fielderror>
-		<p><s:submit cssClass="btn" value="发送" name="submit" id="input_comments_submit" tabindex="5"></s:submit>
+		<p><sx:submit targets="content" cssClass="btn" value="发送" name="submit" id="input_comments_submit" tabindex="5"></sx:submit>
        	<input type="button" value="取消" class="btn"></p>
        	
        	<div class="info">
