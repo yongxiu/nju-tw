@@ -2,27 +2,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-	<s:form action="ModifyUser.do">
-<table>
+<link href="<%=request.getContextPath()%>/css/modifyuser.css" type="text/css"
+	media="screen" rel="stylesheet" />
 
-<s:actionmessage name="message"/>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/js/modifyuser.js"></script>
+	
+<s:form theme="simple" action="ModifyUser.do">
 
-<tr>
-<td>
+	<s:actionmessage name="message"/>
+
 	<s:set name="username"> <s:property value="user.username"/> </s:set>
 	
-	<s:textfield label="username" name="username" value="%{#username}" />
-</td>
+	<div class="cent">
+	<s:fielderror>
+		<s:param>username</s:param>
+	</s:fielderror>
+	
+	<p title="用户的账号，必填"><label class="label" for="username">账号：</label>
+	<s:textfield cssClass="input" name="username" id="username" value="%{#username}" />
+	</p>
 
-</tr>
-
-
-<tr>
-<td>
 	<s:set name="name"><s:property value="user.name"/></s:set>
-	<s:textfield label="name" name="name" value="%{#name}"/>
-</td>
-</tr>
-	<s:submit/>
-</table>
+	
+	<p title="用户的姓名，必填"><label class="label" for="name">姓名：</label>
+	<s:textfield cssClass="input" name="name" id="name" value="%{#name}"/>
+	</p>
+	<p><s:submit cssClass="btn" id="submit" value="保存"/><input
+		type="button" value="取消" class="btn"></p>
+	</div>
+
 </s:form>

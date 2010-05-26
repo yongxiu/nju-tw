@@ -290,9 +290,13 @@
 		</action>
 		
 		<!-- Add User -->
+		<action name="AddUserPage">
+			<result name="success" type="tiles">admin.adduser</result>
+		</action>
+		
 		<action name="AddUser" class="action.AddUserAction">
 			<result name="success">/admin/addUserSuccess.jsp</result>
-			<result name="input">/admin/adduser.jsp</result>
+			<result name="input" type="tiles">admin.adduser</result>
 		</action>
 		
 		<!-- Get Modify List -->

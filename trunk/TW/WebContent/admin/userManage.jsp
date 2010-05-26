@@ -17,14 +17,12 @@
 </div>
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/admin/adduser.jsp'" title="" id="inbox__delete"><span>添加用户</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/AddUserPage.do'" title="" id="inbox__delete"><span>添加用户</span></div>
   </div>
   
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
   </div>
-  
-  <span class="msg-info">(若要修改，请直接点击文章)</span>
   
   <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
     <select onchange="MM.inbox.goPage(this.value);">
@@ -72,7 +70,7 @@
 					<s:else>
 						普通用户
 					</s:else></td>
-			<td class="wd7"><a href='<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
+			<td class="wd7"><a href='#' onclick="javascript:delUser('<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>');return false;">
 					删除
 				</a><a href='<s:url action="GetModifyList"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
 					修改
@@ -94,8 +92,6 @@
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
   </div>
-
-	<span class="msg-info">(若要修改，请直接点击文章)</span>
 
   <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
     <select onchange="MM.inbox.goPage(this.value);">
