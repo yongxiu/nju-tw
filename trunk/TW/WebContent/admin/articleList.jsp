@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 
-<link href="<%=request.getContextPath()%>/css/userManageList.css" type="text/css"
+<link href="<%=request.getContextPath()%>/css/adminArticleList.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
 <script type="text/javascript"
@@ -11,17 +10,13 @@
 <div id="dvTitleinbox">
   <div class="g-title-1">
     <div class="fn-fle">
-      <h2>管理用户</h2>
-      <span class="txt-info">(共 <strong>133</strong> 位)</span></div>
+      <h2>已发表的文章</h2>
+      <span class="txt-info">(共 <strong>133</strong> 篇)</span></div>
   </div>
 </div>
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/admin/adduser.jsp'" title="" id="inbox__delete"><span>添加用户</span></div>
-  </div>
-  
-  <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删 除</span></div>
   </div>
   
   <span class="msg-info">(若要修改，请直接点击文章)</span>
@@ -45,38 +40,25 @@
       <tr>
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文章" type="checkbox"></th>
-        <th class="wd2">用户ID</th>
-        <th class="wd3">用户名</th>
-        <th class="wd4">密码</th>
-        <th class="wd5">姓名</th>
-        <th class="wd6">角色</th>
-        <th class="wd7">操作</th>
+        <th class="wd2">文章标题</th>
+        <th class="wd3">文章类型</th>
+        <th class="wd4">时间</th>
+        <th class="wd5">操作</th>
       </tr>
     </thead>
   </table>
   <div id="MailListMaininbox" class="txt-12">
     <div id="period_div_inbox2">
       <table class="g-table-comm" id="period_table_inbox2">
-      <s:iterator value="users" status="stat">
+      <s:iterator value="articles" id="articles" status="stat">
         <tbody>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
-            <td class="wd2"><s:property value="id"/></td>
-            <td class="wd3"><s:property value="username"/></td>
-            <td class="wd4"><s:property value="password"/></td>
-            <td class="wd5"><s:property value="name"/></td>
-            <td class="wd6"><s:if test="role==1">
-						超级管理员
-					</s:if>
-					<s:else>
-						普通用户
-					</s:else></td>
-			<td class="wd7"><a href='<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
-					删除
-				</a><a href='<s:url action="GetModifyList"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
-					修改
-				</a></td>
+            <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
+            <td class="wd3"><s:property value="category"/></td>
+            <td class="wd4"><s:property value="date"/></td>
+            <td class="wd5">&nbsp;置顶</td>
           </tr>
         </tbody>
         </s:iterator>
@@ -88,11 +70,7 @@
 
 <div class="g-toolbar g-toolbar-bottom" id="dvToolbar_inbox__bottom">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/admin/adduser.jsp'" title="" id="inbox__delete"><span>添加用户</span></div>
-  </div>
-  
-  <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__bottom__delete"><span>删 除</span></div>
   </div>
 
 	<span class="msg-info">(若要修改，请直接点击文章)</span>

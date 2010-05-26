@@ -141,6 +141,10 @@
 		<action name="GetModifyFile" class="action.GetModifyFileAction">
 			<result name="success">/userComponent/fileList.jsp</result>
 		</action>
+		
+		<action name="admin.GetModifyFile" class="action.GetModifyFileAction">
+			<result name="success">/admin/fileList.jsp</result>
+		</action>
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
@@ -270,13 +274,13 @@
 		
 		<!-- Get Modify List -->
 		<action name="GetModifyList" class="action.GetModifyListAction">
-			<result name="success">/admin/modifyuser.jsp</result>
+			<result name="success" type="tiles">admin.modifyuser</result>
 		</action>
 		
 		<!-- Modify User -->
 		<action name="ModifyUser" class="action.ModifyUserAction">
-			<result name="success" type="redirect">ListUser.do</result>
-			<result name="input">/admin/modifyuser.jsp</result>
+			<result name="success" type="redirect">admin.ListUser.do</result>
+			<result name="input" type="tiles">admin.modifyuser</result>
 		</action>
 		
 		<!-- Change Password -->
@@ -299,6 +303,10 @@
 		<!-- Get Modify Articles -->
 		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
 			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
+		
+		<action name="admin.GetModifyArticle" class="action.GetModifyArticleAction">
+			<result name="success">/admin/articleList.jsp</result>
 		</action>
 		
 		
