@@ -49,12 +49,9 @@
 	</div>
 </s:form>
 <div class="info">
-<p>南京大学地址：南京市汉口路22号&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<p>办公地址地址：南京大学鼓楼校区南园&nbsp;&nbsp;&nbsp;&nbsp; <br>
 邮编：210093<br>
-校长办公室电话：086-025-83593186<br>
-Email：<a href="mailto:guyue@nju.edu.cn">guyue@nju.edu.cn</a><br>
-办公地点：南京大学北大楼112室<br>
-<br>
-关于本站任何问题与建议请联络：<br>
-<a href="mailto:webmaster@nju.edu.cn">webmaster@nju.edu.cn</a></p>
+办公室电话：086-025-83593142<br>
+Email：<span>@nju.edu.cn</span><br>
+
 </div>

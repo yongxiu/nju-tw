@@ -15,6 +15,22 @@
 		<put-attribute name="content" value="/OrgnizationAction.do"></put-attribute>
 	</definition>
 	
+	<definition name="orgSecretariat" extends="standard">
+		<put-attribute name="content" value="/Secretariat.do"></put-attribute>
+	</definition>
+	
+	<definition name="orgStudent" extends="standard">
+		<put-attribute name="content" value="/StudentOrg.do"></put-attribute>
+	</definition>
+	
+	<definition name="organ" extends="standard">
+		<put-attribute name="content" value="/Organ.do"></put-attribute>
+	</definition>
+	
+	<definition name="orgBase" extends="standard">
+		<put-attribute name="content" value="/OrgBase.do"></put-attribute>
+	</definition>
+	
 	<definition name="OrgDetail" extends="standard">
 		<put-attribute name="content" value="/OrganizationDetailAction.do"></put-attribute>
 	</definition>
