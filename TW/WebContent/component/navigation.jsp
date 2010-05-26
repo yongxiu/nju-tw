@@ -30,16 +30,17 @@
 	<li class="sy"><a href="Home.do" title="首页" ></a></li>
 	<li class="zz"><a href="Org.do" title="组织结构"> </a>
     
-    	<UL style="display: block; opacity: 0.9999;">
+    	<UL style="display: block; opacity: 0.9999;width:396px;">
 			<LI id="sjs"><A href="#" title="书记室"></A></LI>
-			<LI id="nbjg"><A href="#" title="内部结构"></A></LI>
-			<LI id="xszz"><A href="#" title="下属组织"></A></LI>
+			<LI id="jgsz"><A href="#" title="机构设置"></A></LI>
+			<LI id="xszz"><A href="#" title="学生组织"></A></LI>
+			<LI id="jctw"><A href="#" title="基层团委"></A></LI>
 		</UL>
 		
     </li>
-	<li class="jd"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="焦点新闻"></a>
+	<li class="xw"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="新闻动态"></a>
 	   
-    	<UL style="display: block; opacity: 0.9999; ">
+    	<UL style="display: block; opacity: 0.9999; width:198px;">
 			<LI id="xcsx"><a href='<s:url action="Article.do"><s:param name="category" value="10"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></LI>
 			<LI id="jcdt"> <a href='<s:url action="Article.do"><s:param name="category" value="11"/><s:param name="currentPage" value="1"/></s:url>' title="基层动态"></a></LI>
 		</UL>
@@ -47,7 +48,15 @@
     </li>
 	<li class="gg"><a href='<s:url action="Article.do"><s:param name="category" value="3"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></li>
 	<li class="ll"><a href='<s:url action="Article.do"><s:param name="category" value="4"/><s:param name="currentPage" value="1"/></s:url>' title="理论园地"></a></li>
-	<li class="mt"><a href='<s:url action="Article.do"><s:param name="category" value="5"/><s:param name="currentPage" value="1"/></s:url>' title="媒体报道"></a></li>
+	<li class="mt"><a href='<s:url action="Article.do"><s:param name="category" value="5"/><s:param name="currentPage" value="1"/></s:url>' title="媒体报道"></a>
+		<UL style="display: block; opacity: 0.9999;width:495px;">
+			<LI id="xwbd"><A href="#" title="校外报导"></A></LI>
+			<LI id="ndxww"><A href="#" title="南大新闻网"></A></LI>
+			<LI id="njdxb"><A href="#" title="南京大学报"></A></LI>
+			<LI id="ndqnb"><A href="#" title="南大青年报"></A></LI>
+			<LI id="xygbt"><A href="#" title="南京大学校园广播台"></A></LI>
+		</UL>
+	</li>
 	<li class="xz"><a href="Download.do" title="下载专区"></a></li>
 
 	<li class="lx"><a href="ConnectUs.do" title="联系我们"></a></li>
