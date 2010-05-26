@@ -80,8 +80,8 @@ a {
 	width: 99px;
 }
 
-.jd a {
-	background: url(../imgs/allbgs.png) no-repeat -1473px 0px;
+.xw a {
+	background: url(../imgs/xwdt.gif) no-repeat;
 	width: 99px;
 }
 
@@ -120,8 +120,8 @@ a {
 	width: 99px;
 }
 
-.jd a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1968px 0px;
+.xw a:hover {
+	background: url(../imgs/xwdt-hover.gif) no-repeat;
 	width: 99px;
 }
 
@@ -243,43 +243,16 @@ a {
 	background-color: #FFF;
 }
 
-#topic .sidebarElement {
-	text-align:center;
-	position:relative;
-	top:0;
-}
-
-#logindiv {
-	position:relative;
-	top:10%;
-	left:10%;
-}
-
-#logindiv label {
-	font-style:normal;
-}
-
-#loginTextfield {
-	width:150px;
-	height:15px;
-	}
-
-#ipholder .sidebarElement {
-	text-align:center;
-	position:relative;
-	top:30%;
-}
-
 .headText {
 	position:relative;
 	top:13px;
 	left:55px;
 	width:80px;
-font-size:100%;
-color:#444444;
-font-weight:bold;
-text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
-	}
+	font-size:100%;
+	color:#444444;
+	font-weight:bold;
+	text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
+}
 	
 .headLink {
 	width:34px;
@@ -313,6 +286,33 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	border: 1px solid #e0e0e0;
 	border-top: none;
 	margin: 0 6px 6px 0;
+}
+
+#topic .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:0;
+}
+
+#logindiv {
+	position:relative;
+	top:10%;
+	left:10%;
+}
+
+#logindiv label {
+	font-style:normal;
+}
+
+#loginTextfield {
+	width:150px;
+	height:15px;
+	}
+
+#ipholder .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:30%;
 }
 
 #content {

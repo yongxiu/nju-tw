@@ -50,7 +50,6 @@
   white-space: nowrap;
 }
 .nav li ul {
-	width:297px;
 }
 .nav li ul li {
 	display:block;
@@ -59,51 +58,111 @@
 }
 
 #sjs a {
-	background: url(../img/sjs.png) no-repeat;
+	background: url(../imgs/sjs.png) no-repeat;
 	width: 99px;
 }
 
 #sjs a:hover {
-	background: url(../img/sjs-hover.png) no-repeat;
+	background: url(../imgs/sjs-hover.png) no-repeat;
 	width: 99px;
 }
 
-#nbjg a {
-	background: url(../img/nbjg.png) no-repeat;
+#jgsz a {
+	background: url(../imgs/jgsz.gif) no-repeat;
 	width: 99px;
 }
 
-#nbjg a:hover {
-	background: url(../img/nbjg-hover.png) no-repeat;
+#jgsz a:hover {
+	background: url(../imgs/jgsz-hover.gif) no-repeat;
+	width: 99px;
+}
+
+#jctw a {
+	background: url(../imgs/jctw.gif) no-repeat;
+	width: 99px;
+}
+
+#jctw a:hover {
+	background: url(../imgs/jctw-hover.gif) no-repeat;
 	width: 99px;
 }
 
 #xszz a {
-	background: url(../img/xszz.png) no-repeat;
+	background: url(../imgs/xszz.gif) no-repeat;
 	width: 99px;
 }
 
 #xszz a:hover {
-	background: url(../img/xszz-hover.png) no-repeat;
+	background: url(../imgs/xszz-hover.gif) no-repeat;
 	width: 99px;
 }
 
 #xcsx a {
-	background: url(../img/xcsx.png) no-repeat;
+	background: url(../imgs/xcsx.png) no-repeat;
 	width: 99px;
 }
 
 #xcsx a:hover {
-	background: url(../img/xcsx-hover.png) no-repeat;
+	background: url(../imgs/xcsx-hover.png) no-repeat;
 	width: 99px;
 }
 
 #jcdt a {
-	background: url(../img/jcdt.png) no-repeat;
+	background: url(../imgs/jcdt.png) no-repeat;
 	width: 99px;
 }
 
 #jcdt a:hover {
-	background: url(../img/jcdt-hover.png) no-repeat;
+	background: url(../imgs/jcdt-hover.png) no-repeat;
+	width: 99px;
+}
+			
+#xwbd a {
+	background: url(../imgs/xwbd.gif) no-repeat;
+	width: 99px;
+}
+
+#xwbd a:hover {
+	background: url(../imgs/xwbd-hover.gif) no-repeat;
+	width: 99px;
+}
+
+#ndxww a {
+	background: url(../imgs/ndxww.gif) no-repeat;
+	width: 99px;
+}
+
+#ndxww a:hover {
+	background: url(../imgs/ndxww-hover.gif) no-repeat;
+	width: 99px;
+}
+
+#njdxb a {
+	background: url(../imgs/njdxb.gif) no-repeat;
+	width: 99px;
+}
+
+#njdxb a:hover {
+	background: url(../imgs/njdxb-hover.gif) no-repeat;
+	width: 99px;
+}
+
+#ndqnb a {
+	background: url(../imgs/ndqnb.gif) no-repeat;
+	width: 99px;
+}
+
+#ndqnb a:hover {
+	background: url(../imgs/ndqnb-hover.gif) no-repeat;
+	width: 99px;
+}
+
+#xygbt a {
+	background: url(../imgs/xygbt.gif) no-repeat;
+	width: 99px;
+}
+
+#xygbt a:hover {
+	background: url(../imgs/xygbt-hover.gif) no-repeat;
 	width: 99px;
 }
