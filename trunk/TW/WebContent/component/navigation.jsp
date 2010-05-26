@@ -38,14 +38,7 @@
 		</UL>
 		
     </li>
-	<li class="xw"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="新闻动态"></a>
-	   
-    	<UL style="display: block; opacity: 0.9999; width:198px;">
-			<LI id="xcsx"><a href='<s:url action="Article.do"><s:param name="category" value="10"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></LI>
-			<LI id="jcdt"> <a href='<s:url action="Article.do"><s:param name="category" value="11"/><s:param name="currentPage" value="1"/></s:url>' title="基层动态"></a></LI>
-		</UL>
-		
-    </li>
+	<li class="xw"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="新闻动态"></a></li>
 	<li class="gg"><a href='<s:url action="Article.do"><s:param name="category" value="3"/><s:param name="currentPage" value="1"/></s:url>' title="宣传思想"></a></li>
 	<li class="ll"><a href='<s:url action="Article.do"><s:param name="category" value="4"/><s:param name="currentPage" value="1"/></s:url>' title="理论园地"></a></li>
 	<li class="mt"><a href='<s:url action="Article.do"><s:param name="category" value="5"/><s:param name="currentPage" value="1"/></s:url>' title="媒体报道"></a>
