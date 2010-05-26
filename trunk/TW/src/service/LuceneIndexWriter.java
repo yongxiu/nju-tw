@@ -8,7 +8,9 @@ import jeasy.analysis.MMAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
+import org.apache.lucene.index.Term;
 
 import bean.GenericArticle;
 import dao.GenericArticleDao;
@@ -57,4 +59,22 @@ public class LuceneIndexWriter {
 		writer.addDocument(doc);
 		writer.close();
 	}
+	
+	public static void deleteIndex(String path,GenericArticle article) throws IOException{
+		//将document放入回收站
+		IndexReader reader = IndexReader.open(path);
+		Term term = new Term("id", article.getId()+"");
+		System.out.println("before"+reader.numDocs());
+		reader.deleteDocuments(term);
+		reader.close();
+		
+		//真正删除
+		IndexWriter writer = new IndexWriter(path, new MMAnalyzer(), false);
+		writer.optimize();
+		writer.close();
+		
+		reader = IndexReader.open(path);
+		System.out.println("after"+reader.numDocs());
+	}
+	
 }

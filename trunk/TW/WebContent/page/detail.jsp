@@ -5,6 +5,11 @@
 <br>
 <br>
 <br>
+
+<s:if test="empty==1">
+	抱歉你搜索的内容不存在或已经被删除！
+</s:if>
+<s:else>
 <table>
   <tr>
     <td></td>
@@ -19,3 +24,4 @@
     
   </tr>
 </table>
+</s:else>

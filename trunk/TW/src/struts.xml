@@ -285,6 +285,12 @@
 			<result name="input">/userComponent/changePSW.jsp</result>
 		</action>
 		
+		<!-- Delete Article -->
+		<action name="DeleteArticle" class="action.admin.DeleteArticleAction">
+			<result name="success" type="redirect">/ArticleList.do</result>
+		</action>
+		
+		
 		<!-- Write Index -->
 		<action name="writeIndex" class="action.lucene.WriteIndexAction">
 			<result name="success">/component/login.jsp</result>
