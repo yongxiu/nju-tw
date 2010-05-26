@@ -38,11 +38,11 @@
 	</definition>
 
 	<definition name="admin.fileList" extends="admin">			
-		<put-attribute name="content" value="/GetModifyArticle.do" />
+		<put-attribute name="content" value="/admin.GetModifyFile.do" />
 	</definition>
 	
 	<definition name="admin.articleList" extends="admin">			
-		<put-attribute name="content" value="/GetModifyArticle.do" />
+		<put-attribute name="content" value="/admin.GetModifyArticle.do" />
 	</definition>
 	
 	<definition name="admin.ShowModifyArticle" extends="admin">
@@ -59,6 +59,10 @@
 	
 	<definition name="admin.userManage" extends="admin">		
 		<put-attribute name="content" value="/admin/userManage.jsp" />
+	</definition>
+	
+	<definition name="admin.modifyuser" extends="admin">		
+		<put-attribute name="content" value="/admin/modifyuser.jsp" />
 	</definition>
 
 	
