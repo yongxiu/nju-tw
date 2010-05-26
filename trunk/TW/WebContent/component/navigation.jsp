@@ -31,10 +31,10 @@
 	<li class="zz"><a href="Org.do" title="组织结构"> </a>
     
     	<UL style="display: block; opacity: 0.9999;width:396px;">
-			<LI id="sjs"><A href="#" title="书记室"></A></LI>
-			<LI id="jgsz"><A href="#" title="机构设置"></A></LI>
-			<LI id="xszz"><A href="#" title="学生组织"></A></LI>
-			<LI id="jctw"><A href="#" title="基层团委"></A></LI>
+			<LI id="sjs"><A href="SecretaryOffice.do" title="书记室"></A></LI>
+			<LI id="jgsz"><A href="OrganizationStructure.do" title="机构设置"></A></LI>
+			<LI id="xszz"><A href="StudentsOrganiazation.do" title="学生组织"></A></LI>
+			<LI id="jctw"><A href="BasicYouthLeague.do" title="基层团委"></A></LI>
 		</UL>
 		
     </li>

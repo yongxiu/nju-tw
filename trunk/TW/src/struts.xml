@@ -43,8 +43,20 @@
 			<result name="success" type="tiles">OrgDetail</result>
 		</action>
 		
-		<action name="Article" >
-			<result name="success" type="tiles">article</result>
+		<action name="SecretaryOffice" >
+			<result name="success" type="tiles">orgSecretariat</result>
+		</action>
+		
+		<action name="OrganizationStructure" >
+			<result name="success" type="tiles">orgStudent</result>
+		</action>
+		
+		<action name="StudentsOrganiazation" >
+			<result name="success" type="tiles">organ</result>
+		</action>
+		
+		<action name="BasicYouthLeague" >
+			<result name="success" type="tiles">orgBase</result>
 		</action>
 		
 		<action name="AticalDetail" >
