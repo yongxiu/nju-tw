@@ -1,4 +1,4 @@
-
+html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); }
 body {
 	width: 988px;
 	margin: 50px auto 0 auto;
@@ -233,6 +233,13 @@ a {
 	background-color: #FFF;
 }
 
+#sidebar {
+	width: 194px;
+	height: 759px;
+	float: left;
+	background-color: #FFF;
+}
+
 .headText {
 	position:relative;
 	top:13px;
@@ -249,7 +256,61 @@ a {
 	position:relative;
 	left:350px;
 }
+	
+#sidebar .sidebar-h {
+	height: 39px;
+	width: 188px;
+}
 
+#topic .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	width: 188px;
+}
+
+#login .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2938px 0px;
+	width: 188px;
+}
+
+#ipholder .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2562px 0px;
+	width: 188px;
+}
+
+#sidebar .sidebar-p {
+	height: 207px;
+	width: 186px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	margin: 0 6px 6px 0;
+}
+
+#topic .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:0;
+}
+
+#logindiv {
+	position:relative;
+	top:10%;
+	left:10%;
+}
+
+#logindiv label {
+	font-style:normal;
+}
+
+#loginTextfield {
+	width:150px;
+	height:15px;
+	}
+
+#ipholder .sidebarElement {
+	text-align:center;
+	position:relative;
+	top:30%;
+}
 
 #content {
 	width: 794px;
@@ -257,11 +318,134 @@ a {
 	background-color: #FFF;
 }
 
-#blank-v {
-	width: 6px;
-	height: 206px;
-	background-color: #FFF;
+#content table {
+	font-size:15px;
+	margin-top:15px;
+	margin-left:75px;
+	margin-right:81px;
+	text-align:left;
+	}
+
+.organizationTable * {
+	text-align:center;
+	padding-left:75px;
+	padding-right:81px;
+}
+
+.organizationTable {
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+.organizationTitle {
+	font-weight:bold;
+	font-size:18px;
+}
+
+.organizationDetail{
+	margin-top:20px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#organizationTable1 {
+	position:relative;
+	left:100px;
+	}
+	
+#organizationTable2 {
+	position:relative;
+	left:70px;
+	}
+	
+#organizationTable3 {
+	position:relative;
+	left:0;
+	}
+
+.articleTable {
+	text-align:left;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+.articleTitle {
+	font-weight:bold;
+	font-size:20px;
+	text-align:center;
+	padding-bottom:10px;
+	padding-left:75px;
+	padding-right:81px;
+	}
+
+#news .news-p table {
+	padding:0;
+	margin:7px 7px 7px 7px;
+	text-align:left;
+	}
+
+#content table a {
+	text-decoration:none;
+	font-size:13px;
+	color:black;
+}
+
+#content table a:hover {
+	text-decoration:none;
+	color:blue;
+	font-size:13px;
+}
+
+#picNews {
+	width: 794px;
 	float: left;
+	margin: 0 0 6px 0;
+}
+
+#picNews .picNews-h {
+	height: 39px;
+	width: 794px;
+	background: url(../imgs/allbgs.png) no-repeat -4507px 0px;
+	width: 794px;
+	float: left;
+}
+
+#picNews .picNews-p {
+	width: 792px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	height: 301px;
+	float: left;
+}
+
+#news {
+	width: 794px;
+	height: 412px;
+	float: left;
+}
+
+#news .subnews {
+	width: 394px;
+	height: 206px;
+	float: left;
+}
+
+#news .news-h {
+	height: 39px;
+	width: 394px;
+	background: url(../imgs/allbgs.png) no-repeat -4113px 0px;
+	width: 394px;
+	float: left;
+}
+
+#news .news-p {
+	height: 160px;
+	width: 392px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	margin: 0 0 6px 0;
+	float: left;
+	overflow:hidden;
 }
 
 #linker {
@@ -319,6 +503,65 @@ a {
 	text-decoration: none; color: #1160b7;
 }
 
+#blank-h2 {
+	width: 988px;
+	height: 50px;
+	float: left;
+}
+
+#loginSuccessfulTable span {
+	font-weight:bold;
+}
+
+#loginSuccessfulTable {
+	font-size:15px;
+}
+
+#loginSuccessfulTable a:link {
+	font-size:15px;
+	color:black;
+	text-decoration:none;
+}
+
+#loginSuccessfulTable a:visited {
+	font-size:15px;
+	color:black;
+	text-decoration:none;	
+}
+
+#loginSuccessfulTable a:hover {
+	font-size:15px;
+	color:blue;
+	text-decoration:none;
+}
+
+#loginSuccessfulTable td {
+	width:85px;
+}
+
+#articleNavi {
+	text-align:center;
+}
+
+#downloadPage {
+	font-size:15px;
+	margin-top:15px;
+	margin-left:75px;
+	margin-right:81px;
+	text-align:left;
+}
+
+#downloadPage a {
+	text-decoration:none;
+	font-size:13px;
+	color:black;
+}
+
+#downloadPage a:hover {
+	text-decoration:none;
+	color:blue;
+	font-size:13px;
+}
 
 #copyrightPage {
 	font-size:13px;
@@ -344,42 +587,3 @@ a {
 	color:red;
 }
 
-#blank-h2 {
-	width: 988px;
-	height: 50px;
-	float: left;
-}
-
-#sidebar {
-	width: 194px;
-	line-height: 30px; 
-	list-style-type: none;
-	text-align:left;
-	float: left;
-}
-
-#sidebar a {
-	width: 160px; 
-	display: block;
-	padding-left:20px;
-	/*Width(一定要)，否则下面的Li会变形*/
-}
-#sidebar li {
-	background:#CCC; /*一级目录的背景色*/
-	border-bottom:#FFF 1px solid; /*下面的一条白边*/
-	float:left;
-	/*float：left,本不应该设置，但由于在Firefox不能正常显示
-	继承Nav的width,限制宽度，li自动向下延伸*/
-}
-#sidebar li a:hover{
-	background:#CC0000;	/*一级目录onMouseOver显示的背景色*/
-}
-#sidebar a:link  {
-	color:#666; text-decoration:none;
-}
-#sidebar a:visited  {
-	color:#666;text-decoration:none;
-}
-#sidebar a:hover  {
-	color:#FFF;text-decoration:none;font-weight:bold;
-}
