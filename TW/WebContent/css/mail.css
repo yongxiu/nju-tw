@@ -1,11 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-* {
-	padding:0;
-	margin:0;
-}
-
 h3 {
 font-size:150%;
 color:#444444;
@@ -110,9 +105,15 @@ text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 	width:75px;
 }
 
-.errorMessage  {
+#author_info .errorMessage  {
 color:#FF0000;
 font-size:15px;
+font-weight:normal;
+margin-left: 110px;
+}
+
+#author_info ul{
+list-style:none outside none;
 }
 
 #form_comments .label {

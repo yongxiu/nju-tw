@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html;charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
+<%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 
 
 <link href="<%=request.getContextPath()%>/css/mail.css" type="text/css"
@@ -43,8 +43,8 @@
 	<s:fielderror>
 		<s:param>comment</s:param>
 	</s:fielderror>
-	<p><s:submit cssClass="btn" value="发送" name="submit"
-		id="input_comments_submit" tabindex="5"></s:submit> <input
+	<p><sx:submit targets="content" cssClass="btn" value="发送" name="submit" id="input_comments_submit" tabindex="5"></sx:submit>
+       	<input
 		type="button" value="取消" class="btn"></p>
 	</div>
 </s:form>

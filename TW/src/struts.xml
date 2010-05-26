@@ -209,7 +209,7 @@
 		<action name="FileUploadAction" class="action.FileUploadAction">
 			<!-- result name="success" type="redirect">Home.do</result> -->
 			<result name="success">/UploadSuccess.jsp</result>
-			<result name="input">/FileUpload.jsp</result>
+			<result name="input" type="tiles">customer.upload</result>
 		</action>
 
 		<!-- List organization -->
@@ -249,7 +249,7 @@
 		<!-- Send email -->
 		<action name="SendMailAction" class="action.SendMailAction">
 			<result name="success">/page/sendMailSuccess.jsp</result>
-			<result name="input">/mail.jsp</result>
+			<result name="input" type="tiles">connect</result>
 		</action>
 
 		<!-- List User -->
@@ -292,7 +292,7 @@
 		
 		<!-- Get Modify Articles -->
 		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
-			<result name="success">/userComponent/articleList2.jsp</result>
+			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		
 		

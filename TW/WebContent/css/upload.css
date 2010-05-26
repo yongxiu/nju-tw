@@ -37,7 +37,14 @@ font-size:15px;
 padding-left:20px;
 }
 
-.errorMessage  {
+
+.cent .errorMessage  {
 color:#FF0000;
 font-size:15px;
+font-weight:normal;
+margin-left: 110px;
+}
+
+.cent ul{
+list-style:none outside none;
 }
