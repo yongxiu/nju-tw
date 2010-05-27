@@ -3,7 +3,6 @@
     <%@taglib prefix="s" uri="/struts-tags" %>
 <table border="0">
 
-
 <s:iterator value="infos">
  <tr>
  	<td>
@@ -13,9 +12,5 @@
  		 
  	</td>
 </tr>
-
-
- 
- 
 </s:iterator>
 </table>

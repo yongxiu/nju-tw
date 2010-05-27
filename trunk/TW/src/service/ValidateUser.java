@@ -46,6 +46,6 @@ public class ValidateUser {
 	}
 	
 	public static void main(String[] args){
-		new ValidateUser().validate("wjc2", "123456");
+		new ValidateUser().validate("ht", "123456");
 	}
 }
