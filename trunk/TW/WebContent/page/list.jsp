@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+
+<link href="<%=request.getContextPath()%>/css/list.css" type="text/css"
+	media="screen" rel="stylesheet" />
+
+
 <s:set name="number"><s:property value="number"/></s:set>
 <!-- no result -->
 <s:if test="#number==0">
@@ -16,34 +21,25 @@
 搜索耗时 ：" <s:property value="time"/>"ms   
 </s:else>
 <br>
-<s:form action="SearchDetail.do">
 
-<table>
+<div id="ires">
+<ol>
 	<s:iterator value="articles" id="article">
-		<tr>
-			<td>
-				 <s:set name="id"> <s:property value="id"/> </s:set>
-				 标题：&nbsp; <a href='<s:url action="SearchDetail.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a>
-			</td>
-		</tr>
-		<tr>
-		</tr>
-		<tr>
-			<td>
-				版块:&nbsp; <s:property value="category"/>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				发布日期:&nbsp;<s:property value="date"/>
-			</td>
-		</tr>
-	
+		<li class="g w0">
+			<h3 class="r">
+			 <s:set name="id"> <s:property value="id"/> </s:set>
+			 标题：&nbsp; <a href='<s:url action="SearchDetail.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a>
+			</h3>
+			
+			<div class="s">
+			版块:&nbsp; <s:property value="category"/>
+			发布日期:&nbsp;<s:property value="date"/>
+			</div>
+		</li>
 	</s:iterator>
-</table>
-
-</s:form>
-
+	
+</ol>
+</div>
 <!-- page action -->
 
 <s:set name="search"><s:property value="search" escape="false"/></s:set>

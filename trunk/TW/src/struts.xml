@@ -364,6 +364,14 @@
 		<action name="Picnews" class="action.PicnewsAction">
 			<result name="success">/component/picNews.jsp</result>
 		</action>
+		
+		<!-- Download file  -->
+		<action name="FileDownloadAction" class="action.FileDownloadAction">
+			<result name="success" type="stream">
+				<param name="inputName">targetFile</param> 
+				<param name="contentDisposition">attachment;filename="${filename}"</param> 
+			</result>
+		</action>
 	</package>
 
 </struts>
