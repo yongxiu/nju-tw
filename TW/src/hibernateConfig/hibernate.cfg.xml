@@ -18,7 +18,7 @@
 
 		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/tw?useUnicode=true&amp;characterEncoding=utf8</property>
 
-		<property name="hibernate.connection.password">123456</property>
+		<property name="hibernate.connection.password"></property>
 
 		<property name="hibernate.connection.username">root</property>
 

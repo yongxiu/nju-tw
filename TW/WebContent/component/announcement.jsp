@@ -13,9 +13,5 @@
  		 
  	</td>
 </tr>
-
-
- 
- 
 </s:iterator>
 </table>
