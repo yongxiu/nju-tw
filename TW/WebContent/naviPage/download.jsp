@@ -9,7 +9,7 @@
 <body>
 <div id="downloadPage">
 <s:iterator value="files" id="file">
-	<a href="<s:property value="#file.path"/>">
+	<a href="FileDownloadAction.do?fileId=<s:property value="#file.id"/>">
 	 	<s:property value="#file.filename"/>
 	</a>
 	<br>

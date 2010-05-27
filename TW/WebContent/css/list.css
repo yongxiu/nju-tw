@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content {
+	color:#000;
+	background:#fff;
+	overflow:auto;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:verdana, sans-serif;
+}
+
+#content li.g  {
+margin-bottom:12px;
+margin-top:0;
+}
+
+#content li.g, .std, .c h2, #mbEnd h2, h1 {
+font-family:arial,sans-serif;
+font-size:small;
+}
+#content ol {
+	padding-left: 30px;
+}
+#content ol li {
+	list-style:none outside none;
+}
+
+#ires a:visited {
+color:#551A8B;
+}
+
+#ires a {
+	font-family:arial,sans-serif;
+	font-size:medium;
+	font-weight:normal;
+}
+
+#ires .s {
+line-height:1.54;
+}
