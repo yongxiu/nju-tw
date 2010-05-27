@@ -30,6 +30,11 @@
 		</global-results>
 		
 		
+		<!-- Navi article -->
+		<action name="Article">
+			<result name="success" type="tiles">article</result>
+		</action>
+		
 		<!-- Redirect to home page -->
 		<action name="Home">
 			<result name="success" type="tiles">index</result>

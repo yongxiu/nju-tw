@@ -36,7 +36,7 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 		int count;
 		//categoryd的处理
 		setCategory(getCategory());
-		if(category!=2) {
+		if(category!=4) {
 			category = getCategory();
 			articles = dao.getArticlesByPage(currentPage, number, category);
 			count = getPageCount(dao.getCountBycategory(category), number); 
@@ -44,9 +44,11 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 		}
 		
 		else {
-			articles = dao.getArticlesByPage(currentPage, number, 10, 11);
+			articles = dao.getArticlesByPage(currentPage, number, 5, 6, 7, 8, 9);
 			
-			count = dao.getCountBycategory(10)+dao.getCountBycategory(11);
+			count = dao.getCountBycategory(5)+dao.getCountBycategory(6)
+				+ dao.getCountBycategory(7) + dao.getCountBycategory(8)
+					+ dao.getCountBycategory(9);
 			
 			count = getPageCount(count, number); 
 		

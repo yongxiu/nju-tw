@@ -10,21 +10,23 @@ import bean.GenericArticle;
 
 public class GetArticles {
 
-	public ArrayList<GenericArticle> getFiveNews() {
-		GenericArticleDao genericArticleDao = new GenericArticleDao();
+	
+	public  ArrayList<GenericArticle> getFiveNews(){
+		GenericArticleDao genericArticleDao=new GenericArticleDao();
+		
+		//get all articles
+		List<GenericArticle> articles=genericArticleDao.getAllEntity();
+		
+		//hold all news
+		ArrayList<GenericArticle> news=new ArrayList<GenericArticle>();
+		
+		//hold newest news
+		ArrayList<GenericArticle> fiveNews=new ArrayList<GenericArticle>();
+		
+		//get all news
+		for(GenericArticle a:articles){
+			if(a.getCategory()== 1)
 
-		// get all articles
-		List<GenericArticle> articles = genericArticleDao.getAllEntity();
-
-		// hold all news
-		ArrayList<GenericArticle> news = new ArrayList<GenericArticle>();
-
-		// hold newest news
-		ArrayList<GenericArticle> fiveNews = new ArrayList<GenericArticle>();
-
-		// get all news
-		for (GenericArticle a : articles) {
-			if (a.getCategory() == 10 || a.getCategory() == 11)
 				news.add(a);
 		}
 
@@ -60,8 +62,10 @@ public class GetArticles {
 
 		ArrayList<GenericArticle> fiveMedias = new ArrayList<GenericArticle>();
 
-		for (GenericArticle a : articles) {
-			if (a.getCategory() == 5)
+		
+		for(GenericArticle a:articles) {
+			if(a.getCategory()==5 || a.getCategory()==6 || a.getCategory()==7 || a.getCategory()==8 || a.getCategory()==9)
+
 				medias.add(a);
 
 		}
@@ -99,8 +103,10 @@ public class GetArticles {
 
 		ArrayList<GenericArticle> fiveInfos = new ArrayList<GenericArticle>();
 
-		for (GenericArticle a : articles) {
-			if (a.getCategory() == 3)
+		
+		for(GenericArticle a:articles) {
+			if(a.getCategory()==2)
+
 				infos.add(a);
 		}
 		infos = SortUtil.sort(infos);
@@ -130,8 +136,10 @@ public class GetArticles {
 
 		ArrayList<GenericArticle> fiveTheories = new ArrayList<GenericArticle>();
 
-		for (GenericArticle a : articles) {
-			if (a.getCategory() == 4)
+		
+		for(GenericArticle a:articles) {
+			if(a.getCategory()==3)
+
 				theories.add(a);
 		}
 		theories = SortUtil.sort(theories);
