@@ -75,7 +75,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				System.out.println("mark : "+getSession().get(UserInterceptor.USER_KEY));
 				getSession().put("id", new Long(user.getId()));
 				getSession().put("user", user);
-				
+				getSession().put("role", user.getRole());
 				return SUCCESS;
 			 }
 			 else {
