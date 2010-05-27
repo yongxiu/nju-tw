@@ -14,9 +14,10 @@
       <span class="txt-info">(共 <strong>133</strong> 篇)</span></div>
   </div>
 </div>
+<s:form name="deleteForm">
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删 除</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='DeleteArticle.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
   </div>
   
   <span class="msg-info">(若要修改，请直接点击文章)</span>
@@ -54,7 +55,7 @@
         <tbody>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
+            <td class="wd1 ckb"><input title="选择/不选" value="<s:property value="id"/>" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
             <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
             <td class="wd3"><s:property value="category"/></td>
             <td class="wd4"><s:property value="date"/></td>
@@ -70,7 +71,7 @@
 
 <div class="g-toolbar g-toolbar-bottom" id="dvToolbar_inbox__bottom">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__bottom__delete"><span>删 除</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='DeleteArticle.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
   </div>
 
 	<span class="msg-info">(若要修改，请直接点击文章)</span>
@@ -87,3 +88,4 @@
     </select>
   </div>
 </div>
+</s:form>
