@@ -59,6 +59,26 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		return articles;
 	}
 	
+	//get Articles by page count for medias
+	public ArrayList<GenericArticle> getArticlesByPage(int pageCount,int number,int category1,int category2,int category3,int category4,int category5){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.category =:category1 or a.category =:category2 or a.category =:category3 or a.category =:category4 or a.category =:category5");
+		
+		query.setParameter("category1", category1);
+		query.setParameter("category2", category2);
+		query.setParameter("category3", category3);
+		query.setParameter("category4", category4);
+		query.setParameter("category5", category5);
+		query.setFirstResult((pageCount-1)*number);
+		query.setMaxResults(number);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
 	public int getCountBycategory(int category) {
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
