@@ -67,12 +67,12 @@ a {
 }
 
 .sy a {
-	background: url(../imgs/allbgs.png) no-repeat -495px 0px;
+	background: url(../img/nav-sy.png) no-repeat;
 	width: 99px;
 }
 
 .zz a {
-	background: url(../imgs/allbgs.png) no-repeat -1176px 0px;
+	background: url(../img/nav-zz.png) no-repeat;
 	width: 99px;
 }
 
@@ -82,37 +82,37 @@ a {
 }
 
 .gg a {
-	background: url(../imgs/allbgs.png) no-repeat -1770px 0px;
+	background: url(../img/nav-gg.png) no-repeat;
 	width: 99px;
 }
 
 .ll a {
-	background: url(../imgs/allbgs.png) no-repeat -2364px 0px;
+	background: url(../img/nav-ll.png) no-repeat;
 	width: 99px;
 }
 
 .mt a {
-	background: url(../imgs/allbgs.png) no-repeat -297px 0px;
+	background: url(../img/nav-mt.png) no-repeat;
 	width: 99px;
 }
 
 .xz a {
-	background: url(../imgs/allbgs.png) no-repeat -198px 0px;
+	background: url(../img/nav-xz.png) no-repeat;
 	width: 99px;
 }
 
 .lx a {
-	background: url(../imgs/allbgs.png) no-repeat -2166px 0px;
+	background: url(../img/nav-lx.png) no-repeat;
 	width: 99px;
 }
 
 .sy a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -99px 0px;
+	background: url(../img/nav-sy-hover.png) no-repeat;
 	width: 99px;
 }
 
 .zz a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -693px 0px;
+	background: url(../img/nav-zz-hover.png) no-repeat;
 	width: 99px;
 }
 
@@ -122,67 +122,67 @@ a {
 }
 
 .gg a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1374px 0px;
+	background: url(../img/nav-gg-hover.png) no-repeat;
 	width: 99px;
 }
 
 .ll a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -2265px 0px;
+	background: url(../img/nav-ll-hover.png) no-repeat;
 	width: 99px;
 }
 
 .mt a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1671px 0px;
+	background: url(../img/nav-mt-hover.png) no-repeat;
 	width: 99px;
 }
 
 .xz a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1077px 0px;
+	background: url(../img/nav-xz-hover.png) no-repeat;
 	width: 99px;
 }
 
 .lx a:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1275px 0px;
+	background: url(../img/nav-lx-hover.png) no-repeat;
 	width: 99px;
 }
 
 .sy a.active,.sy a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat 0px 0px;
+	background: url(../img/nav-sy-hover.png) no-repeat;
 	width: 99px;
 }
 
 .zz a.active,.zz a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -594px 0px;
+	background: url(../img/nav-zz-hover.png) no-repeat;
 	width: 99px;
 }
 
 .jd a.active,.jd a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1572px 0px;
+	background: url(../img/nav-jd-hover.png) no-repeat;
 	width: 99px;
 }
 
 .gg a.active,.gg a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -1869px 0px;
+	background: url(../img/nav-gg-hover.png) no-repeat;
 	width: 99px;
 }
 
 .ll a.active,.ll a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -2463px 0px;
+	background: url(../img/nav-ll-hover.png) no-repeat;
 	width: 99px;
 }
 
 .mt a.active,.mt a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -396px 0px;
+	background: url(../img/nav-mt-hover.png) no-repeat;
 	width: 99px;
 }
 
 .xz a.active,.xz a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -978px 0px;
+	background: url(../img/nav-xz-hover.png) no-repeat;
 	width: 99px;
 }
 
 .lx a.active,.lx a.active:hover {
-	background: url(../imgs/allbgs.png) no-repeat -2067px 0px;
+	background: url(../img/nav-lx-hover.png) no-repeat;
 	width: 99px;
 }
 
@@ -234,7 +234,7 @@ a {
 
 #sidebar {
 	width: 194px;
-	height: 779px;
+	height: 799px;
 	float: left;
 	background-color: #FFF;
 }
@@ -277,7 +277,7 @@ a {
 }
 
 #sidebar .sidebar-p {
-	height: 207px;
+	height: 213px;
 	width: 186px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
@@ -285,7 +285,7 @@ a {
 }
 
 #topic .sidebar-p {
-	height: 227px;
+	height: 235px;
 	}
 
 #topic .sidebarElement {
@@ -424,13 +424,13 @@ a {
 
 #news {
 	width: 794px;
-	height: 422px;
+	height: 442px;
 	float: left;
 }
 
 #news .subnews {
 	width: 394px;
-	height: 216px;
+	height: 226px;
 	float: left;
 }
 
@@ -443,7 +443,7 @@ a {
 }
 
 #news .news-p {
-	height: 170px;
+	height: 180px;
 	width: 392px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
