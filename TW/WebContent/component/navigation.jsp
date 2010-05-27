@@ -4,7 +4,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 <link rel="stylesheet" type="text/css" href="/TW/css/navigation.css" />
-
+<!--  
 	<SCRIPT type="text/javascript">
 	  $('#m-nav').ready(function(){
 			$("#m-nav li").hover(
@@ -25,7 +25,7 @@
 			});
 		};	  
 	</SCRIPT>
-
+-->
 <ul id="m-nav" class="nav">
 	<li class="sy"><a href="Home.do" title="首页" ></a></li>
 	<li class="zz"><a href="Org.do" title="组织结构"> </a>
