@@ -36,6 +36,7 @@
 		<mapping resource="bean/IpCount.hbm.xml"/>
 		<mapping resource="bean/Organization.hbm.xml"/>
 		<mapping resource="bean/User.hbm.xml"/>
+		<mapping resource="bean/TopicImage.hbm.xml"/>
 
 
 

@@ -4,6 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
     
 <struts>
+	
 	<constant name="struts.multipart.maxSize" value="20971520" />
 
 	<package name="default" extends="tiles-default">
@@ -242,6 +243,16 @@
 			
 			<result name="success">/UploadSuccess.jsp</result>
 			<result name="input" type="tiles">customer.upload</result>
+		</action>
+		
+		<!-- Topic image Upload -->
+		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">image/gif,image/jpeg,image/png,image/bmp</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/>
+			<result name="success" type="redirect">Home.do</result>
+			<result name="input">/admin/topic/topichange.jsp</result>
 		</action>
 
 		<!-- List organization -->

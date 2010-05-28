@@ -1,6 +1,10 @@
 package action.topic;
 
+import bean.TopicImage;
+
 import com.opensymphony.xwork2.ActionSupport;
+
+import dao.TopicImageDao;
 
 public class TopicChangeAction extends ActionSupport{
 	private int topicid;
@@ -9,8 +13,9 @@ public class TopicChangeAction extends ActionSupport{
 	
 	
 	public String execute() {
-		
-		imagePath = "/TW/topicImage/huodong"+topicid+".gif";
+		TopicImageDao dao = new TopicImageDao();
+		TopicImage topicImage = dao.getById(topicid);
+		imagePath = topicImage.getPath();
 		
 		return SUCCESS;
 	}
