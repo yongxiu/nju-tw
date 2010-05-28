@@ -22,25 +22,48 @@
 </s:else>
 <br>
 
-<div id="ires">
-<ol>
-	<s:iterator value="articles" id="article">
-		<li class="g w0">
-			<h3 class="r">
-			 <s:set name="id"> <s:property value="id"/> </s:set>
-			 标题：&nbsp; <a href='<s:url action="SearchDetail.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a>
-			</h3>
-			
-			<div class="s">
-			版块:&nbsp; <s:property value="category"/>
-			发布日期:&nbsp;<s:property value="date"/>
-			</div>
-		</li>
-	</s:iterator>
+
+
+
 	
-</ol>
+<div id="dvTitleinbox">
+  <div class="g-title-1">
+    <div class="fn-fle">
+      <h2>搜索结果</h2>
+      <span class="txt-info">(共 <strong><s:property value="number"/></strong> 个)</span></div>
+  </div>
 </div>
-<!-- page action -->
+
+<div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
+<div class="gIbx-tablayout">
+  <table class="g-table-comm" id="inboxTitleTable">
+    <thead>
+      <tr>
+        <th class="wd0"></th>
+        <th class="wd2">标题</th>
+        <th class="wd3">版块</th>
+        <th class="wd4">发布日期</th>
+      </tr>
+    </thead>
+  </table>
+  <div id="MailListMaininbox" class="txt-12">
+    <div id="period_div_inbox2">
+      <table class="g-table-comm" id="period_table_inbox2">
+      <s:iterator value="articles" id="article" status="stat">
+        <tbody>
+          <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
+          	<td class="wd0"></td>
+            <td class="wd2"><s:set name="id"> <s:property value="id"/> </s:set>
+			 <a href='<s:url action="SearchDetail.do" ><s:param name="id" value="#id"/></s:url>'><s:property value="title"/> </a></td>
+            <td class="wd3"><s:property value="category"/></td>
+            <td class="wd4"><s:property value="date"/></td>
+          </tr>
+        </tbody>
+        </s:iterator>
+      </table>
+    </div>
+  </div>
+</div>
 
 <s:set name="search"><s:property value="search" escape="false"/></s:set>
 <s:set name="current"><s:property value="currentPage"/> </s:set>
@@ -48,6 +71,7 @@
 <s:set name="previous"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))-1) %></s:set>
 <s:set name="next"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))+1) %></s:set>
 
+<div id="searchPage">
 <!-- one page -->
 <s:if test="#pages==1">
 	<!-- nothing to do -->
@@ -81,5 +105,6 @@
 				下一页
 			</a>
 		</s:else>
-</s:else>		
+</s:else>
+</div>	
 </s:else>
