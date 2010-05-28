@@ -17,6 +17,8 @@ public class GenericArticle {
 	
 	private boolean state;
 	
+	private int topic;
+	
 	//new property
 
 	private boolean ishaveimage;
@@ -112,6 +114,14 @@ public class GenericArticle {
 
 	public void setPath(String path) {
 		this.path = path;
+	}
+
+	public int getTopic() {
+		return topic;
+	}
+
+	public void setTopic(int topic) {
+		this.topic = topic;
 	}
 	
 	
