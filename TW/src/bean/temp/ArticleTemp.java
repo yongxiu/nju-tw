@@ -9,6 +9,8 @@ public class ArticleTemp {
 	private String title;
 	private String introduce;
 	private String path;
+	private int checked;
+	private int topid;
 	
 	public long getId() {
 		return id;
@@ -45,6 +47,19 @@ public class ArticleTemp {
 	}
 	public void setPath(String path) {
 		this.path = path;
+	}
+	
+	public int getChecked() {
+		return checked;
+	}
+	public void setChecked(int checked) {
+		this.checked = checked;
+	}
+	public int getTopid() {
+		return topid;
+	}
+	public void setTopid(int topid) {
+		this.topid = topid;
 	}
 	
 	

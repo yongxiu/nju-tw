@@ -377,6 +377,20 @@
 				<param name="contentDisposition">attachment;filename="${filename}"</param> 
 			</result>
 		</action>
+		
+		
+		<!-- Topic block -->
+			<action name="TopicChange" class="action.topic.TopicChangeAction">
+				<result name="success">/admin/topic/topichange.jsp</result>
+			</action>
+			
+			<action name="TopicManage" class="action.topic.TopicManageAction">
+				<result name="success">/admin/topic/topicmanage.jsp</result>
+			</action>
+			
+			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
+				<result name="success" type="redirect">admin.BackHome.do</result>
+			</action>
 	</package>
 
 </struts>
