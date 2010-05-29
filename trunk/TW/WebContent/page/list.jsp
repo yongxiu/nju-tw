@@ -4,7 +4,7 @@
 <link href="<%=request.getContextPath()%>/css/list.css" type="text/css"
 	media="screen" rel="stylesheet" />
 
-
+<div style="text-align:center;margin-top:20px;margin-bottom:20px;">
 <s:set name="number"><s:property value="number"/></s:set>
 <!-- no result -->
 <s:if test="#number==0">
@@ -21,11 +21,11 @@
 搜索耗时 ：" <s:property value="time"/>"ms   
 </s:else>
 <br>
+</div>
 
 
 
-
-	
+<!--	
 <div id="dvTitleinbox">
   <div class="g-title-1">
     <div class="fn-fle">
@@ -33,9 +33,9 @@
       <span class="txt-info">(共 <strong><s:property value="number"/></strong> 个)</span></div>
   </div>
 </div>
-
+-->
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
-<div class="gIbx-tablayout">
+<div class="gIbx-tablayout" style="margin-left:15px;">
   <table class="g-table-comm" id="inboxTitleTable">
     <thead>
       <tr>
@@ -71,7 +71,7 @@
 <s:set name="previous"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))-1) %></s:set>
 <s:set name="next"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))+1) %></s:set>
 
-<div id="searchPage">
+<div id="searchPage" style="margin-left:350px;">
 <!-- one page -->
 <s:if test="#pages==1">
 	<!-- nothing to do -->
