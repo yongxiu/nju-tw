@@ -4,12 +4,15 @@
 <link href="<%=request.getContextPath()%>/css/topic.css" type="text/css"
 	media="screen" rel="stylesheet" />
 
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/js/articleList.js"></script>
+	
 <div id="dvTitleinbox">
 	<img src="<s:property value="img"/>" />
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>专题活动</h2>
-      <span class="txt-info">( <strong><s:property value="topicid"/></strong>)</span></div>
+      <span class="txt-info">(<strong><s:property value="topicid"/></strong>)</span></div>
   </div>
 </div>
 <div id="topicForm">
@@ -51,7 +54,14 @@
 	        <tbody>
 	          <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
 	          	<td class="wd0"></td>
-	            <td class="wd1 ckb"><input title="选择/不选" value="<s:property value="id"/>" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
+	            <td class="wd1 ckb">
+	            <input  class="check1" type = "checkbox" name="checkId" value="<s:property value="id"/>"
+				<s:set name="ifchecked"> <s:property value="#article.checked"/> </s:set>
+				<s:if test="#ifchecked==1">
+				checked
+				</s:if>
+				/>
+	            </td>
 	            <td class="wd2"><s:property value="title"/></td>
 	            <td class="wd3"><s:property value="category"/></td>
 	            <td class="wd4"><s:property value="date"/></td>
