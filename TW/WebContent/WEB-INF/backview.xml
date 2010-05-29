@@ -68,6 +68,14 @@
 	<definition name="admin.adduser" extends="admin">		
 		<put-attribute name="content" value="/admin/adduser.jsp" />
 	</definition>
+	
+	<definition name="admin.topic" extends="admin">		
+		<put-attribute name="content" value="/admin.topicPage.do" />
+	</definition>
+	
+	<definition name="admin.topichange" extends="admin">		
+		<put-attribute name="content" value="/admin/topic/topichange.jsp" />
+	</definition>
 
 	<definition name="admin.themeManage" extends="admin">		
 		<put-attribute name="content" value="/admin/Theme.jsp" />
