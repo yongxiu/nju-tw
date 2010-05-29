@@ -11,12 +11,15 @@
 	<s:fielderror>
 		<s:param>imgFile</s:param>
 	</s:fielderror>
-	<div><p><label class="label" for="imgFile">修改专题图片：</label><s:file cssClass="filename" name ="imgFile" id="imgFile" size="50"/></p></div>
+	<div><p><label class="imglabel" for="imgFile">修改专题图片：</label><s:file cssClass="filename" name ="imgFile" id="imgFile" size="50"/></p></div>
     
-    <p><s:submit cssClass="btn" value="上传并增加专题内容" name="submit"
+    <p><s:submit cssClass="upbtn" value="上传并增加专题内容" name="submit"
 	id="submit"/></p>
 </s:form>
+
+<div id="change">
 
 <a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>">
 	不修改专题图片，只增减专题内容
 </a>
+</div>

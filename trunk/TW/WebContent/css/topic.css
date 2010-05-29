@@ -31,6 +31,24 @@ border-collapse:collapse;
 border-spacing:0;
 }
 
+#content #topic {
+	margin-left: 100px;
+	margin-bottom: 50px;
+}
+
+#content .imglabel {
+	font-size: 14px;
+	font-style: normal;
+	color: #000000;
+}
+
+#content .upbtn {
+	margin-top: 20px;
+}
+#content #topic a{
+	font-size: 15px;
+	color: #000000;
+}
 #content #topicForm {
 	float: left;
 }
@@ -304,4 +322,18 @@ text-align:left;
 
 .lightBck {
 	background-color: #FFFFCA;
+}
+
+#content #change {
+	margin-top: 50px;
+}
+
+#content #change a{
+	color: #000000;
+	font-size: 14px;
+}
+
+#content #change a:hover{
+	color: blue;
+	font-size: 14px;
 }

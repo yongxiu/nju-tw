@@ -1,7 +1,13 @@
 $('#content').ready(function() {
+	$("input[name='checkId']").each(function(){
+		if ($(this).attr("checked") == true) {
+			$(this).parent().parent().addClass("lightBck");
+		}
+	});
+	
 	$("#checkbox_inbox_all").click(function() {
 		if ($(this).attr("checked") == true) {
-			$("input[name='checkbox_inbox']").each(function(){
+			$("input[name='checkId']").each(function(){
 				$(this).attr("checked", true);
 			});
 			$(".mark0").each(function() {
@@ -9,7 +15,7 @@ $('#content').ready(function() {
 			});
 		}
 		else {
-			$("input[name='checkbox_inbox']").each(function(){
+			$("input[name='checkId']").each(function(){
 				$(this).attr("checked", false);
 			});
 			$(".mark0").each(function() {
@@ -18,7 +24,7 @@ $('#content').ready(function() {
 		}
 	});
 	
-	$("input[name='checkbox_inbox']").click(function() {
+	$("input[name='checkId']").click(function() {
 		if ($(this).attr("checked") == true) {
 			$(this).parent().parent().addClass("lightBck");
 		}
@@ -30,7 +36,7 @@ $('#content').ready(function() {
 });
 
 function selAll() {
-	$("input[name='checkbox_inbox']").each(function(){
+	$("input[name='checkId']").each(function(){
 		$(this).attr("checked", true);
 	});
 	$(".mark0").each(function() {
@@ -39,7 +45,7 @@ function selAll() {
 }
 
 function selConvert() {
-	$("input[name='checkbox_inbox']").each(function(){
+	$("input[name='checkId']").each(function(){
 		if ($(this).attr("checked") == true) {
 			$(this).attr("checked", false);
 			$(this).parent().parent().removeClass("lightBck");
@@ -51,7 +57,7 @@ function selConvert() {
 }
 
 function selNone() {
-	$("input[name='checkbox_inbox']").each(function(){
+	$("input[name='checkId']").each(function(){
 		$(this).attr("checked", false);
 	});
 	$(".mark0").each(function() {

@@ -409,7 +409,7 @@
 			</action>
 			
 			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
-				<result name="success" type="redirect">admin.BackHome.do</result>
+				<result name="success" type="redirect">admin.topic.do</result>
 			</action>
 	</package>
 
