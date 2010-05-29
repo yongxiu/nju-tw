@@ -10,7 +10,7 @@ import org.omg.CORBA.INTERNAL;
 import bean.temp.ArticleTemp;
 
 public class PageService {
-	public static int PAGE_SIZE = 8;
+	public static int PAGE_SIZE = 10;
 	
 	//get pageCount by hits's length
 	public static int countPage(int counts) {

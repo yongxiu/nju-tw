@@ -24,11 +24,11 @@
 </div>
 
 <DIV id="simg">
-<DIV name="f" class="" onmouseover="this.style.cursor='hand';this.style.background='red';" onmouseout="this.style.background='#333';">1</DIV>
-<DIV name="f" class="" onmouseover="this.style.cursor='hand';this.style.background='red';" onmouseout="this.style.background='#333';">2</DIV>
-<DIV name="f" class="" onmouseover="this.style.cursor='hand';this.style.background='red';" onmouseout="this.style.background='#333';">3</DIV>
-<DIV name="f" class="" onmouseover="this.style.cursor='hand';this.style.background='red';" onmouseout="this.style.background='#333';">4</DIV>
-<DIV name="f" class="" onmouseover="this.style.cursor='hand';this.style.background='red';" onmouseout="this.style.background='#333';" style="border-right:none;">5</DIV>
+<DIV name="f" class="" onmouseover="this.style.cursor='hand';" >1</DIV>
+<DIV name="f" class="" onmouseover="this.style.cursor='hand';" >2</DIV>
+<DIV name="f" class="" onmouseover="this.style.cursor='hand';" >3</DIV>
+<DIV name="f" class="" onmouseover="this.style.cursor='hand';" >4</DIV>
+<DIV name="f" class="" onmouseover="this.style.cursor='hand';" style="border-right:none;">5</DIV>
 </DIV>
 
 <DIV id="infoc">
@@ -98,7 +98,7 @@
 
 				fiterplay(b,num,"div","f","show","ititlediv2");	
 				
-				fiterplay(s,num,"div","f","","");
+				fiterplay(s,num,"div","f","s","");
 				
 				fiterplay(z,num,"div","f","show","ititlediv2");	
 				filters[0].play();
@@ -108,7 +108,7 @@
 		{
 				fiterplay(b,num,"div","f","show","ititlediv2");	
 				
-				fiterplay(s,num,"div","f","","");	
+				fiterplay(s,num,"div","f","s","");	
 				
 				fiterplay(z,num,"div","f","show","ititlediv2");	
 		}
