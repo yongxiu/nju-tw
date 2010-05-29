@@ -32,14 +32,24 @@ public class TopicImgUploadAction extends ActionSupport implements SessionAware{
 
 	private Map session;
 	
-	private String topicid;
+	private int topicid;
+	private int isnew;
 	
-	public String getTopicid() {
+
+	public int getTopicid() {
 		return topicid;
 	}
 
-	public void setTopicid(String topicid) {
+	public void setTopicid(int topicid) {
 		this.topicid = topicid;
+	}
+
+	public int getIsnew() {
+		return isnew;
+	}
+
+	public void setIsnew(int isnew) {
+		this.isnew = isnew;
 	}
 
 	@Override
@@ -49,10 +59,8 @@ public class TopicImgUploadAction extends ActionSupport implements SessionAware{
 			return INPUT;
 		}
 		
-		System.out.println(topicid);
-		
 		TopicImageDao dao = new TopicImageDao();
-		TopicImage image = dao.getById(Integer.valueOf(topicid));
+		TopicImage image = dao.getById(topicid);
 		String currentPath = ServletActionContext.getServletContext().getRealPath(image.getPath().substring(3));
 		System.out.println(currentPath);
 		boolean success = new File(currentPath).delete();

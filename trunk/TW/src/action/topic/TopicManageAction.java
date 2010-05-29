@@ -11,14 +11,19 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import dao.GenericArticleDao;
+import dao.TopicImageDao;
 
 public class TopicManageAction extends ActionSupport{
 		private int topicid;
 		private int isnew;
+		
+		private String img;
 
 		private ArrayList<ArticleTemp> articles;
 		
 		public String execute() {
+			TopicImageDao dao = new TopicImageDao();
+			this.setImg(dao.getById(topicid).getPath());
 			
 			ArticleTempService articleTempService = new ArticleTempService();
 			
@@ -65,6 +70,14 @@ public class TopicManageAction extends ActionSupport{
 
 		public void setArticles(ArrayList<ArticleTemp> articles) {
 			this.articles = articles;
+		}
+
+		public void setImg(String img) {
+			this.img = img;
+		}
+
+		public String getImg() {
+			return img;
 		}
 
 	
