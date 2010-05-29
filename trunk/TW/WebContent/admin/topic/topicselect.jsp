@@ -9,15 +9,15 @@
 <body>
 	
 	<a href="<s:url action="TopicChange.do"> <s:param name="topicid" value="1"/></s:url>" id="a1">
-		<img src="/TW/topicImage/huodong1.gif" />
+		<img src="<s:property value="img1"/>" />
 	</a>
 	
 	<a href="<s:url action="TopicChange.do"> <s:param name="topicid" value="2"/></s:url>" id="a2">
-		<img src="/TW/topicImage/huodong2.gif" />
+		<img src="<s:property value="img2"/>" />
 	</a>
 	
 	<a href="<s:url action="TopicChange.do"> <s:param name="topicid" value="3"/></s:url>" id="a3">
-		<img src="/TW/topicImage/huodong3.gif" />
+		<img src="<s:property value="img3"/>" />
 	</a>
 	<br>
 	

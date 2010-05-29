@@ -147,6 +147,10 @@
 			<result name="success" type="tiles">admin.changePSW</result>
 		</action>
 		
+		<action name="admin.topic">
+			<result name="success" type="tiles">admin.topic</result>
+		</action>
+		
 		<action name="admin.ListUser" class="action.ListUserAction">
 			<result name="success" type="tiles">admin.userManage</result>
 		</action>
@@ -167,6 +171,11 @@
 			<result name="success" type="tiles">admin.themeManage</result>
 		</action>
 		<!-- Get Modify Files -->
+		
+		<action name="admin.topicPage" class="action.topic.TopicPageAction">
+			<result name="success">/admin/topic/topicselect.jsp</result>
+		</action>
+		
 		<action name="GetModifyFile" class="action.GetModifyFileAction">
 			<result name="success">/userComponent/fileList.jsp</result>
 		</action>
@@ -251,7 +260,7 @@
 				<param name="allowedTypes">image/gif,image/jpeg,image/png,image/bmp</param>
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/>
-			<result name="success" type="redirect">Home.do</result>
+			<result name="success" type="redirect">admin.topic.do</result>
 			<result name="input">/admin/topic/topichange.jsp</result>
 		</action>
 
@@ -392,7 +401,7 @@
 		
 		<!-- Topic block -->
 			<action name="TopicChange" class="action.topic.TopicChangeAction">
-				<result name="success">/admin/topic/topichange.jsp</result>
+				<result name="success" type="tiles">admin.topichange</result>
 			</action>
 			
 			<action name="TopicManage" class="action.topic.TopicManageAction">
