@@ -12,25 +12,6 @@
  		 </a>
  		 
  	</td>
- 	<td>
- 		
- 		<s:if test="category==5">
- 			[来自 校外报道]
- 		</s:if>
- 		<s:if test="category==6">
- 			[来自南大新闻网]
- 		</s:if>
- 		<s:if test="category==7">
- 			[来自南京大学报]
- 		</s:if>
- 		<s:if test="category==8">
- 			[来自南大青年报]
- 		</s:if>
- 		<s:if test="category==9">
- 			[来自校园广播台]
- 		</s:if>
-	
- 	</td>
 </tr>
 </s:iterator>
 
@@ -45,5 +26,4 @@
 		<a href='<s:url action="Article.do" ><s:param name="currentPage" value="#page"/> <s:param name="category" value="#category"/></s:url>'>
 			<s:property value="page"/>
 		</a>
-		
 </s:iterator></div>
