@@ -93,7 +93,7 @@ public class SendMailAction extends ActionSupport {
 					.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
 			message.setFrom(new InternetAddress("njutwproxy@gmail.com"));
 			message.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					"njutwmail@gmail.com"));
+					"tuanwei.nju@gmail.com"));
 
 			message.setSubject(subject);
 

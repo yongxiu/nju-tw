@@ -13,7 +13,7 @@
  		 
  	</td>
  	<td>
-		[来自 
+		【来自 
  		<s:if test="category==5">
  			校外报道
  		</s:if>
@@ -29,7 +29,7 @@
  		<s:if test="category==9">
  			校园广播台
  		</s:if>
-	]
+	】
  	</td>
 </tr>
 
