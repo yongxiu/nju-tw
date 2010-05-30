@@ -17,7 +17,7 @@
 	<definition name="standard" template="/layouts/standard.jsp">
 		<put-attribute name="banner" value="/component/banner.jsp" />
 		<put-attribute name="navigation" value="/component/navigation.jsp" />
-		<put-attribute name="topic" value="/component/topic.jsp" />
+		<put-attribute name="topic" value="/TopicPageAction.do" />
 		<put-attribute name="login" value="/CheckLogin.do" />
 		<put-attribute name="ipHolder" value="/IpcountAction.do" />
 		

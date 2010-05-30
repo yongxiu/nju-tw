@@ -440,6 +440,10 @@
 		<action name="OrgListPage" >
 			<result name="success" type="tiles">orgList</result>
 		</action>
+		
+		<action name="TopicPageAction" class="action.topic.TopicPageAction">
+			<result name="success">/component/topic.jsp</result>
+		</action>
 
 	</package>
 

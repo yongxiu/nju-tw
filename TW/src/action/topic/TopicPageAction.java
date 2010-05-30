@@ -1,6 +1,5 @@
 package action.topic;
 
-import bean.TopicImage;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -9,7 +8,7 @@ import dao.TopicImageDao;
 public class TopicPageAction extends ActionSupport{
 
 	/**
-	 * 
+	 * @Yongxiu
 	 */
 	private static final long serialVersionUID = 1L;
 

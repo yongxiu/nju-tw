@@ -14,7 +14,7 @@
       <span class="txt-info">(共 <strong>133</strong> 篇)</span></div>
   </div>
 </div>
-  <s:form name="deleteForm" action="DeleteArticle.do">
+  <s:form name="deleteForm" theme="simple" action="DeleteArticle.do">
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.submit();" title="" id="inbox__delete"><span>删 除</span></div>
