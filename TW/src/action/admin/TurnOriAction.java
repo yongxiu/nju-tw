@@ -44,20 +44,35 @@ public class TurnOriAction extends ActionSupport {
 	public void changeBack(File style, File tmpFile) {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
-					new FileInputStream(tmpFile)));
+					new FileInputStream(style)));
 			String tmp = "";
 			String normalCSS = "";
+			String filter = "";
+
+			while ((tmp = br.readLine()) != null) {
+				if(tmp.length() == 0) {
+					break;
+				}
+				filter += (tmp + "\n");
+			}
+			
+			if(!filter.substring(0, 4).equals("html")) {
+				normalCSS = filter;
+			}
+			
 			while ((tmp = br.readLine()) != null) {
 				normalCSS += (tmp + "\n");
 			}
+
 			br.close();
 			BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
-					new FileOutputStream(style)));
+					new FileOutputStream(tmpFile)));
 			bo.append(normalCSS);
-			
+
 			System.out.println(normalCSS);
 			bo.flush();
 			bo.close();
+			updateCSS(style, tmpFile);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
