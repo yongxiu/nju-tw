@@ -48,9 +48,10 @@
   </table>
   <div id="MailListMaininbox" class="txt-12">
     <div id="period_div_inbox2">
-      <table class="g-table-comm" id="period_table_inbox2">
+      <table class="g-table-comm" id="period_table_inbox2" style="width:98%;">
+
       <s:iterator value="articles" id="article" status="stat">
-        <tbody>
+        
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd2"><s:set name="id"> <s:property value="id"/> </s:set>
@@ -58,12 +59,14 @@
             <td class="wd3"><s:property value="category"/></td>
             <td class="wd4"><s:property value="date"/></td>
           </tr>
-        </tbody>
+        
         </s:iterator>
+
       </table>
     </div>
   </div>
 </div>
+
 
 <s:set name="search"><s:property value="search" escape="false"/></s:set>
 <s:set name="current"><s:property value="currentPage"/> </s:set>
@@ -71,7 +74,7 @@
 <s:set name="previous"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))-1) %></s:set>
 <s:set name="next"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))+1) %></s:set>
 
-<div id="searchPage" style="margin-left:350px;">
+<div id="searchPage" style="margin-left:325px;">
 <!-- one page -->
 <s:if test="#pages==1">
 	<!-- nothing to do -->
@@ -106,5 +109,5 @@
 			</a>
 		</s:else>
 </s:else>
-</div>	
 </s:else>
+</div>
