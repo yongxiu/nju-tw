@@ -409,16 +409,23 @@
 			</action>
 			
 			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
-				<result name="success" type="redirect">admin.topic.do</result>
+				<result name="success" type="tiles">admin.success</result>
 			</action>
 			
 			<!-- Homepage topic -->
 			<action name="TopicList" class="action.topic.TopicListAction">
 				<result name="success">/page/topicList.jsp</result>
 			</action>
+			
+			<action name="TopicListPage">
+				<result name="success" type="tiles">topicList</result>
+			</action>
+			
+			<action name="Topic" class="action.topic.TopicAction">
+				<result name="success">/component/topic.jsp</result>
+			</action>
 	</package>
 
-	<include file="adminstruts.xml"/>
 </struts>
 
     

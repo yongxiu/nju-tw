@@ -16,8 +16,8 @@ public class ArticleTempService {
 
 	public String getIntroduce(String content) {
 		String introduce = null;
-		if(content.length()>=24) {
-			introduce  = content.substring(0, 24);
+		if(content.length()>=125) {
+			introduce  = content.substring(0, 125);
 			introduce = introduce+"...";
 		}
 		else {

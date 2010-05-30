@@ -19,9 +19,11 @@
 
 <s:textarea  name="content" id="content" cssClass="ckeditor" rows="16" cols="100"></s:textarea>
 
-<s:set name="category" value="#{'焦点新闻':{'基层动态','宣传思想'},
-								'组织机构':{'书记室','内部机构','下属组织'},
-								'test1':{'test1.1','test1.2'}}"/>
+<s:set name="category" value="#{'新闻动态':{'—— ——'},
+								'公告信息':{'—— ——'},
+								'理论园地':{'—— ——'},
+								'媒体报道':{'—— ——'},
+								'校外报道':{'南大新闻网','南京大学报','南大青年报','校园广播台'}}"/>
 		
 <div class="doubleselect">
 <label class="label">文章类型：</label>
