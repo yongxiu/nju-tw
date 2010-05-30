@@ -24,8 +24,8 @@ public class TurnGrayAction extends ActionSupport {
 		String currentDirPath = ServletActionContext.getServletContext()
 				.getRealPath("/");
 
-		String style = currentDirPath + "css/style.css";
-		String tmp = currentDirPath + "css/tmp.css";
+		File style = new File(currentDirPath + "css/style.css");
+		File tmp = new File(currentDirPath + "css/tmp.css");
 
 		changeGray(style, tmp);
 
@@ -34,24 +34,62 @@ public class TurnGrayAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public void changeGray(String style, String tmpFile) {
+	public void changeGray(File style, File tmpFile) {
 
-		String filter = "html { filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}";
+		String filter = "html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}";
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
-					new FileInputStream(tmpFile)));
+					new FileInputStream(style)));
 			String tmp = "";
 			String normalCSS = "";
+			String grayCSS = "";
+
+			while ((tmp = br.readLine()) != null) {
+				grayCSS += (tmp + "\n");
+			}
+
+			if (!grayCSS.substring(0, 4).equals("html")) {
+				grayCSS = filter + "\n\n" + grayCSS;
+			}
+			normalCSS = grayCSS;
 			while ((tmp = br.readLine()) != null) {
 				normalCSS += (tmp + "\n");
 			}
 			br.close();
 			BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
-					new FileOutputStream(style)));
-			bo.append(filter + "\n" + normalCSS);
-					
+					new FileOutputStream(tmpFile)));
+			if (!normalCSS.contains(filter)) {
+				normalCSS = filter + "\n" + normalCSS;
+			}
+
+			bo.append(normalCSS);
 			bo.flush();
 			bo.close();
+
+			updateCSS(style, tmpFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void updateCSS(File source, File tmpFile) {
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					new FileInputStream(tmpFile)));
+			String tmp = "";
+			String CSS = "";
+			while ((tmp = br.readLine()) != null) {
+				CSS += (tmp + "\n");
+			}
+			br.close();
+			BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
+					new FileOutputStream(source)));
+
+			bo.append(CSS);
+			bo.flush();
+			bo.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
