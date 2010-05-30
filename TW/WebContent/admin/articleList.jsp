@@ -59,7 +59,8 @@
             <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
             <td class="wd3"><s:property value="category"/></td>
             <td class="wd4"><s:property value="date"/></td>
-            <td class="wd5">&nbsp;置顶</td>
+            <td class="wd5">  <button onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</button> </td>
+          
           </tr>
         </tbody>
         </s:iterator>

@@ -19,6 +19,7 @@ public class GenericArticle {
 	
 	private int topic;
 	
+	private long istop;
 	//new property
 
 	private boolean ishaveimage;
@@ -123,6 +124,15 @@ public class GenericArticle {
 	public void setTopic(int topic) {
 		this.topic = topic;
 	}
+
+	public long getIstop() {
+		return istop;
+	}
+
+	public void setIstop(long istop) {
+		this.istop = istop;
+	}
+
 	
 	
 	

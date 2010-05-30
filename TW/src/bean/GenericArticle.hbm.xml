@@ -21,6 +21,7 @@
 		<property name="ishaveimage" column="ishasimage" type="boolean" />
 		<property name="path" column="path" type="string"/>
 		<property name="topic" column="topic" type="int" not-null="false"/>
+		<property name="istop" column="istop" type="long"/>
 		
 		<many-to-one name="user" column="uid" class="bean.User" not-null="true" cascade="all"/>
 	</class>

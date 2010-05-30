@@ -53,11 +53,11 @@ public class OrgListAction extends ActionSupport{
 		}
 		
 		else if (category == 3) {
-			return "学生组织";
+			return "基层团委";
 		}
 		
 		else {
-			return "基层团委";
+			return "学生组织";
 		}
 	}
 	

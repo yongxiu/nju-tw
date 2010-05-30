@@ -120,16 +120,56 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		closeSession();
 		return articles;
 	}
+	
+	public ArrayList<GenericArticle> getArticlesTopSort(){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle order by istop desc,date desc");
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
 
+	public long getMaxTopValue() {
+		Session session =  getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("select max(a.istop) from GenericArticle a");
+		ArrayList<Long> result = (ArrayList<Long>) query.list();
+		long count = result.get(0);
+		return count;
+	}
+	
+	
+	public ArrayList<GenericArticle> getFiveArticles(int category){
+		Session session =  getSession();
+		Transaction tx = session.beginTransaction();
+		if(category !=4) {
+			Query query = session.createQuery("from GenericArticle a where a.category =:category order by istop desc,date desc");
+			query.setParameter("category", category);
+			query.setMaxResults(5);
+			
+			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+			return articles;
+		}
+		else {
+			Query query = session.createQuery("from GenericArticle a where a.category=5 or a.category=6 or a.category=7 or a.category=8 or a.category=9 order by istop desc,date desc");
+			query.setMaxResults(5);
+			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+			return articles;
+		}
+		
+	}
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
 //		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
 //		for(GenericArticle article:articles) {
 //			System.out.println(article.getId());
 //		}
-		ArrayList<GenericArticle> articles = dao.getArticlesByTopic(1);
+		ArrayList<GenericArticle> articles = dao.getFiveArticles(4);
 		for(GenericArticle article:articles) {
 			System.out.println(article.getId());
 		}
+		System.out.println();
 	}
 }

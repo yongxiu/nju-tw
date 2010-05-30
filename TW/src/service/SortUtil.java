@@ -81,6 +81,11 @@ public class SortUtil {
 		else
 			return false;
 	}
+	
+	
+//	public static ArrayList<GenericArticle> TopSort(ArrayList<GenericArticle>){
+//		
+//	}
 
 	//test
 	public static void main(String[] args){

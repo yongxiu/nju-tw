@@ -34,14 +34,17 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 		Long id = (Long) getSession().get("id");
 		User user = userDao.getById(id);
 	
-		Set<GenericArticle> tempArticles = user.getArticles();
-		ArrayList<GenericArticle> articlesG = new ArrayList<GenericArticle>();
-		for(GenericArticle articleTemp : tempArticles) {
-			articlesG.add(articleTemp);
-		}
+//		Set<GenericArticle> tempArticles = user.getArticles();
+		ArrayList<GenericArticle> articlesG ;
+//		for(GenericArticle articleTemp : tempArticles) {
+//			articlesG.add(articleTemp);
+//		}
+//		
+//		//sort articles by date
+//		articlesG = SortUtil.revertSort(articlesG);
 		
-		//sort articles by date
-		articlesG = SortUtil.revertSort(articlesG);
+		//top sort
+		articlesG = articleDao.getArticlesTopSort();
 		
 		//clone generic article to aritcleTemp
 		for(GenericArticle a : articlesG) {

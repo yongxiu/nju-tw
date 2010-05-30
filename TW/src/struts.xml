@@ -429,10 +429,18 @@
 			<action name="Topic" class="action.topic.TopicAction">
 				<result name="success">/component/topic.jsp</result>
 			</action>
+
+			
+			<!-- Top -->
+			<action name="Top" class="action.admin.TopAction">
+				<result name="success" type="redirect">admin.ArticleList.do</result>
+			</action>
+
 			
 		<action name="OrgListPage" >
 			<result name="success" type="tiles">orgList</result>
 		</action>
+
 	</package>
 
 </struts>
