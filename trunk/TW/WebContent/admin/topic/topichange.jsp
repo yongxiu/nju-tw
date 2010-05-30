@@ -3,22 +3,18 @@
 
 <link href="<%=request.getContextPath()%>/css/topic.css" type="text/css"
 	media="screen" rel="stylesheet" />
+
+<img src="<s:property value="imagePath"/>"/>
+<br>
+<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>">
+	原有活动专题修改
+</a>
+
+<br>
+<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="1"/></s:url>">
+	新活动专题修改
+</a>
 	
-<<<<<<< .mine
-	<img src="<s:property value="imagePath"/>"/>
-	<br>
-	<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>">
-		原有活动专题修改
-	</a>
-	<br>
-	<br>
-	<br>
-	<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="1"/></s:url>">
-		新活动专题修改
-	</a>
-	
-</body>
-</html>
 <img src="<s:property value="imagePath"/>"/>
 <br>
 
@@ -32,9 +28,3 @@
 	id="submit"/></p>
 </s:form>
 
-<div id="change">
-
-<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>">
-	不修改专题图片，只增减专题内容
-</a>
-</div>

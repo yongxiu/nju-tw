@@ -65,11 +65,6 @@
 			/>
 		
 			</td>
-			<td>
-			<s:property value="title"/>
-
-
-	            </td>
 	            <td class="wd2"><s:property value="title"/></td>
 	            <td class="wd3"><s:property value="category"/></td>
 	            <td class="wd4"><s:property value="date"/></td>
