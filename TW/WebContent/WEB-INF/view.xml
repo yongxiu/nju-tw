@@ -79,6 +79,9 @@
 		<put-attribute name="content" value="/TopicList.do"></put-attribute>
 	</definition>
 
+	<definition name="orgList" extends="standard">
+		<put-attribute name="content" value="/OrgList.do"></put-attribute>
+	</definition>
 
 </tiles-definitions>
 
