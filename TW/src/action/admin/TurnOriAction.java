@@ -41,36 +41,23 @@ public class TurnOriAction extends ActionSupport {
 		return SUCCESS;
 	}
 
-	public void changeBack(File source, File tmpFile) {
+	public void changeBack(File style, File tmpFile) {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
-					new FileInputStream(source)));
+					new FileInputStream(tmpFile)));
 			String tmp = "";
-			String grayCSS = "";
 			String normalCSS = "";
-			while ((tmp = br.readLine()) != null) {
-				if (tmp.length() == 0) {
-					break;
-				}
-				grayCSS += (tmp + "\n");
-			}
 			while ((tmp = br.readLine()) != null) {
 				normalCSS += (tmp + "\n");
 			}
 			br.close();
-
-			if (grayCSS.charAt(0) != '/') {
-				grayCSS = "/*" + grayCSS + "*/" + "\n";
-
-				BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
-						new FileOutputStream(tmpFile)));
-				bo.append(grayCSS + "\n" + normalCSS);
-				bo.flush();
-				bo.close();
-				updateCSS(source, tmpFile);
-			}
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
+					new FileOutputStream(style)));
+			bo.append(normalCSS);
+			
+			System.out.println(normalCSS);
+			bo.flush();
+			bo.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
