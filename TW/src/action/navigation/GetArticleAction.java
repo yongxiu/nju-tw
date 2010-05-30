@@ -31,7 +31,7 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 	public String execute() throws Exception {
 		GenericArticleDao dao = new GenericArticleDao();
 	    SortUtil sortUtil = new SortUtil();
-		int number = 24;
+		int number = 18;
 		
 		int count;
 		//categoryd的处理
