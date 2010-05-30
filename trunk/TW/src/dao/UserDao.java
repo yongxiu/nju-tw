@@ -39,6 +39,16 @@ public class UserDao extends HibernateGenericDao<User,Long>{
 		session.close();
 		return articles;
 	}
+//
+//	@Override
+//	public boolean delete(Long id) {
+//		Session session=getSession();
+//		Transaction tx=session.beginTransaction();
+//		User user = (User) session.get(User.class, id);
+//		
+//	}
+	
+	
 	
 	
 

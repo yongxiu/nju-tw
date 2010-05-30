@@ -411,6 +411,11 @@
 			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
 				<result name="success" type="redirect">admin.topic.do</result>
 			</action>
+			
+			<!-- Homepage topic -->
+			<action name="TopicList" class="action.topic.TopicListAction">
+				<result name="success">/page/topicList.jsp</result>
+			</action>
 	</package>
 
 	<include file="adminstruts.xml"/>

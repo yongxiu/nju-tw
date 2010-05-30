@@ -23,24 +23,23 @@ public class NaviPageAction extends ActionSupport implements SessionAware{
 	public String execute() {
 		GenericArticleDao dao = new GenericArticleDao();
 	    SortUtil sortUtil = new SortUtil();
-		int number = 10;
-		currentPage = 1;
+		int number = 24;
+	
 		int count;
 		//categoryd的处理
-		if(category!=2) {
+		if(category!=4) {
 			category = getCategory();
 			articles = dao.getArticlesByPage(currentPage, number, category);
 			count = dao.getCountBycategory(category)/number+1;
 		}
 		
 		else {
-			articles = dao.getArticlesByPage(currentPage, number/2, 10);
-			ArrayList<GenericArticle> articles2 = dao.getArticlesByPage(currentPage, number/2, 11);
-			for(GenericArticle article:articles2) {
-				articles.add(article);
-			}
-			count = dao.getCountBycategory(10)+dao.getCountBycategory(11);
-			count = count/number+1;
+			articles = dao.getArticlesByPage(currentPage, number, 5, 6, 7, 8, 9);
+			
+			count = dao.getCountBycategory(5)+dao.getCountBycategory(6)
+			+ dao.getCountBycategory(7) + dao.getCountBycategory(8)
+				+ dao.getCountBycategory(9);
+			count = getPageCount(count, number);
 		}
 		
 		//sort articles
@@ -82,5 +81,24 @@ public class NaviPageAction extends ActionSupport implements SessionAware{
 		this.session = session;
 	}
 	
+	public int getPageCount(int count,int number) {
+		int result;
+		
+		
+		if(count % number == 0) {
+			if(count == number)
+				result = 0;
+			else 
+				result = count/number;
+		}
+		else {
+			if(count<number)
+				result = 0;
+			else 
+				 result = count/number+1;
+		}
+		
+		return result;
+	}
 	
 }

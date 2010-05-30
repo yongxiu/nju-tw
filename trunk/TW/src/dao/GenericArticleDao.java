@@ -30,7 +30,7 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 	public ArrayList<GenericArticle> getArticlesByPage(int pageCount,int number,int category){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
-		Query query = session.createQuery("from GenericArticle a where a.category =:category");
+		Query query = session.createQuery("from GenericArticle a where a.category =:category order by a.date desc");
 		
 		query.setParameter("category", category);
 		query.setFirstResult((pageCount-1)*number);
@@ -46,7 +46,7 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 	public ArrayList<GenericArticle> getArticlesByPage(int pageCount,int number,int category1,int category2){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
-		Query query = session.createQuery("from GenericArticle a where a.category =:category1 or a.category =:category2");
+		Query query = session.createQuery("from GenericArticle a where a.category =:category1 or a.category =:category2 order by a.date desc");
 		
 		query.setParameter("category1", category1);
 		query.setParameter("category2", category2);
@@ -63,7 +63,7 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 	public ArrayList<GenericArticle> getArticlesByPage(int pageCount,int number,int category1,int category2,int category3,int category4,int category5){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
-		Query query = session.createQuery("from GenericArticle a where a.category =:category1 or a.category =:category2 or a.category =:category3 or a.category =:category4 or a.category =:category5");
+		Query query = session.createQuery("from GenericArticle a where a.category =:category1 or a.category =:category2 or a.category =:category3 or a.category =:category4 or a.category =:category5 order by a.date desc");
 		
 		query.setParameter("category1", category1);
 		query.setParameter("category2", category2);
@@ -108,10 +108,26 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		tx.commit();
 		return true;
 	}
+	
+	
+	public ArrayList<GenericArticle> getArticlesByTopic(int topicid){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.topic =:topic order by a.date desc");
+		query.setParameter("topic", topicid);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
 
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
-		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
+//		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
+//		for(GenericArticle article:articles) {
+//			System.out.println(article.getId());
+//		}
+		ArrayList<GenericArticle> articles = dao.getArticlesByTopic(1);
 		for(GenericArticle article:articles) {
 			System.out.println(article.getId());
 		}
