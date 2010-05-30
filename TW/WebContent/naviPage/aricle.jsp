@@ -57,9 +57,13 @@
     <thead>
       <tr>
         <th class="wd0"></th>
+       
+        <s:if test="category==4">
         <th class="wd2" style="width:500px;">标题</th>
         <th class="wd3" style="width:120px;">版块</th>
-        <th class="wd4" style="width:90px;">发布日期</th>
+        </s:if>
+        <s:else><th class="wd2" style="width:620px;">标题</th></s:else>
+        <th class="wd4" style="width:90px;">发布日期</th>       
       </tr>
     </thead>
   </table>
@@ -75,15 +79,15 @@
 			 <a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
  		 	<s:property value="title"/></a></td>
             <td class="wd3" style="width:120px;padding:0;">
-		<s:if test="category==5">[来自 校外报道]
+		<s:if test="category==5">校外报道
  		</s:if>
- 		<s:if test="category==6">[来自南大新闻网]
+ 		<s:if test="category==6">南大新闻网
  		</s:if>
- 		<s:if test="category==7">[来自南京大学报]
+ 		<s:if test="category==7">南京大学报
  		</s:if>
- 		<s:if test="category==8">[来自南大青年报]
+ 		<s:if test="category==8">南大青年报
  		</s:if>
- 		<s:if test="category==9">[来自校园广播台]
+ 		<s:if test="category==9">校园广播台
  		</s:if>
  			</td>
             <td class="wd4" style="width:90px;"><s:property value="date"/></td>

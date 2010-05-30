@@ -52,6 +52,6 @@
 <p>办公地址地址：南京大学鼓楼校区南园&nbsp;&nbsp;&nbsp;&nbsp; <br>
 邮编：210093<br>
 办公室电话：086-025-83593142<br>
-Email：<span>@nju.edu.cn</span><br>
+Email：<span>tuanwei.nju@gmail.com</span><br>
 
 </div>
