@@ -74,6 +74,10 @@
 		<put-attribute name="body" value="/page/index.jsp" />
 		<put-attribute name="login" value="/component/login.jsp" />
 	</definition>
+	
+	<definition name="topicList" extends="standard">
+		<put-attribute name="content" value="/TopicList.do"></put-attribute>
+	</definition>
 
 
 </tiles-definitions>

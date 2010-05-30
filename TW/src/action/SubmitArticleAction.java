@@ -29,6 +29,8 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 	
 	private String category1;
 	
+	private String message;
+	
 	
 	@SuppressWarnings("unchecked")
 	private Map session;
@@ -130,6 +132,14 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 
 	public void setCategory1(String category1) {
 		this.category1 = category1;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 
 	
