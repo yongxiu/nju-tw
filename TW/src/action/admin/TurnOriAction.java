@@ -59,7 +59,6 @@ public class TurnOriAction extends ActionSupport {
 			}
 			br.close();
 
-			System.out.println(grayCSS);
 			if (grayCSS.charAt(0) != '/') {
 				grayCSS = "/*" + grayCSS + "*/" + "\n";
 
