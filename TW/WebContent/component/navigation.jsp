@@ -57,7 +57,7 @@
 
 <BR clear="all">
 
-<!--
+<!-- 
 <script language="javascript">
 	$('#m_nav').ready(
 			function() {
@@ -68,8 +68,11 @@
 						.getElementsByTagName("a");
 				if (pageUrl.indexOf("Org.do")>0) {
 					navArray[1].className = "active";
-				}else{
-					navArray[0].className = "active";}
+				}else if(pageUrl.indexOf("1")>0){
+					navArray[2].className = "active";}
+				else {
+					navArray[0].className = "active";
+				}
 			});
 </script>
--->
+ -->
