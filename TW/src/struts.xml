@@ -374,6 +374,11 @@
 			<action name="GetArticleAction" class="action.navigation.GetArticleAction">
 				<result name="success">/naviPage/aricle.jsp</result>
 			</action>
+			
+			<!-- Org -->
+			<action name="OrgList" class="action.navigation.OrgListAction">
+				<result name="success">/naviPage/orgList.jsp</result>
+			</action>
 		
 		<!-- Navi Page Action -->
 		<action name="NaviPage" class="action.navigation.page.NaviPageAction">
