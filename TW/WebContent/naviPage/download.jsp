@@ -16,8 +16,8 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd2" style="width:510px;">标题</th>
-        <th class="wd3" style="width:100px;">版块</th>
+        <th class="wd2" style="width:610px;">标题</th>
+
         <th class="wd4" style="width:100px;">发布日期</th>
       </tr>
     </thead>
@@ -30,21 +30,7 @@
         
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd2" style="width:510px;"><s:set name="id"><s:property value="id"/></s:set><a href=" <s:property value="#file.path"/>"><s:property value="#file.filename"/></a></td>
-            <td class="wd3" style="width:100px;padding:0;text-align:left;">下载专区
-		<!--  
-			<s:if test="category==5">校外报道
-	 		</s:if>
-	 		<s:if test="category==6">南大新闻网
-	 		</s:if>
-	 		<s:if test="category==7">南京大学报
-	 		</s:if>
-	 		<s:if test="category==8">南大青年报
-	 		</s:if>
-	 		<s:if test="category==9">校园广播台
- 			</s:if>
-		-->
- 			</td>
+            <td class="wd2" style="width:610px;"><s:set name="id"><s:property value="id"/></s:set><a href=" <s:property value="#file.path"/>"><s:property value="#file.filename"/></a></td>           
             <td class="wd4" style="width:100px;"><s:property value="date"/></td>
           </tr>
         

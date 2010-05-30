@@ -12,8 +12,11 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd2" style="width:510px;">标题</th>
+        <s:if test="category==4">
+        <th class="wd2" style="width:510px;">标题</th>        
         <th class="wd3" style="width:100px;">版块</th>
+        </s:if>
+        <s:else> <th class="wd2" style="width:610px;">标题</th> </s:else>
         <th class="wd4" style="width:100px;">发布日期</th>
       </tr>
     </thead>
