@@ -60,7 +60,15 @@
 				<s:if test="#ifchecked==1">
 				checked
 				</s:if>
-				/>
+
+			
+			/>
+		
+			</td>
+			<td>
+			<s:property value="title"/>
+
+
 	            </td>
 	            <td class="wd2"><s:property value="title"/></td>
 	            <td class="wd3"><s:property value="category"/></td>
@@ -78,6 +86,7 @@
 	  <div class="btngrp">
 	    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="topicForm.submit();" id="inbox__delete"><span>保存</span></div>
 	  </div>
+
 	
 	  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
 	    <select onchange="MM.inbox.goPage(this.value);">

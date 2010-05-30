@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
   
-<a href="Home.do">首页</a>组织机构
+<a href="Home.do">首页</a> --》组织机构
 	<table id="organizationTable1" class="organizationTable">
 		<tr>
 			<td class="organizationTitle">书记室</td>

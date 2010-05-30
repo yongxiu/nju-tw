@@ -29,12 +29,12 @@
 <ul id="m-nav" class="nav">
 	<li class="sy"><a href="Home.do" title="首页" ></a></li>
 	<li class="zz"><a href="Org.do" title="组织结构"> </a>
-    
+    	
     	<UL style="display: block; opacity: 0.9999;width:396px;">
-			<LI id="sjs"><A href="SecretaryOffice.do" title="书记室"></A></LI>
-			<LI id="jgsz"><A href="OrganizationStructure.do" title="机构设置"></A></LI>
-			<LI id="xszz"><A href="StudentsOrganiazation.do" title="学生组织"></A></LI>
-			<LI id="jctw"><A href="BasicYouthLeague.do" title="基层团委"></A></LI>
+			<LI id="sjs"><A href="<s:url action="OrgList.do"><s:param name="category" value="1"></s:param> </s:url>" title="书记室"></A></LI>
+			<LI id="jgsz"><A href="<s:url action="OrgList.do"><s:param name="category" value="2"></s:param> </s:url>" title="机构设置"></A></LI>
+			<LI id="xszz"><A href="<s:url action="OrgList.do"><s:param name="category" value="3"></s:param> </s:url>" title="学生组织"></A></LI>
+			<LI id="jctw"><A href="<s:url action="OrgList.do"><s:param name="category" value="4"></s:param> </s:url>" title="基层团委"></A></LI>
 		</UL>
 		
     </li>
