@@ -15,6 +15,23 @@
 	新活动专题修改
 </a>
 	
+
+
+	<img src="<s:property value="imagePath"/>"/>
+	<br>
+	<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>">
+		原有活动专题修改
+	</a>
+	<br>
+	<br>
+	<br>
+	<a href="<s:url action="TopicManage.do"> <s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="1"/></s:url>">
+		新活动专题修改
+	</a>
+	
+</body>
+</html>
+
 <img src="<s:property value="imagePath"/>"/>
 <br>
 
