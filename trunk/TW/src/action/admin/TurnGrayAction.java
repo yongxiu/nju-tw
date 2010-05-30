@@ -49,8 +49,7 @@ public class TurnGrayAction extends ActionSupport {
 			BufferedWriter bo = new BufferedWriter(new OutputStreamWriter(
 					new FileOutputStream(style)));
 			bo.append(filter + "\n" + normalCSS);
-			
-			System.out.println(filter + "\n" + normalCSS);
+					
 			bo.flush();
 			bo.close();
 		} catch (IOException e) {
