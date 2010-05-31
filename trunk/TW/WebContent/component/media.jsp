@@ -12,25 +12,7 @@
  		 </a>
  		 
  	</td>
- 	<td>
-		【来自 
- 		<s:if test="category==5">
- 			校外报道
- 		</s:if>
- 		<s:if test="category==6">
- 			南大新闻网
- 		</s:if>
- 		<s:if test="categoryc==7">
- 			南京大学报
- 		</s:if>
- 		<s:if test="category==8">
- 			南大青年报
- 		</s:if>
- 		<s:if test="category==9">
- 			校园广播台
- 		</s:if>
-	】
- 	</td>
+ 	
 </tr>
 
 
