@@ -9,7 +9,7 @@
 </div>
 <div id="news">
 <div id="news1" class="subnews">
-<div class="news-h"><div class="headText">焦点新闻</div><div class="headLink"><a href="Article.do?category=1&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
+<div class="news-h"><div class="headText">新闻动态</div><div class="headLink"><a href="Article.do?category=1&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
 </div>
 <div id="blank-v"> </div>
