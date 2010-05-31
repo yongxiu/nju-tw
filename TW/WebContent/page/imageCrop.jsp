@@ -7,12 +7,6 @@
 <link href="<%=request.getContextPath()%>/css/imgareaselect-default.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
-<link href="<%=request.getContextPath()%>/css/imgareaselect-deprecated.css" type="text/css"
-	media="screen" rel="stylesheet" />
-	
-<link href="<%=request.getContextPath()%>/css/imgareaselect-animated.css" type="text/css"
-	media="screen" rel="stylesheet" />
-	
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/js/jquery-1.4.2.min.js"></script>
 	
@@ -29,12 +23,12 @@
 </head>
 <body>
 
-<s:form action="CropAction.do" theme="simple"> 
+<s:form action="CropAction.do?imageValue=%{imageValue}" theme="simple"> 
 <div id="preview" style="width: 476px; height: 301px; overflow: hidden; float:left;">
-    <img src="/TW/img/test.jpg" style="width: 476px; height: 301px;" />
+    <img src="<s:property value="imageValue"/>" style="width: 476px; height: 301px;" />
 </div>
 <div style="float:left;">
-<img id="myimg" src="/TW/img/test.jpg" />
+<img id="myimg" src="<s:property value="imageValue"/>" />
 </div>
 <input type="hidden" id="x1" name="x1" />
 <input type="hidden" id="y1" name="y1" />

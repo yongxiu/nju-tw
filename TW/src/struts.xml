@@ -293,7 +293,7 @@
 		
 		<!-- Select image as main image -->
 		<action name="SelectImage" class="action.SelectImageAction">
-			<result name="success">/page/imageSelectSuccess.jsp</result>
+			<result name="success">/page/imageCrop.jsp</result>
 		</action>
 
 		
@@ -443,6 +443,10 @@
 		
 		<action name="TopicPageAction" class="action.topic.TopicPageAction">
 			<result name="success">/component/topic.jsp</result>
+		</action>
+		
+		<action name="CropAction" class="action.CropAction">
+			<result name="success" type="tiles">admin.success</result>
 		</action>
 
 	</package>
