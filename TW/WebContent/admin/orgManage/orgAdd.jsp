@@ -16,8 +16,8 @@
 	 
 	<br>
 	类别选择：<select name="category">
-	      <option value="1" selected="selected">书记室</option>
-	      <option value="2">机构设置</option>
+	      
+	      <option value="2" selected="selected">机构设置</option>
 	      <option value="3">基层团委</option>
 	      <option value="4">学生组织</option>
 	    
