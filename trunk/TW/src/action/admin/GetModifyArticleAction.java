@@ -1,6 +1,7 @@
 package action.admin;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -10,18 +11,20 @@ import service.Category;
 import service.SortUtil;
 
 import bean.GenericArticle;
-import bean.User;
 import bean.temp.ArticleTemp;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.GenericArticleDao;
-import dao.UserDao;
 
 public class GetModifyArticleAction extends ActionSupport implements SessionAware{
 	/**
-	 * list article to be modified
-	 * wjc
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * list all article to be modified
+	 * @author Yongxiu
 	 */
 	
 	private ArrayList<ArticleTemp> articles;
@@ -30,11 +33,8 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 	public String execute() {
 		articles = new ArrayList<ArticleTemp>();
 		GenericArticleDao articleDao =  new GenericArticleDao();
-		UserDao userDao = new UserDao();
-		Long id = (Long) getSession().get("id");
-		User user = userDao.getById(id);
-	
-		Set<GenericArticle> tempArticles = user.getArticles();
+
+		Set<GenericArticle> tempArticles = new HashSet<GenericArticle>(articleDao.getAllEntity());
 		ArrayList<GenericArticle> articlesG = new ArrayList<GenericArticle>();
 		for(GenericArticle articleTemp : tempArticles) {
 			articlesG.add(articleTemp);
@@ -50,6 +50,7 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 			aTemp.setDate(a.getDate().toString());
 			aTemp.setId((int) a.getId());
 			aTemp.setTitle(a.getTitle());
+			aTemp.setOwner(a.getUser().getName());
 			articles.add(aTemp);
 		}
 		

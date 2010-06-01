@@ -10,11 +10,11 @@
 <div id="dvTitleinbox">
   <div class="g-title-1">
     <div class="fn-fle">
-      <h2>已发表的文章</h2>
+      <h2>所有文章</h2>
       <span class="txt-info">(共 <strong>133</strong> 篇)</span></div>
   </div>
 </div>
-<s:form name="deleteForm">
+<s:form name="deleteForm" theme="simple">
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='DeleteArticle.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
@@ -43,8 +43,9 @@
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文章" type="checkbox"></th>
         <th class="wd2">文章标题</th>
         <th class="wd3">文章类型</th>
-        <th class="wd4">时间</th>
-        <th class="wd5">操作</th>
+        <th class="wd4">作者</th>
+        <th class="wd5">时间</th>
+        <th class="wd6">操作</th>
       </tr>
     </thead>
   </table>
@@ -58,9 +59,9 @@
             <td class="wd1 ckb"><input title="选择/不选" value="<s:property value="id"/>" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
             <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
             <td class="wd3"><s:property value="category"/></td>
-            <td class="wd4"><s:property value="date"/></td>
-            <td class="wd5">  <button onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</button> </td>
-          
+            <td class="wd4"><s:property value="owner"/></td>
+            <td class="wd5"><s:property value="date"/></td>
+            <td class="wd6">  <button onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</button> </td>
           </tr>
         </tbody>
         </s:iterator>

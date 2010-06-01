@@ -357,7 +357,7 @@
 			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		
-		<action name="admin.GetModifyArticle" class="action.GetModifyArticleAction">
+		<action name="admin.GetModifyArticle" class="action.admin.GetModifyArticleAction">
 			<result name="success">/admin/articleList.jsp</result>
 		</action>
 		

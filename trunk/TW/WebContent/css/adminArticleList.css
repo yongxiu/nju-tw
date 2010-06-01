@@ -196,7 +196,7 @@ border-left:medium none;
 }
 
 .g-table-comm .wd2 {
-width:513px;
+width:434px;
 }
 
 .g-table-comm .wd3 {
@@ -205,7 +205,11 @@ width:80px;
 }
 
 .g-table-comm .wd4 {
-width:80px;
+width:40px;
+}
+
+.g-table-comm .wd6 {
+width:50px;
 }
 
 .g-table-comm thead tr th a {
@@ -271,8 +275,9 @@ line-height:30px;
 text-align:left;
 }
 
-.g-table-comm .wd4 {
+.g-table-comm .wd5 {
 color:#A5A5A5;
+width: 80px;
 }
 .g-table-comm tbody td a {
 color:#000000;

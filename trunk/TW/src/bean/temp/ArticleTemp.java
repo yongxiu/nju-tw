@@ -9,6 +9,7 @@ public class ArticleTemp {
 	private String title;
 	private String introduce;
 	private String path;
+	private String owner;
 	private int checked;
 	private int topid;
 	
@@ -60,6 +61,12 @@ public class ArticleTemp {
 	}
 	public void setTopid(int topid) {
 		this.topid = topid;
+	}
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+	public String getOwner() {
+		return owner;
 	}
 	
 	
