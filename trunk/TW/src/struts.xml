@@ -449,6 +449,24 @@
 			<result name="success" type="tiles">admin.success</result>
 		</action>
 
+
+		<!-- Org Management -->
+		<action name="OrgManageList" class="action.admin.OrgManageListAction">
+			<result name="success">/admin/orgManage/orgManageList.jsp</result>
+		</action>
+		<action name="OrgModify" class="action.admin.OrgModifyAction">
+			<result name="success">/admin/orgManage/orgModify.jsp</result>
+		</action>
+		<action name="OrgDelete" class="action.admin.OrgDeleteAction">
+			<result name="success" type="redirect">OrgManageList.do</result>
+		</action>
+		<action name="OrgUpdate" class="action.admin.OrgUpdateAction">
+			<result name="success" type="redirect">OrgManageList.do</result>
+		</action>
+		<action name="OrgAdd" class="action.admin.OrgAddAction">
+			<result name="success" type="redirect">OrgManageList.do</result>
+		</action>
+		
 	</package>
 
 </struts>

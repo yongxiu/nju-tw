@@ -7,3 +7,4 @@
 <li><a href='admin.changePSW.do'> 修改密码</a></li>
 <li><a href='admin.topic.do'> 专题活动</a></li>
 <li><a href='admin.ChangeTheme.do'> 变换主题</a></li>
+<li><a href='OrgManageList.do'> 组织机构管理</a></li>
