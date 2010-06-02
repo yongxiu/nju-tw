@@ -2,16 +2,11 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
   
-<a href="Home.do">首页</a> --》组织机构
-	<table id="organizationTable1" class="organizationTable">
+	<table class="o_Table" 	cellspacing=0 cellpadding=0>
 		<tr>
-			<td class="organizationTitle">书记室</td>
+			<td class="o_Title">书记室</td>
 		</tr>
-		
-		<s:iterator value="org1" id="org">
-			<tr>
-				<td>
-					
+		<s:iterator value="org1" id="org"><tr><td>
 					<s:set name="id"> <s:property value="id"/> </s:set>
 					<s:url id="org1det" action="OrgDetail.do">
 						<s:param name="id" value="#id"/>
@@ -19,18 +14,13 @@
 					<s:a  href="%{org1det}" >
 						<s:property value="department"/>
 					</s:a>
-					
-					
-				</td>
-			</tr>
-		</s:iterator>
-		
+		</td></tr></s:iterator>
 	</table>
 
 	
-	<table id="organizationTable2" class="organizationTable">
+	<table class="o_Table" cellspacing=0 cellpadding=0>
 		<tr>
-			<td class="organizationTitle">内部结构</td>
+			<td class="o_Title">内部结构</td>
 		</tr>
 		
 		<s:iterator value="org2">
@@ -50,9 +40,9 @@
 		
 	</table>
 
-	<table id="organizationTable3" class="organizationTable">
+	<table class="o_Table" cellspacing=0 cellpadding=0>
 		<tr>
-			<td class="organizationTitle">下属组织</td>
+			<td class="o_Title">下属组织</td>
 		</tr>
 		
 		<s:iterator value="org3">
