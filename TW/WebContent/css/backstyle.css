@@ -383,3 +383,12 @@ a {
 #sidebar a:hover  {
 	color:#FFF;text-decoration:none;font-weight:bold;
 }
+
+#content .btn {
+	background:url("/TW/img/btn_form.png") no-repeat scroll 0 0 transparent;
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:14px;
+	height:29px;
+}

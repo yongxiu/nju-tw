@@ -441,12 +441,24 @@
 			<result name="success" type="tiles">orgList</result>
 		</action>
 		
+		<action name="OrgManageListPage">
+			<result name="success" type="tiles">admin.OrgManageList</result>
+		</action>
+		
 		<action name="TopicPageAction" class="action.topic.TopicPageAction">
 			<result name="success">/component/topic.jsp</result>
 		</action>
 		
 		<action name="CropAction" class="action.CropAction">
 			<result name="success" type="tiles">admin.success</result>
+		</action>
+		
+		<action name="OrgAddPage">
+			<result name="success" type="tiles">admin.OrgAdd</result>
+		</action>
+		
+		<action name="OrgModifyPage">
+			<result name="success" type="tiles">admin.OrgModify</result>
 		</action>
 
 
@@ -464,7 +476,7 @@
 			<result name="success" type="redirect">OrgManageList.do</result>
 		</action>
 		<action name="OrgAdd" class="action.admin.OrgAddAction">
-			<result name="success" type="redirect">OrgManageList.do</result>
+			<result name="success" type="redirect">OrgManageListPage.do</result>
 		</action>
 		
 	</package>
