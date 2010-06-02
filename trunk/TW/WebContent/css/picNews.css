@@ -29,7 +29,7 @@
 }
 
 #bimg A:hover {
-	COLOR:#00F;
+	COLOR:#F00;
 	TEXT-DECORATION:none;
 }
 
@@ -75,10 +75,12 @@
 	left:0;
 	float:left;
 	padding:20px; 
+	background:url(../imgs/p_n_bg.gif) repeat-x;
 }
 
 #infoc h3 {
 	text-align:center;
+	color:red;
 }
 
 #picNewsContent {
