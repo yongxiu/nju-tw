@@ -30,6 +30,7 @@ public class ImageService {
 			Rectangle rect = new Rectangle(x, y, width, height);
 			param.setSourceRegion(rect);
 			BufferedImage bi = reader.read(0, param);
+			//bi.getWidth();
 			String path = file.getAbsolutePath();
 			path = path.substring(0, path.lastIndexOf("\\"));
 			//path=path + "1";

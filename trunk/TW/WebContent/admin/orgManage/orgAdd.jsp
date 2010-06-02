@@ -26,7 +26,7 @@
 	    </br>
 	    </br>
 	    机构介绍：
-	<s:textarea name="content"   rows="16" cols="100"></s:textarea>
+	<s:textarea name="content"   rows="16" cols="80"></s:textarea>
 	<s:submit value="提交"></s:submit>
 	</s:form>
 </body>

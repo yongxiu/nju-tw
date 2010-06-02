@@ -14,7 +14,7 @@
 	<s:set name="content"><s:property value='org.content' escape="false"/></s:set>
 	<br>
 	机构介绍
-	<s:textarea name="content" value="%{#content}"  rows="16" cols="100"></s:textarea>
+	<s:textarea name="content" value="%{#content}"  rows="16" cols="80"></s:textarea>
 	<br>
 	<s:submit value="提交修改"></s:submit>
 	</s:form>

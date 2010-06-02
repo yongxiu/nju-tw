@@ -88,6 +88,18 @@
 	<definition name="admin.success" extends="admin">
 		<put-attribute name="content" value="/page/success.jsp" />
 	</definition>
+	
+	<definition name="admin.OrgManageList" extends="admin">
+		<put-attribute name="content" value="/OrgManageList.do" />
+	</definition>
+	
+	<definition name="admin.OrgAdd" extends="admin">
+		<put-attribute name="content" value="/admin/orgManage/orgAdd.jsp" />
+	</definition>
+	
+	<definition name="admin.OrgModify" extends="admin">
+		<put-attribute name="content" value="/OrgModify.do" />
+	</definition>
 </tiles-definitions>
 
 
