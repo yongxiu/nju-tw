@@ -8,7 +8,7 @@
 	src="<%=request.getContextPath()%>/js/articleList.js"></script>
 	
 <div id="dvTitleinbox">
-	<img src="<s:property value="img"/>" />
+<br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="img"/>" /></td></tr></table></td></tr></table></div><br/>
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>专题活动</h2>

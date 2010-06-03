@@ -337,3 +337,31 @@ text-align:left;
 	color: blue;
 	font-size: 14px;
 }
+
+.t_s_Table {
+	border:5px solid #e0e0e0;
+	text-align:center;
+	}
+
+.t_s_Table td {
+	width:180px;
+	border-collapse:collapse;
+	border:solid #e0e0e0; 
+	border-width:0 1px 1px 1px;
+}
+
+.t_s_i_Tr {
+	height:80px;
+}
+
+.t_s_a_Tr {
+	height:40px;
+}
+
+.t_s_a_Tr td a {
+	color:black
+}
+
+.t_s_a_Tr td a:hover {
+	color:red;
+}
