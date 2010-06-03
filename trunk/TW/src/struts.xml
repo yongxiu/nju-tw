@@ -284,8 +284,8 @@
 		<!-- summit article -->
 		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
 			
-			<result name="success">/page/submitSuccess.jsp</result>
-			<result name="imageSelect">/page/imageSelect.jsp</result>
+			<result name="success" type="tiles">admin.submitSuccess</result>
+			<result name="imageSelect" type="tiles">admin.imageSelect</result>
 			<interceptor-ref name="UserInterceptor"/>
 			<interceptor-ref name="defaultStack"/>
 			
@@ -293,7 +293,22 @@
 		
 		<!-- Select image as main image -->
 		<action name="SelectImage" class="action.SelectImageAction">
-			<result name="success">/page/imageCrop.jsp</result>
+			<result name="success" type="tiles">admin.imageCrop</result>
+		</action>
+		
+		<!-- summit article -->
+		<action name="admin.SubmitArticleAction" class="action.SubmitArticleAction">
+			
+			<result name="success" type="tiles">admin.submitSuccess</result>
+			<result name="imageSelect" type="tiles">admin.imageSelect</result>
+			<interceptor-ref name="UserInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+			
+		</action>
+		
+		<!-- Select image as main image -->
+		<action name="admin.SelectImage" class="action.SelectImageAction">
+			<result name="success" type="tiles">admin.imageCrop</result>
 		</action>
 
 		

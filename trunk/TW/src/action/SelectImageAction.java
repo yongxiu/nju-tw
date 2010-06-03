@@ -19,12 +19,14 @@ public class SelectImageAction extends ActionSupport implements SessionAware{
 		System.out.println(getImageValue());
 		GenericArticleDao articleDao = new GenericArticleDao();
 		GenericArticle article = (GenericArticle) getSession().get("article");
-		article.setIshaveimage(true);
-		
-		article.setPath(getImageValue());
-		
-		articleDao.update(article);
-		getSession().remove("article");
+		if(article != null) {
+			article.setIshaveimage(true);
+			
+			article.setPath(getImageValue());
+			
+			articleDao.update(article);
+			getSession().remove("article");
+		}
 		return SUCCESS;
 	}
 
