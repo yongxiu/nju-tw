@@ -31,6 +31,18 @@
 		<put-attribute name="content" value="/userComponent/changePSW.jsp" />
 	</definition>
 	
+	<definition name="customer.submitSuccess" extends="customer">
+		<put-attribute name="content" value="/page/submitSuccess.jsp" />
+	</definition>
+	
+	<definition name="customer.imageSelect" extends="customer">
+		<put-attribute name="content" value="/page/imageSelect.jsp" />
+	</definition>
+	
+	<definition name="customer.imageCrop" extends="customer">
+		<put-attribute name="content" value="/page/imageCrop.jsp" />
+	</definition>
+	
 	
 	<!-- Site background of Admin Layout -->
 	<definition name="admin.edit" extends="admin">		
@@ -99,6 +111,18 @@
 	
 	<definition name="admin.OrgModify" extends="admin">
 		<put-attribute name="content" value="/OrgModify.do" />
+	</definition>
+	
+	<definition name="admin.submitSuccess" extends="admin">
+		<put-attribute name="content" value="/page/submitSuccess.jsp" />
+	</definition>
+	
+	<definition name="admin.imageSelect" extends="admin">
+		<put-attribute name="content" value="/page/imageSelect.jsp" />
+	</definition>
+	
+	<definition name="admin.imageCrop" extends="admin">
+		<put-attribute name="content" value="/page/imageCrop.jsp" />
 	</definition>
 </tiles-definitions>
 

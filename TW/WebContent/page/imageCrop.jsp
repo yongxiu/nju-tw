@@ -24,11 +24,11 @@
 <body>
 
 <s:form action="CropAction.do?imageValue=%{imageValue}" theme="simple"> 
-<div id="preview" style="width: 476px; height: 301px; overflow: hidden; float:left;">
-    <img src="<s:property value="imageValue"/>" style="width: 476px; height: 301px;" />
+<div id="preview" style="width: 238px; height: 150px; overflow: hidden; float:left;">
+    <img src="<s:property value="imageValue"/>" />
 </div>
 <div style="float:left;">
-<img id="myimg" src="<s:property value="imageValue"/>" />
+<img id="myimg" src="<s:property value="imageValue"/>"/>
 </div>
 <input type="hidden" id="x1" name="x1" />
 <input type="hidden" id="y1" name="y1" />
