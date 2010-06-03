@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.GenericArticleDao;
 
-public class GetModifyArticleAction extends ActionSupport implements SessionAware{
+public class GetModifyArticlePageAction extends ActionSupport implements SessionAware{
 	/**
 	 * 
 	 */
@@ -39,7 +39,7 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 		articles = new ArrayList<ArticleTemp>();
 		GenericArticleDao articleDao =  new GenericArticleDao();
 		int number =24;
-		currentPage = 1;
+	
 //		Set<GenericArticle> tempArticles = new HashSet<GenericArticle>(articleDao.getAllEntity());
 		
 		ArrayList<GenericArticle> articlesG = articleDao.getArticlesByPageTopSort(currentPage, number);
@@ -49,7 +49,7 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 		
 //		//sort articles by date
 //		articlesG = SortUtil.revertSort(articlesG);
-		
+		System.out.println(currentPage);
 		//initial
 		totalnumber = articleDao.getAllArticleCount();
 		totalpages = getPageCount(totalnumber, number);
@@ -62,7 +62,8 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 			pageCount.add(i+"");
 		}
 		
-		
+		System.out.println(pageCount.size());
+		System.out.println(currentPage);
 		//
 		//clone generic article to aritcleTemp
 		for(GenericArticle a : articlesG) {
@@ -72,7 +73,6 @@ public class GetModifyArticleAction extends ActionSupport implements SessionAwar
 			aTemp.setId((int) a.getId());
 			aTemp.setTitle(a.getTitle());
 			aTemp.setOwner(a.getUser().getName());
-			aTemp.setIstop(a.getIstop());
 			articles.add(aTemp);
 		}
 		
