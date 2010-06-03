@@ -12,6 +12,7 @@ public class ArticleTemp {
 	private String owner;
 	private int checked;
 	private int topid;
+	private long istop;
 	
 	public long getId() {
 		return id;
@@ -68,6 +69,13 @@ public class ArticleTemp {
 	public String getOwner() {
 		return owner;
 	}
+	public long getIstop() {
+		return istop;
+	}
+	public void setIstop(long istop) {
+		this.istop = istop;
+	}
+	
 	
 	
 }

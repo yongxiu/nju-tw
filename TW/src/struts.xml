@@ -183,6 +183,7 @@
 		<action name="admin.GetModifyFile" class="action.GetModifyFileAction">
 			<result name="success">/admin/fileList.jsp</result>
 		</action>
+	
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
@@ -375,7 +376,13 @@
 		<action name="admin.GetModifyArticle" class="action.admin.GetModifyArticleAction">
 			<result name="success">/admin/articleList.jsp</result>
 		</action>
+		<action name="admin.GetModifyArticlePage" class="action.admin.GetModifyArticlePageAction">
+			<result name="success">/admin/articleList.jsp</result>
+		</action>
 		
+		<action name="admin.ArticlePage">
+			<result name="success" type="tiles">admin.articlepage</result>
+		</action>
 		
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
@@ -448,6 +455,9 @@
 			
 			<!-- Top -->
 			<action name="Top" class="action.admin.TopAction">
+				<result name="success" type="redirect">admin.ArticleList.do</result>
+			</action>
+			<action name="RemoveTop" class="action.admin.RemoveTopAction">
 				<result name="success" type="redirect">admin.ArticleList.do</result>
 			</action>
 

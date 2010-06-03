@@ -16,6 +16,26 @@
         <th class="wd2" style="width:510px;">标题</th>        
         <th class="wd3" style="width:100px;">版块</th>
    	</s:if>
+   	<s:elseif test="category==5">
+        <th class="wd2" style="width:510px;">标题</th>        
+        <th class="wd3" style="width:100px;">版块</th>
+   	</s:elseif>
+   		<s:elseif test="category==6">
+        <th class="wd2" style="width:510px;">标题</th>        
+        <th class="wd3" style="width:100px;">版块</th>
+   	</s:elseif>
+   		<s:elseif test="category==7">
+        <th class="wd2" style="width:510px;">标题</th>        
+        <th class="wd3" style="width:100px;">版块</th>
+   	</s:elseif>
+   		<s:elseif test="category==8">
+        <th class="wd2" style="width:510px;">标题</th>        
+        <th class="wd3" style="width:100px;">版块</th>
+   	</s:elseif>
+   		<s:elseif test="category==9">
+        <th class="wd2" style="width:510px;">标题</th>        
+        <th class="wd3" style="width:100px;">版块</th>
+   	</s:elseif>
     <s:else>
 		<th class="wd2" style="width:610px;">标题</th>
 	</s:else>
@@ -30,12 +50,25 @@
       	<s:iterator value="articles" id="article" status="stat">
 			<tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
 				<td class="wd0"></td>
-			<s:if test="category!=4">
+			<s:if test="category==1">
 				<td class="wd2" style="width:610px;"><s:set name="id"> <s:property value="id"/> </s:set>
 					<a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
 					<s:property value="title"/></a>
 				</td>        
 			</s:if>
+			
+			<s:elseif test="category==2">
+				<td class="wd2" style="width:610px;"><s:set name="id"> <s:property value="id"/> </s:set>
+					<a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
+					<s:property value="title"/></a>
+				</td>        
+			</s:elseif>
+			<s:elseif test="category==3">
+				<td class="wd2" style="width:610px;"><s:set name="id"> <s:property value="id"/> </s:set>
+					<a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
+					<s:property value="title"/></a>
+				</td>        
+			</s:elseif>
 	        <s:else>
 	        	<td class="wd2" style="width:510px;"><s:set name="id"> <s:property value="id"/> </s:set>
 				 	<a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
