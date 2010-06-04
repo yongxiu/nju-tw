@@ -36,6 +36,11 @@
 			<result name="success" type="tiles">article</result>
 		</action>
 		
+		<!-- Back Home Menu -->
+		<action name="MenuAction" class="action.MenuAction">
+			<result name="admin.success">/admin/menu.jsp</result>
+			<result name="customer.success">/userComponent/menu.jsp</result>
+		</action>
 		<!-- Redirect to home page -->
 		<action name="Home">
 			<result name="success" type="tiles">index</result>
@@ -258,7 +263,7 @@
 		<!-- Topic image Upload -->
 		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
 			<interceptor-ref name="fileUpload">
-				<param name="allowedTypes">image/gif,image/jpeg,image/png,image/bmp</param>
+				<param name="allowedTypes">image/jpg,image/gif,image/jpeg,image/png,image/bmp</param>
 			</interceptor-ref>
 			<interceptor-ref name="defaultStack"/>
 			<result name="success" type="redirect">TopicManage.do?topicid=${topicid}&amp;isnew=1</result>

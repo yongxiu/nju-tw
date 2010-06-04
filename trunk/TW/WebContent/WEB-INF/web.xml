@@ -18,16 +18,13 @@
 
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
-		<url-pattern>*.do</url-pattern>		
-		<dispatcher>INCLUDE</dispatcher>		
+		<url-pattern>/*</url-pattern>		
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+				
 	</filter-mapping>
 	
-	<filter-mapping>
-		<filter-name>struts2</filter-name>
-		<url-pattern>/*</url-pattern>
-		
-
-	</filter-mapping>
+	
 	
 	<display-name>Struts 2 Fileupload</display-name> 
 

@@ -7,6 +7,9 @@
 <link href="<%=request.getContextPath()%>/css/imgareaselect-default.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
+<link href="<%=request.getContextPath()%>/css/imgareaselect-animated.css" type="text/css"
+	media="screen" rel="stylesheet" />
+	
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/js/jquery-1.4.2.min.js"></script>
 	
