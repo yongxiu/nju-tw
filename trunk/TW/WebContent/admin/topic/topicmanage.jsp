@@ -6,7 +6,22 @@
 
 <script type="text/javascript"
 	src="<%=request.getContextPath()%>/js/articleList.js"></script>
+
+<!-- previous and next -->
+<s:set name="total"><s:property value="totalpages"/></s:set>
+<s:set name="previous"><s:property value="%{currentPage-1}"/></s:set>
+<s:if test="#previous==0">
+	<s:set name="previous"><s:property value="1"/></s:set>
+
+</s:if>
+
+<s:set name="next"><s:property value="%{currentPage+1}"/></s:set>
+<s:set name="totalOver"><s:property value="%{totalpages+1}"/></s:set>
+<s:if test="#next==#totalOver">
+	<s:set name="next"><s:property value="totalpages"/></s:set>
 	
+</s:if>
+
 <div id="dvTitleinbox">
 <br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="img"/>" /></td></tr></table></td></tr></table></div><br/>
   <div class="g-title-1">
@@ -22,16 +37,22 @@
 	    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="topicForm.submit();" id="inbox__delete"><span>保存</span></div>
 	  </div>
 	  
-	  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-	    <select onchange="MM.inbox.goPage(this.value);">
-	      <option value="1" selected="selected">1 / 7</option>
-	      <option value="2">2 / 7</option>
-	      <option value="3">3 / 7</option>
-	      <option value="4">4 / 7</option>
-	      <option value="5">5 / 7</option>
-	      <option value="6">6 / 7</option>
-	      <option value="7">7 / 7</option>
-	    </select>
+	  <div class="btngrp btngrp-ext"><a href="TopicManagePageTiles.do?currentPage=1&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" class="txt-disabd">首页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#previous'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" class="txt-disabd">上页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#next'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" onclick="MM.inbox.goPage(2)">下页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#total'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" onclick="MM.inbox.goPage(7)">末页</a>
+	
+	
+	<select onchange="var url='TopicManagePageTiles.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
+   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
+    <s:iterator value="pageCount" id="mark">
+   		<s:set name="markValue"><s:property value="mark"/> </s:set>
+    	
+    	<s:if test="#current==#markValue">
+    	<option value="<s:property value="mark"/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	</s:if>
+    	<s:else>
+    	<option value="<s:property value="mark"/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	</s:else>
+    </s:iterator>
+  </select> 
 	  </div>
 	</div>
 	<div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
@@ -83,16 +104,20 @@
 	  </div>
 
 	
-	  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-	    <select onchange="MM.inbox.goPage(this.value);">
-	      <option value="1" selected="selected">1 / 7</option>
-	      <option value="2">2 / 7</option>
-	      <option value="3">3 / 7</option>
-	      <option value="4">4 / 7</option>
-	      <option value="5">5 / 7</option>
-	      <option value="6">6 / 7</option>
-	      <option value="7">7 / 7</option>
-	    </select>
+	  <div class="btngrp btngrp-ext"><a href="TopicManagePageTiles.do?currentPage=1&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" class="txt-disabd">首页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#previous'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" class="txt-disabd">上页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#next'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" onclick="MM.inbox.goPage(2)">下页</a><a href="TopicManagePageTiles.do?currentPage=<s:property value='#total'/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" onclick="MM.inbox.goPage(7)">末页</a>
+	    <select onchange="var url='TopicManagePageTiles.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
+   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
+    <s:iterator value="pageCount" id="mark">
+   		<s:set name="markValue"><s:property value="mark"/> </s:set>
+    	
+    	<s:if test="#current==#markValue">
+    	<option value="<s:property value="mark"/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	</s:if>
+    	<s:else>
+    	<option value="<s:property value="mark"/>&topicid=<s:property value='topicid'/>&isnew=<s:property value='isnew'/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	</s:else>
+    </s:iterator>
+  </select> 
 	  </div>
 	</div>
 </s:form>

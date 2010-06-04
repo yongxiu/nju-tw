@@ -124,6 +124,10 @@
 	<definition name="admin.imageCrop" extends="admin">
 		<put-attribute name="content" value="/page/imageCrop.jsp" />
 	</definition>
+	
+	<definition name="admin.topicmanagepage" extends="admin">
+		<put-attribute name="content" value="/TopicManagePage.do"/>
+	</definition>
 </tiles-definitions>
 
 

@@ -1,5 +1,7 @@
 package action.topic;
 
+import java.util.ArrayList;
+
 import bean.GenericArticle;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -16,15 +18,30 @@ public class TopicDecisionAction extends ActionSupport{
 		GenericArticleDao articleDao = new GenericArticleDao();
 		GenericArticle article;
 		setMessage("修改成功！");
-		for(int i=0;i<checkId.length;i++) {
-			System.out.println(checkId[i]);
-			long articleId = Long.parseLong(checkId[i]);
-			article = articleDao.getById(articleId);
-			article.setTopic(topicid);
-			articleDao.update(article);
+		
+		
+		
+		if(checkId != null) {
 			
-			//sys out
-			System.out.println("update topic : "+topicid);
+			//inital topic for cancel topic
+			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) articleDao.getAllEntity();
+			for(GenericArticle a:articles) {
+				if (a.getTopic() == topicid) {
+					a.setTopic(0);
+					articleDao.update(a);
+				}
+			}
+		
+			for(int i=0;i<checkId.length;i++) {
+				System.out.println(checkId[i]);
+				long articleId = Long.parseLong(checkId[i]);
+				article = articleDao.getById(articleId);
+				article.setTopic(topicid);
+				articleDao.update(article);
+				
+				//sys out
+				System.out.println("update topic : "+topicid);
+			}
 		}
 		return SUCCESS;
 	}
