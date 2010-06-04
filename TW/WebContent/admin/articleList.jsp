@@ -110,7 +110,7 @@
 	<span class="msg-info">(若要修改，请直接点击文章)</span>
 
   <div class="btngrp btngrp-ext"><a href="admin.ArticlePage.do?currentPage=1" class="txt-disabd">首页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#previous'/>" class="txt-disabd">上页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#next'/>" onclick="MM.inbox.goPage(2)">下页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#total'/>" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="var url='admin.ArticlePage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
+    <select onchange="var url='TopicListPage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
    	<s:set name="current"> <s:property value="currentPage"/> </s:set>
     <s:iterator value="pageCount" id="mark">
    		<s:set name="markValue"><s:property value="mark"/> </s:set>

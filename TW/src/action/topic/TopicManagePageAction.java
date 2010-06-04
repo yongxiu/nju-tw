@@ -17,7 +17,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 import dao.GenericArticleDao;
 import dao.TopicImageDao;
 
-public class TopicManageAction extends ActionSupport implements SessionAware {
+public class TopicManagePageAction extends ActionSupport implements SessionAware {
 	private int topicid;
 
 	private int isnew;
@@ -39,7 +39,7 @@ public class TopicManageAction extends ActionSupport implements SessionAware {
 	public String execute() {
 		articles = new ArrayList<ArticleTemp>();
 		int number = 24;
-		currentPage = 1;
+		
 		GenericArticleDao articleDao = new GenericArticleDao();
 		ArrayList<GenericArticle> articlesTemp;
 

@@ -448,6 +448,12 @@
 			<action name="TopicList" class="action.topic.TopicListAction">
 				<result name="success">/page/topicList.jsp</result>
 			</action>
+			<action name="TopicManagePage" class="action.topic.TopicManagePageAction">
+				<result name="success">/admin/topic/topicmanage.jsp</result>
+			</action>
+			<action name="TopicManagePageTiles">
+				<result name="success" type="tiles">admin.topicmanagepage</result>
+			</action>
 			
 			<action name="TopicListPage">
 				<result name="success" type="tiles">topicList</result>

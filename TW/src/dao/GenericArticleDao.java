@@ -121,6 +121,30 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		return articles;
 	}
 	
+	public ArrayList<GenericArticle> getArticlesByTopicPage(int topicid,int currentPage,int number){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.topic =:topic order by a.date desc");
+		query.setParameter("topic", topicid);
+		query.setFirstResult((currentPage-1)*number);
+		query.setMaxResults(number);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
+	public int getCountByTopic(int topicid) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery( "select count(a) from GenericArticle a where a.topic =:topicid");
+		query.setParameter("topicid", topicid);
+		ArrayList<Integer> result = (ArrayList<Integer>) query.list();
+		int count = result.get(0);
+		closeSession();
+		return count;
+	}
+	
 	public ArrayList<GenericArticle> getArticlesTopSort(){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
@@ -195,7 +219,7 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //			System.out.println(article.getId());
 //		}
 //		System.out.println();
-		int count = dao.getAllArticleCount();
+		int count = dao.getCountByTopic(3);
 		System.out.println(count);
 	}
 }
