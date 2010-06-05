@@ -18,16 +18,7 @@
 
 <!-- user -->
 <s:if test="role==2">
-	<table id="loginSuccessfulTable" cellpadding="0" cellspacing="0">
-	<tr><td>欢迎您：<span><s:property value="name" /></span></td></tr>
-	<tr><td>您可以执行：</td></tr>
-	<tr><td></td></tr>
-	<tr><td></td></tr>
-	<tr><td></td></tr>
-	<tr><td></td></tr>
-	<tr><td></td></tr>
-	<tr><td></td></tr>
-	</table>
+	
 	<table id="loginSuccessfulTable" cellpadding="0" cellspacing="0">
 	<tr><td colSpan="2" style="width:100%">欢迎您：<span><s:property value="name"/></span></td></tr>
 	<tr><td colSpan="2" style="width:100%">您可以执行：</td></tr>
