@@ -606,3 +606,13 @@ a {
 #copyrightPage a:hover {
 	color:red;
 }
+
+.btn {
+	background:url("/TW/img/btn_form.png") no-repeat scroll 0 0 transparent;
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:14px;
+	height:29px;
+	width:75px;
+}

@@ -11,6 +11,8 @@ public class FileTemp {
 	private String filename;
 	
 	private Date date;
+	
+	private String owner;
 
 	public long getId() {
 		return id;
@@ -34,6 +36,14 @@ public class FileTemp {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public String getOwner() {
+		return owner;
 	}
 	
 	

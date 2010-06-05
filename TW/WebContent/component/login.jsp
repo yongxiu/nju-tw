@@ -27,7 +27,7 @@
 		<tr><td><br></td></tr>
 		<tr>
 			<td>
-			<sx:submit type="image" name="loginbt" src="/TW/img/logoin.gif"  targets="logindiv" ></sx:submit>
+			<sx:submit name="loginbt" cssClass="btn" value="登陆" targets="logindiv" ></sx:submit>
 						
 			</td>
 		</tr>

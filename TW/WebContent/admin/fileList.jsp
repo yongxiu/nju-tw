@@ -41,8 +41,9 @@
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文件" type="checkbox"></th>
         <th class="wd2">文件名称</th>
-        <th class="wd4">上传时间</th>
-        <th class="wd5">操作</th>
+        <th class="wd4">作者</th>
+        <th class="wd5">上传时间</th>
+        <th class="wd6">操作</th>
       </tr>
     </thead>
   </table>
@@ -55,8 +56,9 @@
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
             <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="filename"/></a></td>
-            <td class="wd4"><s:property value="date"/></td>
-            <td class="wd5">&nbsp;置顶</td>
+            <td class="wd4"><s:property value="owner"/></td>
+            <td class="wd5"><s:property value="date"/></td>
+            <td class="wd6">&nbsp;置顶</td>
           </tr>
         </tbody>
         </s:iterator>
