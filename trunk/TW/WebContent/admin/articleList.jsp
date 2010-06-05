@@ -84,13 +84,13 @@
             <td class="wd3"><s:property value="category"/></td>
             <td class="wd4"><s:property value="owner"/></td>
             <td class="wd5"><s:property value="date"/></td>
-            <td class="wd6">  <button onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</button> 
+            <td class="wd6">  <a href='#' onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</a> 
             	&nbsp;
             	<s:if test="istop==0">
             		尚未置顶
             	</s:if>
             	<s:else>
-            		<button onclick="javascript:window.location.href='<s:url action="RemoveTop.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">移除置顶</button>
+            		<a href='#' onclick="javascript:window.location.href='<s:url action="RemoveTop.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">移除置顶</a>
             	</s:else>
             </td>
           </tr>

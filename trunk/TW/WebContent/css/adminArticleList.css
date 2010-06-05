@@ -11,9 +11,19 @@
 	font-family:verdana, sans-serif;
 }
 
+
 #content a {
 	font-size:12px;
 	font-family:verdana, sans-serif;
+	color:#6E6E6E;
+	text-decoration:none;
+}
+
+#content a:hover {
+	font-size:12px;
+	font-family:verdana, sans-serif;
+	color:#000;
+	text-decoration:underline;
 }
 
 #content h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, table, th, td, img, blockquote {

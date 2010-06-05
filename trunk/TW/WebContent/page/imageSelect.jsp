@@ -17,7 +17,7 @@
 		<div style="width:330px;height:229px;float:left;margin:10px 10px 0 0;">
 			 	<div style="width:330px;height:201px;"></div>
 				<div style="width:330px;height:29px;float:none;text-align:center;background:url(./img/btn_form.png) center no-repeat;">
-					<a style="text-decoration:none;color:white;font-size:12px;font-family:'微软雅黑';line-height:25px;"  href='#'>下一步</a>
+					<a style="text-decoration:none;color:white;font-size:12px;font-family:'微软雅黑';line-height:25px;"  href='#'>跳过</a>
 				</div>
 		</div>
 </div>	
