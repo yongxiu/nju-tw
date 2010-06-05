@@ -59,7 +59,7 @@
 					学生组织
 				</s:if>
             </td>
-            <td style="width:160px;text-align:center">
+            <td style="width:160px;text-align:center" class="action">
             <a href="OrgModifyPage.do?orgid=<s:property value='id'/>">修改</a>
             <a href="OrgDelete.do?orgid=<s:property value='id'/>">删除</a>
             </td>

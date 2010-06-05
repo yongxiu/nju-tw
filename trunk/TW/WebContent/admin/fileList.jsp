@@ -54,11 +54,11 @@
         <tbody>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd1 ckb"><input title="选择/不选" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
+            <td class="wd1 ckb"><input title="选择/不选" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
             <td style="width:517px;"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="filename"/></a></td>
             <td style="width:80px;"><s:property value="owner"/></td>
             <td style="width:60px;"><s:property value="date"/></td>
-            <td style="width:40px;">&nbsp;置顶</td>
+            <td style="width:40px;" class="action">&nbsp;置顶</td>
           </tr>
         </tbody>
         </s:iterator>

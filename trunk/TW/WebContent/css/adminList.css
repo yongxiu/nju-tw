@@ -11,15 +11,24 @@
 	font-family:verdana, sans-serif;
 }
 
+#content table a,#content a {
+	font-size:12px;
+	font-family:verdana, sans-serif;
+}
 
-#content a {
+#content table a:hover,#content a:hover {
+	font-size:12px;
+	font-family:verdana, sans-serif;
+}
+
+#content .action a {
 	font-size:12px;
 	font-family:verdana, sans-serif;
 	color:#6E6E6E;
 	text-decoration:none;
 }
 
-#content a:hover {
+#content .action a:hover {
 	font-size:12px;
 	font-family:verdana, sans-serif;
 	color:#000;
