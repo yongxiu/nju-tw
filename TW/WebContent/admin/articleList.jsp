@@ -84,7 +84,7 @@
             <td style="width:80px;"><s:property value="category"/></td>
             <td style="width:40px;"><s:property value="owner"/></td>
             <td style="width:80px;"><s:property value="date"/></td>
-            <td style="width:84px;">  <a href='#' onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</a> 
+            <td style="width:84px;" class="action">  <a href='#' onclick="javascript:window.location.href='<s:url action="Top.do"> <s:param name="articleId"><s:property value="id"/></s:param> </s:url>'">置顶</a> 
             	&nbsp;
             	<s:if test="istop==0">
             		尚未置顶

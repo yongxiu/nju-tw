@@ -48,7 +48,7 @@
         <th style="width:130px;">密码</th>
         <th style="width:130px;">姓名</th>
         <th style="width:130px;">角色</th>
-        <th style="width:101px;">操作</th>
+        <th style="width:101px;text-align:center;">操作</th>
       </tr>
     </thead>
   </table>
@@ -59,7 +59,7 @@
         <tbody>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
+            <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
             <td style="width:50px;"><s:property value="id"/></td>
             <td style="width:130px;"><s:property value="username"/></td>
             <td style="width:130px;"><s:property value="password"/></td>
@@ -70,11 +70,8 @@
 					<s:else>
 						普通用户
 					</s:else></td>
-			<td style="width:101px;"><a href='#' onclick="javascript:delUser('<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>');return false;">
-					删除
-				</a><a href='<s:url action="GetModifyList"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
-					修改
-				</a></td>
+			<td style="width:101px;text-align:center;" class="action"><a href='#' onclick="javascript:delUser('<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>');return false;">
+					删除</a>&nbsp;<a href='<s:url action="GetModifyList"><s:param name="id"><s:property value="id"/></s:param></s:url>'>修改</a></td>
           </tr>
         </tbody>
         </s:iterator>
