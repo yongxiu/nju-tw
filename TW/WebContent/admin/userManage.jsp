@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sx" uri="/struts-dojo-tags" %>
 
-<link href="<%=request.getContextPath()%>/css/userManageList.css" type="text/css"
+<link href="<%=request.getContextPath()%>/css/adminList.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
 <script type="text/javascript"
@@ -43,12 +43,12 @@
       <tr>
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文章" type="checkbox"></th>
-        <th class="wd2">用户ID</th>
-        <th class="wd3">用户名</th>
-        <th class="wd4">密码</th>
-        <th class="wd5">姓名</th>
-        <th class="wd6">角色</th>
-        <th class="wd7">操作</th>
+        <th style="width:50px;">用户ID</th>
+        <th style="width:130px;">用户名</th>
+        <th style="width:130px;">密码</th>
+        <th style="width:130px;">姓名</th>
+        <th style="width:130px;">角色</th>
+        <th style="width:101px;">操作</th>
       </tr>
     </thead>
   </table>
@@ -60,17 +60,17 @@
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
-            <td class="wd2"><s:property value="id"/></td>
-            <td class="wd3"><s:property value="username"/></td>
-            <td class="wd4"><s:property value="password"/></td>
-            <td class="wd5"><s:property value="name"/></td>
-            <td class="wd6"><s:if test="role==1">
+            <td style="width:50px;"><s:property value="id"/></td>
+            <td style="width:130px;"><s:property value="username"/></td>
+            <td style="width:130px;"><s:property value="password"/></td>
+            <td style="width:130px;"><s:property value="name"/></td>
+            <td style="width:130px;"><s:if test="role==1">
 						超级管理员
 					</s:if>
 					<s:else>
 						普通用户
 					</s:else></td>
-			<td class="wd7"><a href='#' onclick="javascript:delUser('<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>');return false;">
+			<td style="width:101px;"><a href='#' onclick="javascript:delUser('<s:url action="DeleteUser"><s:param name="id"><s:property value="id"/></s:param></s:url>');return false;">
 					删除
 				</a><a href='<s:url action="GetModifyList"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
 					修改

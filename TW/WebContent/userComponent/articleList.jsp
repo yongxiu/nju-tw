@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<link href="<%=request.getContextPath()%>/css/adminArticleList.css" type="text/css"
+<link href="<%=request.getContextPath()%>/css/adminList.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
 <script type="text/javascript"
@@ -64,10 +64,9 @@
       <tr>
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文章" type="checkbox"></th>
-        <th class="wd2" style="width:460px;">文章标题</th>
-        <th class="wd3" style="width:80px;">文章类型</th>
-        <th class="wd4" style="width:80px;">作者</th>
-        <th class="wd5" style="width:80px;">时间</th>
+        <th style="width:550px;">文章标题</th>
+        <th style="width:80px;">文章类型</th>
+        <th style="width:80px;">时间</th>
        
       </tr>
     </thead>
@@ -80,11 +79,9 @@
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" value="<s:property value="id"/>" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
-            <td class="wd2" style="width:460px;"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
-            <td class="wd3" style="width:80px;"><s:property value="category"/></td>
-            <td class="wd4" style="width:80px;"><s:property value="owner"/></td>
-            <td class="wd5" style="width:80px;"><s:property value="date"/></td>
-           
+            <td style="width:550px;"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="title"/></a></td>
+            <td style="width:80px;"><s:property value="category"/></td>
+            <td style="width:80px;"><s:property value="date"/></td>
           </tr>
         </tbody>
         </s:iterator>
