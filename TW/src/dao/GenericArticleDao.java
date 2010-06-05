@@ -8,6 +8,7 @@ import java.util.Set;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 import antlr.collections.List;
@@ -207,6 +208,31 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 			return articles;
 		}
 		
+	
+		
+	}
+	
+	
+	public ArrayList<GenericArticle> getArticlesByUserPage(long uid,int currentPage,int number){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.user.id =:uid order by istop desc,date desc");
+		query.setParameter("uid", uid);
+		query.setFirstResult((currentPage-1)*number);
+		query.setMaxResults(number);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		return articles;
+	}
+	
+	public int getCountByUser(long uid) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("select count(a) from GenericArticle a where a.user.id =:uid");
+		query.setParameter("uid", uid);
+		ArrayList<Integer> result = (ArrayList<Integer>) query.list();
+		int count = result.get(0);
+		closeSession();
+		return count;
 	}
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
@@ -219,7 +245,13 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //			System.out.println(article.getId());
 //		}
 //		System.out.println();
-		int count = dao.getCountByTopic(3);
+//		int count = dao.getCountByTopic(3);
+//		System.out.println(count);
+//		ArrayList<GenericArticle> articles = dao.getArticlesByUserPage(1, 1, 6);
+//		for(GenericArticle a:articles) {
+//			System.out.println(a.getId());
+//		}
+		int count = dao.getCountByUser(2);
 		System.out.println(count);
 	}
 }

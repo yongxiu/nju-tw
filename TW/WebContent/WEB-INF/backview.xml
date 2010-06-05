@@ -43,6 +43,14 @@
 		<put-attribute name="content" value="/page/imageCrop.jsp" />
 	</definition>
 	
+	<definition name="customer.customerarticles" extends="customer">
+		<put-attribute name="content" value="/GetCustomerArticles.do"/>
+	</definition>
+	
+	<definition name="customer.customerarticlespage" extends="customer">
+		<put-attribute name="content" value="/GetCustomerArticlesPage.do"/>
+	</definition>
+	
 	
 	<!-- Site background of Admin Layout -->
 	<definition name="admin.edit" extends="admin">		
