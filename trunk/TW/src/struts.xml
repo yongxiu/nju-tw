@@ -515,6 +515,22 @@
 			<result name="success" type="redirect">OrgManageListPage.do</result>
 		</action>
 		
+		
+		<!-- Customer -->
+		<action name="GetCustomerArticles" class="action.customer.GetCustomerArticlesAction">
+			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
+		<action name="CustomerArticles">
+			<result name="success" type="tiles">customer.customerarticles</result>
+		</action>
+		
+		<action name="GetCustomerArticlesPage" class="action.customer.GetCustomerArticlesPageAction">
+			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
+		<action name="CustomerArticlesPage">
+			<result name="success" type="tiles">customer.customerarticlespage</result>
+		</action>
+		
 	</package>
 
 </struts>
