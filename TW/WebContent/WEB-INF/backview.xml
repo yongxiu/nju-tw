@@ -70,7 +70,7 @@
 	</definition>
 	
 	<definition name="admin.userManage" extends="admin">		
-		<put-attribute name="content" value="/admin/userManage.jsp" />
+		<put-attribute name="content" value="/ListUser.do" />
 	</definition>
 	
 	<definition name="admin.modifyuser" extends="admin">		

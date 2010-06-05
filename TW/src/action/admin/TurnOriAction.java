@@ -69,7 +69,7 @@ public class TurnOriAction extends ActionSupport {
 					new FileOutputStream(tmpFile)));
 			bo.append(normalCSS);
 
-			System.out.println(normalCSS);
+
 			bo.flush();
 			bo.close();
 			updateCSS(style, tmpFile);

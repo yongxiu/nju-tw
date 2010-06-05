@@ -332,7 +332,7 @@
 		
 		<!-- Delete User -->
 		<action name="DeleteUser" class="action.DeleteUserAction">
-			<result name="success" type="redirect">ListUser.do</result>
+			<result name="success" type="tiles">admin.userManage</result>
 		</action>
 		
 		<!-- Add User -->
