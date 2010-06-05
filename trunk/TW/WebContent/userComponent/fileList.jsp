@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<link href="<%=request.getContextPath()%>/css/fileList.css" type="text/css"
+<link href="<%=request.getContextPath()%>/css/adminList.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
 <script type="text/javascript"
@@ -40,8 +40,8 @@
       <tr>
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文件" type="checkbox"></th>
-        <th class="wd2">文件名称</th>
-        <th class="wd4">上传时间</th>
+        <th style="width:643px;">文件名称</th>
+        <th style="width:80px;">上传时间</th>
       </tr>
     </thead>
   </table>
@@ -53,8 +53,8 @@
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" name="checkbox_inbox" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
-            <td class="wd2"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="filename"/></a></td>
-            <td class="wd4"><s:property value="date"/></td>
+            <td style="width:643px;"><a href="<s:url action="ShowModifyArticle.do"> <s:param name="id"><s:property value="id"/></s:param> </s:url>"><s:property value="filename"/></a></td>
+            <td style="width:80px;"><s:property value="date"/></td>
           </tr>
         </tbody>
         </s:iterator>

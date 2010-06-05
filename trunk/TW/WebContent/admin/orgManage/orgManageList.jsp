@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-<link href="<%=request.getContextPath()%>/css/adminArticleList.css" type="text/css"
+<link href="<%=request.getContextPath()%>/css/adminList.css" type="text/css"
 	media="screen" rel="stylesheet" />
 	
 <script type="text/javascript"
@@ -32,9 +32,9 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd2" style="width:500px">组织机构</th>
-        <th class="wd3" style="width:70px;text-align:center">类别</th>
-        <th class="wd4" style="width:160px;text-align:center">操作</th>
+        <th class="wd1" style="width:503px">组织机构</th>
+        <th style="width:70px;text-align:center">类别</th>
+        <th style="width:160px;text-align:center">操作</th>
       </tr>
     </thead>
   </table>
@@ -47,8 +47,8 @@
 		  <s:else>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd2" style="width:500px"><s:property value="department"/></td>
-            <td class="wd3" style="width:70px;text-align:center">
+            <td style="width:503px"><s:property value="department"/></td>
+            <td style="width:70px;text-align:center">
             	<s:if test="category==2">
 					机构设置
 				</s:if>
@@ -59,7 +59,7 @@
 					学生组织
 				</s:if>
             </td>
-            <td class="wd4" style="width:160px;text-align:center">
+            <td style="width:160px;text-align:center">
             <a href="OrgModifyPage.do?orgid=<s:property value='id'/>">修改</a>
             <a href="OrgDelete.do?orgid=<s:property value='id'/>">删除</a>
             </td>

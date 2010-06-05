@@ -11,9 +11,19 @@
 	font-family:verdana, sans-serif;
 }
 
+
 #content a {
 	font-size:12px;
 	font-family:verdana, sans-serif;
+	color:#6E6E6E;
+	text-decoration:none;
+}
+
+#content a:hover {
+	font-size:12px;
+	font-family:verdana, sans-serif;
+	color:#000;
+	text-decoration:underline;
 }
 
 #content h1, h2, h3, h4, h5, h6, ul, ol, li, form, p, dl, dt, dd, table, th, td, img, blockquote {
@@ -195,14 +205,6 @@ width:22px;
 border-left:medium none;
 }
 
-.g-table-comm .wd2 {
-width:606px;
-}
-
-.g-table-comm .wd4 {
-width:80px;
-}
-
 .g-table-comm thead tr th a {
 color:#686868;
 }
@@ -210,6 +212,10 @@ color:#686868;
 .coremail, .tip-arr, .tip-rc-l, .tip-rc-r, .g-addr .arr, .g-menu .arr, .btn, .btn span, .btn .arr, .gMtable, .core, .core a, .gSidebar .cnav li, .fn-bg {
 background-image:url("/TW/img/bg.png");
 background-repeat:no-repeat;
+}
+
+.gIbx .g-table-comm th.wd3 {
+color:#000000;
 }
 
 .g-toolbar .btngrp a, .g-toolbar .btngrp select {
@@ -262,9 +268,7 @@ line-height:30px;
 text-align:left;
 }
 
-.g-table-comm .wd4 {
-color:#A5A5A5;
-}
+
 .g-table-comm tbody td a {
 color:#000000;
 outline:medium none;
