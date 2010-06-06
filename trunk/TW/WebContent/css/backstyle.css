@@ -391,4 +391,24 @@ a {
 	cursor:pointer;
 	font-size:14px;
 	height:29px;
+	width:75px;
+}
+
+#content .label  {
+	font-size:14px;
+	font-style:normal;
+	vertical-align:top;
+}
+
+#content #cent {
+	margin-left: 200px;
+	margin-top: 50px;
+}
+
+#content #pswTable tr {
+	height: 30px;
+}
+
+#content #pswConfirm {
+	margin-left: 100px;
 }

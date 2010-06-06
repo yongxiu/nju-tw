@@ -34,10 +34,9 @@ public class GetCustomerArticlesAction extends ActionSupport implements SessionA
 	private int totalpages;
 	private ArrayList<String> pageCount;
 	
-	private long uid;
-	
 	
 	public String execute() {
+		long uid = (Long) getSession().get("id");
 		articles = new ArrayList<ArticleTemp>();
 		GenericArticleDao articleDao =  new GenericArticleDao();
 		int number =24;
@@ -162,19 +161,6 @@ public class GetCustomerArticlesAction extends ActionSupport implements SessionA
 	public void setPageCount(ArrayList<String> pageCount) {
 		this.pageCount = pageCount;
 	}
-	
-	
-	public long getUid() {
-		return uid;
-	}
-
-
-
-
-	public void setUid(long uid) {
-		this.uid = uid;
-	}
-
 
 
 
