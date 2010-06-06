@@ -26,6 +26,8 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 	private String uploadFileName;
 	private String caption;
 	private String myName;
+	private String message;
+	
 	public String getMyName() {
 		return myName;
 	}
@@ -144,6 +146,8 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			
 			FileDao fileDao = new FileDao();
 			fileDao.create(file);
+			
+			message = "文件上传成功！";
 			return SUCCESS;
 		} else {
 			addFieldError("myFile", "文件格式错误！");
@@ -157,6 +161,14 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 
 	public void setSession(Map session) {
 		this.session = session;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 	
 	

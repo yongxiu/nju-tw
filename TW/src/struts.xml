@@ -262,10 +262,6 @@
 		
 		<!-- Topic image Upload -->
 		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
-			<interceptor-ref name="fileUpload">
-				<param name="allowedTypes">image/jpg,image/gif,image/jpeg,image/png,image/bmp</param>
-			</interceptor-ref>
-			<interceptor-ref name="defaultStack"/>
 			<result name="success" type="redirect">TopicManage.do?topicid=${topicid}&amp;isnew=1</result>
 			<result name="input">/admin/topic/topichange.jsp</result>
 		</action>
@@ -363,8 +359,23 @@
 		</action>
 		
 		<!-- Delete Article -->
-		<action name="DeleteArticle" class="action.admin.DeleteArticleAction">
-			<result name="success" type="redirect">/ArticleList.do</result>
+		<action name="DeleteArticle" class="action.customer.DeleteArticleAction">
+			<result name="success" type="redirect">/CustomerArticles.do</result>
+		</action>
+		
+		<!-- Delete Article -->
+		<action name="admin.DeleteArticle" class="action.admin.DeleteArticleAction">
+			<result name="success" type="redirect">/admin.ArticleList.do</result>
+		</action>
+		
+		<!-- Delete File -->
+		<action name="DeleteFile" class="action.customer.DeleteFileAction">
+			<result name="success" type="redirect">/FileList.do</result>
+		</action>
+		
+		<!-- Delete File -->
+		<action name="admin.DeleteArticle" class="action.admin.DeleteFileAction">
+			<result name="success" type="redirect">/admin.FileList.do</result>
 		</action>
 		
 		

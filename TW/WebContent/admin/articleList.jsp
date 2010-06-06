@@ -33,7 +33,7 @@
 <s:form name="deleteForm" theme="simple">
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
   <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='DeleteArticle.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
+    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='admin.DeleteArticle.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
   </div>
   
   <span class="msg-info">(若要修改，请直接点击文章)</span>
