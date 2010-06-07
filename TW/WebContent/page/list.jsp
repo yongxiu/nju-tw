@@ -12,7 +12,7 @@
 	抱歉,没有您要的搜索结果，请重新输入搜索条件！
 </s:if>
 
-
+</div>
 <s:set name="search"><s:property value="search" escape="false"/></s:set>
 <s:else>
 关键词&nbsp;"<s:property value="#search" />"&nbsp;&nbsp;搜索的结果共有："<s:property value="number"/>"  条</>&nbsp;&nbsp;
@@ -21,19 +21,8 @@
 搜索耗时 ：" <s:property value="time"/>"ms   
 </s:else>
 <br>
-</div>
 
 
-
-<!--	
-<div id="dvTitleinbox">
-  <div class="g-title-1">
-    <div class="fn-fle">
-      <h2>搜索结果</h2>
-      <span class="txt-info">(共 <strong><s:property value="number"/></strong> 个)</span></div>
-  </div>
-</div>
--->
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout" style="margin-left:15px;">
   <table class="g-table-comm" id="inboxTitleTable">
@@ -71,8 +60,8 @@
 <s:set name="search"><s:property value="search" escape="false"/></s:set>
 <s:set name="current"><s:property value="currentPage"/> </s:set>
 <s:set name="pages"><s:property value="pages"/> </s:set>
-<s:set name="previous"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))-1) %></s:set>
-<s:set name="next"><%=(Integer.parseInt((request.getAttribute("currentPage").toString()))+1) %></s:set>
+<s:set name="previous"><s:property value="currentPage-1"/></s:set>
+<s:set name="next"><s:property value="currentPage+1"/></s:set>
 
 <div id="searchPage" style="margin-left:325px;">
 <!-- one page -->
@@ -109,5 +98,5 @@
 			</a>
 		</s:else>
 </s:else>
-</s:else>
 </div>
+</s:else>

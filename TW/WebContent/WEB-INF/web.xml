@@ -19,14 +19,12 @@
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>		
-		<dispatcher>INCLUDE</dispatcher>
-		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>REQUEST</dispatcher>   
+    <dispatcher>FORWARD</dispatcher>   
+    <dispatcher>INCLUDE</dispatcher>
 				
 	</filter-mapping>
 	
-	
-	
-	<display-name>Struts 2 Fileupload</display-name> 
 
     <filter> 
         <filter-name>struts-cleanup</filter-name> 
