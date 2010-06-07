@@ -263,7 +263,7 @@
 		<!-- Topic image Upload -->
 		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
 			<result name="success" type="redirect">TopicManage.do?topicid=${topicid}&amp;isnew=1</result>
-			<result name="input">/admin/topic/topichange.jsp</result>
+			<result name="input" type="tiles">admin.topichange</result>
 		</action>
 
 		<!-- List organization -->

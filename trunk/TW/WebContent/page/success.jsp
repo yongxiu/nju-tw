@@ -2,4 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
+<div id="msg">
 <s:property value="message"/>
+</div>
