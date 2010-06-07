@@ -17,14 +17,14 @@ import org.apache.struts2.interceptor.SessionAware;
 import service.ValidateUser;
 
 import FinalValue.UserRole;
-import bean.Article;
+
 import bean.GenericArticle;
 import bean.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
-import dao.ArticleDao;
+
 import dao.GenericArticleDao;
 import dao.UserDao;
 
