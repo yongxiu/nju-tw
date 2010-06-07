@@ -136,6 +136,10 @@
 	<definition name="admin.topicmanagepage" extends="admin">
 		<put-attribute name="content" value="/TopicManagePage.do"/>
 	</definition>
+	
+	<definition name="admin.articlepage" extends="admin">
+		<put-attribute name="content" value="/admin.GetModifyArticlePage.do"/>
+	</definition>
 </tiles-definitions>
 
 

@@ -12,7 +12,7 @@ import org.hibernate.Transaction;
 import dao.hibernateTemlate.HibernateGenericDao;
 import dao.hibernateTemlate.HibernateUtil;
 
-import bean.Article;
+
 import bean.GenericArticle;
 import bean.User;
 

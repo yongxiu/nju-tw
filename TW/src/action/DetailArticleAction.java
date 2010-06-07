@@ -2,7 +2,7 @@ package action;
 
 import org.apache.struts2.ServletActionContext;
 
-import bean.Article;
+
 import bean.GenericArticle;
 
 import com.opensymphony.xwork2.ActionSupport;
