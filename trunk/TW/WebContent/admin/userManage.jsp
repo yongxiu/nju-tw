@@ -12,7 +12,7 @@
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>管理用户</h2>
-      <span class="txt-info">(共 <strong>133</strong> 位)</span></div>
+    </div>
   </div>
 </div>
 <div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
@@ -24,17 +24,6 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
   </div>
   
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
-  </div>
 </div>
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout">
@@ -90,15 +79,4 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
   </div>
 
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
-  </div>
 </div>

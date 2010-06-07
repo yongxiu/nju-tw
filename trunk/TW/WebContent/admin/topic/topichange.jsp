@@ -9,8 +9,8 @@
 <table style="width:790px; height:280px;"><tr><td align=center>
 <table class="t_s_Table">
 	<tr class="t_s_i_Tr">
-		<td><img src="<s:property value="imagePath"/>"/></td>
-		<td style="width:250px"><img src="<s:property value="imagePath"/>"/></td>
+		<td><img src="<s:property value="imagePath"/>" width="161" height="66"/></td>
+		<td style="width:250px"><img src="<s:property value="imagePath"/>" width="161" height="66"/></td>
 	</tr>
 	<tr class="t_s_a_Tr">
 		<td><a href="<s:url action="TopicManage.do"><s:param name="topicid"><s:property value="topicid"/></s:param> <s:param name="isnew" value="0"/></s:url>" style="font-size:16px; font-family:'微软雅黑';">原有活动专题修改</a></td>
