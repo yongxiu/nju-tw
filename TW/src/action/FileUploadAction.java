@@ -111,8 +111,11 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 
 	@Override
 	public String execute() throws Exception {
+		
+		System.out.println("IN FileUpload");
 		if(myFile == null) {
 			addFieldError("myFile", "请选择要上传的文件！");
+			System.out.println("No file");
 			return INPUT;
 		}
 		if(extIsAllowed(getExtention(fileName).substring(1))) {
@@ -131,7 +134,9 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 				FileUtils.copyFile(myFile, imageFile);
 			} catch (IOException e) {
 				addActionError(e.getMessage());
+				System.out.println("这儿错了");
 				return INPUT;
+				
 			}
 			
 			uploadFileName = strPath + "/" + newName;
@@ -146,11 +151,12 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			
 			FileDao fileDao = new FileDao();
 			fileDao.create(file);
-			
+			System.out.println("对了");
 			message = "文件上传成功！";
 			return SUCCESS;
 		} else {
 			addFieldError("myFile", "文件格式错误！");
+			System.out.println("格式错了");
 			return INPUT;
 		}
 	}
