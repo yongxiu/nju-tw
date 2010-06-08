@@ -37,11 +37,23 @@
   </div>
   
   <span class="msg-info">(若要修改，请直接点击文章)</span>
+  <s:set name="current"> <s:property value="currentPage"/> </s:set>
   
-  <div class="btngrp btngrp-ext"><a href="admin.ArticlePage.do?currentPage=1" class="txt-disabd">首页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#previous'/>" class="txt-disabd">上页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#next'/>" onclick="MM.inbox.goPage(2)">下页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#total'/>" onclick="MM.inbox.goPage(7)">末页</a>
+  <div class="btngrp btngrp-ext"><a href="admin.ArticlePage.do?currentPage=1">首页</a><a 
+  	<s:if test="#current==1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="admin.ArticlePage.do?currentPage=<s:property value='#previous'/>" 
+  	</s:else>>上页</a><a 
+  	<s:if test="#current==#totalOver-1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="admin.ArticlePage.do?currentPage=<s:property value='#next'/>"
+  	</s:else>>下页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#total'/>">末页</a>
   
   <select onchange="var url='admin.ArticlePage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
-   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
     <s:iterator value="pageCount" id="mark">
    		<s:set name="markValue"><s:property value="mark"/> </s:set>
     	
@@ -109,20 +121,34 @@
 
 	<span class="msg-info">(若要修改，请直接点击文章)</span>
 
-  <div class="btngrp btngrp-ext"><a href="admin.ArticlePage.do?currentPage=1" class="txt-disabd">首页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#previous'/>" class="txt-disabd">上页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#next'/>" onclick="MM.inbox.goPage(2)">下页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#total'/>" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="var url='admin.ArticlePage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
-   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
+  <div class="btngrp btngrp-ext"><a href="admin.ArticlePage.do?currentPage=1">首页</a><a 
+  	<s:if test="#current==1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="admin.ArticlePage.do?currentPage=<s:property value='#previous'/>" 
+  	</s:else>>上页</a><a 
+  	<s:if test="#current==#totalOver-1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="admin.ArticlePage.do?currentPage=<s:property value='#next'/>"
+  	</s:else>>下页</a><a href="admin.ArticlePage.do?currentPage=<s:property value='#total'/>">末页</a>
+  
+  <select onchange="var url='admin.ArticlePage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
     <s:iterator value="pageCount" id="mark">
    		<s:set name="markValue"><s:property value="mark"/> </s:set>
     	
     	<s:if test="#current==#markValue">
-    	<option value="<s:property value="mark"/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" selected="selected"><s:property value="mark"/>/ <s:property value="totalpages"/></option>
     	</s:if>
     	<s:else>
-    	<option value="<s:property value="mark"/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" ><s:property value="mark"/>/ <s:property value="totalpages"/></option>
     	</s:else>
     </s:iterator>
   </select> 
+    
+   
   </div>
 </div>
 </s:form>
