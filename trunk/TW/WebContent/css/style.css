@@ -319,6 +319,7 @@ a {
 	width: 794px;
 	float: left;
 	background-color: #FFF;
+	overflow: hidden;
 }
 
 .o_Table {
@@ -355,6 +356,7 @@ a {
 	font-size:25px;
 	text-align:center;
 	padding-bottom:15px;
+	color: #f00;
 	}
 
 /*

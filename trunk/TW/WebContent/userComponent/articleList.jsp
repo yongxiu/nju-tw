@@ -37,19 +37,32 @@
   </div>
   
   <span class="msg-info">(若要修改，请直接点击文章)</span>
+  <s:set name="current"> <s:property value="currentPage"/> </s:set>
   
-  <div class="btngrp btngrp-ext"><a href="CustomerArticlesPage.do?currentPage=1&uid=<s:property value="uid"/>" class="txt-disabd">首页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#previous'/>&uid=<s:property value="uid"/>" class="txt-disabd">上页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#next'/>&uid=<s:property value="uid"/>" onclick="MM.inbox.goPage(2)">下页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#total'/>&uid=<s:property value="uid"/>" onclick="MM.inbox.goPage(7)">末页</a>
+  <div class="btngrp btngrp-ext"><a href="CustomerArticlesPage.do?currentPage=1">首页</a><a 
+	<s:if test="#current==1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="CustomerArticlesPage.do?currentPage=<s:property value='#previous'/>" 
+  	</s:else>
+  	>上页</a><a
+  	<s:if test="#current==#totalOver">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="CustomerArticlesPage.do?currentPage=<s:property value='#next'/>"
+  	</s:else>>下页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value="totalpages"/>">末页</a>
   
   <select onchange="var url='CustomerArticlesPage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
-   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
     <s:iterator value="pageCount" id="mark">
    		<s:set name="markValue"><s:property value="mark"/> </s:set>
     	
     	<s:if test="#current==#markValue">
-    	<option value="<s:property value="mark"/>&uid=<s:property value="uid"/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
     	</s:if>
     	<s:else>
-    	<option value="<s:property value="mark"/>&uid=<s:property value="uid"/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
     	</s:else>
     </s:iterator>
   </select> 
@@ -98,20 +111,35 @@
 
 	<span class="msg-info">(若要修改，请直接点击文章)</span>
 
-  <div class="btngrp btngrp-ext"><a href="CustomerArticlesPage.do?currentPage=1&uid=<s:property value="uid"/>" class="txt-disabd">首页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#previous'/>&uid=<s:property value="uid"/>" class="txt-disabd">上页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#next'/>&uid=<s:property value="uid"/>" onclick="MM.inbox.goPage(2)">下页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value='#total'/>&uid=<s:property value="uid"/>" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="var url='CustomerArticlesPage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
-   	<s:set name="current"> <s:property value="currentPage"/> </s:set>
+  <div class="btngrp btngrp-ext"><a href="CustomerArticlesPage.do?currentPage=1">首页</a><a 
+	<s:if test="#current==1">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="CustomerArticlesPage.do?currentPage=<s:property value='#previous'/>" 
+  	</s:else>
+  	>上页</a><a
+  	<s:if test="#current==#totalOver">
+  	class="txt-disabd"
+  	</s:if>
+  	<s:else>
+  	href="CustomerArticlesPage.do?currentPage=<s:property value='#next'/>"
+  	</s:else>>下页</a><a href="CustomerArticlesPage.do?currentPage=<s:property value="totalpages"/>">末页</a>
+  
+  <select onchange="var url='CustomerArticlesPage.do?currentPage='+this.value;  javascript:window.location.href=url;"> 
     <s:iterator value="pageCount" id="mark">
    		<s:set name="markValue"><s:property value="mark"/> </s:set>
     	
     	<s:if test="#current==#markValue">
-    	<option value="<s:property value="mark"/>&uid=<s:property value="uid"/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" selected="selected"><s:property value="mark"/>/<s:property value="totalpages"/></option>
     	</s:if>
     	<s:else>
-    	<option value="<s:property value="mark"/>&uid=<s:property value="uid"/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
+    	<option value="<s:property value="mark"/>" ><s:property value="mark"/>/<s:property value="totalpages"/></option>
     	</s:else>
     </s:iterator>
   </select> 
+    
+   
   </div>
 </div>
 </s:form>

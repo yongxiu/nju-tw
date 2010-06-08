@@ -11,7 +11,7 @@
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>已上传的文件</h2>
-      <span class="txt-info">(共 <strong>133</strong> 个)</span></div>
+	</div>
   </div>
 </div>
 <s:form name="deleteForm" theme="simple">
@@ -20,17 +20,6 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='admin.DeleteFile.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
   </div>
   
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
-  </div>
 </div>
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout">
@@ -39,10 +28,9 @@
       <tr>
         <th class="wd0"></th>
         <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文件" type="checkbox"></th>
-        <th style="width:517px;">文件名称</th>
+        <th style="width:570px;">文件名称</th>
         <th style="width:80px;">作者</th>
         <th style="width:60px;">上传时间</th>
-        <th style="width:40px;">操作</th>
       </tr>
     </thead>
   </table>
@@ -54,10 +42,9 @@
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td class="wd1 ckb"><input title="选择/不选" name="checkId" value="<s:property value="id"/>" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
-            <td style="width:517px;"><s:property value="filename"/></td>
+            <td style="width:570px;"><s:property value="filename"/></td>
             <td style="width:80px;"><s:property value="owner"/></td>
             <td style="width:60px;"><s:property value="date"/></td>
-            <td style="width:40px;" class="action">&nbsp;置顶</td>
           </tr>
         </tbody>
         </s:iterator>
@@ -70,18 +57,6 @@
 <div class="g-toolbar g-toolbar-bottom" id="dvToolbar_inbox__bottom">
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="deleteForm.action='admin.DeleteFile.do';deleteForm.submit();" id="inbox__delete"><span>删 除</span></div>
-  </div>
-
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
   </div>
 </div>
 
