@@ -256,8 +256,8 @@
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
 			
-			<result name="success">/UploadSuccess.jsp</result>
-			<result name="input" type="tiles">customer.upload</result>
+			<result name="success" type="redirect">TopicDecision.do</result>
+			<result name="input" type="redirect">uploadFile.do</result>
 		</action>
 		
 		<!-- Topic image Upload -->
