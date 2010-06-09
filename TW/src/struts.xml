@@ -13,11 +13,18 @@
 		
 		<!-- User interceptor -->
 		<interceptors>
-			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
-
-			<interceptor-stack name="loginDefaultStack">
+			<interceptor name="UserInterceptor" class="interceptor.GeneralInterceptor"/>
+			<interceptor name="AdminInterceptor" class="interceptor.AdminInterceptor"/>
+			<interceptor-stack name="loginStack">
 				<interceptor-ref name="UserInterceptor"/>
 				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="adminStack">
+				<interceptor-ref name="UserInterceptor"/>
+				<interceptor-ref name="AdminInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+				
 			</interceptor-stack>
 
 		</interceptors>
@@ -27,7 +34,8 @@
 		 -->
 		
 		<global-results>
-			<result name="login">/component/login.jsp</result>
+			<result name="redirectLogin">/component/redirectLogin.jsp</result>
+			<result name="roleError">/component/roleError.jsp</result>
 		</global-results>
 		
 		
@@ -38,9 +46,12 @@
 		
 		<!-- Back Home Menu -->
 		<action name="MenuAction" class="action.MenuAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="admin.success">/admin/menu.jsp</result>
 			<result name="customer.success">/userComponent/menu.jsp</result>
 		</action>
+		
+		
 		<!-- Redirect to home page -->
 		<action name="Home">
 			<result name="success" type="tiles">index</result>
@@ -101,91 +112,113 @@
 		
 		
 		<action name="ckupload" class="action.CkeditorUploadAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">index</result>
 		</action>
 		
 		<!-- Redirect to background page -->
 		<!-- User1 -->
 		<action name="BackHome">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.edit</result>
+		
 		</action>
 		
 		<action name="ArticleList">
+		    <interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.articleList</result>
 		</action>
 		
 		<action name="uploadFile">
+	     	<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.upload</result>
 		</action>
 		
 		<action name="FileList">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.fileList</result>
 		</action>
 		
 		<action name="changePSW">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.changePSW</result>
 		</action>
 		
 		<!-- Show Modify Article -->
 		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.ShowModifyArticle</result>
 		</action>
 		
 		<!-- User2 -->
 		<action name="admin.BackHome">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.edit</result>
 		</action>
 		
 		<action name="admin.ArticleList">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.articleList</result>
 		</action>
 		
 		<action name="admin.uploadFile">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.upload</result>
 		</action>
 		
 		<action name="admin.FileList">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.fileList</result>
 		</action>
 		
 		<action name="admin.changePSW">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.changePSW</result>
 		</action>
 		
 		<action name="admin.topic">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.topic</result>
 		</action>
 		
 		<action name="admin.ListUser" class="action.ListUserAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.userManage</result>
 		</action>
 		
 		<action name="admin.ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.ShowModifyArticle</result>
 		</action>
 		
 		<action name="admin.TurnGray" class="action.admin.TurnGrayAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.themeManage</result>
 		</action>
 		
 		<action name="admin.TurnOri" class="action.admin.TurnOriAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.themeManage</result>
 		</action>
 		
 		<action name="admin.ChangeTheme" >
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.themeManage</result>
 		</action>
 		<!-- Get Modify Files -->
 		
 		<action name="admin.topicPage" class="action.topic.TopicPageAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/topic/topicselect.jsp</result>
 		</action>
 		
 		<action name="GetModifyFile" class="action.GetModifyFileAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/fileList.jsp</result>
 		</action>
 		
 		<action name="admin.GetModifyFile" class="action.admin.GetModifyFileAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/fileList.jsp</result>
 		</action>
 	
@@ -193,6 +226,12 @@
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
 			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="input">/component/login.jsp</result>
+		</action>
+		
+		<!-- Redriect Login -->
+		<action name="RedirectLogin" class="action.RedriectLoginAction">
+			<result name="success" type="redirect">/${url}</result>
 			<result name="input">/component/login.jsp</result>
 		</action>
 		
@@ -255,13 +294,14 @@
 
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
-			
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="redirect">TopicDecision.do</result>
 			<result name="input" type="redirect">uploadFile.do</result>
 		</action>
 		
 		<!-- Topic image Upload -->
 		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">TopicManage.do?topicid=${topicid}&amp;isnew=1</result>
 			<result name="input" type="tiles">admin.topichange</result>
 		</action>
@@ -273,7 +313,6 @@
 		
 		<!-- List organization Details -->
 		<action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
-			<!-- interceptor -->
 
 			<result name="success">/page/orgList.jsp</result>
 		</action>
@@ -285,31 +324,33 @@
 
 		<!-- summit article -->
 		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
-			
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.submitSuccess</result>
 			<result name="imageSelect" type="tiles">admin.imageSelect</result>
-			<interceptor-ref name="UserInterceptor"/>
-			<interceptor-ref name="defaultStack"/>
+			
+			
 			
 		</action>
 		
 		<!-- Select image as main image -->
 		<action name="SelectImage" class="action.SelectImageAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.imageCrop</result>
+		
 		</action>
 		
 		<!-- summit article -->
 		<action name="admin.SubmitArticleAction" class="action.SubmitArticleAction">
-			
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.submitSuccess</result>
 			<result name="imageSelect" type="tiles">admin.imageSelect</result>
-			<interceptor-ref name="UserInterceptor"/>
-			<interceptor-ref name="defaultStack"/>
+			
 			
 		</action>
 		
 		<!-- Select image as main image -->
 		<action name="admin.SelectImage" class="action.SelectImageAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.imageCrop</result>
 		</action>
 
@@ -323,85 +364,102 @@
 
 		<!-- List User -->
 		<action name="ListUser" class="action.ListUserAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/userManage.jsp</result>
 		</action>
 		
 		<!-- Delete User -->
 		<action name="DeleteUser" class="action.DeleteUserAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.userManage</result>
 		</action>
 		
 		<!-- Add User -->
 		<action name="AddUserPage">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.adduser</result>
 		</action>
 		
 		<action name="AddUser" class="action.AddUserAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/addUserSuccess.jsp</result>
 			<result name="input" type="tiles">admin.adduser</result>
 		</action>
 		
 		<!-- Get Modify List -->
 		<action name="GetModifyList" class="action.GetModifyListAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.modifyuser</result>
 		</action>
 		
 		<!-- Modify User -->
 		<action name="ModifyUser" class="action.ModifyUserAction">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">admin.ListUser.do</result>
 			<result name="input" type="tiles">admin.modifyuser</result>
 		</action>
 		
 		<!-- Change Password -->
 		<action name="ChangePassword" class="action.ChangePasswordAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/changePswSuccess.jsp</result>
 			<result name="input">/userComponent/changePSW.jsp</result>
 		</action>
 		
 		<!-- Delete Article -->
 		<action name="DeleteArticle" class="action.customer.DeleteArticleAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="redirect">/CustomerArticles.do</result>
 		</action>
 		
 		<!-- Delete Article -->
 		<action name="admin.DeleteArticle" class="action.admin.DeleteArticleAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">/admin.ArticleList.do</result>
 		</action>
 		
 		<!-- Delete File -->
 		<action name="DeleteFile" class="action.customer.DeleteFileAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="redirect">/FileList.do</result>
 		</action>
 		
 		<!-- Delete File -->
 		<action name="admin.DeleteArticle" class="action.admin.DeleteFileAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">/admin.FileList.do</result>
 		</action>
 		
 		
 		<!-- Write Index -->
 		<action name="writeIndex" class="action.lucene.WriteIndexAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/component/login.jsp</result>
 		</action>
 		
 		<!-- Get Modify Articles -->
 		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		
 		<action name="admin.GetModifyArticle" class="action.admin.GetModifyArticleAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/articleList.jsp</result>
 		</action>
 		<action name="admin.GetModifyArticlePage" class="action.admin.GetModifyArticlePageAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/articleList.jsp</result>
 		</action>
 		
 		<action name="admin.ArticlePage">
+		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.articlepage</result>
 		</action>
 		
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/modifySuccess.jsp</result>
 			<result name="imageSelect">/page/imageSelect.jsp</result>
 		</action>
@@ -453,14 +511,17 @@
 		
 		<!-- Topic block -->
 			<action name="TopicChange" class="action.topic.TopicChangeAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.topichange</result>
 			</action>
 			
 			<action name="TopicManage" class="action.topic.TopicManageAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.topicmanage</result>
 			</action>
 			
 			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.success</result>
 			</action>
 			
@@ -469,9 +530,11 @@
 				<result name="success">/page/topicList.jsp</result>
 			</action>
 			<action name="TopicManagePage" class="action.topic.TopicManagePageAction">
+				<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success">/admin/topic/topicmanage.jsp</result>
 			</action>
 			<action name="TopicManagePageTiles">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.topicmanagepage</result>
 			</action>
 			
@@ -486,9 +549,11 @@
 			
 			<!-- Top -->
 			<action name="Top" class="action.admin.TopAction">
+				<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="redirect">admin.ArticleList.do</result>
 			</action>
 			<action name="RemoveTop" class="action.admin.RemoveTopAction">
+				<interceptor-ref name="adminStack"></interceptor-ref>
 				<result name="success" type="redirect">admin.ArticleList.do</result>
 			</action>
 
@@ -498,6 +563,7 @@
 		</action>
 		
 		<action name="OrgManageListPage">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.OrgManageList</result>
 		</action>
 		
@@ -506,48 +572,60 @@
 		</action>
 		
 		<action name="CropAction" class="action.CropAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.success</result>
 		</action>
 		
 		<action name="OrgAddPage">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.OrgAdd</result>
 		</action>
 		
 		<action name="OrgModifyPage">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.OrgModify</result>
 		</action>
 
 
 		<!-- Org Management -->
 		<action name="OrgManageList" class="action.admin.OrgManageListAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/orgManage/orgManageList.jsp</result>
 		</action>
 		<action name="OrgModify" class="action.admin.OrgModifyAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/orgManage/orgModify.jsp</result>
 		</action>
 		<action name="OrgDelete" class="action.admin.OrgDeleteAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">OrgManageList.do</result>
 		</action>
 		<action name="OrgUpdate" class="action.admin.OrgUpdateAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">OrgManageList.do</result>
 		</action>
 		<action name="OrgAdd" class="action.admin.OrgAddAction">
+			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">OrgManageListPage.do</result>
 		</action>
 		
 		
 		<!-- Customer -->
 		<action name="GetCustomerArticles" class="action.customer.GetCustomerArticlesAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		<action name="CustomerArticles">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.customerarticles</result>
 		</action>
 		
 		<action name="GetCustomerArticlesPage" class="action.customer.GetCustomerArticlesPageAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success">/userComponent/articleList.jsp</result>
 		</action>
 		<action name="CustomerArticlesPage">
+		<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.customerarticlespage</result>
 		</action>
 		

@@ -1,6 +1,6 @@
 package filter;
 
-import interceptor.UserInterceptor;
+import interceptor.GeneralInterceptor;
 
 import java.io.IOException;
 
@@ -26,7 +26,7 @@ public class FilterServlet extends HttpServlet implements Filter{
 		HttpServletResponse response2 = (HttpServletResponse) response;
 		HttpSession session = request2.getSession();
 		
-		if(session.getAttribute(UserInterceptor.USER_KEY) == null){
+		if(session.getAttribute(GeneralInterceptor.USER_KEY) == null){
 			response2.sendRedirect(redirectUrl);
 		}
 	}

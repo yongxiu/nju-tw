@@ -1,6 +1,6 @@
 package action;
 
-import interceptor.UserInterceptor;
+import interceptor.GeneralInterceptor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
