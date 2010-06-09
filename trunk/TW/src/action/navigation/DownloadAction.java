@@ -17,7 +17,7 @@ public class DownloadAction extends ActionSupport implements SessionAware{
 	private Map session;
 	private ArrayList<String> pageCount;
 	public String execute() {
-		int number = 5;
+		int number = 24;
 		currentPage = 1;
 		FileDao fileDao = new FileDao();
 		files = fileDao.getFileByPage(currentPage, number);

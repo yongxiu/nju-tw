@@ -41,7 +41,7 @@ public class FileDao extends HibernateGenericDao<File,Long>{
 		Session session = getSession();
 		Transaction tx  = session.beginTransaction();
 		
-		Query query = session.createQuery("from File order by date");
+		Query query = session.createQuery("from File order by date desc");
 		query.setFirstResult((currentPage - 1)*number);
 		query.setMaxResults(number);
 		ArrayList<File> files = (ArrayList<File>) query.list();
