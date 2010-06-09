@@ -573,7 +573,7 @@
 		
 		<action name="CropAction" class="action.CropAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success" type="tiles">admin.success</result>
+			<result name="success" type="tiles">article.success</result>
 		</action>
 		
 		<action name="OrgAddPage">
