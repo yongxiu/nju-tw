@@ -140,6 +140,10 @@
 	<definition name="admin.articlepage" extends="admin">
 		<put-attribute name="content" value="/admin.GetModifyArticlePage.do"/>
 	</definition>
+	
+	<definition name="article.success" extends="admin">
+		<put-attribute name="content" value="/userComponent/articleSuccess.jsp"/>
+	</definition>
 </tiles-definitions>
 
 
