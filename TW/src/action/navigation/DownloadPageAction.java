@@ -11,14 +11,14 @@ import com.opensymphony.xwork2.ActionSupport;
 
 import dao.FileDao;
 
-public class DownloadAction extends ActionSupport implements SessionAware{
+public class DownloadPageAction extends ActionSupport implements SessionAware{
 	private ArrayList<File> files;
 	private int currentPage;
 	private Map session;
 	private ArrayList<String> pageCount;
 	public String execute() {
 		int number = 5;
-		currentPage = 1;
+		
 		FileDao fileDao = new FileDao();
 		files = fileDao.getFileByPage(currentPage, number);
 		

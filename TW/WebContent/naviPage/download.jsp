@@ -25,7 +25,7 @@
   <div id="MailListMaininbox" class="txt-12">
     <div id="period_div_inbox2">
       <table class="g-table-comm" id="period_table_inbox2" style="width:98%;">
-
+	
       <s:iterator value="files" id="file">
         
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
@@ -40,14 +40,21 @@
     </div>
   </div>
 </div>
+<s:set name="current"> <s:property value="currentPage"/> </s:set>
 <div style="clear:both;height:25px;"></div>
 <div id="articleNavi" style="clear:both;"><s:set name="currentPage"><s:property value="currentPage"/></s:set>
-<s:set name="category"><s:property value="category"/></s:set>
+
 <s:iterator value="pageCount" id="page">
-		<a  href='<s:url action="Article.do" ><s:param name="currentPage" value="#page"/> <s:param name="category" value="#category"/></s:url>'>
+		<s:if test="#current==#page">
+			<s:property value="page"/>
+		</s:if>
+		
+		<s:else>
+		
+		<a  href='<s:url action="DownloadPage.do" ><s:param name="currentPage" value="#page"/> </s:url>'>
 			[<s:property value="page"/>]
 		</a>
-		
+		</s:else>
 </s:iterator></div>
 
 <!--  
