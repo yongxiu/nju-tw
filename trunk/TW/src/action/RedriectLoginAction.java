@@ -12,6 +12,7 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
 
 import service.ValidateUser;
@@ -29,7 +30,7 @@ import dao.GenericArticleDao;
 import dao.UserDao;
 
 
-public class LoginAction extends ActionSupport implements SessionAware{
+public class RedriectLoginAction extends ActionSupport implements SessionAware{
 	
 	private String username;
 	private String password;
@@ -37,6 +38,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	private String name;
 	private User user;
 	private Map session;
+	
+	private String url;
 	
 	
 
@@ -76,6 +79,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 				getSession().put("id", new Long(user.getId()));
 				getSession().put("user", user);
 				getSession().put("role", user.getRole());
+				url = (String) getSession().get("url");
+				System.out.println(url);
 				return SUCCESS;
 			 }
 			 else {
@@ -86,47 +91,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		
 	
 		
-		/**
-		 * test the hibernate CRUD
-		 */
-//		ArticleDao articleDao=new ArticleDao();
-//		List<Article> articles=articleDao.getAllEntity();
-//		for(Article article:articles){
-//			System.out.println(article.getId()+" : "+article.getTitle()+" : "+article.getContent());
-//		}
 		
-		
-		
-		/**
-		 * test create an article, success
-		 */
-		
-//		UserDao userDAO=new UserDao();
-//		GenericArticleDao articleDao=new GenericArticleDao();
-//		User user1=userDAO.getById(new Long(1));
-//		GenericArticle article1=new GenericArticle("title1", new Date(), "content1", user1,1, false);
-//		
-//	
-//		
-//		articleDao.create(article1);
-//		
-//		GenericArticleDao dao=new GenericArticleDao();
-//		List<GenericArticle> articles=dao.getAllEntity();
-//		List<GenericArticle> news=new ArrayList<GenericArticle>();
-//		for(GenericArticle a:articles){
-//			if(a.getCategory()==0)
-//				news.add(a);
-//		}
-//		
-//		for(GenericArticle n:news)
-//		System.out.println(n.getCategory()+":"+n.getContent());
-//		
-//		
-//		
-//		
-//	
-//		
-//		return INPUT;
 		
 		
 		
@@ -196,6 +161,18 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 	
 	

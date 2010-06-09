@@ -1,6 +1,6 @@
 package action;
 
-import interceptor.UserInterceptor;
+import interceptor.GeneralInterceptor;
 
 import java.util.Map;
 
@@ -24,7 +24,7 @@ public class CheckLoginAction extends ActionSupport implements SessionAware{
 		
 		if(getSession().get("user")!=null) {
 			
-			username = (String) getSession().get(UserInterceptor.USER_KEY);
+			username = (String) getSession().get(GeneralInterceptor.USER_KEY);
 			name = (String) getSession().get("name");
 			User user = (User)getSession().get("user");
 			role = user.getRole();
