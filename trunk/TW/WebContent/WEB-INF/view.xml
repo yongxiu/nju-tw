@@ -50,6 +50,10 @@
 	<definition name="download" extends="standard">
 		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
 	</definition>
+	
+	<definition name="downloadpage" extends="standard">
+		<put-attribute name="content" value="/DownloadPageActoin.do"/>
+	</definition>
 
 	
 	<definition name="connect" extends="standard">		

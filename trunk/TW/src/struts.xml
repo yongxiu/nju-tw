@@ -428,6 +428,15 @@
 			<result name="success">/naviPage/download.jsp</result>
 		</action>
 		
+		<!-- Download Files Page -->
+		<action name="DownloadPageActoin" class="action.navigation.DownloadPageAction">
+			<result name="success">/naviPage/download.jsp</result>
+		</action>
+		
+		<action name="DownloadPage">
+			<result name="success" type="tiles">downloadpage</result>
+		</action>
+		
 		<!-- Pic news  -->
 		<action name="Picnews" class="action.PicnewsAction">
 			<result name="success">/component/picNews.jsp</result>
