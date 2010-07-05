@@ -295,7 +295,7 @@
 		<!-- Files Upload -->
 		<action name="FileUploadAction" class="action.FileUploadAction">
 			<interceptor-ref name="loginStack"></interceptor-ref>
-			<result name="success" type="redirect">TopicDecision.do</result>
+			<result name="success" type="redirect">SuccessAction.do</result>
 			<result name="input" type="redirect">uploadFile.do</result>
 		</action>
 		
@@ -425,7 +425,7 @@
 		</action>
 		
 		<!-- Delete File -->
-		<action name="admin.DeleteArticle" class="action.admin.DeleteFileAction">
+		<action name="admin.DeleteFile" class="action.admin.DeleteFileAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="redirect">/admin.FileList.do</result>
 		</action>
@@ -522,6 +522,11 @@
 			
 			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
+				<result name="success" type="tiles">admin.success</result>
+			</action>
+			
+			<action name="SuccessAction" class="action.admin.SuccessAction">
+			<interceptor-ref name="loginStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.success</result>
 			</action>
 			
