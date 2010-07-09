@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-youth.jsp<br/>
+/component/youth.jsp<br/>
 青共校、广播台

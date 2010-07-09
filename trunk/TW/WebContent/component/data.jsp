@@ -3,5 +3,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 Data.do<br/>
-data.jsp<br/>
+/component/data.jsp<br/>
 综合资料

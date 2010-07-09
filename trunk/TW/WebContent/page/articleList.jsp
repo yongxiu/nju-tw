@@ -10,8 +10,8 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd2" style="width:610px;">标题</th>
-
+        <th class="wd2" style="width:470px;">标题</th>
+		<th class="wd3" style="width:140px;">类别</th>
         <th class="wd4" style="width:100px;">发布日期</th>
       </tr>
     </thead>
@@ -24,7 +24,7 @@
         
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd2" style="width:4710px;">标题</td>
+            <td class="wd2" style="width:470px;">标题</td>
             <td class="wd3" style="width:140px;">类别</td>           
             <td class="wd4" style="width:100px;">时间</td>
           </tr>

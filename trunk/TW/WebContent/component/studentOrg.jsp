@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-studentOrg.jsp<br/>
+/component/studentOrg.jsp<br/>
 学生组织

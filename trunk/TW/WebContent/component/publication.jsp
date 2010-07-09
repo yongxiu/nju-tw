@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-publication.jsp<br/>
+/component/publication.jsp<br/>
 团属刊物

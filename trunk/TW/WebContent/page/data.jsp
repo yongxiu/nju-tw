@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-data.jsp<br/>
+/page/data.jsp<br/>
 综合资料
