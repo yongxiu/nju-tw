@@ -27,34 +27,40 @@
 	</SCRIPT>
 -->
 <ul id="m-nav" class="nav">
-	<li class="sy"><a href="Home.do" title="首页" ></a></li>
-	<li class="zz"><a href="Org.do" title="组织结构"> </a>
-    	
-    	<UL style="display: block; opacity: 0.9999;width:396px;">
-
-			<LI id="sjs"><A href="<s:url action="OrgListPage.do"><s:param name="category" value="1"></s:param> </s:url>" title="书记室"></A></LI>
-			<LI id="nbjg"><A href="<s:url action="OrgListPage.do"><s:param name="category" value="2"></s:param> </s:url>" title="内部机构"></A></LI>
-			<LI id="xszz"><A href="<s:url action="OrgListPage.do"><s:param name="category" value="4"></s:param> </s:url>" title="学生组织"></A></LI>
-			<LI id="jctw"><A href="<s:url action="OrgListPage.do"><s:param name="category" value="3"></s:param> </s:url>" title="基层团委"></A></LI>
-
-		</UL>
-		
+	<li id="n1"><a href="#" title="首页"> </a>
+	<li id="n2"><a href="#" title="团情纵览"> </a>
+    	<UL style="display: block; opacity: 0.9999;width:297px;">
+			<LI id="n2s1"><A href="#" title="团学新闻"></A></LI>
+			<LI id="n2s2"><A href="#" title="基层采风"></A></LI>
+			<LI id="n2s3"><A href="#" title="媒体传真"></A></LI>
+		</UL>	
     </li>
-	<li class="xw"><a href='<s:url action="Article.do"><s:param name="category" value="1"/><s:param name="currentPage" value="1"/></s:url>' title="新闻动态"></a></li>
-	<li class="gg"><a href='<s:url action="Article.do"><s:param name="category" value="2"/><s:param name="currentPage" value="1"/></s:url>' title="公告信息"></a></li>
-	<li class="ll"><a href='<s:url action="Article.do"><s:param name="category" value="3"/><s:param name="currentPage" value="1"/></s:url>' title="理论园地"></a></li>
-	<li class="mt"><a href='<s:url action="Article.do"><s:param name="category" value="4"/><s:param name="currentPage" value="1"/></s:url>' title="媒体报道"></a>
-		<UL style="display: block; opacity: 0.9999;width:495px;">
-			<LI id="xwbd"><A href="<s:url action="Article.do"><s:param name="category" value="5"/><s:param name="currentPage" value="1"/></s:url>" title="校外报导"></A></LI>
-			<LI id="ndxww"><A href="<s:url action="Article.do"><s:param name="category" value="6"/><s:param name="currentPage" value="1"/></s:url>" title="南大新闻网"></A></LI>
-			<LI id="njdxb"><A href="<s:url action="Article.do"><s:param name="category" value="7"/><s:param name="currentPage" value="1"/></s:url>" title="南京大学报"></A></LI>
-			<LI id="ndqnb"><A href="<s:url action="Article.do"><s:param name="category" value="8"/><s:param name="currentPage" value="1"/></s:url>" title="南大青年报"></A></LI>
-			<LI id="xygbt"><A href="<s:url action="Article.do"><s:param name="category" value="9"/><s:param name="currentPage" value="1"/></s:url>" title="南京大学校园广播台"></A></LI>
-		</UL>
-	</li>
-	<li class="xz"><a href="Download.do" title="下载专区"></a></li>
-
-	<li class="lx"><a href="ConnectUs.do" title="联系我们"></a></li>
+	<li id="n3"><a href="#" title="关于团委"> </a>
+    	<UL style="display: block; opacity: 0.9999;width:495px;">
+			<LI id="n3s1"><A href="#" title="团委简介"></A></LI>
+			<LI id="n3s2"><A href="#" title="机构人员"></A></LI>
+			<LI id="n3s3"><A href="#" title="办公地图"></A></LI>
+			<LI id="n3s4"><A href="#" title="工作简报"></A></LI>
+			<LI id="n3s5"><A href="#" title="联系我们"></A></LI>
+		</UL>	
+    </li>
+    <li id="n4"><a href="#" title="理论园地"> </a>
+    	<UL style="display: block; opacity: 0.9999;width:396px;">
+			<LI id="n4s1"><A href="#" title="时事理论"></A></LI>
+			<LI id="n4s2"><A href="#" title="团内精神与讲话"></A></LI>
+			<LI id="n4s3"><A href="#" title="高教动态"></A></LI>
+			<LI id="n4s4"><A href="#" title="调查研究"></A></LI>
+		</UL>	
+    </li>
+    <li id="n5"><a href="#" title="下载专区"> </a>
+    	<UL style="display: block; opacity: 0.9999;width:198px;">
+			<LI id="n5s1"><A href="#" title="文件系统"></A></LI>
+			<LI id="n5s2"><A href="#" title="综合资料"></A></LI>
+		</UL>	
+    </li>
+    <li id="n6"><a href="#" title="电子团务"> </a></li>
+    <li id="n0"><a href="#" title="占位"> </a></li>
+    <li id="n0"><a href="#" title="占位"> </a></li>
 </ul>
 
 <BR clear="all">
