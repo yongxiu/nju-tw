@@ -3,5 +3,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 BasicStyle.do<br/>
-basicStyle.jsp<br/>
+/component/basicStyle.jsp<br/>
 基层风采

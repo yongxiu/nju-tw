@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-introduction.jsp<br/>
+/page/introduction.jsp<br/>
 团委简介

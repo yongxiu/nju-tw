@@ -3,5 +3,5 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 Project.do<br/>
-project.jsp<br/>
+/component/project.jsp<br/>
 重点工作&品牌项目

@@ -2,5 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-officeMap.jsp<br/>
+/page/officeMap.jsp<br/>
 办公地图
