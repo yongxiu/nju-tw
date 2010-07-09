@@ -57,92 +57,167 @@
 	z-index:1;
 }
 
-#sjs a {
-	background: url(../imgs/sjs.png) no-repeat;
+#n1 a {
+	background: url(../img/1.gif) no-repeat;
 	width: 99px;
 }
-
-#sjs a:hover {
-	background: url(../imgs/sjs-hover.png) no-repeat;
+#n1 a:hover {
+	background: url(../img/1h.gif) no-repeat;
 	width: 99px;
 }
-
-#nbjg a {
-	background: url(../imgs/nbjg.gif) no-repeat;
+#n2 a {
+	background: url(../img/2.gif) no-repeat;
 	width: 99px;
 }
-
-#nbjg a:hover {
-	background: url(../imgs/nbjg-hover.gif) no-repeat;
+#n2 a:hover {
+	background: url(../img/2h.gif) no-repeat;
 	width: 99px;
 }
-
-#jctw a {
-	background: url(../imgs/jctw.gif) no-repeat;
+#n2s1 a {
+	background: url(../img/2-1.gif) no-repeat;
 	width: 99px;
 }
-
-#jctw a:hover {
-	background: url(../imgs/jctw-hover.gif) no-repeat;
+#n2s1 a:hover {
+	background: url(../img/2-1h.gif) no-repeat;
 	width: 99px;
 }
-
-#xszz a {
-	background: url(../imgs/xszz.gif) no-repeat;
+#n2s2 a {
+	background: url(../img/2-2.gif) no-repeat;
 	width: 99px;
 }
-
-#xszz a:hover {
-	background: url(../imgs/xszz-hover.gif) no-repeat;
+#n2s2 a:hover {
+	background: url(../img/2-2h.gif) no-repeat;
 	width: 99px;
 }
-			
-#xwbd a {
-	background: url(../imgs/xwbd.gif) no-repeat;
+#n2s3 a {
+	background: url(../img/2-3.gif) no-repeat;
 	width: 99px;
 }
-
-#xwbd a:hover {
-	background: url(../imgs/xwbd-hover.gif) no-repeat;
+#n2s3 a:hover {
+	background: url(../img/2-3h.gif) no-repeat;
 	width: 99px;
 }
-
-#ndxww a {
-	background: url(../imgs/ndxww.gif) no-repeat;
+#n3 a {
+	background: url(../img/3.gif) no-repeat;
 	width: 99px;
 }
-
-#ndxww a:hover {
-	background: url(../imgs/ndxww-hover.gif) no-repeat;
+#n3 a:hover {
+	background: url(../img/3h.gif) no-repeat;
 	width: 99px;
 }
-
-#njdxb a {
-	background: url(../imgs/njdxb.gif) no-repeat;
+#n3s1 a {
+	background: url(../img/3-1.gif) no-repeat;
 	width: 99px;
 }
-
-#njdxb a:hover {
-	background: url(../imgs/njdxb-hover.gif) no-repeat;
+#n3s1 a:hover {
+	background: url(../img/3-1h.gif) no-repeat;
 	width: 99px;
 }
-
-#ndqnb a {
-	background: url(../imgs/ndqnb.gif) no-repeat;
+#n3s2 a {
+	background: url(../img/3-2.gif) no-repeat;
 	width: 99px;
 }
-
-#ndqnb a:hover {
-	background: url(../imgs/ndqnb-hover.gif) no-repeat;
+#n3s2 a:hover {
+	background: url(../img/3-2h.gif) no-repeat;
 	width: 99px;
 }
-
-#xygbt a {
-	background: url(../imgs/xygbt.gif) no-repeat;
+#n3s3 a {
+	background: url(../img/3-3.gif) no-repeat;
 	width: 99px;
 }
-
-#xygbt a:hover {
-	background: url(../imgs/xygbt-hover.gif) no-repeat;
+#n3s3 a:hover {
+	background: url(../img/3-3h.gif) no-repeat;
+	width: 99px;
+}
+#n3s4 a {
+	background: url(../img/3-4.gif) no-repeat;
+	width: 99px;
+}
+#n3s4 a:hover {
+	background: url(../img/3-4h.gif) no-repeat;
+	width: 99px;
+}
+#n3s5 a {
+	background: url(../img/3-5.gif) no-repeat;
+	width: 99px;
+}
+#n3s5 a:hover {
+	background: url(../img/3-5h.gif) no-repeat;
+	width: 99px;
+}
+#n4 a {
+	background: url(../img/4.gif) no-repeat;
+	width: 99px;
+}
+#n4 a:hover {
+	background: url(../img/4h.gif) no-repeat;
+	width: 99px;
+}
+#n4s1 a {
+	background: url(../img/4-1.gif) no-repeat;
+	width: 99px;
+}
+#n4s1 a:hover {
+	background: url(../img/4-1h.gif) no-repeat;
+	width: 99px;
+}
+#n4s2 a {
+	background: url(../img/4-2.gif) no-repeat;
+	width: 99px;
+}
+#n4s2 a:hover {
+	background: url(../img/4-2h.gif) no-repeat;
+	width: 99px;
+}
+#n4s3 a {
+	background: url(../img/4-3.gif) no-repeat;
+	width: 99px;
+}
+#n4s3 a:hover {
+	background: url(../img/4-3h.gif) no-repeat;
+	width: 99px;
+}
+#n4s4 a {
+	background: url(../img/4-4.gif) no-repeat;
+	width: 99px;
+}
+#n4s4 a:hover {
+	background: url(../img/4-4h.gif) no-repeat;
+	width: 99px;
+}
+#n5 a {
+	background: url(../img/5.gif) no-repeat;
+	width: 99px;
+}
+#n5 a:hover {
+	background: url(../img/5h.gif) no-repeat;
+	width: 99px;
+}
+#n5s1 a {
+	background: url(../img/5-1.gif) no-repeat;
+	width: 99px;
+}
+#n5s1 a:hover {
+	background: url(../img/5-1h.gif) no-repeat;
+	width: 99px;
+}
+#n5s2 a {
+	background: url(../img/5-2.gif) no-repeat;
+	width: 99px;
+}
+#n5s2 a:hover {
+	background: url(../img/5-2h.gif) no-repeat;
+	width: 99px;
+}
+#n6 a {
+	background: url(../img/6.gif) no-repeat;
+	width: 99px;
+}
+#n6 a:hover {
+	background: url(../img/6h.gif) no-repeat;
+	width: 99px;
+}
+#n0 a {
+	background: url(../img/0.gif) no-repeat;
 	width: 99px;
 }
