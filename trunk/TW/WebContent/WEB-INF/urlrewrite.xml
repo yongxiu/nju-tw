@@ -9,7 +9,7 @@
 
 -->
 <urlrewrite>
-
+    
     <rule>
         <note>
             The rule means that requests to /test/status/ will be redirected to /rewrite-status
@@ -19,13 +19,7 @@
         <to type="redirect">%{context-path}/rewrite-status</to>
     </rule>
 
-	<rule>
-        <note>
-            Test
-        </note>
-        <from>/hello</from>
-        <to>/hello.jsp</to>
-    </rule>
+	
 
     <outbound-rule>
         <note>
