@@ -26,8 +26,11 @@ public class TurnGrayAction extends ActionSupport {
 
 		File style = new File(currentDirPath + "css/style.css");
 		File tmp = new File(currentDirPath + "css/tmp.css");
+		File backstyle = new File(currentDirPath + "css/backstyle.css");
+		File backtmp = new File(currentDirPath + "css/backtmp.css");
 
 		changeGray(style, tmp);
+		changeGray(backstyle, backtmp);
 
 		message = "主题已经变为灰色，请刷新";
 

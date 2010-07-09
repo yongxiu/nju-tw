@@ -34,8 +34,11 @@ public class TurnOriAction extends ActionSupport {
 
 		File source = new File(currentDirPath + "css/style.css");
 		File tmp = new File(currentDirPath + "css/tmp.css");
+		File backsource = new File(currentDirPath + "css/backstyle.css");
+		File backtmp = new File(currentDirPath + "css/backtmp.css");
 
 		changeBack(source, tmp);
+		changeBack(backsource, backtmp);
 		message = "主题已经恢复原主题，请刷新";
 
 		return SUCCESS;
