@@ -24,5 +24,24 @@ img,div {
 <p><a href='<%=request.getContextPath()%>/edit.jsp'>CKEditor Test</a></p>
 <p><a href='<%=request.getContextPath()%>/mail.jsp'>发送邮件测试</a></p>
 <p><a href='writeIndex.do'>建立全文索引</a></p>
+
+<div style="margin-top:50px">
+<ul>
+	<li><a href='List.do'>1-11模板</a></li>
+	<li><a href='Introduction.do'>团委简介</a></li>
+	<li><a href='OfficeMap.do'>办公地图</a></li>
+	<li><a href='Contact.do'>联系我们</a></li>
+	<li><a href='FileSystem.do'>文件系统</a></li>
+	<li><a href='Data.do'>综合资料</a></li>
+	-------------------------------
+	<li><a href='UpdateNewsAction.do'>团学新闻</a></li>
+	<li><a href='BasicStyle.do'>基层风采</a></li>
+	<li><a href='Project.do'>重点工作&品牌项目</a></li>
+	<li><a href='UpdateInfoAction.do'>通知公告</a></li>
+	<li><a href='/TW/component/publication.jsp'>团属刊物</a></li>
+	<li><a href='/TW/component/youth.jsp'>青共校、广播台</a></li>
+	<li><a href='/TW/component/studentOrg.jsp'>学生组织</a></li>
+</ul>
+</div>
 </body>
 </html>

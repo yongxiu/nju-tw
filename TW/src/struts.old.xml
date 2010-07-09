@@ -89,6 +89,10 @@
 			<result name="success" type="tiles">download</result>
 		</action>
 		
+		<action name="ConnectUs" >
+			<result name="success" type="tiles">connect</result>
+		</action>
+		
 		<action name="Search">
 			<result name="success" type="tiles">search</result>
 		</action>
@@ -99,6 +103,11 @@
 		
 		<action name="SearchDetail">
 			<result name="success"  type="tiles">searchdetail</result>
+		</action>
+		
+		
+		<action name="Mail" >
+			<result name="success" >/page/mail.jsp</result>
 		</action>
 		
 		
@@ -625,40 +634,6 @@
 			<result name="success" type="tiles">customer.customerarticlespage</result>
 		</action>
 		
-		<!-- 1-11模板 -->
-		<action name="List" >
-			<result name="success" type="tiles">articleList</result>
-		</action>
-		<!-- 团委简介 -->
-		<action name="Introduction" >
-			<result name="success" type="tiles">introduction</result>
-		</action>
-		<!-- 办公地图 -->
-		<action name="OfficeMap" >
-			<result name="success" type="tiles">officeMap</result>
-		</action>
-		<!-- 联系我们 -->
-		<action name="Contact" >
-			<result name="success" type="tiles">contact</result>
-		</action>
-		<!-- 文件系统 -->
-		<action name="FileSystem" >
-			<result name="success" type="tiles">fileSystem</result>
-		</action>
-		<!-- 综合资料 -->
-		<action name="Data" >
-			<result name="success" type="tiles">data</result>
-		</action>
-		
-		<!-- 首页显示项-->
-		<!-- 基层风采 -->
-		<action name="BasicStyle" >
-			<result name="success">/component/basicStyle.jsp</result>
-		</action>
-		<!-- 重点工作&品牌项目 -->
-		<action name="Project" >
-			<result name="success">/component/project.jsp</result>
-		</action>
 	</package>
 
 </struts>
