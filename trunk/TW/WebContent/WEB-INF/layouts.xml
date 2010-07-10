@@ -20,7 +20,7 @@
 		<put-attribute name="topic" value="/TopicPageAction.do" />
 		<put-attribute name="login" value="/CheckLogin.do" />
 		<put-attribute name="ipHolder" value="/IpcountAction.do" />
-		
+		<put-attribute name="orgLink" value="/component/student_org.html" />
 		<put-attribute name="search" value="/component/search.jsp" />
 		<put-attribute name="linker" value="/component/linker.jsp" />
 		<put-attribute name="copyRight" value="/component/copyRight.jsp" />
