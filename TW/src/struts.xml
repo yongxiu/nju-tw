@@ -213,7 +213,7 @@
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
 			<result name="success">/page/loginSuccess.jsp</result>
-			<result name="input">/component/login.jsp</result>
+			<result name="input">/page/login.jsp</result>
 		</action>
 		
 		<!-- Redriect Login -->
@@ -225,7 +225,7 @@
 		<!-- Login check -->
 		<action name="CheckLogin" class="action.CheckLoginAction">
 			<result name="success">/page/loginSuccess.jsp</result>
-			<result name="input">/component/login.jsp</result>
+			<result name="input">/page/login.jsp</result>
 		</action>
 		
 		<!-- Log out -->
@@ -651,6 +651,11 @@
 		<!-- 重点工作&品牌项目 -->
 		<action name="Project" >
 			<result name="success">/component/project.jsp</result>
+		</action>
+		
+		<!-- 后台登陆 -->
+		<action name="LoginDesk" >
+			<result name="success">/page/login.jsp</result>
 		</action>
 	</package>
 

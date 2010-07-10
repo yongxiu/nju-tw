@@ -8,6 +8,7 @@
 <html>
 <head>
 <link href="/TW/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="/TW/css/orgLink.css" rel="stylesheet" type="text/css" media="screen"/>
 <script src="/TW/js/swfobject_modified.js" type="text/javascript"></script>
 <script src="/TW/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="/TW/js/grayscale.js" type="text/javascript"></script>
@@ -32,7 +33,7 @@
 <div class="sidebar-h"><div class=headText>用户登录</div></div>
 <div class="sidebar-p">
 <div id="logindiv">
-<tiles:insertAttribute name="login" />
+<tiles:insertAttribute name="orgLink" />
 </div>
 </div>
 </div>

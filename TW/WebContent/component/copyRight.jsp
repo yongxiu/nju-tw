@@ -3,7 +3,9 @@
 <div id="copyrightPage"><span>&copy; 2010   Tuanwei.nju.edu.cn. All rights reserved.<a href="http://tuanwei.nju.edu.cn"> 共青团南京大学委员会</a> 版权所有 </span> 
 
 
-	<span>Powered By ER</span></div>
+	<span>Powered By IGROO</span></div>
+	<p></p>
+	<a href="LoginDesk.do">进入管理后台</a>
       
 
  
