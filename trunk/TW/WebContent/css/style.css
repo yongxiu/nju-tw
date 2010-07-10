@@ -316,13 +316,11 @@ a {
 
 #news {
 	width: 794px;
-	height: 442px;
 	float: left;
 }
 
 #news .subnews {
 	width: 394px;
-	height: 226px;
 	float: left;
 }
 
@@ -335,7 +333,7 @@ a {
 }
 
 #news .news-p {
-	height: 180px;
+	height:214px;
 	width: 392px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
