@@ -212,7 +212,7 @@
 
 		<!-- login -->
 		<action name="LoginAction" class="action.LoginAction">
-			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="success" type="tiles">customer</result>
 			<result name="input">/page/login.jsp</result>
 		</action>
 		
@@ -224,13 +224,13 @@
 		
 		<!-- Login check -->
 		<action name="CheckLogin" class="action.CheckLoginAction">
-			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="success" type="tiles">customer</result>
 			<result name="input">/page/login.jsp</result>
 		</action>
 		
 		<!-- Log out -->
 		<action name="Logout" class="action.LogoutAction">
-			<result name="success" type="tiles">index</result>
+			<result name="success" type="redirect">LoginDesk.do</result>
 		</action>
 
 		<!-- ipCount -->
