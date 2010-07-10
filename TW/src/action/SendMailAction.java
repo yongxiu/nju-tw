@@ -25,6 +25,8 @@ public class SendMailAction extends ActionSupport {
 			mailFooter;
 
 	private int charInARow = 50;
+	
+	private String message;
 
 	public String getAuthor() {
 		return author;
@@ -113,9 +115,18 @@ public class SendMailAction extends ActionSupport {
 			transport.connect(mailServer, "njutwproxy@gmail.com", "njutw2010@");
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
+			this.message = "发送邮件成功！";
 			return SUCCESS;
 		} catch (Exception e) {
 			return INPUT;
 		}
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 }

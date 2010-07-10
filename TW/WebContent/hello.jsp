@@ -31,8 +31,7 @@ img,div {
 	<li><a href='Introduction.do'>团委简介</a></li>
 	<li><a href='OfficeMap.do'>办公地图</a></li>
 	<li><a href='Contact.do'>联系我们</a></li>
-	<li><a href='FileSystem.do'>文件系统</a></li>
-	<li><a href='Data.do'>综合资料</a></li>
+	<li><a href='Download.do'>文件系统&综合资料</a></li>
 	-------------------------------
 	<li><a href='UpdateNewsAction.do'>团学新闻</a></li>
 	<li><a href='BasicStyle.do'>基层风采</a></li>

@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
-Data.do<br/>
-/component/data.jsp<br/>
-综合资料
+<div id="msg">
+<s:property value="message"/>
+</div>

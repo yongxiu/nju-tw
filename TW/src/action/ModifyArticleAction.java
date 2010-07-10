@@ -30,6 +30,8 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 	
 	private String category1;
 	
+	private String message;
+	
 	
 	private Map session;
 	
@@ -79,6 +81,7 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 			System.out.println(article.getContent());
 			
 
+			message = "修改成功！";
 			return SUCCESS;
 		}
 		
@@ -134,6 +137,14 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 
 	public void setCategory1(String category1) {
 		this.category1 = category1;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
 	}
 
 	

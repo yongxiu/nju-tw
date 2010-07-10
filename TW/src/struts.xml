@@ -85,10 +85,6 @@
 			<result name="success" type="tiles">AticalDetail</result>
 		</action>
 		
-		<action name="Download" >
-			<result name="success" type="tiles">download</result>
-		</action>
-		
 		<action name="Search">
 			<result name="success" type="tiles">search</result>
 		</action>
@@ -349,8 +345,8 @@
 
 		<!-- Send email -->
 		<action name="SendMailAction" class="action.SendMailAction">
-			<result name="success">/page/sendMailSuccess.jsp</result>
-			<result name="input" type="tiles">connect</result>
+			<result name="success">/page/success.jsp</result>
+			<result name="input" type="tiles">contact</result>
 		</action>
 
 		<!-- List User -->
@@ -451,8 +447,8 @@
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
 		<interceptor-ref name="loginStack"></interceptor-ref>
-			<result name="success">/userComponent/modifySuccess.jsp</result>
-			<result name="imageSelect">/page/imageSelect.jsp</result>
+			<result name="success">/userComponent/success.jsp</result>
+			<result name="imageSelect">/userComponent/imageSelect.jsp</result>
 		</action>
 		
 		<!-- Navigation List -->
@@ -641,13 +637,10 @@
 		<action name="Contact" >
 			<result name="success" type="tiles">contact</result>
 		</action>
-		<!-- 文件系统 -->
-		<action name="FileSystem" >
-			<result name="success" type="tiles">fileSystem</result>
-		</action>
-		<!-- 综合资料 -->
-		<action name="Data" >
-			<result name="success" type="tiles">data</result>
+		
+		<!-- 文件系统&综合资料 -->
+		<action name="Download" >
+			<result name="success" type="tiles">download</result>
 		</action>
 		
 		<!-- 首页显示项-->

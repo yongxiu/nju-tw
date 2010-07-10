@@ -36,11 +36,11 @@
 	</definition>
 	
 	<definition name="customer.imageSelect" extends="customer">
-		<put-attribute name="content" value="/page/imageSelect.jsp" />
+		<put-attribute name="content" value="/userComponent/imageSelect.jsp" />
 	</definition>
 	
 	<definition name="customer.imageCrop" extends="customer">
-		<put-attribute name="content" value="/page/imageCrop.jsp" />
+		<put-attribute name="content" value="/userComponent/imageCrop.jsp" />
 	</definition>
 	
 	<definition name="customer.customerarticles" extends="customer">
@@ -126,11 +126,11 @@
 	</definition>
 	
 	<definition name="admin.imageSelect" extends="admin">
-		<put-attribute name="content" value="/page/imageSelect.jsp" />
+		<put-attribute name="content" value="/userComponent/imageSelect.jsp" />
 	</definition>
 	
 	<definition name="admin.imageCrop" extends="admin">
-		<put-attribute name="content" value="/page/imageCrop.jsp" />
+		<put-attribute name="content" value="/userComponent/imageCrop.jsp" />
 	</definition>
 	
 	<definition name="admin.topicmanagepage" extends="admin">
