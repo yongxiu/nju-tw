@@ -24,7 +24,7 @@ public class UpdateNewsAction extends ActionSupport{
 	
 		GetArticles service = new GetArticles();
 	
-		news=service.getFiveNews();
+		news=service.getSomeNews();
 		
 		return SUCCESS;
 	}

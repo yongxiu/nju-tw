@@ -190,23 +190,17 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 	}
 	
 	
-	public ArrayList<GenericArticle> getFiveArticles(int category){
+	public ArrayList<GenericArticle> getSomeArticles(int category){
 		Session session =  getSession();
 		Transaction tx = session.beginTransaction();
-		if(category !=4) {
-			Query query = session.createQuery("from GenericArticle a where a.category =:category order by istop desc,date desc");
+	
+		
+			Query query = session.createQuery("from GenericArticle a where a.category=:category order by istop desc,date desc");
 			query.setParameter("category", category);
-			query.setMaxResults(5);
-			
+			query.setMaxResults(6);
 			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
 			return articles;
-		}
-		else {
-			Query query = session.createQuery("from GenericArticle a where a.category=5 or a.category=6 or a.category=7 or a.category=8 or a.category=9 order by istop desc,date desc");
-			query.setMaxResults(5);
-			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
-			return articles;
-		}
+		
 		
 	
 		
@@ -231,9 +225,86 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		query.setParameter("uid", uid);
 		ArrayList<Integer> result = (ArrayList<Integer>) query.list();
 		int count = result.get(0);
+		tx.commit();
 		closeSession();
 		return count;
 	}
+	
+	public ArrayList<GenericArticle> getArticlesByLevelPage(int level,int currentPage,int number){
+		Session session = getSession();
+		Transaction tx =  session.beginTransaction();
+		Query query = null;
+		if(level == 1) {
+			query = session.createQuery("from GenericArticle a where a.category= 1 or a.category= 2 or a.category= 3 order by istop desc,date desc");
+			
+		}
+		if(level == 2) {
+			query = session.createQuery("from GenericArticle a where a.category= 7 or a.category= 8 or a.category= 9 or a.category=10 order by istop desc,date desc");
+
+		}
+		query.setFirstResult((currentPage-1)*number);
+		query.setMaxResults(number);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
+	public int getCountByLevel(int level) {
+		Session session = getSession();
+		Transaction tx =  session.beginTransaction();
+		Query query = null;
+		if(level == 1) {
+			query = session.createQuery("select count(a) from GenericArticle a where a.category= 1 or a.category= 2 or a.category= 3 order by istop desc,date desc");
+			ArrayList<Integer> result = (ArrayList<Integer>) query.list();
+			int count = result.get(0);
+			tx.commit();
+			closeSession();
+			return count;
+		}
+		if(level == 2) {
+			query = session.createQuery("select count(a) from GenericArticle a where a.category= 7 or a.category= 8 or a.category= 9 or a.category=10 order by istop desc,date desc");
+			
+			ArrayList<Integer> result = (ArrayList<Integer>) query.list();
+			int count = result.get(0);
+			tx.commit();
+			closeSession();
+			return count;
+		}
+		else {
+			tx.commit();
+			closeSession();
+			return 0;
+		}
+		
+	}
+	
+	public ArrayList<GenericArticle> getArticlesByCategoryPage(int category,int currentPage,int number) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.category =:category");
+		query.setParameter("category", category);
+		query.setFirstResult((currentPage-1)*number);
+		query.setMaxResults(number);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
+	public int getCountByCategory(int category) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("select count(a) from GenericArticle a where a.category =:category");
+		query.setParameter("category", category);
+		ArrayList<Integer> result = (ArrayList<Integer>) query.list();
+		int count = result.get(0);
+		tx.commit();
+		closeSession();
+		return count;
+	}
+	
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
 //		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
@@ -251,7 +322,18 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //		for(GenericArticle a:articles) {
 //			System.out.println(a.getId());
 //		}
-		int count = dao.getCountByUser(2);
-		System.out.println(count);
+//		int count = dao.getCountByUser(2);
+//		System.out.println(count);
+//		ArrayList<GenericArticle> articles = dao.getArticlesByLevelPage(2, 1, 100);
+//		for(GenericArticle article:articles) {
+//			System.out.println(article.getCategory());
+//		}
+//		System.out.println(dao.getCountByLevel(3));
+//		ArrayList<GenericArticle> articles  = dao.getArticlesByCategory(1);
+//		for(GenericArticle article:articles) {
+//			System.out.println(article.getCategory());
+//		}
+		System.out.println(dao.getCountBycategory(3));
+		
 	}
 }

@@ -57,7 +57,7 @@ public class TopicManagePageAction extends ActionSupport implements SessionAware
 				aTemp.setDate(b.getDate().toString());
 				aTemp.setId((int) b.getId());
 				aTemp.setTitle(b.getTitle());
-				aTemp.setTopid(b.getTopic());
+				aTemp.setTopid(b.getIworkid());
 				articles.add(aTemp);
 			}
 
@@ -84,7 +84,7 @@ public class TopicManagePageAction extends ActionSupport implements SessionAware
 				aTemp.setDate(b.getDate().toString());
 				aTemp.setId((int) b.getId());
 				aTemp.setTitle(b.getTitle());
-				aTemp.setTopid(b.getTopic());
+				aTemp.setTopid(b.getIworkid());
 				articles.add(aTemp);
 			}
 		}

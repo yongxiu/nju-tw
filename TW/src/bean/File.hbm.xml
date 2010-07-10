@@ -20,6 +20,8 @@
 		
 		<property name="date" column="date" type="date"/>
 		
+		<property name="category" column="category" type="int"/>
+		
 		<many-to-one name="user" column="uid" class="bean.User" not-null="true" cascade="all"/>
 	</class>
 </hibernate-mapping>

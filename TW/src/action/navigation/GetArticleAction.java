@@ -26,6 +26,7 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 	private ArrayList<GenericArticle> articles;
 	private ArrayList<String> pageCount;
 	private int category;
+	private int level;
 	private int currentPage;
 	
 	public String execute() throws Exception {
@@ -33,25 +34,24 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 	    SortUtil sortUtil = new SortUtil();
 		int number = 18;
 		
-		int count;
+		int count=0;
 		//categoryd的处理
 		setCategory(getCategory());
-		if(category!=4) {
-			category = getCategory();
-			articles = dao.getArticlesByPage(currentPage, number, category);
-			count = getPageCount(dao.getCountBycategory(category), number); 
-			
+		setLevel(getLevel());
+		
+		
+	
+		if(level==0) {
+			articles = dao.getArticlesByCategoryPage(category, currentPage, number);
+			count = dao.getCountByCategory(category);
+			count = getPageCount(count, number);
+
 		}
 		
 		else {
-			articles = dao.getArticlesByPage(currentPage, number, 5, 6, 7, 8, 9);
-			
-			count = dao.getCountBycategory(5)+dao.getCountBycategory(6)
-				+ dao.getCountBycategory(7) + dao.getCountBycategory(8)
-					+ dao.getCountBycategory(9);
-			
-			count = getPageCount(count, number); 
-		
+			articles = dao.getArticlesByLevelPage(level, currentPage, number);
+			count = dao.getCountByLevel(level);
+			count = getPageCount(count, number);
 		}
 		
 		//sort articles
@@ -125,6 +125,22 @@ public class GetArticleAction extends ActionSupport implements SessionAware{
 	}
 
 	
+	public int getLevel() {
+		return level;
+	}
+
+
+
+
+
+	public void setLevel(int level) {
+		this.level = level;
+	}
+
+
+
+
+
 	public int getPageCount(int count,int number) {
 		int result;
 		

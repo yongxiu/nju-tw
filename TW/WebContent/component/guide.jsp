@@ -4,7 +4,7 @@
 <table border="0">
 
 
-<s:iterator value="medias" id="media">
+<s:iterator value="guides" id="guide">
  <tr>
  	<td>
  		 <a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>

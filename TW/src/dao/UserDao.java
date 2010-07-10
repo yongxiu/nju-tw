@@ -2,6 +2,7 @@ package dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Set;
 
 
@@ -13,6 +14,7 @@ import dao.hibernateTemlate.HibernateGenericDao;
 import dao.hibernateTemlate.HibernateUtil;
 
 
+import bean.File;
 import bean.GenericArticle;
 import bean.User;
 
@@ -48,12 +50,17 @@ public class UserDao extends HibernateGenericDao<User,Long>{
 		Transaction tx=session.beginTransaction();
 		User user = (User) session.get(User.class, id);
 		Set<GenericArticle> articles = user.getArticles();
+		Set<File> files = user.getFiles();
 		Query query = session.createQuery("from User u where u.role=1");
 		ArrayList<User> admins = (ArrayList<User>) query.list();
 		User admin = admins.get(0);
 		for(GenericArticle article:articles) {
 			article.setUser(admin);
 			session.update(article);
+		}
+		for(File file:files) {
+			file.setUser(admin);
+			session.update(file);
 		}
 		session.delete(user);
 		tx.commit();
@@ -78,7 +85,9 @@ public class UserDao extends HibernateGenericDao<User,Long>{
 	
 	public static void main(String[] args) {
 		UserDao userDao = new UserDao();
-		userDao.delete(new Long(3));
+		
+		
+		userDao.delete(new Long(43));
 	}
 	
 	

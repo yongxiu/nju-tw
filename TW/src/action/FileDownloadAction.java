@@ -19,6 +19,7 @@ public class FileDownloadAction extends ActionSupport {
 	
 	private bean.File file;
 	
+	private int category = 0;
 	public long getFileId() {
 		return fileId;
 	}
@@ -52,4 +53,22 @@ public class FileDownloadAction extends ActionSupport {
 		} 
 		return downFileName + file.getPath().substring(file.getPath().lastIndexOf('.'));
 	}
+
+	public bean.File getFile() {
+		return file;
+	}
+
+	public void setFile(bean.File file) {
+		this.file = file;
+	}
+
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		this.category = category;
+	}
+	
+	
 }

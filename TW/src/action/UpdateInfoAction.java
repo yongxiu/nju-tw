@@ -21,7 +21,7 @@ public class UpdateInfoAction extends ActionSupport{
 	
 	public String execute(){
 		GetArticles service = new GetArticles();
-		infos=service.getFiveInfos();
+		infos=service.getSomeInfos();
 		return SUCCESS;
 	}
 
