@@ -30,18 +30,18 @@
 	<li id="n1"><a href="Home.do" title="首页"> </a>
 	<li id="n2"><a href="#" title="团情纵览"> </a>
     	<UL style="display: block; opacity: 0.9999;width:297px;">
-			<LI id="n2s1"><A href="#" title="团学新闻"></A></LI>
-			<LI id="n2s2"><A href="#" title="基层采风"></A></LI>
-			<LI id="n2s3"><A href="#" title="媒体传真"></A></LI>
+			<LI id="n2s1"><A href="UpdateNewsAction.do" title="团学新闻"></A></LI>
+			<LI id="n2s2"><A href="BasicStyle.do" title="基层采风"></A></LI>
+			<LI id="n2s3"><A href="Project.do" title="媒体传真"></A></LI>
 		</UL>	
     </li>
 	<li id="n3"><a href="#" title="关于团委"> </a>
     	<UL style="display: block; opacity: 0.9999;width:495px;">
-			<LI id="n3s1"><A href="#" title="团委简介"></A></LI>
+			<LI id="n3s1"><A href="Introduction.do" title="团委简介"></A></LI>
 			<LI id="n3s2"><A href="#" title="机构人员"></A></LI>
-			<LI id="n3s3"><A href="#" title="办公地图"></A></LI>
+			<LI id="n3s3"><A href="OfficeMap.do" title="办公地图"></A></LI>
 			<LI id="n3s4"><A href="#" title="工作简报"></A></LI>
-			<LI id="n3s5"><A href="#" title="联系我们"></A></LI>
+			<LI id="n3s5"><A href="Contact.do" title="联系我们"></A></LI>
 		</UL>	
     </li>
     <li id="n4"><a href="#" title="理论园地"> </a>
@@ -52,7 +52,7 @@
 			<LI id="n4s4"><A href="#" title="调查研究"></A></LI>
 		</UL>	
     </li>
-    <li id="n5"><a href="#" title="下载专区"> </a>
+    <li id="n5"><a href="Download.do" title="下载专区"> </a>
     	<UL style="display: block; opacity: 0.9999;width:198px;">
 			<LI id="n5s1"><A href="#" title="文件系统"></A></LI>
 			<LI id="n5s2"><A href="#" title="综合资料"></A></LI>

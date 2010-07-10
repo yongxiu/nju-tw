@@ -39,7 +39,7 @@ img,div {
 	<li><a href='UpdateInfoAction.do'>通知公告</a></li>
 	<li><a href='/TW/component/publication.jsp'>团属刊物</a></li>
 	<li><a href='/TW/component/youth.jsp'>青共校、广播台</a></li>
-	<li><a href='/TW/component/studentOrg.jsp'>学生组织</a></li>
+	
 </ul>
 </div>
 </body>
