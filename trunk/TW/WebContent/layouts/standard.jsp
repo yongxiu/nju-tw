@@ -26,10 +26,10 @@
 <div id="page">
 <div id="sidebar">
 <div id="topic">
-<div class="sidebar-h"><div class="headText">重点工作</div></div>
+<div class="sidebar-h"><div class="headText">重点工作</div><div class="sideheadLink"><a href="#"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="sidebar-p"><tiles:insertAttribute name="topic" /></div></div>
 <div id="proj">
-<div class="sidebar-h"><div class=headText>品牌项目</div></div>
+<div class="sidebar-h"><div class=headText>品牌项目</div><div class="sideheadLink"><a href="#"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="sidebar-p">
 
 <table align="center" cellpadding="0" cellspacing="0">

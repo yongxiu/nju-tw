@@ -129,6 +129,12 @@ a {
 	font-weight:bold;
 	text-shadow:0 2px 3px rgba(0, 0, 0, 0.3);
 }
+
+.sideheadLink {
+	width:34px;
+	position:relative;
+	left:145px;
+}
 	
 .headLink {
 	width:34px;
@@ -148,25 +154,25 @@ a {
 }
 
 #topic .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	background: url(../img/sidebar-head-1.gif);
 	width: 188px;
 }
 
 #proj .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	background: url(../img/sidebar-head-2.gif);
 	width: 188px;
 }
 #mag .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	background: url(../img/sidebar-head-3.gif);
 	width: 188px;
 }
 #org .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	background: url(../img/sidebar-head-4.gif);
 	width: 188px;
 }
 
 #ipholder .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2562px 0px;
+	background: url(../img/sidebar-head-5.gif);
 	width: 188px;
 }
 
@@ -187,7 +193,7 @@ a {
 }
 	
 #ipholder .sidebar-p {
-	height: 38px;
+	height: 39px;
 }
 
 #content {
@@ -301,7 +307,7 @@ a {
 #picNews .picNews-h {
 	height: 39px;
 	width: 794px;
-	background: url(../imgs/allbgs.png) no-repeat -4507px 0px;
+	background: url(../img/picNewsImg-head.gif);
 	width: 794px;
 	float: left;
 }
@@ -327,13 +333,13 @@ a {
 #news .news-h {
 	height: 39px;
 	width: 394px;
-	background: url(../imgs/allbgs.png) no-repeat -4113px 0px;
+	background: url(../img/news-head.gif);
 	width: 394px;
 	float: left;
 }
 
 #news .news-p {
-	height:214px;
+	height:215px;
 	width: 392px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
