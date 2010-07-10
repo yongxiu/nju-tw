@@ -27,11 +27,10 @@
 <div id="sidebar">
 <div id="topic">
 <div class="sidebar-h"><div class="headText">重点工作</div></div>
-<div class="sidebar-p"><div class="sidebarElement"><tiles:insertAttribute name="topic" /></div></div>
-</div>
+<div class="sidebar-p"><tiles:insertAttribute name="topic" /></div></div>
 <div id="proj">
 <div class="sidebar-h"><div class=headText>品牌项目</div></div>
-<div class="sidebar-p"><div class="sidebarElement">
+<div class="sidebar-p">
 
 <table align="center" cellpadding="0" cellspacing="0">
 <tr><td><img  src="topicImage/huodong3.gif" width="139" height="54"/></td></tr>
@@ -39,21 +38,20 @@
 <tr><td><img  src="topicImage/huodong3.gif" width="139" height="54"/></td></tr>
 </table>
 
-</div></div></div>
+</div></div>
 <div id="mag">
 <div class="sidebar-h"><div class="headText">团属刊物</div></div>
-<div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="paper" /></div></div>
-</div>
+<div class="sidebar-p"><tiles:insertAttribute name="paper" /></div></div>
+
 <div id="org">
 <div class="sidebar-h"><div class="headText">学生组织</div></div>
-<div class="sidebar-p"><div class="sidebarElement" >
+<div class="sidebar-p">
 <tiles:insertAttribute name="orgLink" />
-</div></div>
+</div>
 </div>
 <div id="ipholder">
 <div class="sidebar-h"><div class="headText">访问统计</div></div>
-<div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="ipHolder" /></div></div>
-</div>
+<div class="sidebar-p"><tiles:insertAttribute name="ipHolder" /></div></div>
 </div>
 <div id="content">
 <tiles:insertAttribute name="content" />
