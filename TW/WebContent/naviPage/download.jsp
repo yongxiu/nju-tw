@@ -35,14 +35,14 @@
 				<s:property value="id" />
 			</s:set><a href=" <s:property value="#file.path"/>"><s:property
 				value="#file.filename" /></a></td>
-			 <td class="wd3" style="width:100px;">
+			 <td class="wd3" style="width:95px;padding-left:5px;">
 			
 			 <s:set name="s"><s:property value="#file.category"/> </s:set>
 			 <s:if test="#s==1">文件系统</s:if>
 			 <s:if test="#s==2">综合资料</s:if>
 			 </td>
       	
-			<td class="wd4" style="width: 100px;"><s:property value="date" /></td>
+			<td class="wd4" style="width: 90px;padding-left:10px;"><s:property value="date" /></td>
 		</tr>
 
 	</s:iterator>
