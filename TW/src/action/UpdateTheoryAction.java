@@ -21,7 +21,7 @@ public class UpdateTheoryAction extends ActionSupport{
 	
 	public String execute(){
 		GetArticles service = new GetArticles();
-		theories=service.getFiveTheories();
+		theories=service.getSomeTheories();
 		return SUCCESS;
 	}
 
