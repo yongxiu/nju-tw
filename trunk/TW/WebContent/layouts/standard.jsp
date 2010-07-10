@@ -42,7 +42,7 @@
 </div></div></div>
 <div id="topic">
 <div class="sidebar-h"><div class="headText">团属刊物</div></div>
-<div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="ipHolder" /></div></div>
+<div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="paper" /></div></div>
 </div>
 <div id="org">
 <div class="sidebar-h"><div class="headText">学生组织</div></div>
