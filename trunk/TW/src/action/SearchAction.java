@@ -68,10 +68,10 @@ public class SearchAction extends ActionSupport implements SessionAware {
 			Date endtart = new Date();
 			end = endtart.getTime();
 			time = end - start;
-			
-			//add time to session
-			getSession().put("time", time);
 			System.out.println(time);
+			//add time to session
+		//	getSession().put("time", time);
+			
 
 			// add hits to session
 			getSession().put("hits"+search, hits);

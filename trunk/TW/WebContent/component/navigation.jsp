@@ -27,7 +27,7 @@
 	</SCRIPT>
 -->
 <ul id="m-nav" class="nav">
-	<li id="n1"><a href="#" title="首页"> </a>
+	<li id="n1"><a href="Home.do" title="首页"> </a>
 	<li id="n2"><a href="#" title="团情纵览"> </a>
     	<UL style="display: block; opacity: 0.9999;width:297px;">
 			<LI id="n2s1"><A href="#" title="团学新闻"></A></LI>
