@@ -55,7 +55,7 @@ public class ArticleTempService {
 			aTemp.setDate(a.getDate().toString());
 			aTemp.setId((int) a.getId());
 			aTemp.setTitle(a.getTitle());
-			aTemp.setTopid(a.getTopic());
+			aTemp.setTopid(a.getIworkid());
 			articleTemps.add(aTemp);
 		}
 		

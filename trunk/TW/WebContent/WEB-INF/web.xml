@@ -58,7 +58,25 @@
 		<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
 	</listener>
 
-
+	<filter>
+		<filter-name>UserFilter</filter-name>
+		<filter-class>filter.UserFilterServlet</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>UserFilter</filter-name>
+		<url-pattern>/userComponent/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>AdminFilter</filter-name>
+		<filter-class>filter.AdminFilterServlet</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>AdminFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
 
 	<welcome-file-list>
 		<welcome-file>hello.jsp</welcome-file>

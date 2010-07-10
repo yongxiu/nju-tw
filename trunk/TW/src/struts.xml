@@ -258,8 +258,8 @@
 		</action>
 		
 		<!-- update Media -->
-		<action name="UpdateMediaAction" class="action.UpdateMediaAction">
-			<result name="success">/component/media.jsp</result>
+		<action name="UpdateGuideAction" class="action.UpdateGuideAction">
+			<result name="success">/component/guide.jsp</result>
 			<result name="input" type="tiles">index</result>
 		</action>
 
@@ -455,7 +455,7 @@
 		
 			<!-- Get Article -->
 			<action name="GetArticleAction" class="action.navigation.GetArticleAction">
-				<result name="success">/naviPage/aricle.jsp</result>
+				<result name="success">/naviPage/article.jsp</result>
 			</action>
 			
 			<!-- Org -->
@@ -465,7 +465,7 @@
 		
 		<!-- Navi Page Action -->
 		<action name="NaviPage" class="action.navigation.page.NaviPageAction">
-			<result name="success">/naviPage/aricle.jsp</result>
+			<result name="success">/naviPage/article.jsp</result>
 		</action>
 		
 		<!-- Download Files -->

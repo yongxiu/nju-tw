@@ -28,6 +28,9 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 	private String myName;
 	private String message;
 	
+	//category
+	private int category;
+	
 	public String getMyName() {
 		return myName;
 	}
@@ -148,6 +151,8 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 			file.setUser(user);
 			file.setFilename(myName);
 			
+			//set category
+			file.setCategory(category);
 			
 			FileDao fileDao = new FileDao();
 			fileDao.create(file);
@@ -175,6 +180,14 @@ public class FileUploadAction extends ActionSupport implements SessionAware{
 
 	public String getMessage() {
 		return message;
+	}
+
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		this.category = category;
 	}
 	
 	

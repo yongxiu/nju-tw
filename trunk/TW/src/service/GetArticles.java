@@ -11,7 +11,7 @@ import bean.GenericArticle;
 public class GetArticles {
 
 	
-	public  ArrayList<GenericArticle> getFiveNews(){
+	public  ArrayList<GenericArticle> getSomeNews(){
 		GenericArticleDao genericArticleDao=new GenericArticleDao();
 		
 		//get all articles
@@ -21,7 +21,7 @@ public class GetArticles {
 		ArrayList<GenericArticle> news=new ArrayList<GenericArticle>();
 		
 		//hold newest news
-		ArrayList<GenericArticle> fiveNews=new ArrayList<GenericArticle>();
+		ArrayList<GenericArticle> someNews=new ArrayList<GenericArticle>();
 		
 //		//get all news
 //		for(GenericArticle a:articles){
@@ -49,11 +49,11 @@ public class GetArticles {
 //
 //		System.out.println("new l:" + fiveNews.size());
 		
-		fiveNews = genericArticleDao.getFiveArticles(1);
-		return fiveNews;
+		someNews = genericArticleDao.getSomeArticles(1);
+		return someNews;
 	}
 
-	public ArrayList<GenericArticle> getFiveMedias() {
+	public ArrayList<GenericArticle> getSomeGuides() {
 		GenericArticleDao genericArticleDao = new GenericArticleDao();
 
 //		// get all articles
@@ -62,7 +62,7 @@ public class GetArticles {
 //		// hold all medias
 //		ArrayList<GenericArticle> medias = new ArrayList<GenericArticle>();
 //
-		ArrayList<GenericArticle> fiveMedias = new ArrayList<GenericArticle>();
+		ArrayList<GenericArticle> someGuides = new ArrayList<GenericArticle>();
 //
 //		
 //		for(GenericArticle a:articles) {
@@ -90,12 +90,12 @@ public class GetArticles {
 //		}
 //
 //		System.out.println("media l:" + fiveMedias.size());
-		fiveMedias = genericArticleDao.getFiveArticles(4);
-		return fiveMedias;
+		someGuides = genericArticleDao.getSomeArticles(12);
+		return someGuides;
 
 	}
 
-	public ArrayList<GenericArticle> getFiveInfos() {
+	public ArrayList<GenericArticle> getSomeInfos() {
 		GenericArticleDao genericArticleDao = new GenericArticleDao();
 //
 //		// get all articles
@@ -104,7 +104,7 @@ public class GetArticles {
 //		// hold all medias
 //		ArrayList<GenericArticle> infos = new ArrayList<GenericArticle>();
 //
-		ArrayList<GenericArticle> fiveInfos = new ArrayList<GenericArticle>();
+		ArrayList<GenericArticle> someInfos = new ArrayList<GenericArticle>();
 //
 //		
 //		for(GenericArticle a:articles) {
@@ -125,11 +125,11 @@ public class GetArticles {
 //		}
 //
 //		System.out.println("info:" + fiveInfos.size());
-		fiveInfos = genericArticleDao.getFiveArticles(2);
-		return fiveInfos;
+		someInfos = genericArticleDao.getSomeArticles(11);
+		return someInfos;
 	}
 
-	public ArrayList<GenericArticle> getFiveTheories() {
+	public ArrayList<GenericArticle> getSomeTheories() {
 		GenericArticleDao genericArticleDao = new GenericArticleDao();
 
 //		// get all articles
@@ -138,7 +138,7 @@ public class GetArticles {
 //		// hold all medias
 //		ArrayList<GenericArticle> theories = new ArrayList<GenericArticle>();
 //
-		ArrayList<GenericArticle> fiveTheories = new ArrayList<GenericArticle>();
+		ArrayList<GenericArticle> someTheories = new ArrayList<GenericArticle>();
 //
 //		
 //		for(GenericArticle a:articles) {
@@ -158,8 +158,8 @@ public class GetArticles {
 //		}
 //
 //		System.out.println("ther l:" + fiveTheories.size());
-		fiveTheories = genericArticleDao.getFiveArticles(3);
-		return fiveTheories;
+		someTheories = genericArticleDao.getSomeArticles(2);
+		return someTheories;
 	}
 
 	// get all news
@@ -332,13 +332,6 @@ public class GetArticles {
 
 	}
 
-	public static void main(String[] args) {
-		ArrayList<GenericArticle> five = new GetArticles().getFiveNews();
-		for (GenericArticle article : five) {
-			System.out.println(article.getId() + ":" + article.getDate() + ":"
-					+ article.getTitle());
-		}
-
-	}
+	
 
 }

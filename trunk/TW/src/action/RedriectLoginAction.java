@@ -81,6 +81,7 @@ public class RedriectLoginAction extends ActionSupport implements SessionAware{
 				getSession().put("role", user.getRole());
 				url = (String) getSession().get("url");
 				System.out.println(url);
+				session.remove("url");
 				return SUCCESS;
 			 }
 			 else {

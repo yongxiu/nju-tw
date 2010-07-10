@@ -37,8 +37,9 @@
 		<mapping resource="bean/Organization.hbm.xml"/>
 		<mapping resource="bean/User.hbm.xml"/>
 		<mapping resource="bean/TopicImage.hbm.xml"/>
-
-
+		<mapping resource="bean/IWork.hbm.xml"/>
+		<mapping resource="bean/Brand.hbm.xml"/>
+		<mapping resource="bean/Category.hbm.xml"/>
 
 	</session-factory>
 

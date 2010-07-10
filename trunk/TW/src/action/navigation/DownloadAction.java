@@ -16,16 +16,19 @@ public class DownloadAction extends ActionSupport implements SessionAware{
 	private int currentPage;
 	private Map session;
 	private ArrayList<String> pageCount;
+	
+	private int category;
 	public String execute() {
-		int number = 24;
+		System.out.println(category);
+		int number = 4;
 		currentPage = 1;
 		FileDao fileDao = new FileDao();
-		files = fileDao.getFileByPage(currentPage, number);
+		files = fileDao.getFileByCategoryPage(currentPage, number,category);
 		
 		//init page count
 		pageCount = new ArrayList<String>();
 		
-		int count = fileDao.getAllFilesCount();
+		int count = fileDao.getFileCountByCategory(category);
 		
 		count = getPageCount(count, number);
 		for(int i = 1;i<=count;i++) {
@@ -79,5 +82,12 @@ public class DownloadAction extends ActionSupport implements SessionAware{
 		
 		return result;
 	}
+	public int getCategory() {
+		return category;
+	}
+	public void setCategory(int category) {
+		this.category = category;
+	}
+	
 	
 }

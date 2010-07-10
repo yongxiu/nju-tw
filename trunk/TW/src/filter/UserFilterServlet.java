@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class FilterServlet extends HttpServlet implements Filter{
+public class UserFilterServlet extends HttpServlet implements Filter{
 	private String redirectUrl = null;
 		
 
@@ -25,8 +25,9 @@ public class FilterServlet extends HttpServlet implements Filter{
 		HttpServletRequest request2 = (HttpServletRequest) request;
 		HttpServletResponse response2 = (HttpServletResponse) response;
 		HttpSession session = request2.getSession();
-		
+	
 		if(session.getAttribute(GeneralInterceptor.USER_KEY) == null){
+			System.out.println("mark");
 			response2.sendRedirect(redirectUrl);
 		}
 	}
@@ -34,7 +35,7 @@ public class FilterServlet extends HttpServlet implements Filter{
 	
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		redirectUrl = "/TW/component/login.jsp" ;
+		redirectUrl = "/TW/Home.do" ;
 	}
 	
 }

@@ -26,8 +26,8 @@ public class TopicDecisionAction extends ActionSupport{
 			//inital topic for cancel topic
 			ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) articleDao.getAllEntity();
 			for(GenericArticle a:articles) {
-				if (a.getTopic() == topicid) {
-					a.setTopic(0);
+				if (a.getIworkid() == topicid) {
+					a.setIworkid(0);
 					articleDao.update(a);
 				}
 			}
@@ -36,7 +36,7 @@ public class TopicDecisionAction extends ActionSupport{
 				System.out.println(checkId[i]);
 				long articleId = Long.parseLong(checkId[i]);
 				article = articleDao.getById(articleId);
-				article.setTopic(topicid);
+				article.setIworkid(topicid);
 				articleDao.update(article);
 				
 				//sys out

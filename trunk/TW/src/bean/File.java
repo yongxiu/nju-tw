@@ -15,6 +15,8 @@ public class File {
 	
 	private Date date;
 
+	private int category;
+	
 	public long getId() {
 		return id;
 	}
@@ -62,15 +64,26 @@ public class File {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+	
+	
+
+	public int getCategory() {
+		return category;
+	}
+
+	public void setCategory(int category) {
+		this.category = category;
+	}
 
 	public File(String filename, User user, String path, boolean state,
-			Date date) {
+			Date date,int category) {
 		super();
 		this.filename = filename;
 		this.user = user;
 		this.path = path;
 		this.state = state;
 		this.date = date;
+		this.category = category;
 	}
 
 	public File() {

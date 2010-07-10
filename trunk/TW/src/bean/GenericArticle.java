@@ -16,15 +16,15 @@ public class GenericArticle {
 	private int category;
 	
 	private boolean state;
-	
-	private int topic;
+	private boolean ishaveimage;
+	private String path;
+	private int iworkid;
 	
 	private long istop;
 	//new property
+	private int brandid;
 
-	private boolean ishaveimage;
-	private String path;
-
+	
 	public long getId() {
 		return id;
 	}
@@ -117,13 +117,17 @@ public class GenericArticle {
 		this.path = path;
 	}
 
-	public int getTopic() {
-		return topic;
+
+
+	public int getIworkid() {
+		return iworkid;
 	}
 
-	public void setTopic(int topic) {
-		this.topic = topic;
+	public void setIworkid(int iworkid) {
+		this.iworkid = iworkid;
 	}
+
+	
 
 	public long getIstop() {
 		return istop;
@@ -131,6 +135,14 @@ public class GenericArticle {
 
 	public void setIstop(long istop) {
 		this.istop = istop;
+	}
+
+	public int getBrandid() {
+		return brandid;
+	}
+
+	public void setBrandid(int brandid) {
+		this.brandid = brandid;
 	}
 
 	

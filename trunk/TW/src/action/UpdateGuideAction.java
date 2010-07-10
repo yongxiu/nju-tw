@@ -8,30 +8,32 @@ import bean.GenericArticle;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class UpdateMediaAction extends ActionSupport{
+public class UpdateGuideAction extends ActionSupport{
 	/**
 	 * wjc 
 	 * usage: update news
 	 */
 	private static final long serialVersionUID = 5843553509139320770L;
 	//five news to be displayed
-	ArrayList<GenericArticle> medias;
+	ArrayList<GenericArticle> guides;
 	
 	//Get service
 	
 	public String execute(){
 		GetArticles service = new GetArticles();
-		medias=service.getFiveMedias();
+		guides=service.getSomeGuides();
 		return SUCCESS;
 	}
 
-	public ArrayList<GenericArticle> getMedias() {
-		return medias;
+	public ArrayList<GenericArticle> getGuides() {
+		return guides;
 	}
 
-	public void setMedias(ArrayList<GenericArticle> medias) {
-		this.medias = medias;
+	public void setGuides(ArrayList<GenericArticle> guides) {
+		this.guides = guides;
 	}
+
+
 
 
 	

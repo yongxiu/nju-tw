@@ -10,7 +10,7 @@
 		<put-attribute name="news" value="/UpdateNewsAction.do" />
 		<put-attribute name="info" value="/UpdateInfoAction.do" />
 		<put-attribute name="theory" value="/UpdateTheoryAction.do" />
-		<put-attribute name="media" value="/UpdateMediaAction.do" />
+		<put-attribute name="guide" value="/UpdateGuideAction.do" />
 	</definition>
 
 	<!-- Layout -->
