@@ -52,11 +52,11 @@
 			<tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
 				<td class="wd0"></td>
 		
-	        	<td class="wd2" style="width:510px;"><s:set name="id"> <s:property value="id"/> </s:set>
+	        	<td class="wd2" style="width:610px;"><s:set name="id"> <s:property value="id"/> </s:set>
 				 	<a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
 	 		 		<s:property value="title"/></a>
 	 		 	</td> 
-	 			<td class="wd3" style="width:100px;padding:0;text-align:left;">
+	 			<td class="wd3" style="width:95px;padding-left:5px;text-align:left;">
 					<s:if test="category==1">团学新闻
 			 		</s:if>
 			 		<s:if test="category==2">基层风采
@@ -75,7 +75,7 @@
 			 		</s:if>
 	 			</td>
 			
-	            <td class="wd4" style="width:100px;"><s:property value="date"/></td>
+	            <td class="wd4" style="width:90px;padding-left:10px;"><s:property value="date"/></td>
           	</tr>
 		</s:iterator>
       </table>
