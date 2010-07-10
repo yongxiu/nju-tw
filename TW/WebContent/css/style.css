@@ -94,6 +94,7 @@ a {
 	width:66px;
 	height:26px;
 	position:relative;
+	left:10px;
 	top:5px;
 	float:left;
 	}
@@ -139,31 +140,23 @@ a {
 	height: 39px;
 	width: 188px;
 }
-
-#topic .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
-	width: 188px;
-}
-
-#login .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2938px 0px;
-	width: 188px;
-}
-
-#ipholder .sidebar-h {
-	background: url(../imgs/allbgs.png) no-repeat -2562px 0px;
-	width: 188px;
-}
-
 #sidebar .sidebar-p {
-	height: 213px;
 	width: 186px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
 	margin: 0 6px 6px 0;
 }
 
+#topic .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	width: 188px;
+}
+
 #proj .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	width: 188px;
+}
+#mag .sidebar-h {
 	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
 	width: 188px;
 }
@@ -172,44 +165,29 @@ a {
 	width: 188px;
 }
 
-#org .sidebar-p {
-	height: 190px;
-	}
+#ipholder .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2562px 0px;
+	width: 188px;
+}
 
 #topic .sidebar-p {
-	height: 137px;
-	}
-#proj .sidebar-p {
-	height: 203px;
-	}	
-#ipholder .sidebar-p {
-	height: 55px;
-	}
-
-#topic .sidebarElement {
-	text-align:center;
-	position:relative;
-	top:0;
+	height: 120px;
 }
-
-#logindiv {
-	position:relative;
 	
+#proj .sidebar-p {
+	height: 170px;
 }
-
-#logindiv label {
-	font-style:normal;
+	
+#mag .sidebar-p{
+	height: 120px;
 }
-
-#loginTextfield {
-	width:150px;
-	height:15px;
-	}
-
-#ipholder .sidebarElement {
-	text-align:center;
-	position:relative;
-	top:30%;
+	
+#org .sidebar-p {
+	height: 190px;
+}
+	
+#ipholder .sidebar-p {
+	height: 38px;
 }
 
 #content {
