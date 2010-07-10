@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE tiles-definitions PUBLIC
        "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
@@ -84,23 +84,23 @@
 	</definition>
 	
 	
-	<!-- 1-11模板 -->
+	<!-- 1-11æ¨¡æ¿ -->
 	<definition name="articleList" extends="standard">
 		<put-attribute name="content" value="/page/articleList.jsp"></put-attribute>
 	</definition>
-	<!-- 文件系统&综合资料 -->
+	<!-- æä»¶ç³»ç»&ç»¼åèµæ -->
 	<definition name="download" extends="standard">
 		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
 	</definition>
-	<!-- 团委简介 -->
+	<!-- å¢å§ç®ä» -->
 	<definition name="introduction" extends="standard">
 		<put-attribute name="content" value="/page/introduction.jsp"></put-attribute>
 	</definition>
-	<!-- 办公地图 -->
+	<!-- åå¬å°å¾ -->
 	<definition name="officeMap" extends="standard">
 		<put-attribute name="content" value="/page/officeMap.jsp"></put-attribute>
 	</definition>
-	<!-- 联系我们 -->
+	<!-- èç³»æä»¬ -->
 	<definition name="contact" extends="standard">
 		<put-attribute name="content" value="/page/contact.jsp"></put-attribute>
 	</definition>
