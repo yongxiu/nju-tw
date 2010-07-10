@@ -163,6 +163,10 @@ a {
 	margin: 0 6px 6px 0;
 }
 
+#proj .sidebar-h {
+	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
+	width: 188px;
+}
 #org .sidebar-h {
 	background: url(../imgs/allbgs.png) no-repeat -2750px 0px;
 	width: 188px;
@@ -173,9 +177,11 @@ a {
 	}
 
 #topic .sidebar-p {
-	height: 235px;
+	height: 137px;
 	}
-	
+#proj .sidebar-p {
+	height: 203px;
+	}	
 #ipholder .sidebar-p {
 	height: 55px;
 	}
