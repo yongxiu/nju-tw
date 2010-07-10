@@ -38,7 +38,7 @@
 	<li id="n3"><a href="#" title="关于团委"> </a>
     	<UL style="display: block; opacity: 0.9999;width:495px;">
 			<LI id="n3s1"><A href="Introduction.do" title="团委简介"></A></LI>
-			<LI id="n3s2"><A href="#" title="机构人员"></A></LI>
+			<LI id="n3s2"><A href="Org.do" title="机构人员"></A></LI>
 			<LI id="n3s3"><A href="OfficeMap.do" title="办公地图"></A></LI>
 			<LI id="n3s4"><A href="Article.do?currentPage=1&level=1&category=6" title="工作简报"></A></LI>
 			<LI id="n3s5"><A href="Contact.do" title="联系我们"></A></LI>
