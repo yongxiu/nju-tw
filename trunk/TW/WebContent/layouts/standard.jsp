@@ -34,13 +34,13 @@
 <div class="sidebar-p"><div class="sidebarElement">
 
 <table align="center" cellpadding="0" cellspacing="0">
-<tr><td><img  src="topicImage/huodong3.gif" width="161" height="66"/></td></tr>
-<tr><td><img  src="topicImage/huodong3.gif" width="161" height="66"/></td></tr>
-<tr><td><img  src="topicImage/huodong3.gif" width="161" height="66"/></td></tr>
+<tr><td><img  src="topicImage/huodong3.gif" width="139" height="54"/></td></tr>
+<tr><td><img  src="topicImage/huodong3.gif" width="139" height="54"/></td></tr>
+<tr><td><img  src="topicImage/huodong3.gif" width="139" height="54"/></td></tr>
 </table>
 
 </div></div></div>
-<div id="topic">
+<div id="mag">
 <div class="sidebar-h"><div class="headText">团属刊物</div></div>
 <div class="sidebar-p"><div class="sidebarElement" ><tiles:insertAttribute name="paper" /></div></div>
 </div>
