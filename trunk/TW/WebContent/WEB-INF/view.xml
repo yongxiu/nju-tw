@@ -47,10 +47,6 @@
 		<put-attribute name="content" value="/GenericArticleDetail.do"></put-attribute>
 	</definition>
 	
-	<definition name="download" extends="standard">
-		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
-	</definition>
-	
 	<definition name="downloadpage" extends="standard">
 		<put-attribute name="content" value="/DownloadPageActoin.do"/>
 	</definition>
@@ -92,6 +88,10 @@
 	<definition name="articleList" extends="standard">
 		<put-attribute name="content" value="/page/articleList.jsp"></put-attribute>
 	</definition>
+	<!-- 文件系统&综合资料 -->
+	<definition name="download" extends="standard">
+		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>
+	</definition>
 	<!-- 团委简介 -->
 	<definition name="introduction" extends="standard">
 		<put-attribute name="content" value="/page/introduction.jsp"></put-attribute>
@@ -103,14 +103,6 @@
 	<!-- 联系我们 -->
 	<definition name="contact" extends="standard">
 		<put-attribute name="content" value="/page/contact.jsp"></put-attribute>
-	</definition>
-	<!-- 文件系统 -->
-	<definition name="fileSystem" extends="standard">
-		<put-attribute name="content" value="/page/fileSystem.jsp"></put-attribute>
-	</definition>
-	<!-- 综合资料 -->
-	<definition name="data" extends="standard">
-		<put-attribute name="content" value="/page/data.jsp"></put-attribute>
 	</definition>
 
 </tiles-definitions>
