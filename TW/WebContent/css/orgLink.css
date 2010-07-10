@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 /* CSS Document */
-#org td{background:url("../img/box.gif") no-repeat;padding-left:10px;}
-#org a {display:block; color:#999999; height:20px; text-decoration:none; border-bottom:solid 1px  #efefef}
-#org a:visited,active {display:block; color:#999999; height:20px;text-decoration:none; border-bottom:solid 1px  #efefef}
-#org a:hover {color:#000000; border-bottom:solid 1px #cccccc;}
-
+#s_org td{background:url("../img/box.gif") no-repeat;padding-left:10px;}
+#s_org a {display:block; color:#999999; height:20px; text-decoration:none; border-bottom:solid 1px  #efefef}
+#s_org a:visited,active {display:block; color:#999999; height:20px;text-decoration:none; border-bottom:solid 1px  #efefef}
+#s_org a:hover {color:#000000; border-bottom:solid 1px #cccccc;}
+#s_org {padding:10px;}
 /*
 #sorg {
 	
