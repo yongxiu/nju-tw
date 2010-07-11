@@ -13,18 +13,6 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="javascript:window.location.href='/TW/OrgAddPage.do'" id="inbox__delete"><span>添加新的组织机构</span></div>
   </div>
   
-  
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
-  </div>
 </div>
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout">
@@ -32,7 +20,7 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd1" style="width:503px">组织机构</th>
+        <th class="wd1" style="width:503px">机构人员</th>
         <th style="width:70px;text-align:center">类别</th>
         <th style="width:160px;text-align:center">操作</th>
       </tr>
@@ -43,13 +31,15 @@
       <table class="g-table-comm" id="period_table_inbox2">
       <s:iterator value="orgs">
         <tbody>
-        <s:if test="category==1"></s:if>
-		  <s:else>
+        
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
             <td style="width:503px"><s:property value="department"/></td>
             <td style="width:70px;text-align:center">
-            	<s:if test="category==2">
+            	<s:if test="category==1">
+            		工作人员
+            	</s:if>
+		  		<s:if test="category==2">
 					机构设置
 				</s:if>
 				<s:if test="category==3">
@@ -64,7 +54,6 @@
             <a href="OrgDelete.do?orgid=<s:property value='id'/>">删除</a>
             </td>
           </tr>
-          </s:else>
         </tbody>
         </s:iterator>
       </table>
@@ -77,16 +66,5 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="javascript:window.location.href='/TW/admin/orgManage/orgAdd.jsp'" id="inbox__delete"><span>添加新的组织机构</span></div>
   </div>
 
-  <div class="btngrp btngrp-ext"><a href="javascript:fGoto();" class="txt-disabd">首页</a><a href="javascript:fGoto();" class="txt-disabd">上页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(2)">下页</a><a href="javascript:fGoto();" onclick="MM.inbox.goPage(7)">末页</a>
-    <select onchange="MM.inbox.goPage(this.value);">
-      <option value="1" selected="selected">1 / 7</option>
-      <option value="2">2 / 7</option>
-      <option value="3">3 / 7</option>
-      <option value="4">4 / 7</option>
-      <option value="5">5 / 7</option>
-      <option value="6">6 / 7</option>
-      <option value="7">7 / 7</option>
-    </select>
-  </div>
 </div>
 </s:form>

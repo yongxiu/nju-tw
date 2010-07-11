@@ -33,9 +33,9 @@ public class OrganizationDao extends HibernateGenericDao<Organization,Integer>{
 	
 	public static void main(String[] args) {
 		OrganizationDao organizationDao = new OrganizationDao();
-		ArrayList<Organization> orgs = organizationDao.getOrgsByCategory(3);
+		ArrayList<Organization> orgs = (ArrayList<Organization>) organizationDao.getAllEntity();
 		for(Organization o:orgs) {
-			System.out.println(o.getDepartment());
+			System.out.println(o.getCategory());
 		}
 	}
 }
