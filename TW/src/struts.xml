@@ -680,6 +680,10 @@
 		<action name="admin.addiworkPage">
 			<result name="success" type="tiles">admin.addiwork</result>
 		</action>
+		
+		<action name="admin.IWorkChange" class="action.iwork.IWorkChangeAction">
+			<result name="success" type="tiles">admin.iworkChange</result>
+		</action>
 	</package>
 
 </struts>

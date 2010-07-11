@@ -156,6 +156,10 @@
 	<definition name="admin.addiwork" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/addiwork.jsp"/>
 	</definition>
+	
+	<definition name="admin.iworkChange" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkChange.jsp"/>
+	</definition>
 </tiles-definitions>
 
 
