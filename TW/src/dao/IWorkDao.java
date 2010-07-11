@@ -45,6 +45,19 @@ public class IWorkDao extends HibernateGenericDao<IWork, Integer>{
 		return id;
 	}
 	
+	public String getNameById(int id){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from IWork i where i.id=:id");
+		query.setParameter("id", id);
+		ArrayList<IWork> iworks =  (ArrayList<IWork>) query.list();
+		IWork iwork = iworks.get(0);
+		String name = iwork.getName();
+		tx.commit();
+		closeSession();
+		return name;
+	}
+	
 	public ArrayList<IWork> getTopIWorks(){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
@@ -57,10 +70,8 @@ public class IWorkDao extends HibernateGenericDao<IWork, Integer>{
 	
 	public static void main(String[] args) {
 		IWorkDao iWorkDao = new IWorkDao();
-		ArrayList<IWork> names = iWorkDao.getTopIWorks();
-		for(IWork name:names) {
-			System.out.println(name.getName());
-		}
+		String names = iWorkDao.getNameById(2);
+		System.out.println(names);
 	}
 	
 }

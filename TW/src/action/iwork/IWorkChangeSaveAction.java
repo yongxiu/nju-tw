@@ -12,9 +12,13 @@ public class IWorkChangeSaveAction extends ActionSupport{
 	
 	public String execute() {
 		IWorkDao iWorkDao = new IWorkDao();
-		if(checkId!=topicid) {
 		IWork iWorkNew = iWorkDao.getById(checkId);
 		IWork iWorkOld = iWorkDao.getById(topicid);
+		if(iWorkNew.getTop()==1){
+			return ERROR;
+		}
+		else if(checkId!=topicid) {
+		
 		iWorkNew.setTop(1);
 		iWorkOld.setTop(0);
 		iWorkDao.update(iWorkNew);

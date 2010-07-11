@@ -44,6 +44,19 @@ public class BrandDao extends HibernateGenericDao<Brand, Integer>{
 		return id;
 	}
 	
+	public String getNameById(int id){
+		Session session =  getSession();
+		Transaction tx =session.beginTransaction();
+		Query query = session.createQuery("from Brand b where b.id=:id");
+		query.setParameter("id", id);
+		ArrayList<Brand> brands = (ArrayList<Brand>) query.list();
+		Brand brand = brands.get(0);
+		String name =brand.getName();
+		tx.commit();
+		closeSession();
+		return name;
+	}
+	
 	public ArrayList<Brand> getTopBrands(){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
@@ -56,9 +69,6 @@ public class BrandDao extends HibernateGenericDao<Brand, Integer>{
 	
 	public static void main(String[] args) {
 		BrandDao brandDao = new BrandDao();
-		ArrayList<Brand> brands = brandDao.getTopBrands();
-		for(Brand brand:brands) {
-			System.out.println(brand.getPath());
-		}
+		System.out.println(brandDao.getNameById(1));
 	}
 }

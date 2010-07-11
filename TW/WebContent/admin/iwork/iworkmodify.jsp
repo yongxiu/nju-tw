@@ -26,12 +26,12 @@
 <br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="img"/>" width="161" height="66"/></td></tr></table></td></tr></table></div><br/>
   <div class="g-title-1">
     <div class="fn-fle">
-      <h2>专题活动</h2>
+      <h2>重点工作</h2>
       <span class="txt-info">(<strong><s:property value="topicid"/></strong>)</span></div>
   </div>
 </div>
 <div id="topicForm">
-<s:form name="topicForm" action="admin.IWorkModify.do?topicid=%{topicid}">
+<s:form name="topicForm" action="admin.IWorkModifySave.do?topicid=%{topicid}">
 	<div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
 	  <div class="btngrp">
 	    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="topicForm.submit();" id="inbox__delete"><span>保存</span></div>

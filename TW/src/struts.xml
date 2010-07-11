@@ -690,6 +690,7 @@
 		
 		<action name="admin.IWorkChangeSave" class="action.iwork.IWorkChangeSaveAction">
 			<result name="success" type="tiles">admin.iworkChangeSave</result>
+			<result name="error" type="tiles">admin.iworkfail</result>
 		</action>
 
 		
@@ -704,7 +705,12 @@
 		<action name="admin.IWorkModify" class="action.iwork.IWorkModifyAction">
 			<result name="success" type="tiles">admin.iworkModify</result>
 		</action>
+
 		
+		<action name="admin.IWorkModifySave" class="action.iwork.IWorkModifySaveAction">
+			<result name="success" type="tiles">admin.iworkChangeSave</result>
+		</action>
+
 		
 		
 		
@@ -741,6 +747,7 @@
 		<action name="admin.BrandModify" class="action.brand.BrandModifyAction">
 			<result name="success" type="tiles">admin.BrandModify</result>
 		</action>
+
 	</package>
 
 </struts>
