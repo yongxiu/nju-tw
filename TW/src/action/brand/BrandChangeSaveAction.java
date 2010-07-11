@@ -1,10 +1,12 @@
 package action.brand;
 
 import bean.Brand;
+import bean.IWork;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 import dao.BrandDao;
+import dao.IWorkDao;
 
 public class BrandChangeSaveAction extends ActionSupport{
 	/**
@@ -16,13 +18,19 @@ public class BrandChangeSaveAction extends ActionSupport{
 	
 	public String execute() {
 		BrandDao brandDao = new BrandDao();
-		if(checkId!=topicid) {
-		Brand iWorkNew = brandDao.getById(checkId);
-		Brand iWorkOld = brandDao.getById(topicid);
-		iWorkNew.setTop(1);
-		iWorkOld.setTop(0);
-		brandDao.update(iWorkNew);
-		brandDao.update(iWorkOld);
+		Brand brandNew = brandDao.getById(checkId);
+		Brand brandOld = brandDao.getById(topicid);
+		if(brandNew.getTop()==1){
+			System.out.println(brandNew.getName());
+			System.out.println(brandNew.getTop());
+			return ERROR;
+		}
+		else if(checkId!=topicid) {
+		
+		brandNew.setTop(1);
+		brandOld.setTop(0);
+		brandDao.update(brandNew);
+		brandDao.update(brandOld);
 		}
 		return SUCCESS;
 		

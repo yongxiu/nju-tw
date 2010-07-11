@@ -68,6 +68,16 @@ public class IWorkDao extends HibernateGenericDao<IWork, Integer>{
 		return iWorks;
 	}
 	
+	public ArrayList<IWork> getNotTopIWorks(){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from IWork i where i.top=0");
+		ArrayList<IWork> iWorks = (ArrayList<IWork>) query.list();
+		tx.commit();
+		closeSession();
+		return iWorks;
+	}
+	
 	public static void main(String[] args) {
 		IWorkDao iWorkDao = new IWorkDao();
 		String names = iWorkDao.getNameById(2);

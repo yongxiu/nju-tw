@@ -733,6 +733,7 @@
 		
 		<action name="admin.BrandChangeSave" class="action.brand.BrandChangeSaveAction">
 			<result name="success" type="tiles">admin.BrandChangeSave</result>
+			
 		</action>
 
 		
@@ -746,6 +747,10 @@
 
 		<action name="admin.BrandModify" class="action.brand.BrandModifyAction">
 			<result name="success" type="tiles">admin.BrandModify</result>
+		</action>
+		
+		<action name="admin.BrandModifySave" class="action.brand.BrandModifySaveAction">
+			<result name="success" type="tiles">admin.brandfail</result>
 		</action>
 
 		<!-- 首页显示的iwork文章列表 -->

@@ -20,7 +20,7 @@ public class IWorkChangeAction extends ActionSupport{
 	private ArrayList<IWork> iworks;
 	public String execute() {
 		IWorkDao iWorkDao = new IWorkDao();
-		setIworks((ArrayList<IWork>) iWorkDao.getAllEntity());
+		setIworks((ArrayList<IWork>) iWorkDao.getNotTopIWorks());
 		IWork iWork = iWorkDao.getById(topicid);
 		path = iWork.getPath();
 		return SUCCESS;
