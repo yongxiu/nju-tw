@@ -20,7 +20,7 @@ public class BrandChangeAction extends ActionSupport{
 	private ArrayList<Brand> brands;
 	public String execute() {
 		BrandDao brandDao = new BrandDao();
-		setBrands((ArrayList<Brand>) brandDao.getAllEntity());
+		setBrands((ArrayList<Brand>) brandDao.getNotTopBrands());
 		Brand iWork = brandDao.getById(topicid);
 		path = iWork.getPath();
 		return SUCCESS;

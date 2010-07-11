@@ -8,7 +8,7 @@
 	src="<%=request.getContextPath()%>/js/radioList.js"></script>
 
 <div id="dvTitleinbox">
-<br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="path"/>" width="161" height="66"/></td></tr></table></td></tr></table></div><br/>
+<br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">重点工作</td><td style="width:200px;height:70px"><img src="<s:property value="path"/>" width="161" height="66"/></td></tr></table></td></tr></table></div><br/>
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>重点工作</h2>

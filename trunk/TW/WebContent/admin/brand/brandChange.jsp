@@ -16,7 +16,7 @@
   </div>
 </div>
 <div id="topicForm">
-<s:form name="topicForm" theme="simple" action="admin.IWorkChangeSave.do?topicid=%{topicid}">
+<s:form name="topicForm" theme="simple" action="admin.BrandChangeSave.do?topicid=%{topicid}">
 	<div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
 	  <div class="btngrp">
 	    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="topicForm.submit();" id="inbox__delete"><span>保存</span></div>

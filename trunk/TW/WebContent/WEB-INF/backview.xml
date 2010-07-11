@@ -203,6 +203,13 @@
 		<put-attribute name="content" value="/admin/brand/brandModify.jsp"/>
 	</definition>
 
+	<definition name="admin.brandChangeSave" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandChangeSucees.jsp"/>
+	</definition>
+	
+	<definition name="admin.brandfail" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandchangefail.jsp"/>
+	</definition>
 </tiles-definitions>
 
 
