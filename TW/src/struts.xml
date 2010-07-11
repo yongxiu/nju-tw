@@ -5,7 +5,7 @@
     
 <struts>
 	
-	<constant name="struts.multipart.maxSize" value="20971520" />
+	<constant name="struts.multipart.maxSize" value="104857600" />
 
 	<package name="default" extends="tiles-default">
 		
@@ -590,11 +590,11 @@
 		</action>
 		<action name="OrgDelete" class="action.admin.OrgDeleteAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success" type="redirect">OrgManageList.do</result>
+			<result name="success" type="redirect">OrgManageListPage.do</result>
 		</action>
 		<action name="OrgUpdate" class="action.admin.OrgUpdateAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success" type="redirect">OrgManageList.do</result>
+			<result name="success" type="redirect">OrgManageListPage.do</result>
 		</action>
 		<action name="OrgAdd" class="action.admin.OrgAddAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
