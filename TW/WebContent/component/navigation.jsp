@@ -59,7 +59,7 @@
 		</UL>	
     </li>
     <li id="n6"><a href="#" title="电子团务"> </a></li>
-    <li id="n0"><a href="#" title="占位"> </a></li>
+    <li id="n0"></li>
 </ul>
 
 <BR clear="all">
