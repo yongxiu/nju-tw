@@ -559,8 +559,12 @@
 			<result name="success" type="tiles">admin.OrgManageList</result>
 		</action>
 		
-		<action name="TopicPageAction" class="action.topic.TopicPageAction">
-			<result name="success">/component/topic.jsp</result>
+		<action name="IWorkAction" class="action.topic.TopicPageAction">
+			<result name="success">/component/iwork.jsp</result>
+		</action>
+		
+		<action name="BrankAction" >
+			<result name="success">/component/brand.jsp</result>
 		</action>
 		
 		<action name="CropAction" class="action.CropAction">

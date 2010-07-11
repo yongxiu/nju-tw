@@ -20,7 +20,7 @@
 	
 	<table class="o_Table" cellspacing=0 cellpadding=0>
 		<tr>
-			<td class="o_Title">内部结构</td>
+			<td class="o_Title">基层团委</td>
 		</tr>
 		
 		<s:iterator value="org2">
