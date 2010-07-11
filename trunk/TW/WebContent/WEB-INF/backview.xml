@@ -168,6 +168,34 @@
 	<definition name="admin.iworkModify" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/iworkmodify.jsp"/>
 	</definition>
+	
+	
+	
+	
+	
+	<definition name="admin.BrandHome" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandHome.jsp"/>
+	</definition>
+	
+	<definition name="admin.BrandManageList" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandManage.jsp"/>
+	</definition>
+	
+	<definition name="admin.AddBrand" extends="admin">
+		<put-attribute name="content" value="/admin/brand/addBrand.jsp"/>
+	</definition>
+	
+	<definition name="admin.BrandChange" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandChange.jsp"/>
+	</definition>
+	
+	<definition name="admin.BrandChangeSave" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandChangeSucees.jsp"/>
+	</definition>
+	
+	<definition name="admin.BrandModify" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandModify.jsp"/>
+	</definition>
 </tiles-definitions>
 
 

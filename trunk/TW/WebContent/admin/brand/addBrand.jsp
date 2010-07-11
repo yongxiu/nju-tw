@@ -12,11 +12,11 @@
 	<s:fielderror>
 		<s:param>myFile</s:param>
 	</s:fielderror>
-		<div><p><label class="label" for="imgFile">重点工作图片：</label><s:file cssClass="filename" name ="imgFile" id="imgFile" size="50"/></p></div>
+		<div><p><label class="label" for="imgFile">品牌项目图片：</label><s:file cssClass="filename" name ="imgFile" id="imgFile" size="50"/></p></div>
 		<s:fielderror>
 		<s:param>myName</s:param>
 	</s:fielderror>
-	    <div><p><label class="label" for="myName">重点工作名称：</label><s:textfield cssClass="filename" name="myName" id="name"></s:textfield></p></div>
+	    <div><p><label class="label" for="myName">品牌项目名称：</label><s:textfield cssClass="filename" name="myName" id="name"></s:textfield></p></div>
 	    <p><s:submit cssClass="btn" value="上传" name="submit"
 		id="submit" tabindex="5"></s:submit>
 		<input type="button" value="取消" class="btn"></p>
