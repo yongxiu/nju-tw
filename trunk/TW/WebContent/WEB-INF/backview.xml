@@ -168,6 +168,12 @@
 	<definition name="admin.iworkModify" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/iworkmodify.jsp"/>
 	</definition>
+
+	
+	<definition name="admin.iworkfail" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkichangefail.jsp"/>
+	</definition>
+
 	
 	
 	
@@ -196,6 +202,7 @@
 	<definition name="admin.BrandModify" extends="admin">
 		<put-attribute name="content" value="/admin/brand/brandModify.jsp"/>
 	</definition>
+
 </tiles-definitions>
 
 

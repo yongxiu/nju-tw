@@ -9,6 +9,7 @@ import service.Category;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import dao.BrandDao;
 import dao.CategoryDao;
 import dao.GenericArticleDao;
 import dao.IWorkDao;
@@ -48,6 +49,7 @@ public class IWorkModifyAction extends ActionSupport implements SessionAware{
 
 		IWorkDao iWorkDao = new IWorkDao();
 		IWork iWork = iWorkDao.getById(topicid);
+		BrandDao brandDao = new BrandDao();
 		img = iWork.getPath();
 		
 		articlesTemp = articleDao.getArticlesByPageTopSort(currentPage, number);
@@ -55,7 +57,20 @@ public class IWorkModifyAction extends ActionSupport implements SessionAware{
 		// clone generic article to aritcleTemp
 		for (GenericArticle b : articlesTemp) {
 			ArticleTemp aTemp = new ArticleTemp();
-			aTemp.setCategory(categoryDao.getNameByCategory(b.getCategory()));
+			if(b.getCategory()!=0){
+				aTemp.setCategory(categoryDao.getNameByCategory(b.getCategory()));
+			}
+			else if (b.getCategory()==0&&b.getBrandid()!=0) {
+				aTemp.setCategory(brandDao.getNameById(b.getBrandid()));
+			}
+			else if(b.getCategory()==0&&b.getBrandid()==0&&b.getIworkid()!=0){
+				aTemp.setCategory(iWorkDao.getNameById(b.getIworkid()));
+			}
+			else {
+				aTemp.setCategory("其他");
+			}
+			
+			
 			aTemp.setDate(b.getDate().toString());
 			aTemp.setId((int) b.getId());
 			aTemp.setTitle(b.getTitle());
@@ -64,12 +79,23 @@ public class IWorkModifyAction extends ActionSupport implements SessionAware{
 		}
 
 		for (ArticleTemp a : articles) {
-			if (a.getBrandid() == topicid) {
-				System.out.println("equals");
+			if (a.getIworkid() == topicid) {
+				
 				a.setChecked(1);
 			} else {
+				
 				a.setChecked(0);
 			}
+		}
+		
+		//initial
+		totalnumber = articleDao.getAllArticleCount();
+		totalpages = getPageCount(totalnumber, number);
+		System.out.println("totalpages:"+totalpages);
+		//init page count
+		pageCount = new ArrayList<String>();
+		for(int i = 1;i<=totalpages;i++) {
+			pageCount.add(i+"");
 		}
 		return SUCCESS;
 	}
@@ -139,5 +165,21 @@ public class IWorkModifyAction extends ActionSupport implements SessionAware{
 	}
 	
 	
-	
+	public int getPageCount(int count, int number) {
+		int result;
+
+		if (count % number == 0) {
+			if (count == number)
+				result = 0;
+			else
+				result = count / number;
+		} else {
+			if (count < number)
+				result = 0;
+			else
+				result = count / number + 1;
+		}
+
+		return result;
+	}
 }
