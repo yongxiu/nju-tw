@@ -152,6 +152,10 @@
 	<definition name="admin.iworkManageList" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/iworkManage.jsp"/>
 	</definition>
+	
+	<definition name="admin.addiwork" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/addiwork.jsp"/>
+	</definition>
 </tiles-definitions>
 
 

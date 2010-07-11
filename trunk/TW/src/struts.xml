@@ -677,6 +677,9 @@
 		<action name="admin.iWorkManageList" class="action.iwork.IWorkManageListAction">
 			<result name="success" type="tiles">admin.iworkManageList</result>
 		</action>
+		<action name="admin.addiworkPage">
+			<result name="success" type="tiles">admin.addiwork</result>
+		</action>
 	</package>
 
 </struts>
