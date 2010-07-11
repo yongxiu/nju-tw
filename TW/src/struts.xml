@@ -686,6 +686,10 @@
 		<action name="admin.IWorkChange" class="action.iwork.IWorkChangeAction">
 			<result name="success" type="tiles">admin.iworkChange</result>
 		</action>
+		
+		<action name="admin.AddiWorkAction" class="action.iwork.AddiWorkAction">
+			<result name="success" type="redirect">admin.iWorkManageList.do</result>
+		</action>
 	</package>
 
 </struts>

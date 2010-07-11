@@ -8,11 +8,11 @@
 	src="<%=request.getContextPath()%>/js/upload.js"></script>
 
 <div class = "cent">
-	<s:form theme="simple" action ="FileUploadAction.do"  method="post" enctype ="multipart/form-data">
+	<s:form theme="simple" action ="admin.AddiWorkAction.do"  method="post" enctype ="multipart/form-data">
 	<s:fielderror>
 		<s:param>myFile</s:param>
 	</s:fielderror>
-		<div><p><label class="label" for="myFile">重点工作图片：</label><s:file cssClass="filename" name ="myFile" id="file" size="50"/></p></div>
+		<div><p><label class="label" for="imgFile">重点工作图片：</label><s:file cssClass="filename" name ="imgFile" id="file" size="50"/></p></div>
 		<s:fielderror>
 		<s:param>myName</s:param>
 	</s:fielderror>
