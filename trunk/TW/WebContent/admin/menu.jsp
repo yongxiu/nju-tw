@@ -6,7 +6,7 @@
 <li><a href='admin.FileList.do'> 文件列表</a></li>
 <li><a href='admin.changePSW.do'> 修改密码</a></li>
 <li><a href='admin.topic.do'> 专题活动</a></li>
-<li><a href='#'> 重点工作</a></li>
+<li><a href='admin.iWorkHome.do'> 重点工作</a></li>
 <li><a href='#'> 品牌项目</a></li>
 <li><a href='admin.ChangeTheme.do'> 变换主题</a></li>
 <li><a href='OrgManageListPage.do'> 机构人员管理</a></li>

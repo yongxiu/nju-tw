@@ -144,6 +144,14 @@
 	<definition name="article.success" extends="admin">
 		<put-attribute name="content" value="/userComponent/articleSuccess.jsp"/>
 	</definition>
+	
+	<definition name="admin.iworkHome" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkHome.jsp"/>
+	</definition>
+	
+	<definition name="admin.iworkManageList" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkManage.jsp"/>
+	</definition>
 </tiles-definitions>
 
 

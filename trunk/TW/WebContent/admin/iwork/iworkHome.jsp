@@ -4,7 +4,7 @@
 <link href="<%=request.getContextPath()%>/css/topic.css" type="text/css"
 	media="screen" rel="stylesheet" />
 <table style="width:790px; height:200px;"><tr><td align=center>
-<table><tr><td><a href="">重点工作管理管理</a></td></tr></table>
+<table><tr><td><a href="admin.iWorkManageList.do">重点工作管理管理</a></td></tr></table>
 <table class="t_s_Table">
 <tr><td><span>首页重点工作替换</span></td></tr>
 	<tr class="t_s_i_Tr">
