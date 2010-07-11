@@ -33,7 +33,7 @@
          	<td class="wd0"></td>
            <td style="width:573px"><s:property value="name"/></td>
            <td style="width:160px;text-align:center" class="action">
-           <a href="OrgModifyPage.do?orgid=<s:property value='id'/>">修改</a>
+           <a href="admin.IWorkModify.do?topicid=<s:property value='id'/>&currentPage=1">修改</a>
            <a href="OrgDelete.do?orgid=<s:property value='id'/>">删除</a>
            </td>
          </tr>

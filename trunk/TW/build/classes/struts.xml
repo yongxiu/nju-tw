@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<constant name="struts.multipart.maxSize" value="20971520" />
+
+	<package name="default" extends="tiles-default">
+		
+		
+		
+		<!-- User interceptor -->
+		<interceptors>
+			<interceptor name="UserInterceptor" class="interceptor.UserInterceptor" />
+
+			<interceptor-stack name="loginDefaultStack">
+				<interceptor-ref name="UserInterceptor"/>
+				<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+
+		</interceptors>
+		 
+		<!-- 
+		<default-interceptor-ref name="loginDefaultStack"/>
+		 -->
+		
+		<global-results>
+			<result name="login">/component/login.jsp</result>
+		</global-results>
+		
+		
+		<!-- Redirect to home page -->
+		<action name="Home">
+			<result name="success" type="tiles">index</result>
+		</action>
+		
+		<action name="Org" >
+			<result name="success" type="tiles">organization</result>
+		</action>
+		
+		<action name="OrgDetail" >
+			<result name="success" type="tiles">OrgDetail</result>
+		</action>
+		<action name="New" >
+			<result name="success" type="tiles">newspage</result>
+		</action>
+			<action name="NewPublic">
+				<result name="success" type="tiles">newpublic</result>
+			</action>
+			<action name="NewDaymaic">
+				<result name="success" type="tiles">newdynamic</result>
+			</action>
+		<action name="Info" >
+			<result name="success" type="tiles">infopage</result>
+		</action>
+		<action name="Theory" >
+			<result name="success" type="tiles">theorypage</result>
+		</action>
+		<action name="Media" >
+			<result name="success" type="tiles">mediapage</result>
+		</action>
+		<action name="AticalDetail" >
+			<result name="success" type="tiles">AticalDetail</result>
+		</action>
+		
+		<action name="Download" >
+			<result name="success" type="tiles">download</result>
+		</action>
+		
+		<action name="ConnectUs" >
+			<result name="success" type="tiles">connect</result>
+		</action>
+		
+		<action name="Search">
+			<result name="success" type="tiles">search</result>
+		</action>
+		
+		<action name="SearchDetail">
+			<result name="success"  type="tiles">searchdetail</result>
+		</action>
+		
+		
+		<action name="Mail" >
+			<result name="success" >/page/mail.jsp</result>
+		</action>
+		
+		
+		<action name="ckupload" class="action.CkeditorUploadAction">
+			<result name="success" type="tiles">index</result>
+		</action>
+		
+		<!-- Redirect to background page -->
+		<!-- User1 -->
+		<action name="BackHome">
+			<result name="success" type="tiles">customer.edit</result>
+		</action>
+		
+		<action name="ArticleList">
+			<result name="success" type="tiles">customer.articleList</result>
+		</action>
+		
+		<action name="uploadFile">
+			<result name="success" type="tiles">customer.upload</result>
+		</action>
+		
+		<action name="FileList">
+			<result name="success" type="tiles">customer.fileList</result>
+		</action>
+		
+		<action name="changePSW">
+			<result name="success" type="tiles">customer.changePSW</result>
+		</action>
+		
+		<!-- Show Modify Article -->
+		<action name="ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<result name="success" type="tiles">customer.ShowModifyArticle</result>
+		</action>
+		
+		<!-- User2 -->
+		<action name="admin.BackHome">
+			<result name="success" type="tiles">admin.edit</result>
+		</action>
+		
+		<action name="admin.ArticleList">
+			<result name="success" type="tiles">admin.articleList</result>
+		</action>
+		
+		<action name="admin.uploadFile">
+			<result name="success" type="tiles">admin.upload</result>
+		</action>
+		
+		<action name="admin.FileList">
+			<result name="success" type="tiles">admin.fileList</result>
+		</action>
+		
+		<action name="admin.changePSW">
+			<result name="success" type="tiles">admin.changePSW</result>
+		</action>
+		
+		<action name="admin.ListUser" class="action.ListUserAction">
+			<result name="success" type="tiles">admin.userManage</result>
+		</action>
+		
+		<action name="admin.ShowModifyArticle" class="action.ShowModifyArticleAction">
+			<result name="success" type="tiles">admin.ShowModifyArticle</result>
+		</action>
+		
+		<!-- Get Modify Files -->
+		<action name="GetModifyFile" class="action.GetModifyFileAction">
+			<result name="success">/userComponent/fileList.jsp</result>
+		</action>
+
+		<!-- login -->
+		<action name="LoginAction" class="action.LoginAction">
+			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="input">/component/login.jsp</result>
+		</action>
+		
+		<!-- Login check -->
+		<action name="CheckLogin" class="action.CheckLoginAction">
+			<result name="success">/page/loginSuccess.jsp</result>
+			<result name="input">/component/login.jsp</result>
+		</action>
+
+		<!-- ipCount -->
+		<action name="IpcountAction" class="action.IpcountAction">
+			<result name="success">/component/ipHolder.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+
+		<!-- update News -->
+		<action name="UpdateNewsAction" class="action.UpdateNewsAction">
+			<result name="success">/component/news.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
+		<!-- update Infos-->
+		<action name="UpdateInfoAction" class="action.UpdateInfoAction">
+			<result name="success">/component/info.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
+		<!-- update Theory -->
+		<action name="UpdateTheoryAction" class="action.UpdateTheoryAction">
+			<result name="success">/component/theory.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+		
+		<!-- update Media -->
+		<action name="UpdateMediaAction" class="action.UpdateMediaAction">
+			<result name="success">/component/media.jsp</result>
+			<result name="input" type="tiles">index</result>
+		</action>
+
+		<!-- Search Article -->
+		<action name="SearchAction" class="action.SearchAction">
+			<result name="success">/page/list.jsp</result>
+		</action>
+		
+		<!-- Search then Page -->
+		<action name="PageAction" class="action.PageAction">
+			<result name="success">/page/list.jsp</result>
+		</action>
+
+		<!-- List Article -->
+		<action name="DetailArticleAction" class="action.DetailArticleAction">
+			<result name="success">page/detail.jsp</result>
+		</action>
+		
+
+		<!-- Files Upload -->
+		<action name="FileUploadAction" class="action.FileUploadAction">
+			<!-- result name="success" type="redirect">Home.do</result> -->
+			<result name="success">/UploadSuccess.jsp</result>
+			<result name="input">/FileUpload.jsp</result>
+		</action>
+
+		<!-- List organization -->
+		<action name="OrgnizationAction" class="action.OrgnizationAction">
+			<result name="success">/page/organization.jsp</result>
+		</action>
+		
+		<!-- List organization Details -->
+		<action name="OrganizationDetailAction" class="action.OrganizationDetailAction">
+			<!-- interceptor -->
+
+			<result name="success">/page/orgList.jsp</result>
+		</action>
+		
+		<!-- Generic Article Detail -->
+		<action name="GenericArticleDetail" class="action.GenericArticleDetail">
+			<result name="success">/page/genericArticleDetail.jsp</result>
+		</action>
+
+		<!-- summit article -->
+		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
+			
+			<result name="success">/page/submitSuccess.jsp</result>
+			<result name="imageSelect">/page/imageSelect.jsp</result>
+			<interceptor-ref name="UserInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+			
+		</action>
+		
+		<!-- Select image as main image -->
+		<action name="SelectImage" class="action.SelectImageAction">
+			<result name="success">/page/imageSelectSuccess.jsp</result>
+		</action>
+
+		
+
+		<!-- Send email -->
+		<action name="SendMailAction" class="action.SendMailAction">
+			<result name="success">/page/sendMailSuccess.jsp</result>
+			<result name="input">/mail.jsp</result>
+		</action>
+
+		<!-- List User -->
+		<action name="ListUser" class="action.ListUserAction">
+			<result name="success">/admin/userManage.jsp</result>
+		</action>
+		
+		<!-- Delete User -->
+		<action name="DeleteUser" class="action.DeleteUserAction">
+			<result name="success" type="redirect">ListUser.do</result>
+		</action>
+		
+		<!-- Add User -->
+		<action name="AddUser" class="action.AddUserAction">
+			<result name="success">/admin/addUserSuccess.jsp</result>
+			<result name="input">/admin/adduser.jsp</result>
+		</action>
+		
+		<!-- Get Modify List -->
+		<action name="GetModifyList" class="action.GetModifyListAction">
+			<result name="success">/admin/modifyuser.jsp</result>
+		</action>
+		
+		<!-- Modify User -->
+		<action name="ModifyUser" class="action.ModifyUserAction">
+			<result name="success" type="redirect">ListUser.do</result>
+			<result name="input">/admin/modifyuser.jsp</result>
+		</action>
+		
+		<!-- Change Password -->
+		<action name="ChangePassword" class="action.ChangePasswordAction">
+			<result name="success">/userComponent/changePswSuccess.jsp</result>
+			<result name="input">/userComponent/changePSW.jsp</result>
+		</action>
+		
+		<!-- Write Index -->
+		<action name="writeIndex" class="action.lucene.WriteIndexAction">
+			<result name="success">/component/login.jsp</result>
+		</action>
+		
+		<!-- Get Modify Articles -->
+		<action name="GetModifyArticle" class="action.GetModifyArticleAction">
+			<result name="success">/userComponent/articleList.jsp</result>
+		</action>
+		
+		
+		<!-- Modify Article -->
+		<action name="ModifyArticle" class="action.ModifyArticleAction">
+			<result name="success">/userComponent/modifySuccess.jsp</result>
+			<result name="imageSelect">/page/imageSelect.jsp</result>
+		</action>
+		
+		<!-- Navigation List -->
+		<!-- Get news List -->
+		<action name="GetNewsListAction" class="action.navigation.GetNewsListAction">
+			<result name="success">/naviPage/news.jsp</result>
+		</action>
+			<!-- Get 宣传思想 -->
+			<action name="GetNewsOfPublic" class="action.navigation.news.GetNewsOfPublicAction">
+				<result name="success">/naviPage/news/publicNews.jsp</result>
+			</action>
+			
+			<!-- Get 基层动态 -->
+			<action name="GetNewsOfDynamic" class="action.navigation.news.GetNewsOfDynamicAction">
+				<result name="success">/naviPage/news/dynamicNews.jsp</result>
+			</action>
+		
+		<!-- Get Info List-->
+		<action name="GetInfoListAction" class="action.navigation.GetInfoListAction">
+			<result name="success">/naviPage/info.jsp</result>
+		</action>
+		
+		<!-- Get Meida List-->
+		<action name="GetMediaListAction" class="action.navigation.GetMediaListAction">
+			<result name="success">/naviPage/media.jsp</result>
+		</action>
+		
+		<!-- Get Theory List -->
+		<action name="GetTheoryListAction" class="action.navigation.GetTheoryListAction">
+			<result name="success">/naviPage/theory.jsp</result>
+		</action>
+		
+		<!-- Download Files -->
+		<action name="DownloadAction" class="action.navigation.DownloadAction">
+			<result name="success">/naviPage/download.jsp</result>
+		</action>
+		
+		<!-- Pic news  -->
+		<action name="Picnews" class="action.PicnewsAction">
+			<result name="success">/component/picNews.jsp</result>
+		</action>
+	</package>
+
+</struts>
+
+    
+												
+
+		
