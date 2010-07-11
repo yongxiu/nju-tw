@@ -347,7 +347,7 @@ text-align:left;
 	width:180px;
 	border-collapse:collapse;
 	border:solid #e0e0e0; 
-	border-width:0 1px 1px 1px;
+	border-width:0 1px 1px 0;
 }
 
 .t_s_i_Tr {
