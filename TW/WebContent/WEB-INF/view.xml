@@ -104,6 +104,15 @@
 	<definition name="contact" extends="standard">
 		<put-attribute name="content" value="/page/contact.jsp"></put-attribute>
 	</definition>
+	
+	<!-- 重点工作 -->
+	<definition name="iWork" extends="standard">
+		<put-attribute name="content" value="/page/folderList.jsp"></put-attribute>
+	</definition>
+	<!-- 品牌项目 -->
+	<definition name="brand" extends="standard">
+		<put-attribute name="content" value="/page/folderList.jsp"></put-attribute>
+	</definition>
 
 </tiles-definitions>
 

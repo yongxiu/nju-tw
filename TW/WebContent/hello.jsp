@@ -38,7 +38,6 @@ img,div {
 	<li><a href='Project.do'>重点工作&品牌项目</a></li>
 	<li><a href='UpdateInfoAction.do'>通知公告</a></li>
 	<li><a href='/TW/component/publication.jsp'>团属刊物</a></li>
-	<li><a href='/TW/component/youth.jsp'>青共校、广播台</a></li>
 	
 </ul>
 </div>

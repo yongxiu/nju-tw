@@ -661,6 +661,15 @@
 		<action name="LoginDesk" >
 			<result name="success">/page/login.jsp</result>
 		</action>
+		
+		<!-- 重点工作 -->
+		<action name="iWork" class="action.iWorkListAction">
+			<result name="success" type="tiles">iWork</result>
+		</action>
+		<!-- 品牌项目 -->
+		<action name="Brand" class="action.BrandListAction">
+			<result name="success" type="tiles">brand</result>
+		</action>
 	</package>
 
 </struts>
