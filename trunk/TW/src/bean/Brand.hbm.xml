@@ -13,7 +13,7 @@
 		
 		<property name="name" column="name" type="string"/>
 		<property name="path" column="path" type="string"/>
-
+		<property name="top" column="top" type="int" not-null="false"/>
 	</class>
 </hibernate-mapping>
 

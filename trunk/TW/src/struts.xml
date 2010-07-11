@@ -194,10 +194,12 @@
 		</action>
 		<!-- Get Modify Files -->
 		
-		<action name="admin.topicPage" class="action.topic.TopicPageAction">
+		<action name="admin.topicPage" class="action.topic.IWorkAction">
 		<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success">/admin/topic/topicselect.jsp</result>
 		</action>
+		
+	
 		
 		<action name="GetModifyFile" class="action.GetModifyFileAction">
 		<interceptor-ref name="loginStack"></interceptor-ref>
@@ -559,11 +561,11 @@
 			<result name="success" type="tiles">admin.OrgManageList</result>
 		</action>
 		
-		<action name="IWorkAction" class="action.topic.TopicPageAction">
+		<action name="IWorkAction" class="action.topic.IWorkAction">
 			<result name="success">/component/iwork.jsp</result>
 		</action>
 		
-		<action name="BrankAction" >
+		<action name="BrankAction" class="action.topic.BrandAction">
 			<result name="success">/component/brand.jsp</result>
 		</action>
 		
