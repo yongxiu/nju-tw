@@ -13,21 +13,16 @@
 </h2>
 </div>
 
-<s:form theme="simple" action="SubmitArticleAction.do">
+<s:form theme="simple" action="SubmitArticleAction.do" name="imaform">
 <s:textfield cssClass="input-text" name="title"></s:textfield>
 <br/>
 
 <s:textarea  name="content" id="content" cssClass="ckeditor" rows="16" cols="100"></s:textarea>
 
-<s:set name="category" value="#{'新闻动态':{'—— ——'},
-								'公告信息':{'—— ——'},
-								'理论园地':{'—— ——'},
-								'媒体报道':{'—— ——'},
-								'校外报道':{'南大新闻网','南京大学报','南大青年报','校园广播台'}}"/>
-		
+
 <div class="doubleselect">
 <label class="label">文章类型：</label>
-<s:doubleselect name="category1" list="#category.keySet()" doubleName="category2" doubleList="#category[top]"/>
+<s:doubleselect name="category1" list="list" doubleName="category2" doubleList="map.get(top)" formName="imaform"/>
 
 <s:submit value="发布文章" cssClass = "btn"></s:submit>
 </div>

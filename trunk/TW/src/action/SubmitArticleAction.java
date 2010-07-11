@@ -12,7 +12,12 @@ import service.LuceneIndexWriter;
 import bean.GenericArticle;
 import bean.User;
 import com.opensymphony.xwork2.ActionSupport;
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import dao.BrandDao;
+import dao.CategoryDao;
 import dao.GenericArticleDao;
+import dao.IWorkDao;
 import dao.UserDao;
 
 public class SubmitArticleAction extends ActionSupport implements SessionAware{
@@ -47,6 +52,13 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		/**
 		 * check the image path wjc
 		 */
+		//deal with new category 2010-7-11
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
+		int iworkid=0;
+		int brandid=0;
+		
 		GetImageFromArticle get = new GetImageFromArticle();
 		imageStrings = get.getImage(getContent());
 
@@ -55,16 +67,26 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		User user = userDao.getById((Long) getSession().get("id"));
 	    
 		//two category
-		int category;
+		int category=0;
 		if(getCategory2().equals("—— ——")) {
-			category = Category.getCategory(getCategory1());
+			category = categoryDao.getCategoryByName(getCategory1());
+		}
+		else if(getCategory1().equals("重点工作")){
+			
+			iworkid = iWorkDao.getIdByName(getCategory2());
+		}
+		else if (getCategory1().equals("品牌项目")) {
+		
+			brandid = brandDao.getIdByName(getCategory2());
 		}
 		else {
-			category = Category.getCategory(getCategory2());
+			category = categoryDao.getCategoryByName(getCategory2());
 		}
 		GenericArticle article = new GenericArticle(getTitle(), new Date(),
 				getContent(), user, category,
 				true, false, null);
+		article.setBrandid(brandid);
+		article.setIworkid(iworkid);
 		getSession().put("article", article);
 		dao.create(article);
 		

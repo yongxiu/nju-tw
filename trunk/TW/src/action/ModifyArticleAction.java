@@ -17,7 +17,10 @@ import bean.User;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import dao.BrandDao;
+import dao.CategoryDao;
 import dao.GenericArticleDao;
+import dao.IWorkDao;
 import dao.UserDao;
 
 public class ModifyArticleAction extends ActionSupport implements SessionAware{
@@ -39,7 +42,12 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 	ArrayList<String> imageStrings;
 
 	public String execute() throws Exception {
-	
+		//deal with new category 2010-7-11
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
+		int iworkid=0;
+		int brandid=0;
 		
 		GetImageFromArticle get = new GetImageFromArticle();
 		imageStrings = get.getImage(getContent());
@@ -52,16 +60,25 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 		article.setContent(getContent());
 		
 		//two category
-		int category;
+		int category=0;
 		if(getCategory2().equals("—— ——")) {
-			category = Category.getCategory(getCategory1());
+			category = categoryDao.getCategoryByName(getCategory1());
+		}
+		else if(getCategory1().equals("重点工作")){
+			
+			iworkid = iWorkDao.getIdByName(getCategory2());
+		}
+		else if (getCategory1().equals("品牌项目")) {
+		
+			brandid = brandDao.getIdByName(getCategory2());
 		}
 		else {
-			category = Category.getCategory(getCategory2());
+			//nothing to do
 		}
 		
 		article.setCategory(category);
-		
+		article.setBrandid(brandid);
+		article.setIworkid(iworkid);
 		getSession().put("article", article);
 		dao.update(article);
 		
