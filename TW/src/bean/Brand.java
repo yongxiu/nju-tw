@@ -4,6 +4,7 @@ public class Brand {
 	private int id;
 	private String name;
 	private String path;
+	private int top;
 	
 	public Brand() {}
 
@@ -35,6 +36,14 @@ public class Brand {
 
 	public void setPath(String path) {
 		this.path = path;
+	}
+
+	public int getTop() {
+		return top;
+	}
+
+	public void setTop(int top) {
+		this.top = top;
 	}
 	
 	

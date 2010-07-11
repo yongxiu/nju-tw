@@ -44,8 +44,21 @@ public class BrandDao extends HibernateGenericDao<Brand, Integer>{
 		return id;
 	}
 	
+	public ArrayList<Brand> getTopBrands(){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from Brand b where b.top=1");
+		ArrayList<Brand> brands = (ArrayList<Brand>) query.list();
+		tx.commit();
+		closeSession();
+		return brands;
+	}
+	
 	public static void main(String[] args) {
 		BrandDao brandDao = new BrandDao();
-		System.out.println(brandDao.getIdByName("这是第一个品牌活动"));
+		ArrayList<Brand> brands = brandDao.getTopBrands();
+		for(Brand brand:brands) {
+			System.out.println(brand.getPath());
+		}
 	}
 }

@@ -34,9 +34,12 @@ public class TestDao {
 //		FileDao fileDao = new FileDao();
 //		File file = new File("name", user, "path", true, new Date(), 1);
 //		fileDao.create(file);
-		CategoryDao categoryDao = new CategoryDao();
-		Category category = new Category("ss", 122);
-		categoryDao.create(category);
+//		CategoryDao categoryDao = new CategoryDao();
+//		Category category = new Category("ss", 122);
+//		categoryDao.create(category);
+		BrandDao brandDao = new BrandDao();
+		Brand brand = new Brand("第二个品牌", "path");
+		brandDao.create(brand);
 		
 	}
 }
