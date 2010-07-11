@@ -1,45 +1,25 @@
-package action;
+package action.admin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.struts2.interceptor.SessionAware;
+import org.apache.commons.collections.map.LinkedMap;
 
-import bean.GenericArticle;
+
 
 import com.opensymphony.xwork2.ActionSupport;
-
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import dao.BrandDao;
-import dao.GenericArticleDao;
 import dao.IWorkDao;
 
-public class ShowModifyArticleAction extends ActionSupport implements SessionAware{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 112102139212359360L;
-	
+public class EditorAction extends ActionSupport{
 	private List<String> list;
 	private Map<String,List<String>> map;
 	
-	
-	private GenericArticle article;
-	private int id;
-	@SuppressWarnings("unchecked")
-	private Map session;
-	
-	@SuppressWarnings("unchecked")
-	@Override
-	public String execute() throws Exception {
-		// TODO Auto-generated method stub
-		GenericArticleDao articleDao = new GenericArticleDao();
-		article = articleDao.getById(new Long(id));
-		getSession().put("articlem",article);
-		
-		///////////
+	public String execute() {
 		IWorkDao iWorkDao = new IWorkDao();
 		BrandDao brandDao = new BrandDao();
 		List<String> iworks = iWorkDao.getAllIWorkNames();
@@ -82,61 +62,28 @@ public class ShowModifyArticleAction extends ActionSupport implements SessionAwa
          
          map.put("重点工作", iworks);
          map.put("品牌项目", brands);
+         
 		return SUCCESS;
-		
-	}
-
-
-	public GenericArticle getArticle() {
-		return article;
-	}
-
-
-	public void setArticle(GenericArticle article) {
-		this.article = article;
-	}
-
-
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-	@SuppressWarnings("unchecked")
-	public Map getSession() {
-		return session;
-	}
-
-
-	@SuppressWarnings("unchecked")
-	public void setSession(Map session) {
-		this.session = session;
-	}
-
+}
 
 	public List<String> getList() {
 		return list;
 	}
 
-
 	public void setList(List<String> list) {
 		this.list = list;
 	}
-
 
 	public Map<String, List<String>> getMap() {
 		return map;
 	}
 
-
 	public void setMap(Map<String, List<String>> map) {
 		this.map = map;
 	}
+
+	
+	
 	
 	
 }

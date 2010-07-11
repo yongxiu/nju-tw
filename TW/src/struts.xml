@@ -105,7 +105,7 @@
 		
 		<!-- Redirect to background page -->
 		<!-- User1 -->
-		<action name="BackHome">
+		<action name="BackHome" class="action.customer.EditorAction">
 			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">customer.edit</result>
 		
@@ -138,7 +138,7 @@
 		</action>
 		
 		<!-- User2 -->
-		<action name="admin.BackHome">
+		<action name="admin.BackHome" class="action.customer.EditorAction">
 			<interceptor-ref name="adminStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.edit</result>
 		</action>
