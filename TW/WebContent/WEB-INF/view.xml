@@ -107,11 +107,11 @@
 	
 	<!-- 重点工作 -->
 	<definition name="iWork" extends="standard">
-		<put-attribute name="content" value="/page/folderList.jsp"></put-attribute>
+		<put-attribute name="content" value="/page/iworkList.jsp"></put-attribute>
 	</definition>
 	<!-- 品牌项目 -->
 	<definition name="brand" extends="standard">
-		<put-attribute name="content" value="/page/folderList.jsp"></put-attribute>
+		<put-attribute name="content" value="/page/brandList.jsp"></put-attribute>
 	</definition>
 
 </tiles-definitions>
