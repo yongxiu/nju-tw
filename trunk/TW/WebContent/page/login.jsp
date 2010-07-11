@@ -4,36 +4,84 @@
 
 <html>
 <head>
-<link href="/TW/css/login.css" rel="stylesheet" type="text/css" media="screen"/>
+<style type="text/css">
+body{
+	font-family:"黑体";
+	color:grey;
+	background-color:#e5e8f1;
+	background-image: url(/TW/img/adminbg.gif);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+#wrap{
+	width:507px;
+	height:372px;
+	padding-top:65px;
+	padding-left:40px;
+	background-image: url(/TW/img/lg.gif);
+	background-repeat: no-repeat;
+	margin:150px auto;
+}
+#Btn{
+	background-image: url(/TW/img/btlg.gif);
+	width:70px;
+	height:25px;
+	border:0px;
+	cursor:hand;
+}
+#loginTextfield{
+	width: 120px;
+	height: 18px;
+	border: 1px solid grey;
+	font-size: 12px;
+	padding: 0 0 0 2px;
+	line-height: 22px;
+}
+#loginTextfield label {
+	width: 30px;
+	height: 36px;
+	font-size: 12px;
+	padding: 0 0 2px 2px;
+	line-height: 35px;
+}
+#copy{
+font-size: 12px;
+font-family: Verdana, PMingLiU;
+position:absolute;
+top:440px;
+padding-left:30px;
+}
+a {
+	font-size: 12px;
+	font-family: Verdana, PMingLiU;
+	text-decoration:none;
+}
 
+a:link {
+	color: #095C83;
+}
+
+a:visited {
+	color: #095C83;
+}
+
+a:hover {
+	color: #DC143C;
+	text-decoration: underline;
+}
+
+a:active {
+	color: #DC143C;
+	text-decoration: underline;
+}
+</style>
 <title>南京大学共青团委</title>
 </head>
 <body>
-<div id="Wrapper"> 
-			<table width="740" height="100%" align="center" cellpadding="0"
-
-				cellspacing="0"> 
-				<tr> 
-					<td height="136"> 
-						<div id="Logo"> 
-							<a href="#"><img src="img/IndexLogo.png"
-
-									border="0"> </a> 
-						</div> 
-					</td> 
-				</tr> 
-				<tr> 
-					<td height="39"></td> 
-				</tr>
-				<tr>					
-					<td height="341" id="Main">						    					
-						<div id="Login"> 
-						<font style="font-size: 12px;font-weight:bold;color: #FF0000"></font><br> 
-						
-						
-						<s:form  action="LoginAction.do" theme="xhtml">
-	<table cellpadding="0" cellspacing="0" style="margin-left:100px;">
-		<tr><td style="width:100%;">
+<div id="wrap">
+<s:form  action="LoginAction.do" theme="xhtml">
+	<table cellpadding="0" cellspacing="0" style="">
+		<tr><td style="">
     	 	<s:actionerror/>
      		<s:actionmessage name="message" value="message"/>
 		</td></tr>
@@ -47,26 +95,25 @@
 				labelposition="top"></s:textfield>
 			</td>
 		</tr>
+		<tr><td height="5px;"></td></tr>
 		<tr>
 			<td ><s:password id="loginTextfield" name="password" label="密码" size="20"
 				labelposition="top"></s:password>
 			</td>
 		</tr>
+		<tr><td height="10px;"></td></tr>
 		<tr>
 			<td>
-			<s:submit id="Btn" name="loginbt" cssClass="btn" value=""  ></s:submit>
-						
+			<s:submit id="Btn" name="loginbt" cssClass="btn" value=""  ></s:submit>					
 			</td>
 		</tr>
-
 	</table>
-
 </s:form>
+<div id="copy">
 <table width="100%" align="center"><tr><td width="100%" align="center">
-			<div id="copyrightPage"><span>&copy; 2010   Tuanwei.nju.edu.cn. All rights reserved.<a href="http://tuanwei.nju.edu.cn"> 共青团南京大学委员会</a> 版权所有 </span> 
-
-	<span>Powered By IGROO</span></div>	
-	</td></tr></table>							 
-</div>			 
+<span>&copy; 2010   Tuanwei.nju.edu.cn.<a href="http://tuanwei.nju.edu.cn"> 共青团南京大学委员会</a> 版权所有 </span> 
+</td></tr></table>
+</div>
+</div>
 </body>
 </html>
