@@ -8,7 +8,7 @@
 	src="<%=request.getContextPath()%>/js/radioList.js"></script>
 
 <div id="dvTitleinbox">
-<br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="img"/>" width="161" height="66"/></td></tr></table></td></tr></table></div><br/>
+<br/><div><table style="width:790px;"><tr><td align=center><table class="t_s_Table"><tr><td style="width:200px;height:70px;font-size:16px; font-family:'微软雅黑';">活动专题</td><td style="width:200px;height:70px"><img src="<s:property value="path"/>" width="161" height="66"/></td></tr></table></td></tr></table></div><br/>
   <div class="g-title-1">
     <div class="fn-fle">
       <h2>重点工作</h2>
@@ -16,7 +16,7 @@
   </div>
 </div>
 <div id="topicForm">
-<s:form name="topicForm" theme="simple" action="TopicDecision.do?topicid=%{topicid}">
+<s:form name="topicForm" theme="simple" action="admin.IWorkChangeSave.do?topicid=%{topicid}">
 	<div class="g-toolbar g-toolbar-top" id="dvToolbar_inbox">
 	  <div class="btngrp">
 	    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="topicForm.submit();" id="inbox__delete"><span>保存</span></div>
@@ -42,7 +42,16 @@
 	          <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
 	          	<td class="wd0"></td>
 	            <td class="wd1 ckb">
-	            	<input  class="check1" type = "radio" name="checkId" value="<s:property value="id"/>"/>
+	           
+	            <s:set name="topicid"> <s:property value="topicid"/> </s:set>
+	            <s:set name="currentid"> <s:property value="id"/> </s:set>
+				
+	            	<input  class="check1" type = "radio" name="checkId" value="<s:property value="id"/>" <s:if test="#topicid==#currentid">
+				checked
+				</s:if>
+				/>
+				
+					
 				</td>
 	            <td class="wd2" style="width:737px"><s:property value="name"/></td>
 	          </tr>
