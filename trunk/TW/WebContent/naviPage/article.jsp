@@ -3,8 +3,46 @@
 <link href="<%=request.getContextPath()%>/css/list.css" type="text/css"
 	media="screen" rel="stylesheet" />
 
+<style type="text/css">
 
+DIV#quotes {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 3px; PADDING-TOP: 3px; TEXT-ALIGN: 
 
+center
+}
+DIV#quotes A {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ddd 1px solid; COLOR: #aaa; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #ddd 1px 
+
+solid; TEXT-DECORATION: none
+}
+DIV#quotes A:hover {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 1px 
+
+solid
+}
+DIV#quotes A:active {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 1px 
+
+solid
+}
+DIV#quotes SPAN.current {
+	BORDER-RIGHT: #e0e0e0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #e0e0e0 1px solid; PADDING-LEFT: 5px; 
+
+FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #aaa; MARGIN-RIGHT: 2px; PADDING-TOP: 
+
+2px; BORDER-BOTTOM: #e0e0e0 1px solid; BACKGROUND-COLOR: #f0f0f0
+}
+DIV#quotes SPAN.disabled {
+	BORDER-RIGHT: #f3f3f3 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f3f3f3 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #f3f3f3 1px solid; COLOR: #ccc; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #f3f3f3 1px solid
+}
+
+</style>
 
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout" style="margin-left:15px;margin-top:12px;">
@@ -83,21 +121,20 @@
   </div>
 </div>
 <div style="clear:both;height:25px;"></div>
-<div id="articleNavi" style="clear:both;"><s:set name="currentPage"><s:property value="currentPage"/></s:set>
+<div id="quotes" style="clear:both;"><s:set name="currentPage"><s:property value="currentPage"/></s:set>
 <s:set name="category"><s:property value="category"/></s:set>
 <s:set name="level"> <s:property value="level"/> </s:set>
 <s:iterator value="pageCount" id="page">
 <s:set name="pValue"><s:property value="page"/></s:set>
 		
 		<s:if test="#pValue==#currentPage">
-		<s:property value="page"/>
+		<span class="current"><s:property value="page"/></span>
 		</s:if>
 		<s:else>
-		<a  href='<s:url action="Article.do" ><s:param name="currentPage" value="#page"/><s:param name="level" value="#level"/> <s:param name="category" value="#category"/></s:url>'>
-			[<s:property value="page"/>]
-		</a>
+		<a href='<s:url action="Article.do" ><s:param name="currentPage" value="#page"/><s:param name="level" value="#level"/><s:param name="category" value="#category"/></s:url>'><s:property value="page"/></a>
 		</s:else>
 </s:iterator></div>
+
 <!--
 	<table border="0">
 

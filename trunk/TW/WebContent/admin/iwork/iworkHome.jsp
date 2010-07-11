@@ -4,9 +4,9 @@
 <link href="<%=request.getContextPath()%>/css/topic.css" type="text/css"
 	media="screen" rel="stylesheet" />
 <table style="width:790px; height:200px;"><tr><td align=center>
-<table><tr><td><a href="admin.iWorkManageList.do">重点工作管理管理</a></td></tr></table>
-<table class="t_s_Table">
-<tr><td><span>首页重点工作替换</span></td></tr>
+<table class="t_s_Table" cellspacing="0" cellpadding="0">
+<tr class="t_s_a_Tr"><td colspan="2" style="border-bottom:5px solid #e0e0e0; text-align:center;"><a href="admin.iWorkManageList.do">重点工作管理管理</a></td></tr>
+<tr class="t_s_a_Tr"><td colspan="2" style="text-align:center;">首页重点工作替换</td></tr>
 	<tr class="t_s_i_Tr">
 		<td><img src="<s:property value="iworkone.path"/>" width="161" height="66"/></td>
 		<td><img src="<s:property value="iworktwo.path"/>" width="161" height="66"/></td>

@@ -6,6 +6,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="<%=request.getContextPath()%>/css/list.css" type="text/css"
 	media="screen" rel="stylesheet" />
+
+<style type="text/css">
+
+DIV#quotes {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 3px; PADDING-TOP: 3px; TEXT-ALIGN: 
+
+center
+}
+DIV#quotes A {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BORDER-LEFT: #ddd 1px solid; COLOR: #aaa; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #ddd 1px 
+
+solid; TEXT-DECORATION: none
+}
+DIV#quotes A:hover {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 1px 
+
+solid
+}
+DIV#quotes A:active {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #a0a0a0 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #a0a0a0 1px solid; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #a0a0a0 1px 
+
+solid
+}
+DIV#quotes SPAN.current {
+	BORDER-RIGHT: #e0e0e0 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #e0e0e0 1px solid; PADDING-LEFT: 5px; 
+
+FONT-WEIGHT: bold; PADDING-BOTTOM: 2px; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #aaa; MARGIN-RIGHT: 2px; PADDING-TOP: 
+
+2px; BORDER-BOTTOM: #e0e0e0 1px solid; BACKGROUND-COLOR: #f0f0f0
+}
+DIV#quotes SPAN.disabled {
+	BORDER-RIGHT: #f3f3f3 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f3f3f3 1px solid; PADDING-LEFT: 5px; 
+
+PADDING-BOTTOM: 2px; BORDER-LEFT: #f3f3f3 1px solid; COLOR: #ccc; MARGIN-RIGHT: 2px; PADDING-TOP: 2px; BORDER-BOTTOM: #f3f3f3 1px solid
+}
+
+</style>	
+
 <title>download</title>
 </head>
 <body>
@@ -56,19 +98,17 @@
 	<s:property value="currentPage" />
 </s:set>
 <div style="clear: both; height: 25px;"></div>
-<div id="articleNavi" style="clear: both;"><s:set
+<div id="quotes" style="clear: both;"><s:set
 	name="currentPage">
 	<s:property value="currentPage" />
 </s:set> <s:iterator value="pageCount" id="page">
 	<s:if test="#current==#page">
-		<s:property value="page" />
+		<span class="current"><s:property value="page"/></span>
 	</s:if>
 
 	<s:else>
 
-		<a
-			href='<s:url action="DownloadPage.do" ><s:param name="currentPage" value="#page"/><s:param name="category"><s:property value='category'/></s:param> </s:url>'>
-		[<s:property value="page" />] </a>
+		<a href='<s:url action="DownloadPage.do" ><s:param name="currentPage" value="#page"/><s:param name="category"><s:property value='category'/></s:param> </s:url>'><s:property value="page" /></a>
 	</s:else>
 </s:iterator></div>
 
