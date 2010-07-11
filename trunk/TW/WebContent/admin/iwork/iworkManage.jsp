@@ -19,10 +19,9 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd1" style="width:503px">专题活动</th>
-        <th style="width:70px;text-align:center">类别</th>
+        <th class="wd1" style="width:573px">重点工作</th>
         <th style="width:160px;text-align:center">操作</th>
-    	  </tr>
+   	  </tr>
     </thead>
   </table>
   <div id="MailListMaininbox" class="txt-12">
