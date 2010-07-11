@@ -164,6 +164,10 @@
 	<definition name="admin.iworkChangeSave" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/iworkChangeSucees.jsp"/>
 	</definition>
+	
+	<definition name="admin.iworkModify" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkmodify.jsp"/>
+	</definition>
 </tiles-definitions>
 
 

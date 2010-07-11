@@ -697,6 +697,9 @@
 			<result name="success" type="redirect">admin.iWorkManageList.do</result>
 		</action>
 
+		<action name="admin.IWorkModify" class="action.iwork.IWorkModifyAction">
+			<result name="success" type="tiles">admin.iworkModify</result>
+		</action>
 	</package>
 
 </struts>

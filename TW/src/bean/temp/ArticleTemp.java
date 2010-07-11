@@ -13,6 +13,8 @@ public class ArticleTemp {
 	private int checked;
 	private int topid;
 	private long istop;
+	private int brandid;
+	private int iworkid;
 	
 	public long getId() {
 		return id;
@@ -74,6 +76,18 @@ public class ArticleTemp {
 	}
 	public void setIstop(long istop) {
 		this.istop = istop;
+	}
+	public int getBrandid() {
+		return brandid;
+	}
+	public void setBrandid(int brandid) {
+		this.brandid = brandid;
+	}
+	public int getIworkid() {
+		return iworkid;
+	}
+	public void setIworkid(int iworkid) {
+		this.iworkid = iworkid;
 	}
 	
 	
