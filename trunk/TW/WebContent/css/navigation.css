@@ -217,7 +217,7 @@
 	background: url(../img/6h.gif) no-repeat;
 	width: 99px;
 }
-#n0 a {
-	background: url(../img/0.gif) no-repeat;
+#n0 {
+	background: url(../img/searchbg.gif) repeat-x;
 	width: 99px;
 }
