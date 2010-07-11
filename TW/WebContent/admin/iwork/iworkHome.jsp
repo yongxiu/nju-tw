@@ -6,7 +6,7 @@
 <table style="width:790px; height:200px;"><tr><td align=center>
 <table><tr><td><a href="">重点工作管理管理</a></td></tr></table>
 <table class="t_s_Table">
-<tr><td><span>首页替换重点工作替换</span></td></tr>
+<tr><td><span>首页重点工作替换</span></td></tr>
 	<tr class="t_s_i_Tr">
 		<td><img src="<s:property value="img1"/>" width="161" height="66"/></td>
 		<td><img src="<s:property value="img2"/>" width="161" height="66"/></td>
