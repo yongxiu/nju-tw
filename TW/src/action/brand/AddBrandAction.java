@@ -1,4 +1,4 @@
-package action.iwork;
+package action.brand;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,13 +10,13 @@ import org.apache.commons.io.FileUtils;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
 
-import bean.IWork;
+import bean.Brand;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import dao.IWorkDao;
+import dao.BrandDao;
 
-public class AddiWorkAction extends ActionSupport implements SessionAware{
+public class AddBrandAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = 572146812454l;
 
 	private String myName;
@@ -33,7 +33,7 @@ public class AddiWorkAction extends ActionSupport implements SessionAware{
 	private Map session;
 
 	
-	public AddiWorkAction() {
+	public AddBrandAction() {
 		deniedExtensions = new ArrayList<String>();
 		allowedExtensions = stringToArrayList("png|jpg|gif|bmp");
 	}
@@ -51,8 +51,8 @@ public class AddiWorkAction extends ActionSupport implements SessionAware{
 		}
 
 		if(extIsAllowed(extension.substring(1))) {
-			IWorkDao dao = new IWorkDao();
-			IWork iwork = new IWork();
+			BrandDao dao = new BrandDao();
+			Brand brand = new Brand();
 			String imageName = (new Date()).getTime() + extension;
 			File newFile = new File(ServletActionContext.getServletContext().getRealPath("/topicImage") + "\\" + imageName);
 			System.out.println(ServletActionContext.getServletContext().getRealPath("/topicImage") + "\\" + imageName);
@@ -63,10 +63,10 @@ public class AddiWorkAction extends ActionSupport implements SessionAware{
 				return INPUT;
 			}
 			
-			iwork.setPath("/TW/topicImage/" + imageName);
-			iwork.setTop(0);
-			iwork.setName(getMyName());
-			dao.create(iwork);
+			brand.setPath("/TW/topicImage/" + imageName);
+			brand.setTop(0);
+			brand.setName(getMyName());
+			dao.create(brand);
 			return SUCCESS;
 		} else {
 			addFieldError("imgFile", "文件格式错误！");

@@ -696,9 +696,50 @@
 		<action name="admin.AddiWorkAction" class="action.iwork.AddiWorkAction">
 			<result name="success" type="redirect">admin.iWorkManageList.do</result>
 		</action>
+		
+		<action name="admin.DeleteiworkAction" class="action.iwork.DeleteiworkAction">
+			<result name="success" type="redirect">admin.iWorkManageList.do</result>
+		</action>
 
 		<action name="admin.IWorkModify" class="action.iwork.IWorkModifyAction">
 			<result name="success" type="tiles">admin.iworkModify</result>
+		</action>
+		
+		
+		
+		
+		
+		
+		<action name="admin.BrandHome" class="action.brand.BrandHomeAction">
+			<result name="success" type="tiles">admin.BrandHome</result>
+		</action>
+		<action name="admin.BrandManageList" class="action.brand.BrandManageListAction">
+			<result name="success" type="tiles">admin.BrandManageList</result>
+		</action>
+		<action name="admin.addBrandPage">
+			<result name="success" type="tiles">admin.AddBrand</result>
+		</action>
+		
+		<action name="admin.BrandChange" class="action.brand.BrandChangeAction">
+			<result name="success" type="tiles">admin.BrandChange</result>
+		</action>
+
+		
+		<action name="admin.BrandChangeSave" class="action.brand.BrandChangeSaveAction">
+			<result name="success" type="tiles">admin.BrandChangeSave</result>
+		</action>
+
+		
+		<action name="admin.AddBrandAction" class="action.brand.AddBrandAction">
+			<result name="success" type="redirect">admin.BrandManageList.do</result>
+		</action>
+		
+		<action name="admin.DeletebrandAction" class="action.brand.DeleteBrandAction">
+			<result name="success" type="redirect">admin.BrandManageList.do</result>
+		</action>
+
+		<action name="admin.BrandModify" class="action.brand.BrandModifyAction">
+			<result name="success" type="tiles">admin.BrandModify</result>
 		</action>
 	</package>
 
