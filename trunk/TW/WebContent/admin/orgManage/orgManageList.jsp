@@ -40,7 +40,7 @@
             		工作人员
             	</s:if>
 		  		<s:if test="category==2">
-					机构设置
+					组织机构
 				</s:if>
 				<s:if test="category==3">
 					基层团委
