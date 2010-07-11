@@ -670,11 +670,14 @@
 		<action name="Brand" class="action.BrandListAction">
 			<result name="success" type="tiles">brand</result>
 		</action>
+		
+		<action name="admin.iWorkHome" class="action.iwork.IWorkHomeAction">
+			<result name="success" type="tiles">admin.iworkHome</result>
+		</action>
+		<action name="admin.iWorkManageList" class="action.iwork.IWorkManageListAction">
+			<result name="success" type="tiles">admin.iworkManageList</result>
+		</action>
 	</package>
 
 </struts>
 
-    
-												
-
-		
