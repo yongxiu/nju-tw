@@ -10,9 +10,8 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd2" style="width:470px;">标题</th>
-		<th class="wd3" style="width:140px;">类别</th>
-        <th class="wd4" style="width:100px;">发布日期</th>
+        <th class="wd2" style="width:270px;">活动</th>
+		<th class="wd3" style="width:450px;">活动名称</th>
       </tr>
     </thead>
   </table>
@@ -21,14 +20,12 @@
       <table class="g-table-comm" id="period_table_inbox2" style="width:98%;">
 
       <s:iterator value="entities" id="files" status="stat">
-        
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd2" style="width:470px;"><s:property value="id"/></td>
-            <td class="wd3" style="width:140px;"><s:property value="name"/></td>           
-            <td class="wd4" style="width:100px;"><s:property value="path"/></td>
+          	<s:set name="id"><s:property value="id"/></s:set>
+            <td class="wd2" style="width:200px;"><a href="<s:url action="BrandArticleList.do"><s:param name="brandid" value="#id"/></s:url>"><img src="<s:property value="path"/>" width="161" height="66"/></a></td>
+            <td class="wd3" style="width:340px;"><a href="<s:url action="BrandArticleList.do"><s:param name="brandid" value="#id"/></s:url>"><s:property value="name"/></a></td>
           </tr>
-        
       </s:iterator>
 
       </table>
