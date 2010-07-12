@@ -314,11 +314,8 @@
 		<!-- summit article -->
 		<action name="SubmitArticleAction" class="action.SubmitArticleAction">
 			<interceptor-ref name="loginStack"></interceptor-ref>
-			<result name="success" type="tiles">admin.submitSuccess</result>
+			<result name="success" type="tiles">admin.success</result>
 			<result name="imageSelect" type="tiles">admin.imageSelect</result>
-			
-			
-			
 		</action>
 		
 		<!-- Select image as main image -->
@@ -741,7 +738,7 @@
 			<result name="success" type="redirect">admin.BrandManageList.do</result>
 		</action>
 		
-		<action name="admin.DeletebrandAction" class="action.brand.DeleteBrandAction">
+		<action name="admin.DeleteBrandAction" class="action.brand.DeleteBrandAction">
 			<result name="success" type="redirect">admin.BrandManageList.do</result>
 		</action>
 

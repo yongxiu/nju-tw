@@ -8,7 +8,7 @@
 	src="<%=request.getContextPath()%>/js/upload.js"></script>
 
 <div class = "cent">
-	<s:form theme="simple" action ="admin.AddiWorkAction.do"  method="post" enctype ="multipart/form-data">
+	<s:form theme="simple" action ="admin.AddBrandAction.do"  method="post" enctype ="multipart/form-data">
 	<s:fielderror>
 		<s:param>myFile</s:param>
 	</s:fielderror>

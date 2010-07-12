@@ -1,18 +1,15 @@
 package action;
 
-import interceptor.GeneralInterceptor;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
-import service.Category;
 import service.GetImageFromArticle;
 import service.LuceneIndexWriter;
 import bean.GenericArticle;
 import bean.User;
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import dao.BrandDao;
 import dao.CategoryDao;
@@ -95,6 +92,7 @@ public class SubmitArticleAction extends ActionSupport implements SessionAware{
 		LuceneIndexWriter.updateIndex(INDEX_PATH, article);
 		System.out.println("更新索引");
 		
+		message = "发布成功！";
 		if (imageStrings.isEmpty()) {
 			System.out.println(article.getContent());
 			return SUCCESS;

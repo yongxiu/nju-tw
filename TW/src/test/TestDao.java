@@ -37,9 +37,7 @@ public class TestDao {
 //		CategoryDao categoryDao = new CategoryDao();
 //		Category category = new Category("ss", 122);
 //		categoryDao.create(category);
-		BrandDao brandDao = new BrandDao();
-		Brand brand = new Brand("第二个品牌", "path");
-		brandDao.create(brand);
+
 		
 	}
 }
