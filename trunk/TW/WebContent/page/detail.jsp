@@ -13,7 +13,7 @@
 <table>
   <tr>
     <td></td>
-    <td><s:property value="article.title" /> </td>
+    <td class="g_a_Title"><s:property value="article.title" /> </td>
   </tr>
   <tr>
     <td></td>
