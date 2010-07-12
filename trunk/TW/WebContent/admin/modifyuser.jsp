@@ -12,7 +12,7 @@
 
 	<s:actionmessage name="message"/>
 
-	<s:set name="username"> <s:property value="user.username"/> </s:set>
+	<s:set name="username"> <s:property value="user.username" escape="false"/> </s:set>
 	
 	<div class="cent">
 	<s:fielderror>
@@ -23,7 +23,7 @@
 	<s:textfield cssClass="input" name="username" id="username" value="%{#username}" />
 	</p>
 
-	<s:set name="name"><s:property value="user.name"/></s:set>
+	<s:set name="name"><s:property value="user.name" escape="false"/></s:set>
 	
 	<p title="用户的姓名，必填"><label class="label" for="name">姓名：</label>
 	<s:textfield cssClass="input" name="name" id="name" value="%{#name}"/>
