@@ -18,9 +18,9 @@
 <a href="http://bbs.nju.edu.cn/">
 <img src="/TW/linkImage/5.gif"></a>
 <div id="linkerVerticalBlank"></div>
-<a href="http://tuanwei.nju.edu.cn/qing/">
-<img src="/TW/linkImage/6.gif"></a>
+<a href="http://news.nju.edu.cn/">
+<img src="/TW/linkImage/7.gif"></a>
 <div id="linkerVerticalBlank"></div>
-<a href="#"><img src="/TW/linkImage/7.gif"></a>
+<a href="http://tuanwei.nju.edu.cn/qing/"><img src="/TW/linkImage/6.gif"></a>
 <div id="linkerVerticalBlank"></div>
 <div id="linkerHorizontalBlank"></div>

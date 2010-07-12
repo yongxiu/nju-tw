@@ -23,7 +23,7 @@
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
           	<s:set name="id"><s:property value="id"/></s:set>
-            <td class="wd2" style="width:200px;"><a href="<s:url action="IWorkArticleList.do"><s:param name="iworkid" value="#id"/></s:url>"><img src="<s:property value="path"/>" width="161" height="66"/></a></td>
+            <td class="wd2" style="width:200px;"><a href="<s:url action="IWorkArticleList.do"><s:param name="iworkid" value="#id"/></s:url>"><img border="none" src="<s:property value="path"/>" width="161" height="66"/></a></td>
             <td class="wd3" style="width:340px;"><a href="<s:url action="IWorkArticleList.do"><s:param name="iworkid" value="#id"/></s:url>"><s:property value="name"/></a></td>
           </tr>
       </s:iterator>
