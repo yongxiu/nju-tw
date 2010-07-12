@@ -34,6 +34,7 @@ public class EditorAction extends ActionSupport{
          list.add("工作简报");
          list.add("理论园地");
          list.add("办事指南");
+         list.add("通知公告");
          	//iwork
          list.add("重点工作");
          	//brand
@@ -59,6 +60,10 @@ public class EditorAction extends ActionSupport{
          temp = new ArrayList<String>();
          temp.add("—— ——");
          map.put("办事指南", temp);
+         
+         temp = new ArrayList<String>();
+         temp.add("—— ——");
+         map.put("通知公告", temp);
          
          map.put("重点工作", iworks);
          map.put("品牌项目", brands);
