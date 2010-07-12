@@ -15,6 +15,7 @@ public class ArticleTemp {
 	private long istop;
 	private int brandid;
 	private int iworkid;
+	private String brandiworkName;
 	
 	public long getId() {
 		return id;
@@ -88,6 +89,12 @@ public class ArticleTemp {
 	}
 	public void setIworkid(int iworkid) {
 		this.iworkid = iworkid;
+	}
+	public void setBrandiworkName(String brandiworkName) {
+		this.brandiworkName = brandiworkName;
+	}
+	public String getBrandiworkName() {
+		return brandiworkName;
 	}
 	
 	
