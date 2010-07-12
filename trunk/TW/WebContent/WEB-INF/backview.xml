@@ -35,6 +35,10 @@
 		<put-attribute name="content" value="/page/success.jsp" />
 	</definition>
 	
+	<definition name="success" extends="customer">
+		<put-attribute name="content" value="/userComponent/success.jsp"/>
+	</definition>
+	
 	<definition name="customer.imageSelect" extends="customer">
 		<put-attribute name="content" value="/userComponent/imageSelect.jsp" />
 	</definition>
@@ -89,6 +93,9 @@
 		<put-attribute name="content" value="/admin/adduser.jsp" />
 	</definition>
 	
+	<definition name="admin.addusersuccess" extends="admin">
+		<put-attribute name="content" value="/admin/addUserSuccess.jsp"/>
+	</definition>
 	
 
 	<definition name="admin.themeManage" extends="admin">		
