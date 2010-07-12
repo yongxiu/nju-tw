@@ -20,10 +20,6 @@
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/AddUserPage.do'" title="" id="inbox__delete"><span>添加用户</span></div>
   </div>
   
-  <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
-  </div>
-  
 </div>
 <div class="gIbx-lineinfo" id="inboxStatusDiv" style="display: none;"></div>
 <div class="gIbx-tablayout">
@@ -31,7 +27,7 @@
     <thead>
       <tr>
         <th class="wd0"></th>
-        <th class="wd1 ckb"><input id="checkbox_inbox_all" title="全选/不选　本页所有文章" type="checkbox"></th>
+        <th class="wd1 ckb"></th>
         <th style="width:50px;">用户ID</th>
         <th style="width:130px;">用户名</th>
         <th style="width:130px;">密码</th>
@@ -48,7 +44,7 @@
         <tbody>
           <tr style="" class="mark0" id="tr_inbox_<s:property value="#stat.index"/>">
           	<td class="wd0"></td>
-            <td class="wd1 ckb"><input title="选择/不选" value="178:1tbishvRp0X9dqUmMAAAsi" name="checkId" id="checkbox_inbox_<s:property value="#stat.index"/>" type="checkbox"></td>
+            <td class="wd1 ckb"></td>
             <td style="width:50px;"><s:property value="id"/></td>
             <td style="width:130px;"><s:property value="username"/></td>
             <td style="width:130px;"><s:property value="password"/></td>
@@ -68,15 +64,11 @@
     </div>
   </div>
 </div>
-<div class="ibx-sel" id="divBom_inbox" style=""> 选择： <a href="javascript:selAll()">全部</a> - <a href="javascript:selConvert()">反选</a> - <a href="javascript:selNone()">不选</a> </div>
 
 <div class="g-toolbar g-toolbar-bottom" id="dvToolbar_inbox__bottom">
   <div class="btngrp">
     <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="window.location.href='/TW/admin/adduser.jsp'" title="" id="inbox__delete"><span>添加用户</span></div>
   </div>
-  
-  <div class="btngrp">
-    <div class="btn btn-dft txt-b" onmouseover="this.className='btn btn-dft btn-dft-hover txt-b'" onmouseout="this.className='btn btn-dft txt-b'" onmousedown="this.className='btn btn-dft btn-dft-active txt-b'" onmouseup="this.className='btn btn-dft btn-dft-hover txt-b'" onclick="MM.inbox.deleteList('delete');" title="" id="inbox__delete"><span>删除用户</span></div>
-  </div>
+
 
 </div>
