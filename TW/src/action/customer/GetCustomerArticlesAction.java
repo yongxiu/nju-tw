@@ -15,7 +15,10 @@ import bean.temp.ArticleTemp;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import dao.BrandDao;
+import dao.CategoryDao;
 import dao.GenericArticleDao;
+import dao.IWorkDao;
 
 public class GetCustomerArticlesAction extends ActionSupport implements SessionAware{
 	/**
@@ -39,6 +42,9 @@ public class GetCustomerArticlesAction extends ActionSupport implements SessionA
 		long uid = (Long) getSession().get("id");
 		articles = new ArrayList<ArticleTemp>();
 		GenericArticleDao articleDao =  new GenericArticleDao();
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
 		int number =24;
 		currentPage = 1;
 //		Set<GenericArticle> tempArticles = new HashSet<GenericArticle>(articleDao.getAllEntity());
@@ -68,7 +74,19 @@ public class GetCustomerArticlesAction extends ActionSupport implements SessionA
 		//clone generic article to aritcleTemp
 		for(GenericArticle a : articlesG) {
 			ArticleTemp aTemp = new ArticleTemp();
-			aTemp.setCategory(Category.getCategory(a.getCategory()));
+			if(a.getCategory()!=0) {
+				aTemp.setCategory(categoryDao.getNameByCategory(a.getCategory()));
+			}
+			else if (a.getCategory()==0&&a.getIworkid()!=0) {
+				aTemp.setCategory(iWorkDao.getNameById(a.getIworkid()));
+			}
+			
+			else if (a.getCategory()==0&&a.getIworkid()==0&&a.getBrandid()!=0) {
+				aTemp.setCategory(brandDao.getNameById(a.getBrandid()));
+			}
+			else {
+				aTemp.setCategory("无分类");
+			}
 			aTemp.setDate(a.getDate().toString());
 			aTemp.setId((int) a.getId());
 			aTemp.setTitle(a.getTitle());
