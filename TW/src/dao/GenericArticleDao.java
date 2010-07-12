@@ -12,6 +12,7 @@ import org.hibernate.criterion.Order;
 import org.omg.CORBA.PUBLIC_MEMBER;
 
 import antlr.collections.List;
+import bean.Brand;
 import bean.GenericArticle;
 import dao.hibernateTemlate.HibernateGenericDao;
 import dao.hibernateTemlate.HibernateUtil;
@@ -330,6 +331,24 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		return count;
 	}
 	
+	public String getNameByBrand(Long id) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.id=:id");
+		query.setParameter("id", id);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		GenericArticle article = articles.get(0);
+		int brandid = article.getBrandid();
+		Query query2 = session.createQuery("from Brand b where b.id=:brandid");
+		query2.setParameter("brandid", brandid);
+		ArrayList<Brand> brands = (ArrayList<Brand>) query2.list();
+		Brand brand = brands.get(0);
+		String brandName = brand.getName();
+		tx.commit();
+		closeSession();
+		return brandName;
+	}
+	
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
 //		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
@@ -358,10 +377,10 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //		for(GenericArticle article:articles) {
 //			System.out.println(article.getCategory());
 //		}
-		ArrayList<GenericArticle> articles = dao.getArticlesByIWorkId(1);
-		for(GenericArticle a:articles) {
-			System.out.println(a.getIworkid());
-		}
-		
+//		ArrayList<GenericArticle> articles = dao.getArticlesByIWorkId(1);
+//		for(GenericArticle a:articles) {
+//			System.out.println(a.getIworkid());
+//		}
+		System.out.println(dao.getNameByBrand(new Long(499)));
 	}
 }
