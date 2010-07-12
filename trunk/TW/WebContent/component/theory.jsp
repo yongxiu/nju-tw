@@ -6,15 +6,15 @@
 
 <s:iterator value="theories">
  <tr>
- 	<td>
+ 	<td valign="top" width="300" align="left">
  		 <a href='<s:url action="AticalDetail.do"><s:param name="id"><s:property value="id"/></s:param></s:url>'>
- 		 	<s:property value="title"/> &nbsp; [ <s:property value="date"/> ]
+ 		 	<s:property value="title"/>
  		 </a>
- 		 
  	</td>
+ 	<td width="80" align="left" style="color:rgb(148,28,0); padding-left:8px;font-size:12px;"><s:property value="date"/></td>
 </tr>
 
-
+<tr><td height="2" colspan="2" style="background-color:#EFEFEF"></td></tr>
  
  
 </s:iterator>
