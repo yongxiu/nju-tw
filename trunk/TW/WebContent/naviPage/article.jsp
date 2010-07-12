@@ -72,6 +72,12 @@
 			 		</s:if>
 			 		<s:if test="category==10">调查研究
 			 		</s:if>
+			 		
+			 		<s:if test="category==11">通知公告
+			 		</s:if>
+			 		
+			 		<s:if test="category==12">办事指南
+			 		</s:if>
 	 			</td>
 			
 	            <td class="wd4" style="width:90px;padding-left:10px;"><s:property value="date"/></td>
