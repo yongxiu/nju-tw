@@ -10,7 +10,7 @@
 	<tr><td><a href='admin.uploadFile.do'> 上传文件</a></td><td><a href='admin.changePSW.do'> 修改密码</a></td></tr>
 	<tr><td><a href='admin.FileList.do'> 文章列表</a></td><td><a href='admin.ArticleList.do'> 文章列表</a></td></tr>
 	<tr><td><a href='OrgManageListPage.do'> 组织结构</a></td><td><a href='admin.topic.do'>活动管理</a></td></tr>
-	<tr><td><a href='admin.ListUser.do'>后台管理</a></td><td><a href='Logout.do''>退出</a></td></tr>
+	<tr><td><a href='admin.ListUser.do'>后台管理</a></td><td><a href='Logout.do'>退出</a></td></tr>
 	</table>
 </s:if>
 

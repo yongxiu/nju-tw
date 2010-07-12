@@ -163,10 +163,7 @@
 			<result name="success" type="tiles">admin.changePSW</result>
 		</action>
 		
-		<action name="admin.topic">
-		<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success" type="tiles">admin.topic</result>
-		</action>
+		
 		
 		<action name="admin.ListUser" class="action.ListUserAction">
 		<interceptor-ref name="adminStack"></interceptor-ref>
@@ -194,12 +191,7 @@
 		</action>
 		<!-- Get Modify Files -->
 		
-		<action name="admin.topicPage" class="action.topic.IWorkAction">
-		<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success">/admin/topic/topicselect.jsp</result>
-		</action>
-		
-	
+			
 		
 		<action name="GetModifyFile" class="action.GetModifyFileAction">
 		<interceptor-ref name="loginStack"></interceptor-ref>
@@ -288,12 +280,7 @@
 			<result name="input" type="redirect">uploadFile.do</result>
 		</action>
 		
-		<!-- Topic image Upload -->
-		<action name="TopicImgUploadAction" class="action.TopicImgUploadAction">
-			<interceptor-ref name="adminStack"></interceptor-ref>
-			<result name="success" type="redirect">TopicManage.do?topicid=${topicid}&amp;isnew=1</result>
-			<result name="input" type="tiles">admin.topichange</result>
-		</action>
+
 
 		<!-- List organization -->
 		<action name="OrgnizationAction" class="action.OrgnizationAction">
@@ -494,48 +481,16 @@
 			</result>
 		</action>
 		
-		
-		<!-- Topic block -->
-			<action name="TopicChange" class="action.topic.TopicChangeAction">
-			<interceptor-ref name="adminStack"></interceptor-ref>
-				<result name="success" type="tiles">admin.topichange</result>
-			</action>
+
 			
-			<action name="TopicManage" class="action.topic.TopicManageAction">
-			<interceptor-ref name="adminStack"></interceptor-ref>
-				<result name="success" type="tiles">admin.topicmanage</result>
-			</action>
-			
-			<action name="TopicDecision" class="action.topic.TopicDecisionAction">
-			<interceptor-ref name="adminStack"></interceptor-ref>
-				<result name="success" type="tiles">admin.success</result>
-			</action>
+
 			
 			<action name="SuccessAction" class="action.admin.SuccessAction">
 			<interceptor-ref name="loginStack"></interceptor-ref>
 				<result name="success" type="tiles">admin.success</result>
 			</action>
 			
-			<!-- Homepage topic -->
-			<action name="TopicList" class="action.topic.TopicListAction">
-				<result name="success">/page/topicList.jsp</result>
-			</action>
-			<action name="TopicManagePage" class="action.topic.TopicManagePageAction">
-				<interceptor-ref name="adminStack"></interceptor-ref>
-				<result name="success">/admin/topic/topicmanage.jsp</result>
-			</action>
-			<action name="TopicManagePageTiles">
-			<interceptor-ref name="adminStack"></interceptor-ref>
-				<result name="success" type="tiles">admin.topicmanagepage</result>
-			</action>
-			
-			<action name="TopicListPage">
-				<result name="success" type="tiles">topicList</result>
-			</action>
-			
-			<action name="Topic" class="action.topic.TopicAction">
-				<result name="success">/component/topic.jsp</result>
-			</action>
+
 
 			
 			<!-- Top -->
