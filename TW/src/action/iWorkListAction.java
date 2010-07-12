@@ -17,6 +17,7 @@ public class iWorkListAction extends ActionSupport{
 	private ArrayList<IWork> entities;
 
 	public String execute() {
+		//System.out.println("到了");
 		IWorkDao iWorkDao = new IWorkDao();
 		entities = (ArrayList<IWork>) iWorkDao.getAllEntity();
 		for(int i = 0;i < entities.size();i ++) {

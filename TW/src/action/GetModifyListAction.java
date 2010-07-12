@@ -17,7 +17,7 @@ public class GetModifyListAction extends ActionSupport implements SessionAware{
 	public String execute() {
 		UserDao userDao = new UserDao();
 		user = userDao.getById(new Long(getId()));
-		getSession().put("user", getUser());
+		getSession().put("usermodify", getUser());
 		return SUCCESS;
 	}
 	public int getId() {

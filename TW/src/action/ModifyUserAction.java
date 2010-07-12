@@ -20,7 +20,7 @@ public class ModifyUserAction extends ActionSupport implements SessionAware{
 	 
 	 public String execute() {
 		 UserDao userDao = new UserDao();
-		 User user= (User) getSession().get("user");
+		 User user= (User) getSession().get("usermodify");
 		// getSession().remove("user");
 		 
 		 if(getUsername().equals(user.getUsername())) {
