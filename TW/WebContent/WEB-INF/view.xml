@@ -88,6 +88,10 @@
 	<definition name="articleList" extends="standard">
 		<put-attribute name="content" value="/page/articleList.jsp"></put-attribute>
 	</definition>
+	
+	<definition name="brandiworkList" extends="standard">
+		<put-attribute name="content" value="/page/brandiworkArticleList.jsp"></put-attribute>
+	</definition>
 	<!-- æä»¶ç³»ç»&ç»¼åèµæ -->
 	<definition name="download" extends="standard">
 		<put-attribute name="content" value="/DownloadAction.do"></put-attribute>

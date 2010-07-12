@@ -1,17 +1,12 @@
 package action.iwork;
 
 import java.util.ArrayList;
-import java.util.Map;
-
-import org.apache.struts2.interceptor.SessionAware;
-import org.omg.CORBA.PRIVATE_MEMBER;
 
 import service.Category;
-import service.GetArticles;
-import service.SortUtil;
-import sun.print.resources.serviceui;
+
 
 import bean.GenericArticle;
+import bean.temp.ArticleTemp;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -22,23 +17,38 @@ public class IWorkArticleListAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private ArrayList<GenericArticle> articles;
+	private ArrayList<ArticleTemp> articles;
 	private int iworkid;
 	
 	public String execute() throws Exception {
-		GenericArticleDao dao = new GenericArticleDao();
-		setArticles(dao.getArticlesByIWorkId(getIworkid()));
+		articles = new ArrayList<ArticleTemp>();
+		GenericArticleDao articleDao =  new GenericArticleDao();
+	
+//		Set<GenericArticle> tempArticles = user.getArticles();
+		ArrayList<GenericArticle> articlesG ;
+//		for(GenericArticle articleTemp : tempArticles) {
+//			articlesG.add(articleTemp);
+//		}
+//		
+//		//sort articles by date
+//		articlesG = SortUtil.revertSort(articlesG);
 		
+		//top sort
+		articlesG = articleDao.getArticlesByIWorkId(getIworkid());
+		
+		//clone generic article to aritcleTemp
+		for(GenericArticle a : articlesG) {
+			ArticleTemp aTemp = new ArticleTemp();
+			aTemp.setCategory(Category.getCategory(a.getCategory()));
+			aTemp.setDate(a.getDate().toString());
+			aTemp.setId((int) a.getId());
+			aTemp.setTitle(a.getTitle());
+			aTemp.setBrandiworkName(articleDao.getNameByIWork(a.getId()));
+			articles.add(aTemp);
+		}
 		return SUCCESS;
 	}
 
-	public ArrayList<GenericArticle> getArticles() {
-		return articles;
-	}
-
-	public void setArticles(ArrayList<GenericArticle> articles) {
-		this.articles = articles;
-	}
 
 	public void setIworkid(int iworkid) {
 		this.iworkid = iworkid;
@@ -46,6 +56,16 @@ public class IWorkArticleListAction extends ActionSupport {
 
 	public int getIworkid() {
 		return iworkid;
+	}
+
+
+	public void setArticles(ArrayList<ArticleTemp> articles) {
+		this.articles = articles;
+	}
+
+
+	public ArrayList<ArticleTemp> getArticles() {
+		return articles;
 	}
 	
 }

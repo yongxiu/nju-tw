@@ -709,12 +709,12 @@
 
 		<!-- 首页显示的iwork文章列表 -->
 		<action name="IWorkArticleList" class="action.iwork.IWorkArticleListAction">
-			<result name="success" type="tiles">articleList</result>
+			<result name="success" type="tiles">brandiworkList</result>
 		</action>
 		
 		<!-- 首页显示的brand文章列表 -->
 		<action name="BrandArticleList" class="action.brand.BrandArticleListAction">
-			<result name="success" type="tiles">articleList</result>
+			<result name="success" type="tiles">brandiworkList</result>
 		</action>
 		
 	</package>
