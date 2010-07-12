@@ -20,7 +20,7 @@ public class DownloadAction extends ActionSupport implements SessionAware{
 	private int category;
 	public String execute() {
 		System.out.println(category);
-		int number = 4;
+		int number = 24;
 		currentPage = 1;
 		FileDao fileDao = new FileDao();
 		files = fileDao.getFileByCategoryPage(currentPage, number,category);
