@@ -7,6 +7,12 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.search.Hits;
 import org.omg.CORBA.INTERNAL;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
+import dao.BrandDao;
+import dao.CategoryDao;
+import dao.IWorkDao;
+
 import bean.temp.ArticleTemp;
 
 public class PageService {
@@ -31,6 +37,9 @@ public class PageService {
 	}
 	
 	public static ArrayList<ArticleTemp> getArticleByPage(int currentPage, int pageCount,Hits hits){
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
 		ArrayList<ArticleTemp> articles = new ArrayList<ArticleTemp>();
 		
 		int startIndex = (currentPage - 1) * PAGE_SIZE;
