@@ -12,8 +12,15 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.Term;
 
+import sun.net.www.content.audio.basic;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 import bean.GenericArticle;
+import dao.BrandDao;
+import dao.CategoryDao;
 import dao.GenericArticleDao;
+import dao.IWorkDao;
 
 public class LuceneIndexWriter {
 	public static void initalIndex(String path) throws IOException {
@@ -25,13 +32,31 @@ public class LuceneIndexWriter {
 		Field f4 = null;
 		Field f5 = null;
 		GenericArticleDao articleDao = new GenericArticleDao();
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
 		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) articleDao.getAllEntity();
 		for(GenericArticle article:articles) {
 			doc = new Document();
 			f1 = new Field("id",article.getId()+"",Field.Store.YES,Field.Index.UN_TOKENIZED);
 			f2 = new Field("title",article.getTitle(),Field.Store.YES,Field.Index.TOKENIZED);
 			f3 = new Field("content",article.getContent(),Field.Store.YES,Field.Index.TOKENIZED);
-			f4 = new Field("category", Category.getCategory(article.getCategory()), Field.Store.YES,Field.Index.TOKENIZED);
+			if (article.getCategory()!=0) {
+				f4 = new Field("category", categoryDao.getNameByCategory(article.getCategory()), Field.Store.YES,Field.Index.TOKENIZED);
+
+			}
+			else if (article.getCategory()==0&&article.getIworkid()!=0) {
+				f4 = new Field("category", iWorkDao.getNameById(article.getIworkid()), Field.Store.YES,Field.Index.TOKENIZED);
+
+			}
+			else if (article.getCategory()==0&&article.getIworkid()==0&&article.getBrandid()!=0) {
+				f4 = new Field("category",brandDao.getNameById(article.getBrandid()), Field.Store.YES,Field.Index.TOKENIZED);
+
+			}
+			else {
+				f4 = new Field("category", "未分类", Field.Store.YES,Field.Index.TOKENIZED);
+
+			}
 			f5 = new Field("date", article.getDate().toString(), Field.Store.YES, Field.Index.UN_TOKENIZED);
 			doc.add(f1);
 			doc.add(f2);
@@ -45,12 +70,30 @@ public class LuceneIndexWriter {
 	
 	public static void updateIndex(String path,GenericArticle article) throws IOException {
 		IndexWriter writer = new IndexWriter(path, new MMAnalyzer(), false);
+		CategoryDao categoryDao = new CategoryDao();
+		BrandDao brandDao = new BrandDao();
+		IWorkDao iWorkDao = new IWorkDao();
 		Document doc = new Document();
 		Field f1 = new Field("id",article.getId()+"",Field.Store.YES,Field.Index.UN_TOKENIZED);
 		Field f2 = new Field("title",article.getTitle(),Field.Store.YES,Field.Index.TOKENIZED);
 		Field f3 = new Field("content",article.getContent(),Field.Store.YES,Field.Index.TOKENIZED);
-		Field f4 = new Field("category", Category.getCategory(article.getCategory()), Field.Store.YES,Field.Index.TOKENIZED);
-		Field f5 = new Field("date", article.getDate().toString(), Field.Store.YES, Field.Index.UN_TOKENIZED);
+		Field f4;
+		if (article.getCategory()!=0) {
+			f4 = new Field("category", categoryDao.getNameByCategory(article.getCategory()), Field.Store.YES,Field.Index.TOKENIZED);
+
+		}
+		else if (article.getCategory()==0&&article.getIworkid()!=0) {
+			f4 = new Field("category", iWorkDao.getNameById(article.getIworkid()), Field.Store.YES,Field.Index.TOKENIZED);
+
+		}
+		else if (article.getCategory()==0&&article.getIworkid()==0&&article.getBrandid()!=0) {
+			f4 = new Field("category",brandDao.getNameById(article.getBrandid()), Field.Store.YES,Field.Index.TOKENIZED);
+
+		}
+		else {
+			f4 = new Field("category", "未分类", Field.Store.YES,Field.Index.TOKENIZED);
+
+		}		Field f5 = new Field("date", article.getDate().toString(), Field.Store.YES, Field.Index.UN_TOKENIZED);
 		doc.add(f1);
 		doc.add(f2);
 		doc.add(f3);
