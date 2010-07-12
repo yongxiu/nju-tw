@@ -49,7 +49,7 @@
 			<LI id="n4s1"><A href="Article.do?currentPage=1&level=0&category=7" title="时事理论"></A></LI>
 			<LI id="n4s2"><A href="Article.do?currentPage=1&level=0&category=8" title="团内精神与讲话"></A></LI>
 			<LI id="n4s3"><A href="Article.do?currentPage=1&level=0&category=9" title="高教动态"></A></LI>
-			<LI id="n4s4"><A href="#" title="调查研究"></A></LI>
+			<LI id="n4s4"><A href="Article.do?currentPage=1&level=0&category=10" title="调查研究"></A></LI>
 		</UL>	
     </li>
     <li id="n5"><a href="Download.do" title="下载专区"> </a>
