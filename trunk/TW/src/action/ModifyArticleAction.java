@@ -73,7 +73,7 @@ public class ModifyArticleAction extends ActionSupport implements SessionAware{
 			brandid = brandDao.getIdByName(getCategory2());
 		}
 		else {
-			//nothing to do
+			category = categoryDao.getCategoryByName(getCategory2());
 		}
 		
 		article.setCategory(category);

@@ -9,21 +9,21 @@
 </div>
 <div id="news">
 <div id="news1" class="subnews">
-<div class="news-h"><div class="headText">团学新闻</div><div class="headLink"><a href="Article.do?category=1&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
+<div class="news-h"><div class="headText">团学新闻</div><div class="headLink"><a href="Article.do?currentPage=1&level=0&category=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="news-p"><tiles:insertAttribute name="news" /></div>
 </div>
 <div id="blank-v"> </div>
 <div id="news2" class="subnews">
-<div class="news-h"><div class="headText">通知公告</div><div class="headLink"><a href="Article.do?category=2&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
+<div class="news-h"><div class="headText">通知公告</div><div class="headLink"><a href="Article.do?currentPage=1&level=0&category=11"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="news-p"><tiles:insertAttribute name="info" /></div>
 </div>
 <div id="news3" class="subnews">
-<div class="news-h"><div class="headText">基层采风</div><div class="headLink"><a href="Article.do?category=3&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
+<div class="news-h"><div class="headText">基层采风</div><div class="headLink"><a href="Article.do?currentPage=1&level=0&category=2"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="news-p"><tiles:insertAttribute name="theory" /></div>
 </div>
 <div id="blank-v"> </div>
 <div id="news4" class="subnews">
-<div class="news-h"><div class="headText">办事指南</div><div class="headLink"><a href="Article.do?category=4&amp;currentPage=1"><img src="img/more.gif" style="border:none;"/></a></div></div>
+<div class="news-h"><div class="headText">办事指南</div><div class="headLink"><a href="Article.do?currentPage=1&level=0&category=12"><img src="img/more.gif" style="border:none;"/></a></div></div>
 <div class="news-p"><tiles:insertAttribute name="guide" /></div>
 </div>
 </div>
