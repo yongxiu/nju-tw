@@ -14,6 +14,7 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 import antlr.collections.List;
 import bean.Brand;
 import bean.GenericArticle;
+import bean.IWork;
 import dao.hibernateTemlate.HibernateGenericDao;
 import dao.hibernateTemlate.HibernateUtil;
 
@@ -349,6 +350,24 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		return brandName;
 	}
 	
+	public String getNameByIWork(long id) {
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.id=:id");
+		query.setParameter("id", id);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		GenericArticle article = articles.get(0);
+		int iworkid = article.getIworkid();
+		Query query2 = session.createQuery("from IWork i where i.id=:iworkid");
+		query2.setParameter("iworkid", iworkid);
+		ArrayList<IWork> iWorks = (ArrayList<IWork>) query2.list();
+		IWork iWork = iWorks.get(0);
+		String iworkName = iWork.getName();
+		tx.commit();
+		closeSession();
+		return iworkName;
+	}
+	
 	public static void main(String[] args) {
 		GenericArticleDao dao = new GenericArticleDao();
 //		ArrayList<GenericArticle> articles = dao.getArticlesByPage(4, 20, 10, 11);
@@ -381,6 +400,6 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //		for(GenericArticle a:articles) {
 //			System.out.println(a.getIworkid());
 //		}
-		System.out.println(dao.getNameByBrand(new Long(499)));
+		System.out.println(dao.getNameByIWork(new Long(504)));
 	}
 }
