@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 	<table class="o_l_Table" cellpadding=0 cellspacing=0>
 		<tr>
-			<td style="text-align:left;font-size:25px;font-weight:bold;">组织结构介绍</td>
+			<td style="text-align:left;font-size:25px;font-weight:bold;">机构人员介绍</td>
 			<td style="text-align:right;font-size:20px;"><s:property value="org.department" escape="false"/></td>
 		</tr>		
 		<tr>
