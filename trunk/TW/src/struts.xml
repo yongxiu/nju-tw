@@ -697,6 +697,7 @@
 		
 		<action name="admin.DeleteiworkAction" class="action.iwork.DeleteiworkAction">
 			<result name="success" type="redirect">admin.iWorkManageList.do</result>
+			<result name="error" type="tiles">admin.iworkmessage</result>
 		</action>
 
 		<action name="admin.IWorkModify" class="action.iwork.IWorkModifyAction">
@@ -740,6 +741,7 @@
 		
 		<action name="admin.DeleteBrandAction" class="action.brand.DeleteBrandAction">
 			<result name="success" type="redirect">admin.BrandManageList.do</result>
+			<result name="error" type="tiles">admin.brandmessage</result>
 		</action>
 
 		<action name="admin.BrandModify" class="action.brand.BrandModifyAction">
@@ -747,7 +749,7 @@
 		</action>
 		
 		<action name="admin.BrandModifySave" class="action.brand.BrandModifySaveAction">
-			<result name="success" type="tiles">admin.brandfail</result>
+			<result name="success" type="tiles">admin.BrandChangeSave</result>
 		</action>
 
 		<!-- 首页显示的iwork文章列表 -->

@@ -358,7 +358,10 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 //		for(GenericArticle article:articles) {
 //			System.out.println(article.getCategory());
 //		}
-		System.out.println(dao.getCountBycategory(3));
+		ArrayList<GenericArticle> articles = dao.getArticlesByIWorkId(1);
+		for(GenericArticle a:articles) {
+			System.out.println(a.getIworkid());
+		}
 		
 	}
 }
