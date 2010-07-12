@@ -33,7 +33,7 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 	public ArrayList<GenericArticle> getArticlesByPage(int pageCount,int number,int category){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
-		Query query = session.createQuery("from GenericArticle a where a.category =:category order by a.date desc");
+		Query query = session.createQuery("from GenericArti ncle a where a.category =:category order by a.date desc");
 		
 		query.setParameter("category", category);
 		query.setFirstResult((pageCount-1)*number);
