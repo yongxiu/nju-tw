@@ -280,6 +280,31 @@ public class GenericArticleDao extends HibernateGenericDao<GenericArticle,Long>{
 		
 	}
 	
+	public ArrayList<GenericArticle> getArticlesByIWorkId(int id){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.iworkid=:id");
+		query.setParameter("id", id);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
+	public ArrayList<GenericArticle> getArticlesByBrandId(int id){
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		Query query = session.createQuery("from GenericArticle a where a.brandid=:id");
+		query.setParameter("id", id);
+		ArrayList<GenericArticle> articles = (ArrayList<GenericArticle>) query.list();
+		tx.commit();
+		closeSession();
+		return articles;
+	}
+	
+	
+	
+	
 	public ArrayList<GenericArticle> getArticlesByCategoryPage(int category,int currentPage,int number) {
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
