@@ -170,6 +170,10 @@
 	<definition name="admin.iworkfail" extends="admin">
 		<put-attribute name="content" value="/admin/iwork/iworkichangefail.jsp"/>
 	</definition>
+	
+	<definition name="admin.iworkmessage" extends="admin">
+		<put-attribute name="content" value="/admin/iwork/iworkMessage.jsp"/>
+	</definition>
 
 	
 	
@@ -206,6 +210,10 @@
 	
 	<definition name="admin.brandfail" extends="admin">
 		<put-attribute name="content" value="/admin/brand/brandchangefail.jsp"/>
+	</definition>
+	
+	<definition name="admin.brandmessage" extends="admin">
+		<put-attribute name="content" value="/admin/brand/brandMessage.jsp"/>
 	</definition>
 </tiles-definitions>
 
