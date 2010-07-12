@@ -297,7 +297,6 @@ a {
 	text-decoration:none;
 	color:red;
 	font-size:13px;
-	background: #f2f1e9;
 }
 
 #picNews {
@@ -341,7 +340,7 @@ a {
 }
 
 #news .news-p {
-	height:215px;
+	height:250px;
 	width: 392px;
 	border: 1px solid #e0e0e0;
 	border-top: none;
