@@ -323,7 +323,7 @@
 		
 		<!-- Select image as main image -->
 		<action name="admin.SelectImage" class="action.SelectImageAction">
-		<interceptor-ref name="adminStack"></interceptor-ref>
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">admin.imageCrop</result>
 		</action>
 
@@ -433,7 +433,7 @@
 		<!-- Modify Article -->
 		<action name="ModifyArticle" class="action.ModifyArticleAction">
 		<interceptor-ref name="loginStack"></interceptor-ref>
-			<result name="success">/userComponent/success.jsp</result>
+			<result name="success" type="tiles">success</result>
 			<result name="imageSelect">/userComponent/imageSelect.jsp</result>
 		</action>
 		
@@ -522,7 +522,7 @@
 		</action>
 		
 		<action name="CropAction" class="action.CropAction">
-			<interceptor-ref name="adminStack"></interceptor-ref>
+			<interceptor-ref name="loginStack"></interceptor-ref>
 			<result name="success" type="tiles">article.success</result>
 		</action>
 		
